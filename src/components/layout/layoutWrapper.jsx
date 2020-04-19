@@ -15,12 +15,14 @@ const Slider = styled(motion.div)`
 `;
 
 const LayoutWrapper = ({ element, props, ...rest }) => {
+  const innerHeight = typeof window !== 'undefined' ? window.innerHeight : 0;
+
   const { path } = props;
   const isHome = path === '/';
 
   const left = [-140, 244.6875, 244.6875];
   const top = [-50, -50, 100];
-  const height = [window.innerHeight + 100, window.innerHeight + 100, 500];
+  const height = [innerHeight + 100, innerHeight + 100, 500];
   const borderRadius = [0, 0, 5];
 
   const variants = {
