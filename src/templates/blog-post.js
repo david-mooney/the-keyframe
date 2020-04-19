@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
 
+import PageTransition from '@components/layout/pageTransition';
 import Page from '@components/page';
 import Bio from '@components/bio';
 import Seo from '@components/seo';
@@ -10,7 +11,7 @@ import Seo from '@components/seo';
 const Article = styled.article`
   width: 100%;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 30rem auto;
 `;
 
 const Nav = styled.article`
@@ -25,58 +26,48 @@ const Nav = styled.article`
   }
 `;
 
-const BlogPostTemplate = ({
-  data,
-  pageContext,
-  location,
-  transitionStatus,
-  entry,
-  exit,
-}) => {
-  // console.log(transitionStatus);
-  // console.log(entry);
-  // console.log(exit);
-
-  const { markdownRemark: post } = data;
-  const { title } = data.site.siteMetadata;
+const BlogPostTemplate = ({ data, pageContext }) => {
+  const { site, markdownRemark: post } = data;
   const { previous, next } = pageContext;
 
   return (
-    <Page location={location} title={title}>
+    <Page title={site.siteMetadata.title}>
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <Article>
-        <header>
-          <h1>{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
-        </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+      <PageTransition>
+        <Article>
+          <header>
+            <h1>{post.frontmatter.title}</h1>
+            <p>{post.frontmatter.date}</p>
+          </header>
+          <section dangerouslySetInnerHTML={{ __html: post.html }} />
 
-        <footer>
-          <Bio />
-        </footer>
-      </Article>
+          <footer>
+            <Bio />
+          </footer>
+        </Article>
 
-      <Nav>
-        <ul>
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </Nav>
+        <Nav>
+          <ul>
+            <li>
+              {previous && (
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              )}
+            </li>
+            <li>
+              {next && (
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              )}
+            </li>
+          </ul>
+        </Nav>
+      </PageTransition>
     </Page>
   );
 };
@@ -84,7 +75,6 @@ const BlogPostTemplate = ({
 BlogPostTemplate.propTypes = {
   data: PropTypes.object.isRequired,
   pageContext: PropTypes.object.isRequired,
-  location: PropTypes.object.isRequired,
 };
 
 export default BlogPostTemplate;

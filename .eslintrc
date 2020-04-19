@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "wesbos"
+  ],
+  "rules": {
+    "react/no-danger": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          [
+            "@styles",
+            "./src/styles/"
+          ],
+          [
+            "@components",
+            "./src/components"
+          ]
+        ],
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".json"
+        ]
+      }
+    }
+  }
+}

@@ -20,7 +20,7 @@ const moon = css`
 const TopLeft = styled.div`
   position: absolute;
   top: 4rem;
-  left: 4rem;
+  right: 4rem;
 `;
 
 const Switch = styled.div`
@@ -28,7 +28,6 @@ const Switch = styled.div`
   height: 3rem;
   width: 6rem;
   border-radius: 3rem;
-  overflow: hidden;
   background-color: ${props => props.theme.text};
 `;
 

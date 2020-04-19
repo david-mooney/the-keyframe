@@ -68,9 +68,6 @@ module.exports = {
         extensions: ['js', 'jsx'],
       },
     },
-    {
-      resolve: 'gatsby-plugin-transition-link',
-    },
     // 'gatsby-plugin-offline', // fixme: PWA
   ],
 };

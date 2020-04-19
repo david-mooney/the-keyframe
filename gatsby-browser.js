@@ -1,4 +1,7 @@
 import 'prismjs/themes/prism.css';
-import wrapWithProvider from './stateProvider';
+import React from 'react';
+import StateProvider from '@components/layout/stateProvider';
+import LayoutWrapper from '@components/layout/layoutWrapper';
 
-export const wrapRootElement = wrapWithProvider;
+export const wrapRootElement = StateProvider;
+export const wrapPageElement = data => <LayoutWrapper {...data} />;

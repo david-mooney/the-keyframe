@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Image from 'gatsby-image';
-import TransitionLink from 'gatsby-plugin-transition-link';
+import { Link } from 'gatsby';
 
 const Container = styled.article`
   position: relative;
@@ -89,7 +88,7 @@ const Title = styled.h2`
   margin: 0;
 `;
 
-const Cta = styled(TransitionLink)`
+const Cta = styled(Link)`
   padding-top: 1rem;
   text-decoration: underline;
   font-size: 1.8rem;
@@ -98,28 +97,11 @@ const Cta = styled(TransitionLink)`
   cursor: pointer;
 `;
 
-const FeaturedImage = styled(Image)`
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.4;
-  border-radius: 0.5rem;
-  overflow: hidden;
-`;
-
 const Post = ({ fields, frontmatter, index, excerpt }) => (
   <Container>
     <LeftColumn>
       <Index>{`${index + 1}`.padStart(2, '0')}</Index>
-      <Artwork gradient={frontmatter.gradient}>
-        {frontmatter.featuredImage && (
-          <FeaturedImage
-            fluid={frontmatter.featuredImage.childImageSharp.fluid}
-          />
-        )}
-      </Artwork>
+      <Artwork gradient={frontmatter.gradient} className={`artwork-${index}`} />
     </LeftColumn>
 
     <RightColumn>
@@ -130,7 +112,7 @@ const Post = ({ fields, frontmatter, index, excerpt }) => (
           __html: frontmatter.description || excerpt,
         }}
       />
-      <Cta to={fields.slug} aria-label={frontmatter.title}>
+      <Cta to={fields.slug} aria-label={frontmatter.title} state={{ index }}>
         Read More
       </Cta>
     </RightColumn>
