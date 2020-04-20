@@ -1,10 +1,11 @@
+export const storageId = 'keyframe_darkMode';
+
 export const loadState = id => {
   try {
     const savedState = localStorage.getItem(id);
-    return JSON.parse(savedState) || undefined;
+    return JSON.parse(savedState) || {};
   } catch (error) {
     console.warn(error);
-    return undefined;
   }
 };
 

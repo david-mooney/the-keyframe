@@ -1,15 +1,14 @@
 import { createStore } from 'redux';
-import { loadState } from './localStorage';
 
-export const storageId = 'tpw_state';
 export const actions = {
+  SET_STATE: 'SET_STATE',
   TOGGLE_STATE: 'TOGGLE_STATE',
 };
 
-const persistedState = loadState(storageId);
-
-const reducer = (state = { darkMode: false }, action) => {
-  switch (action.type) {
+const reducer = (state = { darkMode: false }, { type, value }) => {
+  switch (type) {
+    case actions.SET_STATE:
+      return { ...state, darkMode: value };
     case actions.TOGGLE_STATE:
       return { ...state, darkMode: !state.darkMode };
     default:
@@ -17,11 +16,4 @@ const reducer = (state = { darkMode: false }, action) => {
   }
 };
 
-const store = () =>
-  createStore(
-    reducer,
-    persistedState
-    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-  );
-
-export default store;
+export default createStore(reducer);
