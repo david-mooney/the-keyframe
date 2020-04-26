@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import PageTransition from '@components/layout/pageTransition';
-import Page from '@components/page';
 import Bio from '@components/bio';
 import Seo from '@components/seo';
 
@@ -31,7 +30,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
   const { previous, next } = pageContext;
 
   return (
-    <Page title={site.siteMetadata.title}>
+    <>
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -68,7 +67,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           </ul>
         </Nav>
       </PageTransition>
-    </Page>
+    </>
   );
 };
 

@@ -12,7 +12,7 @@ const H1 = styled.h1`
   font-size: 5vw;
   font-weight: 600;
   word-spacing: 9999rem;
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.primary};
   opacity: 0.1;
 `;
 
@@ -28,7 +28,7 @@ const Header = ({ title }) => (
     <Link to="/">
       <H1>{title}</H1>
     </Link>
-    <ThemeToggle />
+    {/* <ThemeToggle /> */}
   </Container>
 );
 

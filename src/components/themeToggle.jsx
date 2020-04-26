@@ -1,11 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { connect } from 'react-redux';
-
 import Toggle from '@components/inputs/toggle';
-
-import { actions } from '../../createStore'; // FIXME: alias
+import ThemeContext from '@components/themeContext';
+import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 
 const sun = css`
   background-color: ${props => props.theme.background};
@@ -42,31 +39,30 @@ const Circle = styled.span`
   ${props => (props.checked ? moon : sun)}
 `;
 
-const Toggler = ({ darkMode, toggle }) => (
-  <TopLeft>
-    <Toggle
-      id="themeToggle"
-      label="Switch between light and dark mode"
-      size="4rem"
-      value={darkMode}
-      onClick={toggle}
-    >
-      <Switch checked={darkMode}>
-        <Circle checked={darkMode} />
-      </Switch>
-    </Toggle>
-  </TopLeft>
+const Toggler = () => (
+  <ThemeToggler>
+    {({ theme, toggleTheme }) => (
+      <TopLeft>
+        <input
+          type="checkbox"
+          onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+          defaultChecked={theme === 'dark'}
+        />
+        {`Toggle - ${theme}`}
+        {/* <Toggle
+          id="themeToggle"
+          label="Switch between light and dark mode"
+          size="4rem"
+          value={darkMode}
+          onClick={toggleDarkMode}
+        >
+          <Switch checked={darkMode}>
+            <Circle checked={darkMode} />
+          </Switch>
+        </Toggle> */}
+      </TopLeft>
+    )}
+  </ThemeToggler>
 );
 
-Toggler.propTypes = {
-  darkMode: PropTypes.bool.isRequired,
-  toggle: PropTypes.func.isRequired,
-};
-
-const mapStateToProps = ({ darkMode }) => ({ darkMode });
-
-const mapDispatchToProps = dispatch => ({
-  toggle: () => dispatch({ type: actions.TOGGLE_STATE }),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Toggler);
+export default Toggler;

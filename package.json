@@ -28,6 +28,7 @@
     "gatsby": "^2.20.25",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-dark-mode": "^1.1.1",
     "gatsby-plugin-google-analytics": "^2.1.34",
     "gatsby-plugin-manifest": "^2.3.1",
     "gatsby-plugin-offline": "^3.0.32",

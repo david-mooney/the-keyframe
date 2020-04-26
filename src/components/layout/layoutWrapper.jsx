@@ -1,66 +1,62 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled, { ThemeProvider } from 'styled-components';
+import GlobalStyles from '@styles/globalStyles';
+import themes from '@styles/themes';
 
-const Wrapper = styled.div`
-  width: 100%;
-  overflow: hidden;
+import ThemeContext from '@components/themeContext';
+import Header from '@components/header';
+import Footer from '@components/footer';
+
+const PageLayout = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.8rem;
+  color: ${props => props.theme.text};
+  background-color: ${props => props.theme.background};
+  transition: 0.2s background-color linear, 0.2s color linear;
 `;
 
-const Slider = styled(motion.div)`
-  position: absolute;
-  width: 213.3125px;
-  background: linear-gradient(0deg, #f9748f, #fe9a8b);
+const Main = styled.main`
+  flex: 1 1 auto;
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
 `;
 
-const LayoutWrapper = ({ element, props, ...rest }) => {
-  const innerHeight = typeof window !== 'undefined' ? window.innerHeight : 0;
-
-  const { path } = props;
-  const isHome = path === '/';
-
-  const left = [-140, 244.6875, 244.6875];
-  const top = [-50, -50, 100];
-  const height = [innerHeight + 100, innerHeight + 100, 500];
-  const borderRadius = [0, 0, 5];
-
-  const variants = {
-    home: {
-      left,
-      top,
-      height,
-      borderRadius,
-      position: 'absolute',
-    },
-    post: {
-      left: [...left].reverse(),
-      top: [...top].reverse(),
-      height: [...height].reverse(),
-      borderRadius: [...borderRadius].reverse(),
-      transitionEnd: {
-        position: 'fixed',
-      },
-    },
-  };
+const LayoutWrapper = ({ element, props }) => {
+  const { data } = props;
+  const { title } = data.site.siteMetadata;
 
   return (
-    <Wrapper {...props}>
-      {element}
-
-      <Slider
-        variants={variants}
-        animate={isHome ? 'home' : 'post'}
-        initial={isHome ? 'home' : 'post'}
-        transition={{ ease: 'circOut' }}
-      />
-    </Wrapper>
+    <ThemeContext.Consumer>
+      {({ darkMode, toggleDarkMode }) => (
+        <ThemeProvider theme={darkMode ? themes.dark : themes.light}>
+          <PageLayout>
+            <GlobalStyles />
+            <Header title={title} />
+            <Main>
+              <input
+                style={{ position: 'absolute' }}
+                type="checkbox"
+                onChange={toggleDarkMode}
+                defaultChecked={darkMode}
+              />
+              {`Toggle - ${darkMode}`}
+              {element}
+            </Main>
+            <Footer />
+          </PageLayout>
+        </ThemeProvider>
+      )}
+    </ThemeContext.Consumer>
   );
 };
 
 LayoutWrapper.propTypes = {
   props: PropTypes.object,
-  path: PropTypes.string,
+  data: PropTypes.object,
   element: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,

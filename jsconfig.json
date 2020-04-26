@@ -15,6 +15,12 @@
       "@pages/*": [
         "./src/pages/*"
       ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@utilities/*": [
+        "./src/utilities/*"
+      ],
     }
   },
   "exclude": [

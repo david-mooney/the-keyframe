@@ -8,7 +8,7 @@ const colors = {
 
 export default {
   light: {
-    primary: colors.bastille,
+    primary: colors.paarl,
     background: colors.alabaster,
     text: colors.bastille,
     lightest: colors.alabaster,

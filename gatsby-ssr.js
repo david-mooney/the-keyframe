@@ -1,6 +1,6 @@
 import React from 'react';
-import StateProvider from '@components/layout/stateProvider';
+import { ThemeWrapper } from '@components/themeContext';
 import LayoutWrapper from '@components/layout/layoutWrapper';
 
-export const wrapRootElement = StateProvider;
+export const wrapRootElement = data => <ThemeWrapper {...data} />;
 export const wrapPageElement = data => <LayoutWrapper {...data} />;

@@ -44,24 +44,29 @@ const Toggle = ({
   id,
   value,
   onClick,
-}) => (
-  <Label htmlFor={id} aria-label={label}>
-    <Input
-      id={id}
-      type="checkbox"
-      role="switch"
-      checked={value}
-      aria-checked={value}
-      onChange={onClick}
-    />
-    {children || (
-      <Switch size={size}>
-        <Circle size={size} checked={value} />
-      </Switch>
-    )}
-  </Label>
-);
+}) => {
+  const handleChange = () => {
+    onClick(value);
+  };
 
+  return (
+    <Label htmlFor={id} aria-label={label}>
+      <Input
+        id={id}
+        type="checkbox"
+        role="switch"
+        defaultChecked={value}
+        aria-checked={value}
+        onChange={handleChange}
+      />
+      {children || (
+        <Switch size={size}>
+          <Circle size={size} checked={value} />
+        </Switch>
+      )}
+    </Label>
+  );
+};
 Toggle.propTypes = {
   id: PropTypes.string.isRequired,
   value: PropTypes.bool.isRequired,

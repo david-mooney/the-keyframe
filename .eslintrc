@@ -16,6 +16,14 @@
           [
             "@components",
             "./src/components"
+          ],
+          [
+            "@hooks",
+            "./src/hooks"
+          ],
+          [
+            "@utilities",
+            "./src/utilities"
           ]
         ],
         "extensions": [

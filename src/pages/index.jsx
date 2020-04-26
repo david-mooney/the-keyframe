@@ -6,15 +6,13 @@ import PageTransition from '@components/layout/pageTransition';
 import Seo from '@components/seo';
 import PostsGrid from '@components/postsGrid';
 import Post from '@components/post';
-import Page from '@components/page';
 
 const HomePage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <Page title={data.site.siteMetadata.title}>
+    <>
       <Seo title="Home" description="I is a good home page" />
-
       <PageTransition>
         <PostsGrid>
           {posts.map(({ node }, index) => (
@@ -22,7 +20,7 @@ const HomePage = ({ data }) => {
           ))}
         </PostsGrid>
       </PageTransition>
-    </Page>
+    </>
   );
 };
 

@@ -64,6 +64,8 @@ module.exports = {
           '@templates': 'src/templates',
           '@pages': 'src/pages',
           '@styles': 'src/styles',
+          '@hooks': 'src/hooks',
+          '@utilities': 'src/utilities',
         },
         extensions: ['js', 'jsx'],
       },
