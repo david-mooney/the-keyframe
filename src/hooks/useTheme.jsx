@@ -6,15 +6,13 @@ export default initialValue => {
 
   useEffect(() => {
     const storedState = getItem(storageId);
+    const query = window.matchMedia('(prefers-color-scheme: dark)');
 
     if (typeof storedState === 'boolean') {
       setStoredValue(storedState);
     } else {
-      const query = window.matchMedia('(prefers-color-scheme: dark)');
       setStoredValue(query.matches);
     }
-
-    console.log('running');
   }, []);
 
   const setValue = value => {

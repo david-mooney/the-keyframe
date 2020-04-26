@@ -1,3 +1,4 @@
+import './src/styles/test.css';
 import React from 'react';
 import { ThemeWrapper } from '@components/themeContext';
 import LayoutWrapper from '@components/layout/layoutWrapper';

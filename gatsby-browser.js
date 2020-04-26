@@ -1,5 +1,5 @@
 import 'prismjs/themes/prism.css';
-import './src/styles/global.css';
+import './src/styles/test.css';
 import React from 'react';
 import { ThemeWrapper } from '@components/themeContext';
 import LayoutWrapper from '@components/layout/layoutWrapper';
