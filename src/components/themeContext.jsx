@@ -16,7 +16,7 @@ const ThemeWrapper = ({ element }) => {
 
   return (
     <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>
-      {typeof darkMode === `boolean` && element}
+      {typeof darkMode === 'boolean' && element}
     </ThemeContext.Provider>
   );
 };

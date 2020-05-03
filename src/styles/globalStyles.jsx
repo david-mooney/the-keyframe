@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     font-size: 10px;
     font-family: 'Arial';
+    background-color: red;
     background-color: ${props => props.theme.background};
     transition: 0.2s background-color linear, 0.2s color linear;
   }
@@ -23,7 +24,6 @@ const GlobalStyles = createGlobalStyle`
   h2,
   h3 {
     text-decoration: none;
-    transition: 0.2s color linear;
   }
 `;
 
