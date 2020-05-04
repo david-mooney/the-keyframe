@@ -10,11 +10,11 @@ import Seo from '@components/seo';
 const Article = styled.article`
   width: 100%;
   max-width: 900px;
-  margin: 30rem auto;
+  margin: 60px auto;
 `;
 
 const Nav = styled.article`
-  padding: 2rem 0;
+  padding: 30px 0;
 
   ul {
     display: flex;

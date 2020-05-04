@@ -16,7 +16,11 @@ const HomePage = ({ data }) => {
       <PageTransition>
         <PostsGrid>
           {posts.map(({ node }, index) => (
-            <Post key={node.fields.slug} index={index} {...node} />
+            <Post
+              key={node.fields.slug}
+              index={posts.length - index}
+              {...node}
+            />
           ))}
         </PostsGrid>
       </PageTransition>

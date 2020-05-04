@@ -12,10 +12,10 @@ const PageLayout = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-size: 1.8rem;
+  // fixme: should happen elsewhere
   color: ${props => props.theme.text};
   background-color: ${props => props.theme.background};
-  transition: 0.2s background-color linear, 0.2s color linear;
+  transition: 0.2s background-color linear, 0.2s color linear; */
 `;
 
 const Main = styled.main`
@@ -31,21 +31,12 @@ const LayoutWrapper = ({ element, props }) => {
 
   return (
     <ThemeContext.Consumer>
-      {({ darkMode, toggleDarkMode }) => (
+      {({ darkMode }) => (
         <ThemeProvider theme={darkMode ? themes.dark : themes.light}>
           <PageLayout>
             <GlobalStyles />
             <Header title={title} />
-            <Main>
-              <input
-                style={{ position: 'absolute' }}
-                type="checkbox"
-                onChange={toggleDarkMode}
-                defaultChecked={darkMode}
-              />
-              {`Toggle - ${darkMode}`}
-              {element}
-            </Main>
+            <Main>{element}</Main>
             <Footer />
           </PageLayout>
         </ThemeProvider>

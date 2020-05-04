@@ -2,7 +2,6 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import Toggle from '@components/inputs/toggle';
 import ThemeContext from '@components/themeContext';
-import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 
 const sun = css`
   background-color: ${props => props.theme.background};
@@ -16,15 +15,15 @@ const moon = css`
 
 const TopLeft = styled.div`
   position: absolute;
-  top: 4rem;
-  right: 4rem;
+  top: 30px;
+  right: 30px;
 `;
 
 const Switch = styled.div`
   position: relative;
-  height: 3rem;
-  width: 6rem;
-  border-radius: 3rem;
+  height: 30px;
+  width: 60px;
+  border-radius: 30px;
   background-color: ${props => props.theme.text};
 `;
 
@@ -32,37 +31,30 @@ const Circle = styled.span`
   position: absolute;
   top: 50%;
   left: 0;
-  height: 3rem;
-  width: 3rem;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
   transition: 0.2s transform ease-out, 0.25s background-color ease-out;
   ${props => (props.checked ? moon : sun)}
 `;
 
 const Toggler = () => (
-  <ThemeToggler>
-    {({ theme, toggleTheme }) => (
+  <ThemeContext.Consumer>
+    {({ darkMode, toggleDarkMode }) => (
       <TopLeft>
-        <input
-          type="checkbox"
-          onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
-          defaultChecked={theme === 'dark'}
-        />
-        {`Toggle - ${theme}`}
-        {/* <Toggle
+        <Toggle
           id="themeToggle"
           label="Switch between light and dark mode"
-          size="4rem"
           value={darkMode}
-          onClick={toggleDarkMode}
+          callback={toggleDarkMode}
         >
           <Switch checked={darkMode}>
             <Circle checked={darkMode} />
           </Switch>
-        </Toggle> */}
+        </Toggle>
       </TopLeft>
     )}
-  </ThemeToggler>
+  </ThemeContext.Consumer>
 );
 
 export default Toggler;

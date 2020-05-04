@@ -1,15 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 
-// FIXME: font scaling
-
 const GlobalStyles = createGlobalStyle`
   html, body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 10px;
+    font-size: 100%;
     font-family: 'Arial';
-    background-color: red;
     background-color: ${props => props.theme.background};
     transition: 0.2s background-color linear, 0.2s color linear;
   }

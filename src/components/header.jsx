@@ -1,23 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
-import { Link } from 'gatsby';
 import ThemeToggle from '@components/themeToggle';
 
 const H1 = styled.h1`
   // FIXME: common typography section
-  margin: 8rem 4rem;
+  margin: 30px;
   text-align: right;
-  font-size: 5vw;
+  font-size: 20vw;
   font-weight: 600;
-  word-spacing: 9999rem;
-  color: ${({ theme }) => theme.primary};
-  opacity: 0.1;
+  word-spacing: 100vw;
+  color: ${({ theme }) => theme.text};
+  opacity: 0.03;
 `;
 
 const Container = styled.header`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -25,10 +23,8 @@ const Container = styled.header`
 
 const Header = ({ title }) => (
   <Container>
-    <Link to="/">
-      <H1>{title}</H1>
-    </Link>
-    {/* <ThemeToggle /> */}
+    <H1>{title}</H1>
+    <ThemeToggle />
   </Container>
 );
 

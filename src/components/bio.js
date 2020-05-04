@@ -35,7 +35,7 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
-        padding: `2rem 0`,
+        padding: `30px 0`,
       }}
     >
       <Image
@@ -52,7 +52,7 @@ const Bio = () => {
       />
       <p
         style={{
-          marginLeft: `1rem`,
+          marginLeft: `15px`,
         }}
       >
         Written by <strong>{author.name}</strong> {author.summary}

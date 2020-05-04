@@ -33,20 +33,20 @@ const Input = styled.input`
   opacity: 0;
   pointer-events: none;
   &:focus + div {
-    box-shadow: 0 0 0.3rem 0.15rem ${props => props.theme.focus};
+    box-shadow: 0 0 4px 2px ${props => props.theme.focus};
   }
 `;
 
 const Toggle = ({
-  size = '3rem',
+  size = '60px',
   label = 'toggle button',
   children = null,
   id,
   value,
-  onClick,
+  callback,
 }) => {
   const handleChange = () => {
-    onClick(value);
+    callback(value);
   };
 
   return (
@@ -70,7 +70,7 @@ const Toggle = ({
 Toggle.propTypes = {
   id: PropTypes.string.isRequired,
   value: PropTypes.bool.isRequired,
-  onClick: PropTypes.func.isRequired,
+  callback: PropTypes.func.isRequired,
   size: PropTypes.string,
   label: PropTypes.string,
   children: PropTypes.oneOfType([
