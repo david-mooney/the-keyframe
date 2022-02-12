@@ -1,7 +1,10 @@
-import 'prismjs/themes/prism.css';
-import React from 'react';
-import { ThemeWrapper } from '@components/themeContext';
-import LayoutWrapper from '@components/layout/layoutWrapper';
+// custom typefaces
+import 'typeface-montserrat';
+import 'typeface-merriweather';
+// normalize CSS across browsers
+import './src/normalize.css';
+// custom CSS styles
+import './src/style.css';
 
-export const wrapRootElement = data => <ThemeWrapper {...data} />;
-export const wrapPageElement = data => <LayoutWrapper {...data} />;
+// Highlighting for code blocks
+import 'prismjs/themes/prism.css';
