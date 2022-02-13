@@ -1,5 +1,3 @@
-/* CSS Custom Properties Definitions */
-
 :root {
   --maxWidth-none: 'none';
   --maxWidth-xs: 20rem;
@@ -27,11 +25,10 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --fontFamily-serif: 'Merriweather', 'Georgia', Cambria, 'Times New Roman',
-    Times, serif;
+  --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  --fontFamily-serif: 'Merriweather', 'Georgia', Cambria, 'Times New Roman', Times, serif;
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
@@ -54,26 +51,26 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
+
+  --color-primary: #ffa99f;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
-  --color-heading: #1a202c;
+  --color-heading: #fd868c;
   --color-heading-black: black;
-  --color-accent: #d1dce5;
-}
-
-/* Light Mode */
-:root {
-  --color-background: white;
-  --color-text: #222;
-  --color-primary: #164bc5;
+  --color-accent: #ff719a;
+  --color-background: #ffffff;
 }
 
 /* Dark Mode */
+
 :root.-dark {
-  --color-background: black;
-  --color-text: #ddd;
-  --color-primary: #0f9640;
+  --color-primary: #ffa99f;
+  --color-text: #dddddd;
+  --color-text-light: #17325e;
+  --color-heading: #fd868c;
+  --color-heading-black: black;
+  --color-accent: #ff719a;
+  --color-background: #2e353f;
 }
 
 /* HTML elements */
@@ -98,10 +95,6 @@ body {
   background: var(--color-background);
 }
 
-footer {
-  padding: var(--spacing-6) var(--spacing-0);
-}
-
 hr {
   background: var(--color-accent);
   height: 1px;
@@ -123,23 +116,38 @@ h6 {
   letter-spacing: -0.025em;
 }
 
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   font-weight: var(--fontWeight-bold);
-  color: var(--color-heading);
 }
 
 h1 {
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
+  background-color: #f3ec78;
+  background-image: linear-gradient(-225deg, #fd868c 0%, #ffa99f 48%, #ff719a 100%);
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 h2 {
   font-size: var(--fontSize-5);
+  background-color: #f3ec78;
+  background-image: linear-gradient(-225deg, #fd868c 0%, #ffa99f 48%, #ff719a 100%);
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 h3 {
@@ -172,7 +180,17 @@ h6 > a {
   color: inherit;
 }
 
-/* Prose */
+.page-wrapper {
+  margin: 52px auto var(--spacing-0);
+  max-width: var(--maxWidth-wrapper);
+  padding: var(--spacing-10) var(--spacing-5);
+}
+
+a {
+  color: var(--color-primary);
+}
+
+/* Prose
 
 p {
   line-height: var(--lineHeight-relaxed);
@@ -242,21 +260,13 @@ table thead tr th {
   border-bottom: 1px solid var(--color-accent);
 }
 
-/* Link */
-
-a {
-  color: var(--color-primary);
-}
-
 a:hover,
 a:focus {
   text-decoration: none;
 }
 
-/* Custom classes */
-
 .global-wrapper {
-  margin: var(--spacing-0) auto;
+  margin: 52px auto var(--spacing-0);
   max-width: var(--maxWidth-wrapper);
   padding: var(--spacing-10) var(--spacing-5);
 }
@@ -334,8 +344,6 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
-/* Media queries */
-
 @media (max-width: 42rem) {
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
@@ -345,4 +353,4 @@ a:focus {
   ol {
     list-style-position: inside;
   }
-}
+} */

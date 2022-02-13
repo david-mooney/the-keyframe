@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import Toggle from 'react-toggle';
-import 'react-toggle/style.css';
+
+import './themeToggle.css';
 
 const ThemeToggle = () => {
   const [checked, setChecked] = useState(window.theme === window.themes.DARK);
@@ -14,7 +15,7 @@ const ThemeToggle = () => {
     [setChecked]
   );
 
-  return <Toggle checked={checked} onChange={onChange} />;
+  return <Toggle checked={checked} onChange={onChange} aria-label="Toggle Dark Mode" />;
 };
 
 export default ThemeToggle;

@@ -18,24 +18,30 @@ const html = () => {
     try {
       return localStorage.getItem('preferred-theme');
     } catch (error) {
-      return window.themes.LIGHT;
+      return null;
     }
   };
 
   const findTheme = () => {
     try {
-      const theme = window.matchMedia('(prefers-color-scheme: dark)').matches && window.themes.DARK;
-      saveTheme(theme);
-      return theme;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? window.themes.DARK
+        : window.themes.LIGHT;
     } catch (error) {
       return window.themes.LIGHT;
     }
   };
 
-  window.setTheme = (theme = getSavedTheme() || findTheme()) => {
-    window.theme = theme;
+  window.setTheme = (theme = null) => {
+    const savedTheme = getSavedTheme();
+
+    window.theme = theme || savedTheme || findTheme();
     document.documentElement.classList.remove(window.themes.LIGHT, window.themes.DARK);
-    document.documentElement.classList.add(theme);
+    document.documentElement.classList.add(window.theme);
+
+    if (window.theme !== savedTheme) {
+      saveTheme(window.theme);
+    }
   };
 
   window.setTheme();

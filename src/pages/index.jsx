@@ -4,9 +4,6 @@ import { Link, graphql } from 'gatsby';
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
-import ThemeToggle from '../components/themeToggle';
-
-const isBrowser = typeof window !== 'undefined';
 
 function BlogIndex({ data, location }) {
   const siteTitle = data.site.siteMetadata?.title || 'Title';
@@ -29,7 +26,6 @@ function BlogIndex({ data, location }) {
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
       <Bio />
-      {isBrowser && <ThemeToggle />}
 
       <ol style={{ listStyle: 'none' }}>
         {posts.map(post => {

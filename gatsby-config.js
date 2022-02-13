@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Blog',
+    title: 'The Key Frame',
     author: {
-      name: 'Kyle Mathews',
-      summary: 'who lives and works in San Francisco building useful things.',
+      name: 'David Mooney',
+      summary: 'I am  code.',
     },
     description: 'A starter blog demonstrating what Gatsby can do.',
     siteUrl: 'https://gatsbystarterblogsource.gatsbyjs.io/',
@@ -74,14 +74,15 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => allMarkdownRemark.nodes.map((node) => ({
-              ...node.frontmatter,
-              description: node.excerpt,
-              date: node.frontmatter.date,
-              url: site.siteMetadata.siteUrl + node.fields.slug,
-              guid: site.siteMetadata.siteUrl + node.fields.slug,
-              custom_elements: [{ 'content:encoded': node.html }],
-            })),
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
+              allMarkdownRemark.nodes.map(node => ({
+                ...node.frontmatter,
+                description: node.excerpt,
+                date: node.frontmatter.date,
+                url: site.siteMetadata.siteUrl + node.fields.slug,
+                guid: site.siteMetadata.siteUrl + node.fields.slug,
+                custom_elements: [{ 'content:encoded': node.html }],
+              })),
             query: `
               {
                 allMarkdownRemark(
@@ -108,7 +109,6 @@ module.exports = {
       },
     },
     {
-
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Gatsby Starter Blog',
