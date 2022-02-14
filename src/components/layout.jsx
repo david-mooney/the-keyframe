@@ -3,8 +3,8 @@ import Header from './header';
 import Footer from './footer';
 
 function Layout({ location, title, children }) {
-  const rootPath = `${__PATH_PREFIX__}/`;
-  const isRootPath = location.pathname === rootPath;
+  // const rootPath = `${__PATH_PREFIX__}/`;
+  // const isRootPath = location.pathname === rootPath;
 
   return (
     <>

@@ -3,12 +3,12 @@ module.exports = {
     title: 'The Key Frame',
     author: {
       name: 'David Mooney',
-      summary: 'I am  code.',
+      summary: null,
     },
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsbystarterblogsource.gatsbyjs.io/',
+    description: "David Mooney's web development blog.",
+    siteUrl: 'https://thekeyframe.dev/',
     social: {
-      twitter: 'kylemathews',
+      twitter: null,
     },
   },
   plugins: [
