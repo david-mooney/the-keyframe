@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
+import ScrollToTop from '../components/scrollToTop';
 
 function BlogPostTemplate({ data, location }) {
   const post = data.markdownRemark;
@@ -12,6 +13,9 @@ function BlogPostTemplate({ data, location }) {
 
   return (
     <Layout location={location} title={siteTitle}>
+
+      <ScrollToTop />
+
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -83,6 +87,7 @@ export const pageQuery = graphql`
     }
     markdownRemark(id: { eq: $id }) {
       id
+      timeToRead
       excerpt(pruneLength: 160)
       html
       frontmatter {

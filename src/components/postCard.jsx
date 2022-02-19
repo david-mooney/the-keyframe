@@ -3,7 +3,7 @@ import React from 'react';
 
 import * as styles from './postCard.module.css';
 
-const PostCard = ({ frontmatter, fields, excerpt }) => {
+const PostCard = ({ frontmatter, fields, excerpt, timeToRead }) => {
   const title = frontmatter.title || fields.slug;
 
   return (
@@ -16,6 +16,7 @@ const PostCard = ({ frontmatter, fields, excerpt }) => {
             </Link>
           </h2>
           <small>{frontmatter.date}</small>
+          <small> - {timeToRead} min read</small>
         </header>
         <section>
           <p

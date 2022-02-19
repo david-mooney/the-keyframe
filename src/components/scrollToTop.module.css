@@ -1,0 +1,29 @@
+.button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  outline: 2px solid transparent;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.button:hover {
+  outline-color: var(--color-primary);
+}
+
+.icon {
+  color: var(--color-primary);
+  font-size: 2.5rem;
+}

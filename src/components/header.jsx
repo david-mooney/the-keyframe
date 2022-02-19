@@ -7,8 +7,6 @@ import * as header from './header.module.css';
 const isBrowser = typeof window !== 'undefined';
 
 const Header = ({ title }) => {
-  console.log('rendering...');
-
   return (
     <nav className={header.header}>
       <ul>
