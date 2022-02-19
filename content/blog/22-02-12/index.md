@@ -1,5 +1,5 @@
 ---
-title: New Beginnings
+title: Adding a dark mode toggle in Gatsby
 date: '2022-02-12'
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 ---
@@ -106,4 +106,3 @@ to its own, safe country. But nothing the copy said could convince her and so it
 didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
 with Longe and Parole and dragged her into their agency, where they abused her
 for their projects again and again.
-

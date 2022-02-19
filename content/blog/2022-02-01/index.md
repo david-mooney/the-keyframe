@@ -1,5 +1,5 @@
 ---
-title: Hello World
+title: Do you need Babel anymore?
 date: '2022-02-01'
 description: 'Hello World'
 ---

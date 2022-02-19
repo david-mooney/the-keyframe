@@ -1,7 +1,9 @@
 .card {
   padding: 1rem;
   margin-bottom: 3rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  background-color: #6c71e7;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .card h2 {

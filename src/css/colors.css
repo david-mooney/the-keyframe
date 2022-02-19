@@ -1,0 +1,28 @@
+/* TODO: box shadow for light mode */
+/* TODO: themes per post (Figma) */
+
+/* Light Mode */
+
+:root {
+  /* Brand */
+  --color-primary: hsl(6, 100%, 81%);
+  --color-secondary: hsl(343, 100%, 72%);
+  --color-tertiary: hsl(357, 97%, 76%);
+
+  /* Typography */
+  --color-text: hsl(233, 13%, 14%);
+  --color-background: hsl(0, 0%, 100%);
+}
+
+/* Dark Mode */
+
+:root.-dark {
+  /* Brand */
+  --color-primary: hsl(6, 100%, 81%);
+  --color-secondary: hsl(343, 100%, 72%);
+  --color-tertiary: hsl(357, 97%, 76%);
+
+  /* Typography */
+  --color-text: hsl(0, 0%, 100%);
+  --color-background: hsl(233, 13%, 14%);
+}

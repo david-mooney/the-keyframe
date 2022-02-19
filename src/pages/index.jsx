@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 import Seo from '../components/seo';
 import PostCard from '../components/postCard';
 
-function BlogIndex({ data, location }) {
+const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || 'Title';
   const posts = data.allMarkdownRemark.nodes;
 
@@ -15,10 +15,7 @@ function BlogIndex({ data, location }) {
       <Layout location={location} title={siteTitle}>
         <Seo title="All posts" />
         <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the directory you specified
-          for the "gatsby-source-filesystem" plugin in gatsby-config.js).
-        </p>
+        <p>No blog posts... this isn't right</p>
       </Layout>
     );
   }
@@ -27,6 +24,7 @@ function BlogIndex({ data, location }) {
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
 
+      {/* TODO: remove this inline style */}
       <ol style={{ listStyle: 'none' }}>
         {posts.map(post => (
           <PostCard {...post} />
@@ -34,7 +32,7 @@ function BlogIndex({ data, location }) {
       </ol>
     </Layout>
   );
-}
+};
 
 export default BlogIndex;
 

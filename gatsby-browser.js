@@ -1,10 +1,12 @@
 // Custom Fonts
-// import 'typeface-montserrat';
 import '@fontsource/aleo';
 
 // Custom CSS
-import './src/normalize.css';
-import './src/style.css';
+import './src/css/normalize.css';
+import './src/css/colors.css';
+import './src/css/spacing.css';
+import './src/css/typography.css';
+import './src/css/global.css';
 
 // Highlighting for code blocks
 import 'prismjs/themes/prism.css';

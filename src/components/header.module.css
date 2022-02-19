@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: var(--spacing-6) var(--spacing-6);
+  padding: var(--spacing-6);
 }
 
 .header h1 {
