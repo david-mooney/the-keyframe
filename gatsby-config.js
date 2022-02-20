@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/posts`,
         name: 'blog',
       },
     },
@@ -112,20 +112,42 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Gatsby Starter Blog',
-        short_name: 'GatsbyJS',
-        start_url: '/',
+        name: 'The Key Frame Blog',
+        short_name: 'The Key Frame',
+        description: 'The web development blog of David Mooney',
+        start_url: 'https://thekeyframe.dev/',
         background_color: '#ffffff',
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        theme_color: `#1f2028`,
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icons: [
+          {
+            src: 'src/images/icon-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+            purpose: 'maskable any',
+          },
+          {
+            src: 'src/images/icon-256x256.png',
+            sizes: '256x256',
+            type: 'image/png',
+            purpose: 'maskable any',
+          },
+          {
+            src: 'src/images/icon-384x384.png',
+            sizes: '384x384',
+            type: 'image/png',
+            purpose: 'maskable any',
+          },
+          {
+            src: 'src/images/icon-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable any',
+          },
+        ],
       },
     },
     'gatsby-plugin-react-helmet',
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    'gatsby-plugin-offline',
   ],
 };

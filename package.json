@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "the-key-frame",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "My personal blog, powered by Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "David Mooney",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/david-mooney/the-key-frame/issues"
   },
   "dependencies": {
     "@fontsource/aleo": "^4.5.1",
@@ -38,15 +38,13 @@
   "devDependencies": {
     "prettier": "^2.5.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
-  "keywords": [
-    "gatsby"
-  ],
+  "homepage": "https://thekeyframe.dev",
+  "keywords": ["gatsby"],
   "license": "0BSD",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/david-mooney/the-key-frame.git"
   },
   "scripts": {
     "build": "gatsby build",
