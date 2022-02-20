@@ -3,12 +3,17 @@
 }
 
 .list a {
+  display: block;
+  height: 100%;
   color: inherit;
   text-decoration: none;
 }
 
 .card {
   --color-text: var(--color-white);
+  --shape-passive: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 0 50%, 0% 0%);
+  --shape-active: polygon(20% 0, 60% 50%, 20% 100%, 0% 100%, 40% 50%, 0% 0%);
+
   position: relative;
   color: var(--color-text);
   height: 100%;
@@ -16,6 +21,15 @@
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px; /* TODO HSL color */
+  transform: translateZ(0); /* safari bug */
+}
+
+.card:hover .imageWrapper {
+  clip-path: var(--shape-active);
+}
+
+.list a:focus-visible .imageWrapper {
+  clip-path: var(--shape-active);
 }
 
 .card header {
@@ -41,4 +55,6 @@
   max-width: 25%;
   overflow: hidden;
   background-color: transparent;
+  clip-path: var(--shape-passive);
+  transition: 0.3s clip-path ease;
 }

@@ -21,6 +21,7 @@ body {
   font-size: var(--fontSize-1);
   color: var(--color-text);
   background: var(--color-background);
+  /* background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%); */
 }
 
 hr {
@@ -81,6 +82,14 @@ h6 > a {
 a {
   color: var(--color-text);
   font-weight: var(--fontWeight-medium);
+}
+
+/* TODO: different style for links / UI controls */
+*:focus-visible {
+  outline-color: transparent;
+  outline-style: solid; /* hide the default outline in Edge */
+  box-shadow: 0 0 0 5px var(--color-background), 0 0 0 7px var(--focus-ring);
+  border-radius: 1rem;
 }
 
 small {

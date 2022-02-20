@@ -3,10 +3,10 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-auto-columns: minmax(2.5rem, auto);
+  grid-auto-columns: minmax(4rem, auto);
   grid-auto-flow: column;
   grid-auto-rows: 1fr;
-  column-gap: var(--spacing-12);
+  column-gap: var(--spacing-6);
   padding-top: var(--spacing-12);
   padding-bottom: var(--spacing-12);
   padding-left: var(--spacing-6);
@@ -18,7 +18,31 @@
 @media (min-width: 800px) {
   .list {
     grid-auto-columns: minmax(6rem, auto);
+    column-gap: var(--spacing-12);
   }
+}
+
+.list::-webkit-scrollbar {
+  height: 0.333rem;
+  width: 15px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: rgb(63, 62, 62);
+  border-radius: 1rem;
+  visibility: hidden;
+}
+
+.list::-webkit-scrollbar-track {
+  background: rgb(12, 12, 12);
+  visibility: hidden;
+}
+
+.list:focus-within::-webkit-scrollbar-thumb,
+.list:focus-within::-webkit-scrollbar-track,
+.list:hover::-webkit-scrollbar-thumb,
+.list:hover::-webkit-scrollbar-track {
+  visibility: visible;
 }
 
 .list > li {

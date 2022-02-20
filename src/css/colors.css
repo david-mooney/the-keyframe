@@ -4,7 +4,12 @@
 /* Light Mode */
 
 :root {
+  /* Base Colors */
   --color-white: hsl(0, 0%, 100%);
+  --color-a11yBlue: hsl(220, 85%, 37%);
+
+  /* A11y */
+  --focus-ring: var(--color-a11yBlue);
 
   /* Brand */
   --color-primary: hsl(6, 100%, 81%);
@@ -19,6 +24,9 @@
 /* Dark Mode */
 
 :root.-dark {
+  /* A11y */
+  --focus-ring: var(--color-white);
+
   /* Brand */
   --color-primary: hsl(6, 100%, 81%);
   --color-secondary: hsl(343, 100%, 72%);
