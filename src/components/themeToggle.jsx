@@ -1,6 +1,5 @@
 import React, { useCallback, useState } from 'react';
 import Toggle from 'react-toggle';
-
 import './themeToggle.css';
 
 const ThemeToggle = () => {

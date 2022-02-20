@@ -1,5 +1,5 @@
 ---
-title: The problem with MVP releases
+title: The problem with MVP launches
 date: '2022-02-05'
 color: hsl(0, 70%, 54%)
 image: './rocket.jpg'

@@ -3,10 +3,10 @@ import Header from './header';
 import Footer from './footer';
 import * as styles from './layout.module.css';
 
-const Layout = ({ location, title, children }) => (
+const Layout = ({ title, children }) => (
   <>
     <Header title={title} />
-    <main className={styles.container}>{children}</main>
+    <main className={styles.main}>{children}</main>
     <Footer />
   </>
 );

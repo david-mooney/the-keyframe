@@ -10,3 +10,4 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 - [ ] add skip to content hidden button
 - [ ] system for translations for articles
 - [ ] Unsplash photographer credit
+- [ ] srcset images

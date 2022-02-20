@@ -3,17 +3,20 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-auto-columns: minmax(6rem, auto);
+  grid-auto-columns: minmax(2.5rem, auto);
   grid-auto-flow: column;
   grid-auto-rows: 1fr;
   column-gap: var(--spacing-12);
-  padding: var(--spacing-6) 0;
-
+  padding: var(--spacing-6);
   overflow-x: scroll;
   scroll-behavior: smooth;
-  scroll-snap-type: x proximity;
+  scroll-snap-type: x mandatory;
+}
 
-  padding: var(--spacing-6);
+@media (min-width: 800px) {
+  .list {
+    grid-auto-columns: minmax(6rem, auto);
+  }
 }
 
 .list > li {
