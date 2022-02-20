@@ -1,9 +1,5 @@
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: var(--spacing-6) var(--spacing-6);
+  padding: var(--spacing-6);
 }
 
 .footer ul {

@@ -1,34 +1,26 @@
 import { Link } from 'gatsby';
 import React from 'react';
-
 import * as styles from './postCard.module.css';
 
-const PostCard = ({ frontmatter, fields, excerpt, timeToRead }) => {
-  const title = frontmatter.title || fields.slug;
-
-  return (
-    <li key={fields.slug} className={styles.card}>
-      <article className="post-list-item" itemScope itemType="http://schema.org/Article">
+const PostCard = ({ frontmatter, fields, timeToRead }) => (
+  <li key={fields.slug} className={styles.list}>
+    <Link to={fields.slug} itemProp="url">
+      <article
+        className={styles.card}
+        style={{ backgroundColor: frontmatter.color }}
+        itemScope
+        itemType="http://schema.org/Article"
+      >
         <header>
-          <h2>
-            <Link to={fields.slug} itemProp="url">
-              <span itemProp="headline">{title}</span>
-            </Link>
-          </h2>
           <small>{frontmatter.date}</small>
-          <small> - {timeToRead} min read</small>
+          <h2 itemProp="headline">{frontmatter.title || fields.slug}</h2>
+          <small className={styles.readTime}>{timeToRead} min read</small>
         </header>
-        <section>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: frontmatter.description || excerpt,
-            }}
-            itemProp="description"
-          />
-        </section>
+
+        <div className={styles.placeholder}></div>
       </article>
-    </li>
-  );
-};
+    </Link>
+  </li>
+);
 
 export default PostCard;

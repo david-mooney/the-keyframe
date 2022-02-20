@@ -1,35 +1,18 @@
-import * as React from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 
-import Bio from '../components/bio';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
-import PostCard from '../components/postCard';
+import BlogPostsList from '../components/blogPostsList.jsx';
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || 'Title';
-  const posts = data.allMarkdownRemark.nodes;
-
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
-        <Bio />
-        <p>No blog posts... this isn't right</p>
-      </Layout>
-    );
-  }
+  const title = data.site.siteMetadata?.title || 'Title';
+  const { nodes } = data.allMarkdownRemark;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={title}>
       <Seo title="All posts" />
-
-      {/* TODO: remove this inline style */}
-      <ol style={{ listStyle: 'none' }}>
-        {posts.map(post => (
-          <PostCard {...post} />
-        ))}
-      </ol>
+      <BlogPostsList posts={nodes} />
     </Layout>
   );
 };
@@ -51,6 +34,7 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
+          color
           date(formatString: "MMMM DD, YYYY")
           title
           description

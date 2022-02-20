@@ -2,8 +2,8 @@
 
 :root {
   /* Font Families */
-  --fontFamily-sans: 'Aleo';
-  --fontFamily-serif: 'Georgia', Cambria, 'Times New Roman', Times, serif;
+  --fontFamily-sans: 'Aleo', 'Lucida Grande', Tahoma, Sans-Serif;
+  --fontFamily-serif: 'Aleo', Cambria, 'Times New Roman', Times, serif;
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
 
@@ -19,7 +19,7 @@
 
   /* Font Sizes - Minor Third */
   --fontSize-0: 0.833em;
-  --fontSize-1: 1em;
+  --fontSize-1: 100%;
   --fontSize-2: 1.2em;
   --fontSize-3: 1.44rem;
   --fontSize-4: 1.728rem;

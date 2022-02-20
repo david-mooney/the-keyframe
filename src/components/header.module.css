@@ -1,35 +1,31 @@
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
+.container {
   width: 100%;
   padding: var(--spacing-6);
 }
 
-.header h1 {
+.mainTitle {
   margin: 0;
+  word-spacing: 100vw;
 }
 
-.header ul {
+.container ul {
   list-style: none;
   padding: 0;
   margin: 0;
-
   display: grid;
-  grid-template-columns: repeat(3, 100px);
   grid-gap: 10px;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 
-.header li {
+.container li {
   display: grid;
   justify-content: center;
   align-items: center;
 }
 
 @media (min-width: 600px) {
-  .header ul {
+  .container ul {
     grid-template-columns: 1fr repeat(3, fit-content(50px));
     grid-gap: 20px;
     justify-items: end;
@@ -37,7 +33,7 @@
 }
 
 @media (min-width: 600px) {
-  .header ul {
+  .container ul {
     grid-template-columns: 1fr repeat(3, fit-content(50px));
     grid-gap: 20px;
     justify-items: end;

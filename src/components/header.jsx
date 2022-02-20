@@ -2,16 +2,16 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 import ThemeToggle from './themeToggle';
-import * as header from './header.module.css';
+import * as styles from './header.module.css';
 
 const isBrowser = typeof window !== 'undefined';
 
 const Header = ({ title }) => {
   return (
-    <nav className={header.header}>
+    <nav className={styles.container}>
       <ul>
-        <li className={header.fullWidth}>
-          <h1 className="main-heading">
+        <li className={styles.fullWidth}>
+          <h1 className={styles.mainTitle}>
             <Link to="/">{title}</Link>
           </h1>
         </li>

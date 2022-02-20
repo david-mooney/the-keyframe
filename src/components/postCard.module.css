@@ -1,11 +1,44 @@
-.card {
-  padding: 1rem;
-  margin-bottom: 3rem;
-  background-color: #6c71e7;
-  border-radius: 1rem;
-  overflow: hidden;
+.list {
+  grid-column: span 4 / span 4;
 }
 
-.card h2 {
-  margin: 1rem 0;
+.list a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card {
+  --color-text: var(--color-white);
+  position: relative;
+  color: var(--color-text);
+  height: 100%;
+  min-height: 20rem;
+  display: flex;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px; /* TODO HSL color */
+}
+
+.card header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: var(--spacing-6);
+}
+
+.card header h2 {
+  padding-right: var(--spacing-3);
+}
+
+.readTime {
+  justify-self: end;
+  align-self: flex-end;
+}
+
+.placeholder {
+  width: 20%;
+  min-width: 20%;
+  height: 100%;
+  background-color: black;
 }

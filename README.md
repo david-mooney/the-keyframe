@@ -3,3 +3,9 @@
 # The Key Frame
 
 My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog).
+
+## TODO's
+
+- [ ] import articles from Notion via API
+- [ ] add skip to content hidden button
+- [ ] system for translations for articles

@@ -115,7 +115,7 @@
 
 .react-toggle--checked .react-toggle-thumb {
   left: 27px;
-  border-color: var(--color-primary);
+  border-color: var(--color-text);
 }
 
 .react-toggle--focus .react-toggle-thumb {
