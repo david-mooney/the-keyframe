@@ -2,6 +2,7 @@
 title: The problem with MVP releases
 date: '2022-02-05'
 color: hsl(0, 70%, 54%)
+image: './rocket.jpg'
 ---
 
 Well blow me down? Prepare to be boarded. The existence of the sea means the existence of pirates. The Code is more like guidelines, really. How much does the pirate pay for an ear piercing? … A buccaneer! (buck- in- ear…)

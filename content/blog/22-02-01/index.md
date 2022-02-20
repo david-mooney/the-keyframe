@@ -3,6 +3,7 @@ title: Do you need Babel anymore?
 date: '2022-02-01'
 description: 'Hello World'
 color: hsl(284, 41%, 54%)
+image: './letters.jpg'
 ---
 
 This is my first post on my new fake blog! How exciting!

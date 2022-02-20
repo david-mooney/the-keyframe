@@ -3,10 +3,10 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-auto-columns: minmax(7rem, auto);
+  grid-auto-columns: minmax(6rem, auto);
   grid-auto-flow: column;
   grid-auto-rows: 1fr;
-  column-gap: var(--spacing-6);
+  column-gap: var(--spacing-12);
   padding: var(--spacing-6) 0;
 
   overflow-x: scroll;

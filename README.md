@@ -9,3 +9,4 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 - [ ] import articles from Notion via API
 - [ ] add skip to content hidden button
 - [ ] system for translations for articles
+- [ ] Unsplash photographer credit

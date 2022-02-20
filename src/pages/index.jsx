@@ -20,7 +20,7 @@ const BlogIndex = ({ data, location }) => {
 export default BlogIndex;
 
 export const pageQuery = graphql`
-  query {
+  {
     site {
       siteMetadata {
         title
@@ -34,10 +34,15 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          color
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          color
+          image {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED)
+            }
+          }
         }
       }
     }

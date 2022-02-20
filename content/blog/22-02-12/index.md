@@ -1,8 +1,9 @@
 ---
 title: Adding a dark mode toggle in Gatsby
 date: '2022-02-12'
-description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt.
 color: hsl(238, 72%, 64%)
+image: './desert.jpg'
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and
