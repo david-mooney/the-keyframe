@@ -7,7 +7,9 @@
   grid-auto-flow: column;
   grid-auto-rows: 1fr;
   column-gap: var(--spacing-12);
-  padding: var(--spacing-6);
+  padding-top: var(--spacing-12);
+  padding-bottom: var(--spacing-12);
+  padding-left: var(--spacing-6);
   overflow-x: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
@@ -22,4 +24,8 @@
 .list > li {
   margin-bottom: 1.5rem;
   scroll-snap-align: center;
+}
+
+.list > li:last-child {
+  padding-right: var(--spacing-6); /* Safari ignores the parent padding */
 }
