@@ -12,6 +12,8 @@
   overflow-x: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x proximity;
+
+  padding: var(--spacing-6);
 }
 
 .list > li {

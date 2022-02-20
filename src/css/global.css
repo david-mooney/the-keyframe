@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 html {
   line-height: var(--lineHeight-root);
   font-size: var(--fontSize-root);
@@ -81,4 +86,12 @@ a {
 small {
   font-size: var(--fontSize-1);
   font-weight: var(--fontWeight-medium);
+}
+
+/* Gatsby Wrappers */
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
