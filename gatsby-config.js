@@ -119,7 +119,7 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: `#1f2028`,
         display: 'minimal-ui',
-        icon: 'src/images/pwa-icon.png',
+        icon: 'src/images/gatsby-icon.png',
         icon_options: {
           purpose: `any maskable`,
         },
