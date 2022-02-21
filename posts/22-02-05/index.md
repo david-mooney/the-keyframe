@@ -1,5 +1,5 @@
 ---
-title: The problem with MVP launches
+title: Do you need SCSS/SASS?
 date: '2022-02-05'
 color: hsl(0, 70%, 54%)
 image: './rocket.jpg'
