@@ -31,8 +31,7 @@
 .react-toggle--disabled {
   cursor: not-allowed;
   opacity: 0.5;
-  -webkit-transition: opacity 0.25s;
-  transition: opacity 0.25s;
+  transition: var(--timing-fast) opacity;
 }
 
 .react-toggle-track {
@@ -41,9 +40,7 @@
   padding: 0;
   border-radius: 30px;
   background-color: #4d4d4d;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  transition: var(--timing-fast) all ease;
 }
 
 .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track,

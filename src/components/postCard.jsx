@@ -25,7 +25,7 @@ const PostCard = ({ frontmatter, fields, timeToRead }) => {
             <GatsbyImage
               className={styles.imageWrapper}
               image={image.childImageSharp.gatsbyImageData}
-              alt="hmm"
+              alt="hmm" // TODO: hmm
             />
           )}
         </article>

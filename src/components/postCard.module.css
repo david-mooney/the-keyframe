@@ -28,10 +28,6 @@
   clip-path: var(--shape-active);
 }
 
-.list a:focus-visible .imageWrapper {
-  clip-path: var(--shape-active);
-}
-
 .card header {
   display: flex;
   flex-direction: column;
@@ -56,5 +52,5 @@
   overflow: hidden;
   background-color: transparent;
   clip-path: var(--shape-passive);
-  transition: 0.3s clip-path ease;
+  transition: var(--timing-fast) clip-path var(--ease-in-out-quad);
 }

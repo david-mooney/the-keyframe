@@ -7,7 +7,10 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 ## TODO's
 
 - [ ] import articles from Notion via API
-- [ ] add skip to content hidden button
 - [ ] system for translations for articles
 - [ ] Unsplash photographer credit
-- [ ] srcset images
+- [ ] RSS feed
+- [ ] Page transitions
+- [ ] Skip to content
+- [ ] Read progress (sticky)
+- [ ] Blog template variables widths (x3?)

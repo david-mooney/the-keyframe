@@ -22,7 +22,7 @@
   }
 }
 
-.list::-webkit-scrollbar {
+/* .list::-webkit-scrollbar {
   height: 0.333rem;
   width: 15px;
 }
@@ -43,7 +43,7 @@
 .list:hover::-webkit-scrollbar-thumb,
 .list:hover::-webkit-scrollbar-track {
   visibility: visible;
-}
+} */
 
 .list > li {
   margin-bottom: 1.5rem;

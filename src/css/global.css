@@ -21,7 +21,8 @@ body {
   font-size: var(--fontSize-1);
   color: var(--color-text);
   background: var(--color-background);
-  /* background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%); */
+  transition: var(--timing-fast) background-color var(--ease-in-out-quad),
+    var(--timing-fast) color var(--ease-in-out-quad);
 }
 
 hr {
@@ -85,10 +86,11 @@ a {
 }
 
 /* TODO: different style for links / UI controls */
-*:focus-visible {
+a:focus-visible {
   outline-color: transparent;
   outline-style: solid; /* hide the default outline in Edge */
   box-shadow: 0 0 0 5px var(--color-background), 0 0 0 7px var(--focus-ring);
+  transition: var(--timing-fast) box-shadow var(--ease-bounce);
   border-radius: 1rem;
 }
 

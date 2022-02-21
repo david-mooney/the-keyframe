@@ -109,6 +109,7 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -125,7 +126,11 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        globPatterns: ['**/*.{js,html,css,jpg}'],
+      },
+    },
   ],
 };

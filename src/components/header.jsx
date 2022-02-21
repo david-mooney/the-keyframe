@@ -15,12 +15,6 @@ const Header = ({ title }) => {
             <Link to="/">{title}</Link>
           </h1>
         </li>
-        <li>
-          <a href="/about">About</a>
-        </li>
-        <li>
-          <a href="/newsletter">Newsletter</a>
-        </li>
         <li>{isBrowser && <ThemeToggle />}</li>
       </ul>
     </nav>

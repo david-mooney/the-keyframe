@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import Bio from '../components/bio';
 import Layout from '../components/blogLayout';
@@ -19,17 +20,24 @@ function BlogPostTemplate({ data, location }) {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+
       <article className="blog-post" itemScope itemType="http://schema.org/Article">
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
+
+          {post.frontmatter.image?.childImageSharp && (
+            <GatsbyImage image={post.frontmatter.image.childImageSharp.gatsbyImageData} alt="hmm" />
+          )}
         </header>
+
         <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody" />
         <hr />
         <footer>
           <Bio />
         </footer>
       </article>
+
       <nav className="blog-post-nav">
         <ul
           style={{
@@ -78,6 +86,11 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        image {
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED)
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

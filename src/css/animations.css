@@ -1,0 +1,7 @@
+:root {
+  --timing-fastest: 0.1s;
+  --timing-fast: 0.25s;
+
+  --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  --ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
