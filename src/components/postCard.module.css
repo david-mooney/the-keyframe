@@ -13,7 +13,7 @@
   outline-color: transparent;
   outline-style: solid; /* hide the default outline in Edge */
   box-shadow: 0 0 0 5px var(--color-background), 0 0 0 7px var(--focus-ring);
-  transition: var(--timing-fast) box-shadow var(--ease-bounce);
+  transition: var(--timing-fast) box-shadow var(--ease-in-out-quad);
   border-radius: 1rem;
 }
 

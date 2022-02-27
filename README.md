@@ -15,3 +15,4 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 - [ ] Read progress (sticky)
 - [ ] Blog template variables widths (x3?)
 - [ ] Back button from blog
+- [ ] Yellow links

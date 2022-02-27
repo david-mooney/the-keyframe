@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link, graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 import Bio from '../components/bio';
 import Layout from '../components/blogLayout';
 import Seo from '../components/seo';
+import ProgressBar from '../components/progressBar';
 import ScrollToTop from '../components/scrollToTop';
 
 function BlogPostTemplate({ data, location }) {
+  const postRef = useRef(null);
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata?.title || 'Title';
   const { previous, next } = data;
@@ -21,14 +23,17 @@ function BlogPostTemplate({ data, location }) {
         description={post.frontmatter.description || post.excerpt}
       />
 
-      <article className="blog-post" itemScope itemType="http://schema.org/Article">
+      <div>
+        {post.frontmatter.image?.childImageSharp && (
+          <GatsbyImage image={post.frontmatter.image.childImageSharp.gatsbyImageData} alt="hmm" />
+        )}
+      </div>
+
+      <article className="blog-post" itemScope itemType="http://schema.org/Article" ref={postRef}>
+        <ProgressBar ref={postRef} />
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
-
-          {post.frontmatter.image?.childImageSharp && (
-            <GatsbyImage image={post.frontmatter.image.childImageSharp.gatsbyImageData} alt="hmm" />
-          )}
         </header>
 
         <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody" />
@@ -46,6 +51,8 @@ function BlogPostTemplate({ data, location }) {
             justifyContent: 'space-between',
             listStyle: 'none',
             padding: 0,
+            height: '20rem',
+            border: '1px solid var(--color-secondary)',
           }}
         >
           <li>

@@ -1,6 +1,3 @@
-/* TODO: box shadow for light mode */
-/* TODO: themes per post (Figma) */
-
 /* Light Mode */
 
 :root {
@@ -18,6 +15,7 @@
 
   /* Typography */
   --color-text: hsl(233, 13%, 14%);
+  --color-text-faint: hsl(233, 13%, 86%);
   --color-background: hsl(0, 0%, 100%);
 }
 
@@ -34,5 +32,6 @@
 
   /* Typography */
   --color-text: hsl(0, 0%, 100%);
+  --color-text-faint: hsl(0, 0%, 50%);
   --color-background: hsl(233, 13%, 14%);
 }

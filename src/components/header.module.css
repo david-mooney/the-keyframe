@@ -18,7 +18,7 @@
 }
 
 .list li {
-  grid-column: span 0.5;
+  grid-column: span 1;
   display: flex;
   justify-content: center;
   align-items: center;

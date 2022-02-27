@@ -11,3 +11,8 @@
   max-width: var(--maxWidth-wrapper);
   margin: var(--spacing-12) auto;
 }
+
+/* TODO: move this */
+.blog-post {
+  position: relative;
+}

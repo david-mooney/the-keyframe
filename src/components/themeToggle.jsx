@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { BsSun } from '@react-icons/all-files/bs/BsSun';
+import { FiSun } from '@react-icons/all-files/fi/FiSun';
 import { BsMoon } from '@react-icons/all-files/bs/BsMoon';
 
 import CircleButton from './circleButton';
@@ -24,7 +24,7 @@ const ThemeToggle = () => {
   return (
     <CircleButton label={id}>
       <div className={`${styles.icon} ${styles.sun}`} data-active={!checked}>
-        <BsSun style={{ height, width }} />
+        <FiSun style={{ height, width }} />
       </div>
 
       <div className={`${styles.icon} ${styles.moon}`} data-active={checked}>

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { BsArrowBarUp } from '@react-icons/all-files/bs/BsArrowBarUp';
+import CircleButton from './circleButton';
 import * as styles from './scrollToTop.module.css';
 
+// TODO: remove - probably use lodash
 function throttle(callback, limit) {
   var wait = false;
   return function (...args) {
@@ -16,6 +18,8 @@ function throttle(callback, limit) {
 }
 
 const ScrollToTop = () => {
+  const height = '50%';
+  const width = '50%';
   const [visible, setVisible] = useState(false);
 
   const handleClick = () => {
@@ -36,14 +40,20 @@ const ScrollToTop = () => {
   }, []);
 
   return (
-    <button
-      class={visible ? styles.button : styles.hidden}
-      type="button"
-      onClick={handleClick}
-      aria-label="Scroll to top"
-    >
-      <BsArrowBarUp class={styles.icon} />
-    </button>
+    <div className={`${styles.fixed} ${!visible && styles.hidden}`}>
+      <CircleButton>
+        <button
+          type="button"
+          class={styles.button}
+          onClick={handleClick}
+          aria-label="Scroll to top"
+        >
+          <div className={styles.icon}>
+            <BsArrowBarUp style={{ height, width }} />
+          </div>
+        </button>
+      </CircleButton>
+    </div>
   );
 };
 

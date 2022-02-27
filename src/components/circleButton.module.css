@@ -9,7 +9,7 @@
 
 .container {
   --size: 3rem;
-  --length: 137.339;
+  --length: 139;
 
   position: relative;
   height: var(--size);
@@ -31,7 +31,7 @@
 }
 
 .circle {
-  stroke: rgba(255, 255, 255, 0.5); /* TODO - make this a variable */
+  stroke: var(--color-text-faint);
   fill: transparent;
 }
 
@@ -39,7 +39,7 @@
   stroke: currentColor;
   stroke-dasharray: var(--length);
   stroke-dashoffset: var(--length);
-  transition: 0.4s stroke-dashoffset linear;
+  transition: var(--timing-fast) stroke-dashoffset var(--ease-in-out-quad);
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
 }

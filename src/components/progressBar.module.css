@@ -1,0 +1,33 @@
+.aside {
+  position: fixed;
+  left: var(--spacing-24);
+  top: 25vh;
+  opacity: 0;
+  transition: var(--timing-fast) opacity var(--ease-in-out-quad);
+}
+
+.visible {
+  opacity: 1;
+}
+
+.progressTrack {
+  position: relative;
+  width: 2px;
+  height: 50vh;
+  background-color: var(--color-text-faint);
+}
+
+.progressBar {
+  --progress: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: var(--color-text);
+  transition: var(--timing-fastest) transform linear;
+  transform: scaleY(var(--progress));
+  -webkit-transform: scaleY(var(--progress));
+  transform-origin: top;
+}
