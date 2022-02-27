@@ -21,8 +21,8 @@ body {
   font-size: var(--fontSize-1);
   color: var(--color-text);
   background: var(--color-background);
-  transition: var(--timing-fast) background-color var(--ease-in-out-quad),
-    var(--timing-fast) color var(--ease-in-out-quad);
+  transition: var(--timing-intermediate) background-color var(--ease-in-out-quad),
+    var(--timing-intermediate) color var(--ease-in-out-quad);
 }
 
 hr {
@@ -85,13 +85,28 @@ a {
   font-weight: var(--fontWeight-medium);
 }
 
-/* TODO: different style for links / UI controls */
-a:focus-visible {
-  outline-color: transparent;
-  outline-style: solid; /* hide the default outline in Edge */
-  box-shadow: 0 0 0 5px var(--color-background), 0 0 0 7px var(--focus-ring);
-  transition: var(--timing-fast) box-shadow var(--ease-bounce);
-  border-radius: 1rem;
+.underline {
+  position: relative;
+  outline: none;
+}
+
+.underline::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  transform-origin: left;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  background-color: var(--color-text);
+}
+
+.underline:focus::after,
+.underline:hover::after {
+  transform: scaleX(1);
 }
 
 small {
@@ -105,4 +120,15 @@ small {
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }

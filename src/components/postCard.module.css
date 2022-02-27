@@ -9,6 +9,14 @@
   text-decoration: none;
 }
 
+.list a:focus-visible {
+  outline-color: transparent;
+  outline-style: solid; /* hide the default outline in Edge */
+  box-shadow: 0 0 0 5px var(--color-background), 0 0 0 7px var(--focus-ring);
+  transition: var(--timing-fast) box-shadow var(--ease-bounce);
+  border-radius: 1rem;
+}
+
 .card {
   --color-text: var(--color-white);
   --shape-passive: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 0 50%, 0% 0%);

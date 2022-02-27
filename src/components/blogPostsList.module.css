@@ -6,10 +6,9 @@
   grid-auto-columns: minmax(4rem, auto);
   grid-auto-flow: column;
   grid-auto-rows: 1fr;
-  column-gap: var(--spacing-6);
-  padding-top: var(--spacing-12);
-  padding-bottom: var(--spacing-12);
-  padding-left: var(--spacing-6);
+  column-gap: var(--spacing-16);
+  padding: var(--spacing-24) var(--spacing-16);
+  padding-right: 0;
   overflow-x: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
@@ -17,9 +16,16 @@
 
 @media (min-width: 800px) {
   .list {
-    grid-auto-columns: minmax(6rem, auto);
-    column-gap: var(--spacing-12);
+    grid-auto-columns: minmax(5rem, 30vw);
   }
+}
+
+.list > li {
+  scroll-snap-align: center;
+}
+
+.list > li:last-child {
+  padding-right: var(--spacing-12); /* Safari ignores the parent padding */
 }
 
 /* .list::-webkit-scrollbar {
@@ -44,12 +50,3 @@
 .list:hover::-webkit-scrollbar-track {
   visibility: visible;
 } */
-
-.list > li {
-  margin-bottom: 1.5rem;
-  scroll-snap-align: center;
-}
-
-.list > li:last-child {
-  padding-right: var(--spacing-6); /* Safari ignores the parent padding */
-}

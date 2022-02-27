@@ -1,0 +1,40 @@
+.button {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  color: var(--color-text);
+  overflow: hidden;
+  border: 2px solid var(--color-text);
+
+  /* background-color: aqua; */
+}
+
+.icon {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: var(--timing-intermediate) transform var(--ease-in-out-quad);
+}
+
+.sun {
+  transform: rotate(75deg);
+  transform-origin: 50% 150%;
+}
+
+.moon {
+  transform: rotate(-75deg);
+  transform-origin: 50% 150%;
+}
+
+.sun[data-active='true'],
+.moon[data-active='true'] {
+  transform: rotate(0deg);
+}

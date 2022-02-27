@@ -1,0 +1,50 @@
+@keyframes dash {
+  from {
+    stroke-dashoffset: var(--length);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.container {
+  --size: 3rem;
+  --length: 137.339;
+
+  position: relative;
+  height: var(--size);
+  width: var(--size);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.circle {
+  stroke: rgba(255, 255, 255, 0.5); /* TODO - make this a variable */
+  fill: transparent;
+}
+
+.inner-circle {
+  stroke: currentColor;
+  stroke-dasharray: var(--length);
+  stroke-dashoffset: var(--length);
+  transition: 0.4s stroke-dashoffset linear;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.container:hover .inner-circle,
+.container:focus-within .inner-circle {
+  stroke-dashoffset: 0;
+}
