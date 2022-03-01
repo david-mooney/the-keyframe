@@ -80,6 +80,11 @@ h6 > a {
   color: inherit;
 }
 
+small,
+p {
+  color: var(--color-text);
+}
+
 a {
   color: var(--color-text);
   font-weight: var(--fontWeight-medium);
@@ -131,4 +136,14 @@ small {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+/* TODO: move this */
+.blog {
+}
+
+.blog-post {
+  position: relative;
+  max-width: var(--maxWidth-wrapper);
+  margin: var(--spacing-12) auto;
 }

@@ -7,12 +7,14 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 ## TODO's
 
 - [ ] import articles from Notion via API
-- [ ] system for translations for articles
+- [ ] system for i18n translations for articles
 - [ ] Unsplash photographer credit
 - [ ] RSS feed
 - [ ] Page transitions
-- [ ] Skip to content
+- [ ] skip to content
 - [ ] Read progress (sticky)
 - [ ] Blog template variables widths (x3?)
 - [ ] Back button from blog
 - [ ] Yellow links
+- [ ] semantics around <section>'s
+- [ ] Narrative font

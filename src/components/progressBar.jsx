@@ -2,24 +2,31 @@
 
 import React, { useRef, useEffect, useState } from 'react';
 import throttle from 'lodash/throttle';
+import clamp from 'lodash/clamp';
 import * as styles from './progressBar.module.css';
 
 const ProgressBar = React.forwardRef((_, ref) => {
-  const [progress, setProgress] = useState(0);
   const track = useRef(null);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const handleScroll = throttle(() => {
-      const { offsetTop, offsetHeight } = ref.current;
-      const articleTop = document.documentElement.scrollTop - offsetTop;
-      const scrollPercent = Math.floor((articleTop / (offsetHeight - window.innerHeight)) * 100);
+    const passive = { passive: true };
+    const { offsetTop, offsetHeight } = ref.current;
 
-      setProgress(scrollPercent);
+    const handleScroll = throttle(() => {
+      const articleTop = document.documentElement.scrollTop - offsetTop;
+
+      if (articleTop < 0) {
+        setProgress(0);
+        return;
+      }
+
+      const scrollPercent = Math.floor((articleTop / (offsetHeight - window.innerHeight)) * 100);
+      setProgress(clamp(scrollPercent, 0, 100));
     }, 10);
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, passive);
+    return () => window.removeEventListener('scroll', handleScroll, passive);
   }, [ref]);
 
   return (

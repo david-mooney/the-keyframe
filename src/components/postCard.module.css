@@ -23,7 +23,6 @@
   --shape-active: polygon(20% 0, 60% 50%, 20% 100%, 0% 100%, 40% 50%, 0% 0%);
 
   position: relative;
-  color: var(--color-text);
   height: 100%;
   display: flex;
   border-radius: 1rem;

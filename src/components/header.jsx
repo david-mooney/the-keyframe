@@ -7,22 +7,20 @@ import * as styles from './header.module.css';
 
 const isBrowser = typeof window !== 'undefined';
 
-const Header = ({ title }) => {
-  return (
-    <nav className={styles.container}>
-      <ul className={styles.list}>
-        <li>
-          <h1>
-            <Link to="/" className="underline">
-              {title}
-            </Link>
-          </h1>
-        </li>
-        <li>{<CopyLinkButton />}</li>
-        <li>{isBrowser && <ThemeToggle />}</li>
-      </ul>
-    </nav>
-  );
-};
+const Header = ({ title }) => (
+  <nav className={styles.container}>
+    <ul className={styles.list}>
+      <li>
+        <h1>
+          <Link to="/" className="underline">
+            {title}
+          </Link>
+        </h1>
+      </li>
+      <li>{<CopyLinkButton />}</li>
+      <li>{isBrowser && <ThemeToggle />}</li>
+    </ul>
+  </nav>
+);
 
 export default Header;
