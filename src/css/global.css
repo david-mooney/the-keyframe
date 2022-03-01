@@ -93,6 +93,8 @@ a {
 .underline {
   position: relative;
   outline: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 .underline::after {
@@ -146,4 +148,17 @@ small {
   position: relative;
   max-width: var(--maxWidth-wrapper);
   margin: var(--spacing-12) auto;
+}
+
+.skip-to-content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  opacity: 0;
+  transition: var(--timing-fast) opacity var(--ease-in-out-quad);
+  z-index: 1; /* TODO: vars for z-indices */
+}
+
+.skip-to-content:focus {
+  opacity: 1;
 }

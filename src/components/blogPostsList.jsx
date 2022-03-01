@@ -3,7 +3,7 @@ import PostCard from './postCard.jsx';
 import * as styles from './blogPostsList.module.css';
 
 const BlogPostsList = ({ posts }) => (
-  <ol className={styles.list}>
+  <ol id="main" className={styles.list}>
     {posts.map(post => (
       <PostCard {...post} />
     ))}

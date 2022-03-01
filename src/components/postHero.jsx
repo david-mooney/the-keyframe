@@ -6,7 +6,9 @@ const PostHero = ({ data }) => {
   return (
     <header className={styles.header}>
       <div className={styles.content} style={{ backgroundColor: data.color }}>
-        <h1 itemProp="headline">{data.title}</h1>
+        <h1 id="main-title" itemProp="headline">
+          {data.title}
+        </h1>
         <p>{data.date}</p>
       </div>
       <div className={styles.image}>

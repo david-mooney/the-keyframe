@@ -6,10 +6,19 @@ const PostArticle = ({ post }) => {
   const postRef = useRef(null);
 
   return (
-    <article className="blog-post" itemScope itemType="http://schema.org/Article" ref={postRef}>
+    <article
+      id="main"
+      className="blog-post"
+      itemScope
+      itemType="http://schema.org/Article"
+      ref={postRef}
+    >
       <ProgressBar ref={postRef} />
-
-      <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody" />
+      <section
+        dangerouslySetInnerHTML={{ __html: post.html }}
+        itemProp="articleBody"
+        aria-labelledby="main-title"
+      />
       <hr />
       <footer>
         <Bio />

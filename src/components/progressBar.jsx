@@ -23,7 +23,7 @@ const ProgressBar = React.forwardRef((_, ref) => {
 
       const scrollPercent = Math.floor((articleTop / (offsetHeight - window.innerHeight)) * 100);
       setProgress(clamp(scrollPercent, 0, 100));
-    }, 10);
+    }, 16);
 
     window.addEventListener('scroll', handleScroll, passive);
     return () => window.removeEventListener('scroll', handleScroll, passive);

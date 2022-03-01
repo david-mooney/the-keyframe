@@ -11,10 +11,10 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 - [ ] Unsplash photographer credit
 - [ ] RSS feed
 - [ ] Page transitions
-- [ ] skip to content
-- [ ] Read progress (sticky)
 - [ ] Blog template variables widths (x3?)
 - [ ] Back button from blog
 - [ ] Yellow links
-- [ ] semantics around <section>'s
 - [ ] Narrative font
+- [ ] Mobile
+- [ ] Code theme for markdown
+- [ ] Layered background image?
