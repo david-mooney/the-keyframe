@@ -11,9 +11,9 @@ const ProgressBar = React.forwardRef((_, ref) => {
 
   useEffect(() => {
     const passive = { passive: true };
-    const { offsetTop, offsetHeight } = ref.current;
 
     const handleScroll = throttle(() => {
+      const { offsetTop, offsetHeight } = ref.current;
       const articleTop = document.documentElement.scrollTop - offsetTop;
 
       if (articleTop < 0) {
@@ -28,6 +28,8 @@ const ProgressBar = React.forwardRef((_, ref) => {
     window.addEventListener('scroll', handleScroll, passive);
     return () => window.removeEventListener('scroll', handleScroll, passive);
   }, [ref]);
+
+  console.log('redrawing progress bar');
 
   return (
     <aside className={`${styles.aside} ${progress > 0 && progress < 100 && styles.visible}`}>
