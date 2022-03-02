@@ -14,7 +14,12 @@ const CopyLinkButton = () => {
 
   return (
     <CircleButton label="copyLinkButton">
-      <button className={styles.button} onClick={handleClick} ariaLabel="Copy a link to this page">
+      <button
+        type="button"
+        className={styles.button}
+        onClick={handleClick}
+        aria-label="Copy a link to this page"
+      >
         <div className={styles.icon}>
           <BsLink45Deg style={{ height, width }} />
         </div>

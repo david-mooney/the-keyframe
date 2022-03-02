@@ -18,3 +18,4 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 - [ ] Mobile
 - [ ] Code theme for markdown
 - [ ] Layered background image?
+- [ ] Lazy motion optimization

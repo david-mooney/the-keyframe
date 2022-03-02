@@ -10,6 +10,7 @@
   "dependencies": {
     "@fontsource/aleo": "^4.5.1",
     "@react-icons/all-files": "^4.1.0",
+    "framer-motion": "^6.2.8",
     "gatsby": "^4.7.1",
     "gatsby-plugin-feed": "^4.7.0",
     "gatsby-plugin-gatsby-cloud": "^4.7.0",
@@ -38,7 +39,9 @@
     "prettier": "^2.5.1"
   },
   "homepage": "https://thekeyframe.dev",
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "0BSD",
   "main": "n/a",
   "repository": {

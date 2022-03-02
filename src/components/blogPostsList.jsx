@@ -1,13 +1,31 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import PostCard from './postCard.jsx';
 import * as styles from './blogPostsList.module.css';
 
-const BlogPostsList = ({ posts }) => (
-  <ol id="main" className={styles.list}>
-    {posts.map(post => (
-      <PostCard {...post} />
-    ))}
-  </ol>
-);
+const BlogPostsList = ({ posts }) => {
+  const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  return (
+    <motion.ol
+      id="main"
+      className={styles.list}
+      variants={container}
+      initial="hidden"
+      animate="show"
+    >
+      {posts.map(post => (
+        <PostCard {...post} />
+      ))}
+    </motion.ol>
+  );
+};
 
 export default BlogPostsList;
