@@ -1,17 +1,25 @@
 import React, { useRef } from 'react';
+import { motion } from 'framer-motion';
 import ProgressBar from '../components/progressBar';
 import Bio from '../components/bio';
+import * as styles from './postArticle.module.css';
 
 const PostArticle = ({ post }) => {
   const postRef = useRef(null);
+  const enter = { opacity: 1 };
+  const exit = { opacity: 0 };
 
   return (
-    <article
-      id="main"
-      className="blog-post"
+    <motion.article
       itemScope
-      itemType="http://schema.org/Article"
+      id="main"
       ref={postRef}
+      className={`blog-post ${styles.article}`}
+      itemType="http://schema.org/Article"
+      initial={exit}
+      animate={enter}
+      exit={exit}
+      transition={{ type: 'tween' }}
     >
       <ProgressBar ref={postRef} />
       <section
@@ -23,7 +31,7 @@ const PostArticle = ({ post }) => {
       <footer>
         <Bio />
       </footer>
-    </article>
+    </motion.article>
   );
 };
 

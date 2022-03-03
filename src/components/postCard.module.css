@@ -9,6 +9,7 @@
   text-decoration: none;
 }
 
+.list a:hover,
 .list a:focus-visible {
   outline-color: transparent;
   outline-style: solid; /* hide the default outline in Edge */
@@ -19,9 +20,6 @@
 
 .card {
   --color-text: var(--color-white);
-  --shape-passive: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 0 50%, 0% 0%);
-  --shape-active: polygon(20% 0, 60% 50%, 20% 100%, 0% 100%, 40% 50%, 0% 0%);
-
   position: relative;
   height: 100%;
   display: flex;
@@ -29,10 +27,6 @@
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px; /* TODO HSL color */
   transform: translateZ(0); /* safari bug */
-}
-
-.card:hover .imageWrapper {
-  clip-path: var(--shape-active);
 }
 
 .card header {
@@ -58,6 +52,16 @@
   max-width: 25%;
   overflow: hidden;
   background-color: transparent;
-  clip-path: var(--shape-passive);
-  transition: var(--timing-fast) clip-path var(--ease-in-out-quad);
+}
+
+.container .card:nth-child(1) .icon {
+  background: hsl(8, 66%, 64%);
+}
+
+.container .card:nth-child(2) .icon {
+  background: hsl(203, 54%, 63%);
+}
+
+.container .card:nth-child(3) .icon {
+  background: hsl(178, 40%, 48%);
 }

@@ -29,8 +29,6 @@ const ProgressBar = React.forwardRef((_, ref) => {
     return () => window.removeEventListener('scroll', handleScroll, passive);
   }, [ref]);
 
-  console.log('redrawing progress bar');
-
   return (
     <aside className={`${styles.aside} ${progress > 0 && progress < 100 && styles.visible}`}>
       <div className={styles.progressTrack} ref={track}>

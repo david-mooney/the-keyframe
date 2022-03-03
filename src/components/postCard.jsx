@@ -7,8 +7,8 @@ import * as styles from './postCard.module.css';
 const PostCard = ({ frontmatter, fields, timeToRead }) => {
   const { title, date, color, image } = frontmatter;
   const item = {
-    hidden: { x: 200, opacity: 0 },
-    show: { x: 0, opacity: 1, transition: { type: 'spring', damping: 20, stiffness: 130 } },
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { type: 'tween', duration: 0.5 } },
   };
 
   return (

@@ -1,0 +1,8 @@
+.article {
+  padding: var(--spacing-24) 0;
+  font-size: var(--fontSize-2);
+}
+
+.article a {
+  color: var(--color-primary);
+}
