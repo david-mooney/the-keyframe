@@ -1,9 +1,10 @@
 import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { motion } from 'framer-motion';
+import TimeToRead from './timeToRead';
 import * as styles from './postHero.module.css';
 
-const PostHero = ({ data }) => {
+const PostHero = ({ data, readTime }) => {
   const enter = { opacity: 1 };
   const exit = { opacity: 0 };
 
@@ -20,15 +21,16 @@ const PostHero = ({ data }) => {
         <h1 id="main-title" itemProp="headline">
           {data.title}
         </h1>
-        <p>{data.date}</p>
+        <span className={styles.date}>{data.date}</span>
+        <TimeToRead readTime={readTime} />
       </div>
       <div className={styles.frame}>
         {data.image?.childImageSharp && (
           <GatsbyImage
             className={styles.image}
             image={data.image.childImageSharp.gatsbyImageData}
-            alt="hmm"
-          /> // TODO: fix alt
+            alt={`Image for article: "${data.title}"`}
+          />
         )}
       </div>
     </motion.header>

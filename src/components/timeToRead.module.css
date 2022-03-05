@@ -1,0 +1,31 @@
+.container {
+  position: absolute;
+  bottom: 0;
+  right: var(--spacing-12);
+  display: flex;
+  padding: 1rem;
+}
+
+.text {
+  position: relative;
+  color: var(--color-text);
+  font-size: var(--fontSize-1);
+  font-weight: var(--fontWeight-bold);
+  opacity: 0.8;
+}
+
+.pipe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: var(--color-text);
+}
+
+.basic {
+  justify-self: end;
+  align-self: flex-end;
+  font-size: var(--fontSize-1);
+  font-weight: var(--fontWeight-bold);
+}

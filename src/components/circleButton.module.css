@@ -1,14 +1,5 @@
-@keyframes dash {
-  from {
-    stroke-dashoffset: var(--length);
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
 .container {
-  --size: 3rem;
+  --size: 2.75rem;
   --length: 139;
 
   position: relative;
@@ -31,12 +22,12 @@
 }
 
 .circle {
-  stroke: var(--color-text-faint);
+  stroke: var(--color-text);
   fill: transparent;
 }
 
 .inner-circle {
-  stroke: currentColor;
+  stroke: var(--color-secondary);
   stroke-dasharray: var(--length);
   stroke-dashoffset: var(--length);
   transition: var(--timing-fast) stroke-dashoffset var(--ease-in-out-quad);

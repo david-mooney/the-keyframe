@@ -41,27 +41,10 @@
   padding-right: var(--spacing-3);
 }
 
-.readTime {
-  justify-self: end;
-  align-self: flex-end;
-}
-
 .imageWrapper {
   width: 25%;
   min-width: 25%;
   max-width: 25%;
   overflow: hidden;
   background-color: transparent;
-}
-
-.container .card:nth-child(1) .icon {
-  background: hsl(8, 66%, 64%);
-}
-
-.container .card:nth-child(2) .icon {
-  background: hsl(203, 54%, 63%);
-}
-
-.container .card:nth-child(3) .icon {
-  background: hsl(178, 40%, 48%);
 }

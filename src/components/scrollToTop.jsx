@@ -1,21 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { BsArrowBarUp } from '@react-icons/all-files/bs/BsArrowBarUp';
+import throttle from 'lodash/throttle';
 import CircleButton from './circleButton';
 import * as styles from './scrollToTop.module.css';
-
-// TODO: remove - probably use lodash
-function throttle(callback, limit) {
-  var wait = false;
-  return function (...args) {
-    if (!wait) {
-      callback(...args);
-      wait = true;
-      setTimeout(function () {
-        wait = false;
-      }, limit);
-    }
-  };
-}
 
 const ScrollToTop = () => {
   const height = '50%';
@@ -32,7 +19,7 @@ const ScrollToTop = () => {
       const isVisible = scrollTop > window.innerHeight / 2;
 
       setVisible(isVisible);
-    }, 30);
+    }, 24);
 
     window.addEventListener('scroll', onScroll, { passive: true });
 

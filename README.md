@@ -19,3 +19,6 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 - [ ] Code theme for markdown
 - [ ] Layered background image?
 - [ ] Lazy motion optimization
+- [ ] Add commenting system? (Disqus?)
+- [ ] Images grow on click
+- [ ] Thumb's up for posts

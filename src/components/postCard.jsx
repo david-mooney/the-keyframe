@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { motion } from 'framer-motion';
+import { TimeToReadBasic } from './timeToRead';
 import * as styles from './postCard.module.css';
 
 const PostCard = ({ frontmatter, fields, timeToRead }) => {
@@ -23,7 +24,7 @@ const PostCard = ({ frontmatter, fields, timeToRead }) => {
           <header>
             <small>{date}</small>
             <h2 itemProp="headline">{title || fields.slug}</h2>
-            <small className={styles.readTime}>{timeToRead} min read</small>
+            <TimeToReadBasic readTime={timeToRead} />
           </header>
 
           {image?.childImageSharp && (

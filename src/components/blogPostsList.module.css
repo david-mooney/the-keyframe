@@ -1,13 +1,11 @@
 .list {
   list-style: none;
-  margin: 112px 0 0 0;
-  padding: 0;
   display: grid;
   grid-auto-columns: minmax(4rem, auto);
   grid-auto-flow: column;
   grid-auto-rows: 1fr;
-  column-gap: var(--spacing-16);
-  padding: var(--spacing-24) var(--spacing-16);
+  column-gap: var(--spacing-24);
+  padding: var(--spacing-32) var(--spacing-12);
   padding-right: 0;
   overflow-x: scroll;
   scroll-behavior: smooth;
@@ -21,11 +19,13 @@
 }
 
 .list > li {
+  max-width: 90vw;
   scroll-snap-align: center;
 }
 
 .list > li:last-child {
-  padding-right: var(--spacing-12); /* Safari ignores the parent padding */
+  /* Safari ignores the parent padding */
+  padding-right: var(--spacing-12);
 }
 
 /* .list::-webkit-scrollbar {
@@ -36,17 +36,14 @@
 .list::-webkit-scrollbar-thumb {
   background: rgb(63, 62, 62);
   border-radius: 1rem;
-  visibility: hidden;
 }
 
 .list::-webkit-scrollbar-track {
   background: rgb(12, 12, 12);
-  visibility: hidden;
 }
 
 .list:focus-within::-webkit-scrollbar-thumb,
 .list:focus-within::-webkit-scrollbar-track,
 .list:hover::-webkit-scrollbar-thumb,
 .list:hover::-webkit-scrollbar-track {
-  visibility: visible;
 } */

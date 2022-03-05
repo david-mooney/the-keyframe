@@ -3,11 +3,12 @@
 
   display: grid;
   grid-template-columns: 1fr 1.25fr;
-  grid-template-rows: max(66.6vh, 35rem);
+  grid-template-rows: max(80vh, 35rem);
   overflow: hidden;
 }
 
 .content {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,9 +22,16 @@
   border-radius: 0.25rem; /* var(--borderRadius-8); */
 }
 
+.date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: var(--spacing-6) var(--spacing-12);
+}
+
 .image {
   width: 100%;
-  height: 80%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }

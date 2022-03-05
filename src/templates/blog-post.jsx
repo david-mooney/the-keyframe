@@ -21,7 +21,7 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
 
-      <PostHero data={post.frontmatter} />
+      <PostHero data={post.frontmatter} readTime={post.timeToRead} />
       <PostArticle post={post} />
       <PostFooter data={data} />
     </Layout>
