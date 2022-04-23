@@ -1,7 +1,8 @@
 ---
-title: 'UI Test #2'
+title: 'Agile development and the "no true Scotsman" fallacy'
 date: '2021-12-28'
 color: hsl(123, 71%, 19%)
+image: './agile.jpg'
 ---
 
 This is my first post on my new fake blog! How exciting!

@@ -22,3 +22,4 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 - [ ] Add commenting system? (Disqus?)
 - [ ] Images grow on click
 - [ ] Thumb's up for posts
+- [ ] Hijack vertical scroll

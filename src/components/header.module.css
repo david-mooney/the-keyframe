@@ -1,7 +1,8 @@
 .container {
   position: absolute;
-  padding: var(--spacing-6) var(--spacing-12);
+  height: 10vh;
   width: 100%;
+  padding: var(--spacing-6) var(--spacing-12);
   z-index: 1;
 }
 

@@ -3,15 +3,13 @@
 :root {
   /* Base Colors */
   --color-white: hsl(0, 0%, 100%);
-  --color-a11yBlue: hsl(220, 85%, 37%);
+  --color-text: hsl(233, 13%, 14%);
 
   /* A11y */
-  --focus-ring: var(--color-a11yBlue);
+  --focus-ring: var(--color-text);
 
   /* Brand */
-  --color-primary: hsl(41, 79%, 74%);
-  --color-secondary: hsl(343, 100%, 72%);
-  --color-tertiary: hsl(357, 97%, 76%);
+  --color-primary: hsl(340, 4%, 69%);
 
   /* Typography */
   --color-text: hsl(233, 13%, 14%);
@@ -23,12 +21,10 @@
 
 :root.-dark {
   /* A11y */
-  --focus-ring: var(--color-white);
+  --focus-ring: var(--color-text);
 
   /* Brand */
-  --color-primary: hsl(6, 100%, 81%);
-  --color-secondary: hsl(343, 100%, 72%);
-  --color-tertiary: hsl(357, 97%, 76%);
+  --color-primary: hsl(0, 2%, 8%);
 
   /* Typography */
   --color-text: hsl(0, 0%, 100%);

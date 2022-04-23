@@ -1,8 +1,9 @@
 ---
-title: 'UI Test #1'
+title: 'Who cares about good engineering?'
 date: '2022-01-01'
 description: 'Hello World'
 color: hsl(221, 80%, 18%)
+image: './watch.jpg'
 ---
 
 This is my first post on my new fake blog! How exciting!

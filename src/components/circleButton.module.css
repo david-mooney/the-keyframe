@@ -27,7 +27,7 @@
 }
 
 .inner-circle {
-  stroke: var(--color-secondary);
+  stroke: var(--color-primary);
   stroke-dasharray: var(--length);
   stroke-dashoffset: var(--length);
   transition: var(--timing-fast) stroke-dashoffset var(--ease-in-out-quad);

@@ -2,7 +2,7 @@
   --color-text: var(--color-white);
 
   display: grid;
-  grid-template-columns: 1fr 1.25fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: max(80vh, 35rem);
   overflow: hidden;
 }
@@ -23,6 +23,7 @@
 }
 
 .date {
+  color: var(--color-text);
   position: absolute;
   top: 0;
   right: 0;

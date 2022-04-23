@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import Seo from '../components/seo';
+import SubscribeCard from '../components/subscribeCard';
 
 const NewsletterPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -10,8 +11,11 @@ const NewsletterPage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Newsletter" />
-      <h1>Newsletter</h1>
-      <p>This is the Newsletter page</p>
+
+      <div className="page">
+        <h1>Newsletter</h1>
+        <SubscribeCard />
+      </div>
     </Layout>
   );
 };

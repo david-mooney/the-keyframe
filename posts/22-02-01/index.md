@@ -2,7 +2,7 @@
 title: Do you need Babel anymore?
 date: '2022-02-01'
 description: 'Hello World'
-color: hsl(308, 52%, 38%)
+color: hsl(330, 70%, 50%)
 image: './letters.jpg'
 ---
 

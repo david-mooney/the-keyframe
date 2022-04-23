@@ -1,49 +1,66 @@
 .list {
   list-style: none;
+  margin: 0;
+  height: 80vh;
   display: grid;
-  grid-auto-columns: minmax(4rem, auto);
+  grid-auto-columns: auto;
   grid-auto-flow: column;
-  grid-auto-rows: 1fr;
-  column-gap: var(--spacing-24);
-  padding: var(--spacing-32) var(--spacing-12);
-  padding-right: 0;
+  align-items: center;
+  column-gap: var(--spacing-16);
+  margin-top: 10vh;
   overflow-x: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 @media (min-width: 800px) {
   .list {
-    grid-auto-columns: minmax(5rem, 30vw);
+    grid-auto-columns: minmax(3rem, 30vw);
   }
 }
 
-.list > li {
-  max-width: 90vw;
+.item {
+  height: 50vh;
+  max-height: 600px;
+  grid-column: span 6;
   scroll-snap-align: center;
 }
 
-.list > li:last-child {
-  /* Safari ignores the parent padding */
+.item:last-child {
   padding-right: var(--spacing-12);
 }
 
-/* .list::-webkit-scrollbar {
-  height: 0.333rem;
-  width: 15px;
+.list::-webkit-scrollbar {
+  height: 0;
+  width: 0;
 }
 
-.list::-webkit-scrollbar-thumb {
-  background: rgb(63, 62, 62);
-  border-radius: 1rem;
+/* .list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40vh;
+  grid-auto-rows: 1fr;
+  gap: var(--spacing-12);
+  padding: 0 var(--spacing-8);
+  margin: 10vh auto;
 }
 
-.list::-webkit-scrollbar-track {
-  background: rgb(12, 12, 12);
+@media (min-width: 800px) {
+  .list {
+    max-width: 1800px;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 var(--spacing-12);
+  }
 }
 
-.list:focus-within::-webkit-scrollbar-thumb,
-.list:focus-within::-webkit-scrollbar-track,
-.list:hover::-webkit-scrollbar-thumb,
-.list:hover::-webkit-scrollbar-track {
+.item {
+  grid-column: span 1;
+  scroll-snap-align: center;
+}
+
+.item:first-child {
+  grid-column: span 1;
 } */

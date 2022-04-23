@@ -1,5 +1,6 @@
 .footer {
-  padding: var(--spacing-6);
+  height: 10vh;
+  padding: var(--spacing-6) var(--spacing-12);
 }
 
 .footer ul {

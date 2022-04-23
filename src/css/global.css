@@ -142,13 +142,11 @@ small {
 }
 
 /* TODO: move this */
-.blog {
-}
-
-.blog-post {
-  position: relative;
-  max-width: var(--maxWidth-wrapper);
-  margin: var(--spacing-12) auto;
+.page {
+  margin-top: 10vh;
+  height: 80vh;
+  display: grid;
+  align-items: center;
 }
 
 .skip-to-content {

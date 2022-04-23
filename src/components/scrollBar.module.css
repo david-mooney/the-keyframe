@@ -1,0 +1,46 @@
+:global(.slider) {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  max-width: 500px;
+  height: 10vh;
+  z-index: 99;
+}
+
+:global(.thumb) {
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  background: ed;
+  border: 5px solid #3774ff;
+  border-radius: 100%;
+  display: block;
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 44%);
+}
+
+:global(.thumb.active) {
+  background-color: grey;
+}
+
+:global(.track) {
+  position: relative;
+  background: pink;
+}
+
+:global(.track.example-track-0) {
+  background: #83a9ff;
+}
+
+:global(.slider .track) {
+  top: 20px;
+  height: 4px;
+}
+
+:global(.slider .thumb) {
+  top: 12px;
+  width: 10px;
+  outline: none;
+  height: 10px;
+  line-height: 38px;
+}

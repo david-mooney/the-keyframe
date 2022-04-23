@@ -14,7 +14,7 @@ const PostArticle = ({ post }) => {
       itemScope
       id="main"
       ref={postRef}
-      className={`blog-post ${styles.article}`}
+      className={styles.article}
       itemType="http://schema.org/Article"
       initial={exit}
       animate={enter}

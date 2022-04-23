@@ -1,3 +1,5 @@
+// TODO: scroll snap goes here instead
+
 import React from 'react';
 import { Link } from 'gatsby';
 
@@ -27,3 +29,23 @@ const PostFooter = ({ data }) => {
 };
 
 export default PostFooter;
+
+/* .list::-webkit-scrollbar {
+  height: 0.333rem;
+  width: 15px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: rgb(63, 62, 62);
+  border-radius: 1rem;
+}
+
+.list::-webkit-scrollbar-track {
+  background: rgb(12, 12, 12);
+}
+
+.list:focus-within::-webkit-scrollbar-thumb,
+.list:focus-within::-webkit-scrollbar-track,
+.list:hover::-webkit-scrollbar-thumb,
+.list:hover::-webkit-scrollbar-track {
+} */

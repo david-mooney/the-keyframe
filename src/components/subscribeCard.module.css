@@ -1,0 +1,20 @@
+.card {
+  --color-text: var(--color-white);
+  position: relative;
+  height: 100%;
+  display: flex;
+  border-radius: var(--border-radius-1);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px; /* TODO HSL color */
+
+  background-color: rgb(249, 136, 155);
+  transform: translateZ(0); /* safari bug */
+}
+
+.form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

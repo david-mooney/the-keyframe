@@ -13,7 +13,7 @@ const ProgressBar = React.forwardRef((_, ref) => {
     const passive = { passive: true };
 
     const handleScroll = throttle(() => {
-      const { offsetTop, offsetHeight } = ref.current;
+      const { offsetTop, offsetHeight } = ref.current || {};
       const articleTop = document.documentElement.scrollTop - offsetTop;
 
       if (articleTop < 0) {

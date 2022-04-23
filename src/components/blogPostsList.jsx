@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import PostCard from './postCard.jsx';
+import SubscribeCard from './subscribeCard.jsx';
 import * as styles from './blogPostsList.module.css';
 
 const BlogPostsList = ({ posts }) => {
@@ -13,6 +14,11 @@ const BlogPostsList = ({ posts }) => {
     },
   };
 
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { type: 'tween', duration: 0.5 } },
+  };
+
   return (
     <motion.ol
       id="main"
@@ -22,8 +28,14 @@ const BlogPostsList = ({ posts }) => {
       animate="show"
     >
       {posts.map(post => (
-        <PostCard {...post} />
+        <motion.li className={styles.item} variants={item}>
+          <PostCard {...post} />
+        </motion.li>
       ))}
+
+      <motion.li className={styles.item} variants={item}>
+        <SubscribeCard />
+      </motion.li>
     </motion.ol>
   );
 };
