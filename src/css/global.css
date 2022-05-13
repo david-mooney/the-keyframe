@@ -38,7 +38,6 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-text);
   letter-spacing: 0.1em;
   font-family: var(--font-heading);
   font-weight: var(--fontWeight-bold);
@@ -52,7 +51,8 @@ h1 {
 }
 
 h2 {
-  font-size: var(--fontSize-4);
+  /* font-size: var(--fontSize-4); */
+  font-size: clamp(var(--fontSize-3), var(--fontSize-4), var(--fontSize-5));
 }
 
 h3 {
@@ -83,7 +83,12 @@ h6 > a {
 
 small,
 p {
-  color: var(--color-text);
+  color: inherit;
+}
+
+small {
+  font-size: var(--fontSize-1);
+  font-weight: var(--fontWeight-medium);
 }
 
 a {
@@ -115,11 +120,6 @@ a {
 .underline:focus::after,
 .underline:hover::after {
   transform: scaleX(1);
-}
-
-small {
-  font-size: var(--fontSize-1);
-  font-weight: var(--fontWeight-medium);
 }
 
 /* Gatsby Wrappers */

@@ -1,7 +1,6 @@
 .link {
-  display: block;
+  display: flex;
   height: 100%;
-  color: inherit;
   text-decoration: none;
   box-shadow: none;
   outline-color: transparent;
@@ -16,22 +15,27 @@
 }
 
 .card {
-  --color-text: var(--color-white);
   position: relative;
-  height: 100%;
   display: flex;
+  flex-direction: row-reverse;
   border-radius: var(--border-radius-1);
-  overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px; /* TODO HSL color */
+  /* overflow: hidden; */
   transform: translateZ(0); /* safari bug */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; /* border: 2px solid var(--color-text); */
 }
 
 .card header {
-  width: 100%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: var(--spacing-6);
+}
+
+@media (min-width: 800px) {
+  .card header {
+    width: 60%;
+  }
 }
 
 .card header h2 {
@@ -39,8 +43,8 @@
 }
 
 .imageWrapper {
-  min-width: 33.3%;
-  max-width: 33.3%;
+  min-width: 30%;
+  max-width: 30%;
 }
 
 @media (min-width: 800px) {
@@ -48,4 +52,27 @@
     min-width: 40%;
     max-width: 40%;
   }
+}
+
+.imageWrapper {
+  position: relative;
+  margin: 1rem;
+  border-radius: var(--border-radius-1);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.imageWrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary);
+  opacity: 0.65;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    var(--gradientA) 17.8%,
+    var(--gradientB) 100.2%
+  );
 }

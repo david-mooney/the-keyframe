@@ -5,10 +5,10 @@ const SubscribeCard = () => {
   return (
     <div className={styles.card}>
       <form className={styles.form}>
-        <span>Subscribe for the latest posts</span>
+        <h3>Subscribe for the latest posts</h3>
         <input type="email" placeholder="Your email" />
         <button type="button">Subscribe</button>
-        <small>I will never share your email and you can unsubscribe any time</small>
+        <small>I will never share your email and you can unsubscribe at any time</small>
       </form>
     </div>
   );

@@ -3,14 +3,7 @@ import React from 'react';
 import * as styles from './timeToRead.module.css';
 
 export const TimeToRead = ({ readTime }) => (
-  <div className={styles.container}>
-    <span className={styles.text}>{readTime} minute read</span>
-    <div className={styles.pipe} />
-  </div>
-);
-
-export const TimeToReadBasic = ({ readTime }) => (
-  <span className={styles.basic}>{readTime} minute read</span>
+  <small className={styles.timeToRead}>{readTime} minute read</small>
 );
 
 export default TimeToRead;

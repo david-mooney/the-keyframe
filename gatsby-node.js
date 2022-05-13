@@ -84,7 +84,8 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
 
     type Frontmatter {
-      color: String
+      colorA: String
+      colorB: String
       title: String
       description: String
       date: Date @dateformat

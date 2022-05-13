@@ -1,7 +1,8 @@
 ---
 title: 'Agile development and the "no true Scotsman" fallacy'
 date: '2021-12-28'
-color: hsl(123, 71%, 19%)
+colorA: rgba(14,174,87,1)
+colorB: rgba(12,116,117,1)
 image: './agile.jpg'
 ---
 

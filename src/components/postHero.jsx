@@ -15,7 +15,7 @@ const PostHero = ({ data, readTime }) => {
       animate={enter}
       exit={exit}
       transition={{ type: 'tween' }}
-      style={{ backgroundColor: data.color }}
+      // style={{ backgroundColor: data.color }}
     >
       <div className={styles.content}>
         <h1 id="main-title" itemProp="headline">

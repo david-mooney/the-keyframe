@@ -15,6 +15,12 @@
   --color-text: hsl(233, 13%, 14%);
   --color-text-faint: hsl(233, 13%, 86%);
   --color-background: hsl(0, 0%, 100%);
+
+  --gradient: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(253, 101, 133, 1) 0%,
+    rgba(255, 211, 165, 1) 90%
+  );
 }
 
 /* Dark Mode */
@@ -30,4 +36,6 @@
   --color-text: hsl(0, 0%, 100%);
   --color-text-faint: hsl(0, 0%, 50%);
   --color-background: hsl(233, 13%, 14%);
+
+  --gradient: linear-gradient(96.5deg, rgba(39, 103, 187, 1) 10.4%, rgba(16, 72, 144, 1) 87.7%);
 }

@@ -1,13 +1,10 @@
 .container {
-  position: absolute;
   height: 10vh;
   width: 100%;
   padding: var(--spacing-6) var(--spacing-12);
-  z-index: 1;
 }
 
 .container h1 {
-  font-size: var(--fontSize-3);
   margin: 0;
 }
 
