@@ -4,6 +4,7 @@
   /* Base Colors */
   --color-white: hsl(0, 0%, 100%);
   --color-text: hsl(233, 13%, 14%);
+  --color-shadow: hsla(233, 13%, 14%, 0.2);
 
   /* A11y */
   --focus-ring: var(--color-text);
@@ -34,6 +35,7 @@
 
   /* Typography */
   --color-text: hsl(0, 0%, 100%);
+  --color-shadow: hsla(0, 0%, 100%, 0.2);
   --color-text-faint: hsl(0, 0%, 50%);
   --color-background: hsl(233, 13%, 14%);
 

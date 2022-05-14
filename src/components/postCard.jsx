@@ -12,15 +12,14 @@ const PostCard = ({ frontmatter, fields, timeToRead }) => {
   };
 
   return (
-    <Link to={fields.slug} className={styles.link} itemProp="url">
+    <Link to={fields.slug} className={styles.link} itemProp="url" style={gradientColors}>
       <article
         className={styles.card}
-        // style={{ boxShadow: `${colorA} 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px` }}
         itemScope
         itemType="http://schema.org/Article"
       >
         <header>
-          <small>{date}</small>
+          <small className={styles.date}>{date}</small>
           <h2 itemProp="headline">{title || fields.slug}</h2>
           <TimeToRead readTime={timeToRead} />
         </header>
@@ -29,7 +28,6 @@ const PostCard = ({ frontmatter, fields, timeToRead }) => {
           <GatsbyImage
             className={styles.imageWrapper}
             image={image.childImageSharp.gatsbyImageData}
-            style={gradientColors}
             alt={`Image for article: ${title}`}
           />
         )}
