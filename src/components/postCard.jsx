@@ -8,29 +8,27 @@ const PostCard = ({ frontmatter, fields, timeToRead }) => {
   const { title, date, colorA, colorB, image } = frontmatter;
   const gradientColors = {
     '--gradientA': colorA,
-    '--gradientB': colorB
+    '--gradientB': colorB,
   };
 
   return (
     <Link to={fields.slug} className={styles.link} itemProp="url" style={gradientColors}>
-      <article
-        className={styles.card}
-        itemScope
-        itemType="http://schema.org/Article"
-      >
+      <article className={styles.card} itemScope itemType="http://schema.org/Article">
+        {image?.childImageSharp && (
+          <div className={styles.imageWrapper}>
+            <GatsbyImage
+              className={styles.image}
+              image={image.childImageSharp.gatsbyImageData}
+              alt={`Image for article: ${title}`}
+            />
+          </div>
+        )}
+
         <header>
           <small className={styles.date}>{date}</small>
           <h2 itemProp="headline">{title || fields.slug}</h2>
           <TimeToRead readTime={timeToRead} />
         </header>
-
-        {image?.childImageSharp && (
-          <GatsbyImage
-            className={styles.imageWrapper}
-            image={image.childImageSharp.gatsbyImageData}
-            alt={`Image for article: ${title}`}
-          />
-        )}
       </article>
     </Link>
   );

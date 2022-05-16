@@ -2,12 +2,20 @@ import React from 'react';
 import * as styles from './subscribeCard.module.css';
 
 const SubscribeCard = () => {
+  // const emailForm = document.querySelector('.email-form');
+  // if (emailForm) {
+  //   emailForm.addEventListener('submit', e => {
+  //     e.preventDefault();
+  //     processForm(emailForm);
+  //   });
+  // }
+
   return (
     <div className={styles.card}>
-      <form className={styles.form}>
+      <form className={styles.form} name="subscribe" method="POST" data-netlify="true">
         <h3>Subscribe for the latest posts</h3>
-        <input type="email" placeholder="Your email" />
-        <button type="button">Subscribe</button>
+        <input type="email" name="email" placeholder="Your email" required />
+        <button type="submit">Subscribe</button>
         <small>I will never share your email and you can unsubscribe at any time</small>
       </form>
     </div>

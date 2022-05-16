@@ -2,13 +2,12 @@
 
 .list {
   list-style: none;
-
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 100%;
   grid-auto-rows: 1fr;
-  grid-gap: var(--spacing-24);
-  padding-left: var(--spacing-24);
+  grid-gap: var(--spacing-28);
+  padding-left: var(--spacing-28);
   overflow-x: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
@@ -30,12 +29,12 @@
 
 .item {
   grid-column: span 1;
-  padding: 3rem 0; /* TODO: no magic numbers */
+  padding: 5rem 0; /* TODO: no magic numbers */
   scroll-snap-align: center;
 }
 
 .item:last-child {
-  padding-right: var(--spacing-24);
+  padding-right: var(--spacing-28);
 }
 
 .list::-webkit-scrollbar {

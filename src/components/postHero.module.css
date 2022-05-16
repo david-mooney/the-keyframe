@@ -2,7 +2,9 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: max(50vh, 35rem);
+  grid-template-rows: max(60vh, 35rem);
+  max-width: 1800px;
+  margin: 0 auto;
 }
 
 .content {
@@ -11,12 +13,15 @@
   flex-direction: column;
   justify-content: center;
   padding: var(--spacing-6) var(--spacing-12);
+  order: 1;
 }
 
 .frame {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  order: 2;
 }
 
 .date {
@@ -30,13 +35,13 @@
   position: relative;
   width: 100%;
   height: 100%;
+  max-width: 40rem;
   object-fit: contain;
-  overflow: visible;
   border-radius: var(--border-radius-1);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.image::before {
+.frame::before {
   content: '';
   position: absolute;
   top: 0;
@@ -46,9 +51,4 @@
   transform: rotate(9deg);
   border-radius: var(--border-radius-1);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
-
-.image img {
-  overflow: hidden;
-  border-radius: var(--border-radius-1);
 }

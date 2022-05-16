@@ -1,7 +1,9 @@
 :root {
-  --timing-fastest: 0.1s;
+  --timing-fastest: 0.15s;
   --timing-fast: 0.25s;
-  --timing-intermediate: 0.4s;
+  --timing-intermediate: 0.35s;
+  --timing-slow: 0.55s;
+  --timing-slowest: 0.85s;
 
   --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
