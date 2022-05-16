@@ -10,19 +10,6 @@
   transition: var(--timing-fast) box-shadow var(--ease-in-out-quad);
 }
 
-.link::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 47%;
-  background: linear-gradient(to right, var(--gradientA), var(--gradientB));
-  transform: rotate(10deg);
-  border-radius: var(--border-radius-1);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  z-index: 1;
-}
-
 .link:hover,
 .link:focus-visible {
   box-shadow: 0 0 0 4px var(--color-background), 0 0 0 6px var(--focus-ring);
@@ -31,10 +18,16 @@
 .card {
   position: relative;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column-reverse; /* TODO - default, not reverse */
   border-radius: var(--border-radius-1);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  z-index: 2;
+  transition: var(--timing-intermediate) color var(--ease-in-out-quad);
+}
+
+@media (min-width: 500px) {
+  .card {
+    flex-direction: row-reverse;
+  }
 }
 
 .card header {
@@ -45,7 +38,7 @@
   padding: var(--spacing-6);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 500px) {
   .card header {
     width: 60%;
   }
@@ -53,11 +46,6 @@
 
 .card header h2 {
   padding-right: var(--spacing-3);
-}
-
-.imageWrapper {
-  min-width: 30%;
-  max-width: 30%;
 }
 
 @media (min-width: 800px) {
@@ -68,10 +56,25 @@
 }
 
 .imageWrapper {
+  overflow: visible;
   position: relative;
   margin: 1rem;
   border-radius: var(--border-radius-1);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.imageWrapper::before {
+  content: '';
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  background: linear-gradient(to right, var(--gradientA), var(--gradientB));
+  transform: rotate(10deg);
+  border-radius: var(--border-radius-1);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  z-index: -1;
 }
 
 .imageWrapper::after {
@@ -87,6 +90,11 @@
     var(--gradientA) 17.8%,
     var(--gradientB) 100.2%
   );
+}
+
+.imageWrapper img {
+  border-radius: var(--border-radius-1);
+  overflow: hidden;
 }
 
 .date {

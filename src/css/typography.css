@@ -1,11 +1,9 @@
-/* TODO choose font families */
-
 :root {
   /* Font Families */
-  --fontFamily-sans: 'Aleo', 'Lucida Grande', Tahoma, Sans-Serif;
   --fontFamily-serif: 'Aleo', Cambria, 'Times New Roman', Times, serif;
-  --font-body: var(--fontFamily-serif);
-  --font-heading: var(--fontFamily-sans);
+  --fontFamily-sans: 'Lato', 'Lucida Grande', Tahoma, Sans-Serif;
+  --font-heading: var(--fontFamily-serif);
+  --font-body: var(--fontFamily-sans);
 
   /* Weights */
   --fontWeight-normal: 400;

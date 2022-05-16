@@ -1,3 +1,4 @@
+import "@fontsource/lato"
 import '@fontsource/aleo';
 import './src/css/normalize.css';
 import './src/css/colors.css';

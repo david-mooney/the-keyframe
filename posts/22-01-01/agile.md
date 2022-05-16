@@ -1,10 +1,9 @@
 ---
-title: 'Who cares about good engineering?'
-date: '2022-01-01'
-description: 'Hello World'
-colorA: rgba(97,186,255,1)
-colorB: rgba(166,239,253,1)
-image: './watch.jpg'
+title: 'The cult of Agile'
+date: '2021-12-28'
+colorA: rgba(96,221,142,1)
+colorB: rgba(24,138,141,1)
+image: './agile.jpg'
 ---
 
 This is my first post on my new fake blog! How exciting!

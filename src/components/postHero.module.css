@@ -1,10 +1,8 @@
 .header {
-  --color-text: var(--color-white);
-
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: max(80vh, 35rem);
-  overflow: hidden;
+  grid-template-rows: max(50vh, 35rem);
 }
 
 .content {
@@ -19,11 +17,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0.25rem; /* var(--borderRadius-8); */
 }
 
 .date {
-  color: var(--color-text);
   position: absolute;
   top: 0;
   right: 0;
@@ -31,8 +27,28 @@
 }
 
 .image {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: contain;
+  overflow: visible;
+  border-radius: var(--border-radius-1);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, var(--gradientA), var(--gradientB));
+  transform: rotate(9deg);
+  border-radius: var(--border-radius-1);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.image img {
+  overflow: hidden;
+  border-radius: var(--border-radius-1);
 }

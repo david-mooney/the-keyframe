@@ -12,8 +12,13 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata?.title || 'Title';
 
+  const gradientColors = {
+    '--gradientA': post.frontmatter.colorA,
+    '--gradientB': post.frontmatter.colorB,
+  };
+
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} css={gradientColors}>
       <ScrollToTop />
 
       <Seo

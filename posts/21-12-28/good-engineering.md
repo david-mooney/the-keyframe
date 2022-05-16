@@ -1,9 +1,10 @@
 ---
-title: 'Agile development and the "no true Scotsman" fallacy'
-date: '2021-12-28'
-colorA: rgba(14,174,87,1)
-colorB: rgba(12,116,117,1)
-image: './agile.jpg'
+title: 'Who cares about good engineering?'
+date: '2022-01-01'
+description: 'Hello World'
+colorA: rgba(166,239,253,1)
+colorB: rgba(97,186,255,1)
+image: './watch.jpg'
 ---
 
 This is my first post on my new fake blog! How exciting!

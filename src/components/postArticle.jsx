@@ -22,12 +22,15 @@ const PostArticle = ({ post }) => {
       transition={{ type: 'tween' }}
     >
       <ProgressBar ref={postRef} />
+
       <section
         dangerouslySetInnerHTML={{ __html: post.html }}
         itemProp="articleBody"
         aria-labelledby="main-title"
       />
+
       <hr />
+
       <footer>
         <Bio />
       </footer>

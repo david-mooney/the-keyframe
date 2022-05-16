@@ -6,8 +6,6 @@
   color: var(--color-text);
   overflow: hidden;
   border: 2px solid var(--color-text);
-
-  /* background-color: aqua; */
 }
 
 .icon {

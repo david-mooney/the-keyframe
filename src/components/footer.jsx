@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className={footer.footer}>
       <ul>
         <li className={footer.fullWidth}>
-          <small>All rights reserved © David Mooney {new Date().getFullYear()}</small>
+          <small>Created by David Mooney, all rights reserved © {new Date().getFullYear()}</small>
         </li>
       </ul>
     </footer>
