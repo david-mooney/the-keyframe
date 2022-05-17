@@ -14,7 +14,7 @@ const SubscribeCard = () => {
   return (
     <div className={styles.card}>
       <form className={styles.form} name={formName} method="POST" data-netlify="true">
-        <input type="hidden" name={formName} value={formName} />
+        <input type="hidden" name="form-name" value={formName} />
         <h3>Subscribe for the latest posts</h3>
         <input type="email" name="email" placeholder="Your email" required />
         <button type="submit">Subscribe</button>
