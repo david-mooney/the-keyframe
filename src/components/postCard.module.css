@@ -10,11 +10,22 @@
   outline-style: solid;
   border-radius: var(--border-radius-1);
   transition: var(--timing-fast) box-shadow var(--ease-in-out-quad);
+  /* box-shadow: 0 0 0 2px var(--focus-ring); */
 }
 
 .link:hover,
 .link:focus-visible {
-  box-shadow: 0 0 0 2px var(--focus-ring);
+  /* box-shadow: 0 0 0 2px var(--focus-ring); */
+}
+
+.link:hover .card::before,
+.link:focus-visible .card::before {
+  transform: rotate(0) scaleX(1.02) scaleY(1.03);
+}
+
+.link:hover .image::after,
+.link:focus-visible .image::after {
+  opacity: 0;
 }
 
 .card {
@@ -23,7 +34,9 @@
   flex-direction: column;
   border-radius: var(--border-radius-1);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  transition: var(--timing-intermediate) color var(--ease-in-out-quad);
+  transition: var(--timing-intermediate) color var(--ease-in-out-quad),
+    var(--timing-intermediate) background-color var(--ease-in-out-quad);
+  background-color: var(--color-background);
 }
 
 @media (min-width: 600px) {
@@ -44,9 +57,8 @@
   position: relative;
   align-self: center;
   width: 50vw;
-  margin: 1rem;
   border-radius: var(--border-radius-1);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  padding: 1rem;
 }
 
 @media (min-width: 600px) {
@@ -58,15 +70,17 @@
   }
 }
 
-.imageWrapper::before {
+.card::before {
   content: '';
   position: absolute;
-  top: -2.5%;
-  left: -2.5%;
-  width: 105%;
-  height: 105%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(to right, var(--gradientA), var(--gradientB));
-  transform: rotate(10deg);
+  transform: rotate(-5deg) scaleY(1.08);
+  transition: transform var(--timing-fast) var(--ease-in-out-quad);
+
   border-radius: var(--border-radius-1);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   z-index: -1;
@@ -87,10 +101,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.25;
+  opacity: 0.45;
   background-image: radial-gradient(
     circle farthest-corner at 10% 20%,
     var(--gradientA) 17.8%,
     var(--gradientB) 100.2%
   );
+  transition: opacity var(--timing-fast) var(--ease-in-out-quad);
 }

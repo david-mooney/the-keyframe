@@ -10,16 +10,16 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 - [ ] system for i18n translations for articles
 - [ ] Unsplash photographer credit
 - [ ] RSS feed
-- [ ] Page transitions
+- [x] Page transitions
 - [ ] Blog template variables widths (x3?)
 - [ ] Back button from blog
-- [ ] Yellow links
-- [ ] Narrative font
+- [x] Coloured links
+- [x] Narrative font
 - [ ] Mobile
 - [ ] Code theme for markdown
 - [ ] Layered background image?
 - [ ] Lazy motion optimization
 - [ ] Add commenting system? (Disqus?)
-- [ ] Images grow on click
+- [ ] Article Images grow on click
 - [ ] Thumb's up for posts
 - [ ] Hijack vertical scroll

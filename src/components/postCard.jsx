@@ -25,7 +25,7 @@ const PostCard = ({ frontmatter, fields, timeToRead }) => {
         )}
 
         <header>
-          <small className={styles.date}>{date}</small>
+          <small>{date}</small>
           <h2 itemProp="headline">{title || fields.slug}</h2>
           <TimeToRead readTime={timeToRead} />
         </header>

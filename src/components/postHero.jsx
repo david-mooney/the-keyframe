@@ -17,10 +17,10 @@ const PostHero = ({ data, readTime }) => {
       transition={{ type: 'tween' }}
     >
       <div className={styles.content}>
+        <small>{data.date}</small>
         <h1 id="main-title" itemProp="headline">
           {data.title}
         </h1>
-        <span className={styles.date}>{data.date}</span>
         <TimeToRead readTime={readTime} />
       </div>
 
