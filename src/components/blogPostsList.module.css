@@ -10,7 +10,7 @@
   padding-left: var(--spacing-28);
   overflow-x: scroll;
   scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
+  /* scroll-snap-type: x proximity; */
   scrollbar-width: none;
   -ms-overflow-style: none;
 }

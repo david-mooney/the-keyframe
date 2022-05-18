@@ -1,4 +1,5 @@
 /* TODO - standardise box shadows */
+/* TODO - clean up this file */
 
 .link {
   position: relative;
@@ -10,22 +11,22 @@
   outline-style: solid;
   border-radius: var(--border-radius-1);
   transition: var(--timing-fast) box-shadow var(--ease-in-out-quad);
-  /* box-shadow: 0 0 0 2px var(--focus-ring); */
+  box-shadow: 0 0 0 2px var(--focus-ring);
 }
 
-.link:hover,
-.link:focus-visible {
-  /* box-shadow: 0 0 0 2px var(--focus-ring); */
-}
-
-.link:hover .card::before,
-.link:focus-visible .card::before {
-  transform: rotate(0) scaleX(1.02) scaleY(1.03);
+.link:hover .test,
+.link:focus-visible .test {
+  background-size: 100% 3px;
 }
 
 .link:hover .image::after,
 .link:focus-visible .image::after {
   opacity: 0;
+}
+
+.link:hover .card::before,
+.link:focus-visible .card::before {
+  transform: rotate(0deg) scale(1);
 }
 
 .card {
@@ -78,9 +79,8 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(to right, var(--gradientA), var(--gradientB));
-  transform: rotate(-5deg) scaleY(1.08);
+  transform: rotate(-5deg) scale(1.03);
   transition: transform var(--timing-fast) var(--ease-in-out-quad);
-
   border-radius: var(--border-radius-1);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   z-index: -1;
@@ -108,4 +108,12 @@
     var(--gradientB) 100.2%
   );
   transition: opacity var(--timing-fast) var(--ease-in-out-quad);
+}
+
+.test {
+  display: inline;
+  background: linear-gradient(var(--color-text), var(--color-text)) left bottom;
+  background-repeat: no-repeat;
+  background-size: 0% 3px;
+  transition: background-size var(--timing-slow);
 }

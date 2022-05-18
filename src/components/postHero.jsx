@@ -25,13 +25,15 @@ const PostHero = ({ data, readTime }) => {
       </div>
 
       <div className={styles.frame}>
-        {data.image?.childImageSharp && (
-          <GatsbyImage
-            className={styles.image}
-            image={data.image.childImageSharp.gatsbyImageData}
-            alt={`Image for article: "${data.title}"`}
-          />
-        )}
+        <div className={styles.imageWrapper}>
+          {data.image?.childImageSharp && (
+            <GatsbyImage
+              className={styles.image}
+              image={data.image.childImageSharp.gatsbyImageData}
+              alt={`Image for article: "${data.title}"`}
+            />
+          )}
+        </div>
       </div>
     </motion.header>
   );
