@@ -9,7 +9,7 @@ const isBrowser = typeof window !== 'undefined';
 
 const Header = ({ title }) => (
   <nav className={styles.container}>
-    <a class="skip-to-content underline" href="#main">
+    <a className="skip-to-content underline" href="#main">
       Skip to content
     </a>
 

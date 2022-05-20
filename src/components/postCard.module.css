@@ -1,7 +1,6 @@
-/* TODO - standardise box shadows */
-/* TODO - clean up this file */
-
 .link {
+  --underline-size: 2px;
+
   position: relative;
   display: flex;
   height: 100%;
@@ -9,21 +8,24 @@
   box-shadow: none;
   outline-color: transparent;
   outline-style: solid;
+  border: 2px solid var(--focus);
   border-radius: var(--border-radius-1);
   transition: var(--timing-fast) box-shadow var(--ease-in-out-quad);
-  box-shadow: 0 0 0 2px var(--focus-ring);
 }
 
-.link:hover .test,
-.link:focus-visible .test {
-  background-size: 100% 3px;
+/* trigger the underline animation */
+.link:hover .underline,
+.link:focus-visible .underline {
+  background-size: 100% var(--underline-size);
 }
 
+/* hide the image gradient overlay */
 .link:hover .image::after,
 .link:focus-visible .image::after {
   opacity: 0;
 }
 
+/* rotate the gradient card out of view */
 .link:hover .card::before,
 .link:focus-visible .card::before {
   transform: rotate(0deg) scale(1);
@@ -34,10 +36,10 @@
   display: flex;
   flex-direction: column;
   border-radius: var(--border-radius-1);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  background-color: var(--color-background);
+  box-shadow: var(--box-shadow-small);
   transition: var(--timing-intermediate) color var(--ease-in-out-quad),
     var(--timing-intermediate) background-color var(--ease-in-out-quad);
-  background-color: var(--color-background);
 }
 
 @media (min-width: 600px) {
@@ -57,17 +59,18 @@
 .imageWrapper {
   position: relative;
   align-self: center;
-  width: 50vw;
-  border-radius: var(--border-radius-1);
-  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  padding: var(--spacing-6) var(--spacing-6) 0 var(--spacing-6);
 }
 
 @media (min-width: 600px) {
   .imageWrapper {
+    height: 100%;
     width: 45%;
     min-width: 45%;
-    height: 100%;
     align-self: flex-start;
+    padding: var(--spacing-6);
   }
 }
 
@@ -78,12 +81,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, var(--gradientA), var(--gradientB));
   transform: rotate(-5deg) scale(1.03);
-  transition: transform var(--timing-fast) var(--ease-in-out-quad);
+  background: linear-gradient(to right, var(--gradientA), var(--gradientB));
+  transition: transform var(--timing-intermediate) var(--ease-out-back);
   border-radius: var(--border-radius-1);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  z-index: -1;
+  box-shadow: var(--box-shadow-small);
+  z-index: var(--z-back);
 }
 
 .image {
@@ -92,6 +95,7 @@
   object-fit: cover;
   border-radius: var(--border-radius-1);
   overflow: hidden;
+  box-shadow: var(--box-shadow-small);
 }
 
 .image::after {
@@ -102,18 +106,14 @@
   width: 100%;
   height: 100%;
   opacity: 0.45;
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    var(--gradientA) 17.8%,
-    var(--gradientB) 100.2%
-  );
+  background: linear-gradient(to right, var(--gradientA), var(--gradientB));
   transition: opacity var(--timing-fast) var(--ease-in-out-quad);
 }
 
-.test {
+.underline {
   display: inline;
-  background: linear-gradient(var(--color-text), var(--color-text)) left bottom;
+  background: linear-gradient(var(--color-text), var(--color-text)) 0 100%;
   background-repeat: no-repeat;
-  background-size: 0% 3px;
+  background-size: 0 var(--underline-size);
   transition: background-size var(--timing-slow);
 }

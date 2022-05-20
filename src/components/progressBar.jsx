@@ -17,7 +17,7 @@ const ProgressBar = React.forwardRef((_, ref) => {
       const articleTop = document.documentElement.scrollTop - offsetTop;
 
       if (articleTop < 0) {
-      setProgress(0);
+        setProgress(0);
         return;
       }
 

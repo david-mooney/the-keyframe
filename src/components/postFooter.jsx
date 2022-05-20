@@ -1,4 +1,4 @@
-// TODO: scroll snap goes here instead
+// TODO: scroll snap list goes here instead?
 
 import React from 'react';
 import { Link } from 'gatsby';
@@ -7,7 +7,7 @@ const PostFooter = ({ data }) => {
   const { previous, next } = data;
 
   return (
-    <nav className="blog-post-nav">
+    <nav className="blog-post-nav" title="blog post navigation">
       <ul>
         <li>
           {previous && (

@@ -2,7 +2,7 @@
   position: fixed;
   bottom: var(--spacing-6);
   right: var(--spacing-6);
-  z-index: 1;
+  z-index: var(--z-front);
   opacity: 1;
   transition: var(--timing-fast) opacity var(--ease-in-out-quad);
 }

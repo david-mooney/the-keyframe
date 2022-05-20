@@ -24,6 +24,7 @@ body {
   background: var(--color-background);
   transition: var(--timing-intermediate) background-color var(--ease-in-out-quad),
     var(--timing-intermediate) color var(--ease-in-out-quad);
+  overflow-x: hidden;
 }
 
 hr {
@@ -122,7 +123,6 @@ a {
   transform: scaleX(1);
 }
 
-/* Gatsby Wrappers */
 #___gatsby,
 #gatsby-focus-wrapper {
   height: 100%;
@@ -141,21 +141,13 @@ a {
   width: 1px;
 }
 
-/* TODO: move this */
-.page {
-  margin-top: 10vh;
-  height: 80vh;
-  display: grid;
-  align-items: center;
-}
-
 .skip-to-content {
   position: absolute;
   top: 0;
   left: 50%;
   opacity: 0;
   transition: var(--timing-fast) opacity var(--ease-in-out-quad);
-  z-index: 1; /* TODO: vars for z-indices */
+  z-index: var(--z-front);
 }
 
 .skip-to-content:focus {

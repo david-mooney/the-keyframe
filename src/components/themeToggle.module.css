@@ -1,7 +1,7 @@
 .button {
   position: relative;
-  height: 3rem;
-  width: 3rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   color: var(--color-text);
   overflow: hidden;
@@ -14,21 +14,19 @@
   left: 0%;
   height: 100%;
   width: 100%;
-  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  transition: var(--timing-intermediate) transform var(--ease-in-out-quad);
+  transition: var(--timing-slow) transform var(--ease-out-back);
 }
 
 .sun {
-  transform: rotate(75deg);
+  transform: rotate(45deg);
   transform-origin: 50% 150%;
 }
 
 .moon {
-  transform: rotate(-75deg);
+  transform: rotate(-45deg);
   transform-origin: 50% 150%;
 }
 

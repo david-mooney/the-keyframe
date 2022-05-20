@@ -6,20 +6,20 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 
 ## TODO's
 
-- [ ] import articles from Notion via API
 - [ ] system for i18n translations for articles
 - [ ] Unsplash photographer credit
 - [ ] RSS feed
-- [x] Page transitions
-- [ ] Blog template variables widths (x3?)
-- [ ] Back button from blog
-- [x] Coloured links
-- [x] Narrative font
+- [ ] Blog template variables widths
 - [ ] Mobile
 - [ ] Code theme for markdown
-- [ ] Layered background image?
 - [ ] Lazy motion optimization
-- [ ] Add commenting system? (Disqus?)
 - [ ] Article Images grow on click
-- [ ] Thumb's up for posts
 - [ ] Hijack vertical scroll
+- [ ] Card and hero images to split background images and background-blend-mode
+
+## Potential Additions
+
+- [ ] Import articles from Notion API
+- [ ] Commenting system
+- [ ] 'Like' system for for posts
+- [ ] system for i18n translations for articles

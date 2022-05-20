@@ -26,4 +26,8 @@
   --spacing-28: 7rem;
   --spacing-32: 8rem;
   --border-radius-1: 0.5rem;
+
+  --z-front: 2;
+  --z-middle: 1;
+  --z-back: -1;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsLink45Deg } from '@react-icons/all-files/bs/BsLink45Deg';
+import { FiShare } from '@react-icons/all-files/fi/FiShare';
 import CircleButton from './circleButton';
 
 import * as styles from './copyLinkButton.module.css';
@@ -21,7 +21,7 @@ const CopyLinkButton = () => {
         aria-label="Copy a link to this page"
       >
         <div className={styles.icon}>
-          <BsLink45Deg style={{ height, width }} />
+          <FiShare style={{ height, width }} />
         </div>
       </button>
     </CircleButton>

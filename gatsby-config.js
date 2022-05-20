@@ -1,18 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: 'The Key Frame',
+    title: 'The Keyframe',
     author: {
       name: 'David Mooney',
       summary: null,
     },
-    description: "David Mooney's web development blog.",
+    description: "David Mooney's web development blog",
     siteUrl: 'https://thekeyframe.dev/',
     social: {
       twitter: null,
     },
   },
   plugins: [
-    // 'gatsby-plugin-preact',
     'gatsby-plugin-image',
     {
       resolve: 'gatsby-source-filesystem',
@@ -113,8 +112,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'The Key Frame Blog',
-        short_name: 'The Key Frame',
+        name: 'The Keyframe Blog',
+        short_name: 'The Keyframe',
         description: 'The web development blog of David Mooney',
         start_url: '/',
         background_color: '#ffffff',

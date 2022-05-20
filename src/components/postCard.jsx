@@ -27,7 +27,7 @@ const PostCard = ({ frontmatter, fields, timeToRead }) => {
         <header>
           <small>{date}</small>
           <div>
-            <h2 itemProp="headline" className={styles.test}>
+            <h2 itemProp="headline" className={styles.underline}>
               {title || fields.slug}
             </h2>
           </div>

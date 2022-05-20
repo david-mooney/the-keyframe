@@ -31,7 +31,7 @@ const ScrollToTop = () => {
       <CircleButton>
         <button
           type="button"
-          class={styles.button}
+          className={styles.button}
           onClick={handleClick}
           aria-label="Scroll to top"
         >

@@ -7,37 +7,23 @@
   --color-shadow: hsla(233, 13%, 14%, 0.2);
 
   /* A11y */
-  --focus-ring: var(--color-text);
-
-  /* Brand */
-  --color-primary: hsl(340, 4%, 69%);
+  --focus: var(--color-text);
 
   /* Typography */
   --color-text: hsl(233, 13%, 14%);
   --color-text-faint: hsl(233, 13%, 86%);
   --color-background: hsl(0, 0%, 100%);
-
-  --gradient: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(253, 101, 133, 1) 0%,
-    rgba(255, 211, 165, 1) 90%
-  );
 }
 
 /* Dark Mode */
 
 :root.-dark {
   /* A11y */
-  --focus-ring: var(--color-text);
-
-  /* Brand */
-  --color-primary: hsl(0, 2%, 8%);
+  --focus: var(--color-text);
 
   /* Typography */
   --color-text: hsl(0, 0%, 100%);
   --color-shadow: hsla(0, 0%, 100%, 0.2);
   --color-text-faint: hsl(0, 0%, 50%);
   --color-background: hsl(233, 13%, 14%);
-
-  --gradient: linear-gradient(96.5deg, rgba(39, 103, 187, 1) 10.4%, rgba(16, 72, 144, 1) 87.7%);
 }

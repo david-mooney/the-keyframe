@@ -28,7 +28,7 @@ const BlogPostsList = ({ posts }) => {
       animate="show"
     >
       {posts.map(post => (
-        <motion.li className={styles.item} variants={item}>
+        <motion.li className={styles.item} variants={item} key={post.fields.slug}>
           <PostCard {...post} />
         </motion.li>
       ))}
