@@ -3,8 +3,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 25vw;
-  /* display: flex; */
+  width: 50vw;
   border-right: 1px solid var(--color-text);
   padding: var(--spacing-6);
   z-index: 99;

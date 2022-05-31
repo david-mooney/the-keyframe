@@ -1,15 +1,41 @@
+.imageWrapper {
+  width: 25%;
+  min-width: 25%;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-1);
+  box-shadow: var(--box-shadow-small);
+  /* filter: grayscale(100%); */
+}
+
+.image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.45;
+  background: linear-gradient(to right, var(--gradientA), var(--gradientB));
+  transition: opacity var(--timing-fast) var(--ease-in-out-quad);
+}
+
 .link {
   --underline-size: 2px;
   position: relative;
   display: flex;
+  height: 100%;
   text-decoration: none;
   box-shadow: none;
   outline-color: transparent;
   outline-style: solid;
   border-radius: var(--border-radius-1);
   transition: var(--timing-fast) box-shadow var(--ease-in-out-quad);
-
-  width: 75%;
 }
 
 /* trigger the underline animation */
@@ -32,11 +58,12 @@
 
 .card {
   width: 100%;
-  padding: 4rem 4rem;
+  padding: var(--spacing-6);
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: space-between;
   border-radius: var(--border-radius-1);
   background-color: var(--color-background);
   box-shadow: var(--box-shadow-small);
@@ -78,7 +105,7 @@
   width: 150rem;
   height: 1px;
   background-color: var(--color-text);
-  z-index: -1;
+  z-index: -2;
 } */
 
 .underline {
