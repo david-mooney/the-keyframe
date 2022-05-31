@@ -9,14 +9,17 @@ const BlogPostsList = ({ posts }) => {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: 0.085,
+        staggerChildren: 0.09,
       },
     },
   };
 
   const item = {
     hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { type: 'tween', duration: 0.5 } },
+    show: {
+      opacity: 1,
+      transition: { type: 'tween', duration: 0.5 },
+    },
   };
 
   return (
@@ -28,7 +31,7 @@ const BlogPostsList = ({ posts }) => {
       animate="show"
     >
       {posts.map(post => (
-        <motion.li className={styles.item} variants={item} key={post.fields.slug}>
+        <motion.li className={`test ${styles.item}`} variants={item} key={post.fields.slug}>
           <PostCard {...post} />
         </motion.li>
       ))}

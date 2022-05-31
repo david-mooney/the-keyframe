@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/blogLayout';
+import BlogLayout from '../components/layout/blogLayout';
 import Seo from '../components/seo';
 import PostHero from '../components/postHero';
 import PostArticle from '../components/postArticle';
@@ -18,7 +18,7 @@ const BlogPostTemplate = ({ data, location }) => {
   };
 
   return (
-    <Layout location={location} title={siteTitle} css={gradientColors}>
+    <BlogLayout location={location} title={siteTitle} css={gradientColors}>
       <ScrollToTop />
 
       <Seo
@@ -29,7 +29,7 @@ const BlogPostTemplate = ({ data, location }) => {
       <PostHero data={post.frontmatter} readTime={post.timeToRead} />
       <PostArticle post={post} />
       <PostFooter data={data} />
-    </Layout>
+    </BlogLayout>
   );
 };
 

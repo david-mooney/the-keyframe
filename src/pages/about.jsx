@@ -1,18 +1,18 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/layout';
+import PageLayout from '../components/layout/pageLayout';
 import Seo from '../components/seo';
 
 const AboutPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <PageLayout location={location} title={siteTitle}>
       <Seo title="About" />
       <h1>About</h1>
       <p>This is the about page</p>
-    </Layout>
+    </PageLayout>
   );
 };
 

@@ -51,11 +51,10 @@
   content: '';
   position: absolute;
   top: 70%;
-  left: 0%;
-  height: 2%;
-  width: 100%;
+  left: -1%;
+  height: 20%;
+  width: 102%;
   box-shadow: var(--box-shadow-small);
   background: linear-gradient(to right, var(--gradientA), var(--gradientB));
-
-  /* vertical full length on post article? */
+  transform: rotate(-3deg);
 }

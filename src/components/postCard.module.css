@@ -1,16 +1,15 @@
 .link {
   --underline-size: 2px;
-
   position: relative;
   display: flex;
-  height: 100%;
   text-decoration: none;
   box-shadow: none;
   outline-color: transparent;
   outline-style: solid;
-  border: 2px solid var(--focus);
   border-radius: var(--border-radius-1);
   transition: var(--timing-fast) box-shadow var(--ease-in-out-quad);
+
+  width: 75%;
 }
 
 /* trigger the underline animation */
@@ -28,24 +27,23 @@
 /* rotate the gradient card out of view */
 .link:hover .card::before,
 .link:focus-visible .card::before {
-  transform: rotate(0deg) scale(1);
+  transform: rotate(3deg) scale(0.95);
 }
 
 .card {
+  width: 100%;
+  padding: 4rem 4rem;
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: flex-start;
   border-radius: var(--border-radius-1);
   background-color: var(--color-background);
   box-shadow: var(--box-shadow-small);
   transition: var(--timing-intermediate) color var(--ease-in-out-quad),
     var(--timing-intermediate) background-color var(--ease-in-out-quad);
-}
-
-@media (min-width: 600px) {
-  .card {
-    flex-direction: row;
-  }
+  border: 1px solid var(--color-text);
+  box-shadow: var(--box-shadow-large);
 }
 
 .card header {
@@ -56,59 +54,32 @@
   padding: var(--spacing-6);
 }
 
-.imageWrapper {
-  position: relative;
-  align-self: center;
-  width: 100%;
-  height: 100%;
-  padding: var(--spacing-6) var(--spacing-6) 0 var(--spacing-6);
-}
-
-@media (min-width: 600px) {
-  .imageWrapper {
-    height: 100%;
-    width: 45%;
-    min-width: 45%;
-    align-self: flex-start;
-    padding: var(--spacing-6);
-  }
-}
-
 .card::before {
+  --offset: 0.5rem;
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: rotate(-5deg) scale(1.03);
+  top: calc(-1 * var(--offset));
+  left: calc(-1 * var(--offset));
+  width: calc(100% + 2 * var(--offset));
+  height: calc(100% + 2 * var(--offset));
+  transform: rotate(-3deg);
   background: linear-gradient(to right, var(--gradientA), var(--gradientB));
-  transition: transform var(--timing-intermediate) var(--ease-out-back);
+  transition: transform var(--timing-fast) var(--ease-out-quad);
   border-radius: var(--border-radius-1);
   box-shadow: var(--box-shadow-small);
   z-index: var(--z-back);
 }
 
-.image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--border-radius-1);
-  overflow: hidden;
-  box-shadow: var(--box-shadow-small);
-}
-
-.image::after {
+/* .card::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.45;
-  background: linear-gradient(to right, var(--gradientA), var(--gradientB));
-  transition: opacity var(--timing-fast) var(--ease-in-out-quad);
-}
+  bottom: calc(50% - 1px);
+  left: -15rem;
+  width: 150rem;
+  height: 1px;
+  background-color: var(--color-text);
+  z-index: -1;
+} */
 
 .underline {
   display: inline;
@@ -116,4 +87,18 @@
   background-repeat: no-repeat;
   background-size: 0 var(--underline-size);
   transition: background-size var(--timing-slow);
+}
+
+.date {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -250%);
+  z-index: var(--z-front);
+  /* background-color: var(--color-background); */
+  border: 1px solid var(--color-text);
+
+  border-radius: var(--border-radius-1);
+  box-shadow: var(--box-shadow-large);
+  padding: var(--spacing-1) var(--spacing-3);
 }

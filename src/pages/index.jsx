@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/layout';
+import PageLayout from '../components/layout/pageLayout';
 import Seo from '../components/seo';
 import BlogPostsList from '../components/blogPostsList.jsx';
 
@@ -10,10 +10,10 @@ const BlogIndex = ({ data, location }) => {
   const { nodes } = data.allMarkdownRemark;
 
   return (
-    <Layout location={location} title={title}>
+    <PageLayout location={location} title={title}>
       <Seo title="All posts" />
       <BlogPostsList posts={nodes} />
-    </Layout>
+    </PageLayout>
   );
 };
 

@@ -6,20 +6,18 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 
 ## TODO's
 
-- [ ] system for i18n translations for articles
-- [ ] Unsplash photographer credit
-- [ ] RSS feed
-- [ ] Blog template variables widths
 - [ ] Mobile
 - [ ] Code theme for markdown
-- [ ] Lazy motion optimization
-- [ ] Article Images grow on click
-- [ ] Hijack vertical scroll
+- [ ] Article images grow on click
 - [ ] Card and hero images to split background images and background-blend-mode
+- [ ] Lazy motion optimization
+- [ ] Unsplash photographer credit
+- [ ] Hijack vertical scroll
 
 ## Potential Additions
 
+- [ ] RSS feed
 - [ ] Import articles from Notion API
 - [ ] Commenting system
 - [ ] 'Like' system for for posts
-- [ ] system for i18n translations for articles
+- [ ] system for localisation of articles

@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/layout';
+import PageLayout from '../components/layout/pageLayout';
 import Seo from '../components/seo';
 import SubscribeCard from '../components/subscribeCard';
 
@@ -9,14 +9,14 @@ const NewsletterPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <PageLayout location={location} title={siteTitle}>
       <Seo title="Newsletter" />
 
       <div className="page">
         <h1>Newsletter</h1>
         <SubscribeCard />
       </div>
-    </Layout>
+    </PageLayout>
   );
 };
 
