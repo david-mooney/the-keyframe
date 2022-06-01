@@ -9,7 +9,7 @@ const BlogPostsList = ({ posts }) => {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: 0.09,
+        staggerChildren: 0.05,
       },
     },
   };

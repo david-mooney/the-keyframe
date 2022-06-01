@@ -8,7 +8,7 @@
 
 @media (min-width: 800px) {
   .aside {
-    left: var(--spacing-24);
+    left: calc(22.75vw);
     top: 25vh;
   }
 }
