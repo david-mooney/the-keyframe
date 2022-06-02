@@ -1,6 +1,6 @@
 .navigation {
-  padding: var(--spacing-6) var(--spacing-3);
-  border-left: 1px solid var(--color-text);
+  padding: var(--spacing-8) var(--spacing-8);
+  border-right: 1px solid var(--color-text);
 }
 
 .navigation ul {
