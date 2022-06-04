@@ -22,15 +22,12 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
-  background: var(--color-background);
-  transition: var(--timing-intermediate) background-color var(--ease-in-out-quad),
-    var(--timing-intermediate) color var(--ease-in-out-quad);
 }
 
 hr {
   height: 1px;
   border: 0;
-  background: var(--color-accent);
+  background: var(--color-text);
 }
 
 h1,

@@ -31,7 +31,7 @@ const BlogPostsList = ({ posts }) => {
       animate="show"
     >
       {posts.map(post => (
-        <motion.li className={`test ${styles.item}`} variants={item} key={post.fields.slug}>
+        <motion.li className={styles.item} variants={item} key={post.fields.slug}>
           <PostCard {...post} />
         </motion.li>
       ))}

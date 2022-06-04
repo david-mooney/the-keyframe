@@ -1,15 +1,21 @@
 :root {
+  /* timings */
   --timing-fastest: 0.15s;
   --timing-fast: 0.25s;
   --timing-intermediate: 0.45s;
   --timing-slow: 0.55s;
   --timing-slowest: 0.85s;
 
+  /* easings */
   --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
   --ease-in-out-back: cubic-bezier(0.68, -0.6, 0.32, 1.6);
   --ease-out-quad: cubic-bezier(0.5, 1, 0.89, 1);
   --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-in-quad: cubic-bezier(0.11, 0, 0.5, 0);
+}
 
-  --box-shadow-small: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  --box-shadow-large: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+.animate-colors {
+  transition: var(--timing-intermediate) background-color var(--ease-out-quad),
+    var(--timing-intermediate) color var(--ease-out-quad),
+    var(--timing-intermediate) border-color var(--ease-out-quad);
 }

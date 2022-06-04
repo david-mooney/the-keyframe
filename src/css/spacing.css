@@ -25,9 +25,14 @@
   --spacing-24: 6rem;
   --spacing-28: 7rem;
   --spacing-32: 8rem;
+  --spacing-36: 10rem;
+
   --border-radius-1: 0.5rem;
 
   --z-front: 2;
   --z-middle: 1;
   --z-back: -1;
+
+  --box-shadow-small: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  --box-shadow-large: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }

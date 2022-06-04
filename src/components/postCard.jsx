@@ -13,7 +13,11 @@ const PostCard = ({ frontmatter, fields, timeToRead }) => {
 
   return (
     <Link to={fields.slug} className={styles.link} itemProp="url" style={gradientColors}>
-      <article className={styles.card} itemScope itemType="http://schema.org/Article">
+      <article
+        className={`animate-colors ${styles.card}`}
+        itemScope
+        itemType="http://schema.org/Article"
+      >
         {image?.childImageSharp && (
           <div className={styles.imageWrapper}>
             <GatsbyImage
