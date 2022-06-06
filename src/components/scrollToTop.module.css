@@ -1,8 +1,4 @@
-.fixed {
-  position: fixed;
-  bottom: var(--spacing-6);
-  right: var(--spacing-6);
-  z-index: var(--z-front);
+.container {
   opacity: 1;
   transition: var(--timing-fast) opacity var(--ease-in-out-quad);
 }

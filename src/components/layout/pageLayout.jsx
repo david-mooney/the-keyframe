@@ -1,14 +1,16 @@
 import React from 'react';
 import Header from './header';
-
+import Controls from '../controls';
+// import { motion } from 'framer-motion';
 import * as styles from './pageLayout.module.css';
 
 const PageLayout = ({ title, children, css }) => (
   <>
     <Header title={title} />
-    <main className={`animate-colors ${styles.main}`} style={css}>
+    <main style={css} className={`animate-colors ${styles.main}`}>
       {children}
     </main>
+    <Controls />
   </>
 );
 

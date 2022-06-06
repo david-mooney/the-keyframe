@@ -14,20 +14,17 @@ const ScrollToTop = () => {
   };
 
   useEffect(() => {
-    const onScroll = throttle(event => {
-      const { scrollTop } = event.target.documentElement;
-      const isVisible = scrollTop > window.innerHeight / 2;
+    const isVisible = () => window.pageYOffset > window.innerHeight / 2;
+    const onScroll = throttle(event => setVisible(isVisible()), 24);
 
-      setVisible(isVisible);
-    }, 24);
-
+    setVisible(isVisible());
     window.addEventListener('scroll', onScroll, { passive: true });
 
     return () => window.removeEventListener('scroll', onScroll, { passive: true });
   }, []);
 
   return (
-    <div className={`${styles.fixed} ${!visible && styles.hidden}`}>
+    <div className={`${styles.container} ${!visible && styles.hidden}`}>
       <CircleButton>
         <button
           type="button"

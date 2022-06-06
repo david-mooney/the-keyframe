@@ -4,10 +4,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  text-rendering: optimizeLegibility;
+}
+
 html,
 body {
   margin: 0;
-  scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
 
@@ -22,6 +25,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  background-color: var(--color-background);
 }
 
 hr {
@@ -45,12 +49,12 @@ h6 {
 }
 
 h1 {
-  font-size: var(--fontSize-5);
+  font-size: clamp(var(--fontSize-3), 1vw + 1rem, var(--fontSize-5));
 }
 
 h2 {
   /* font-size: var(--fontSize-4); */
-  font-size: clamp(var(--fontSize-3), var(--fontSize-4), var(--fontSize-5));
+  font-size: clamp(var(--fontSize-2), 1vw + 1rem, var(--fontSize-4));
 }
 
 h3 {

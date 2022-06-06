@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-
 import PageLayout from '../components/layout/pageLayout';
 import Seo from '../components/seo';
 import BlogPostsList from '../components/blogPostsList.jsx';

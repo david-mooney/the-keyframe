@@ -33,6 +33,9 @@ const Seo = ({ description, lang, meta, title }) => {
   return (
     <Helmet
       htmlAttributes={{ lang }}
+      bodyAttributes={{
+        class: 'animate-colors',
+      }}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[

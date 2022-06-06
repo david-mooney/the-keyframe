@@ -1,12 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-
 import PageLayout from '../components/layout/pageLayout';
 import Seo from '../components/seo';
 import PostHero from '../components/postHero';
 import PostArticle from '../components/postArticle';
 import PostFooter from '../components/postFooter';
-import ScrollToTop from '../components/scrollToTop';
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
@@ -19,8 +17,6 @@ const BlogPostTemplate = ({ data, location }) => {
 
   return (
     <PageLayout location={location} title={siteTitle} css={gradientColors}>
-      <ScrollToTop />
-
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import TimeToRead from './timeToRead';
+import TimeToRead from '../timeToRead';
 import * as styles from './postCard.module.css';
 
 const PostCard = ({ frontmatter, fields, timeToRead }) => {

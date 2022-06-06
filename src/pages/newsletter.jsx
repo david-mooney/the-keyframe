@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 import PageLayout from '../components/layout/pageLayout';
 import Seo from '../components/seo';
-import SubscribeCard from '../components/subscribeCard';
+import SubscribeCard from '../components/cards/subscribeCard';
 
 const NewsletterPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
