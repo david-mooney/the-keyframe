@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import TimeToRead from '../timeToRead';
 import * as styles from './postCard.module.css';
 
 const PostCard = ({ frontmatter, fields, timeToRead }) => {
@@ -29,13 +28,13 @@ const PostCard = ({ frontmatter, fields, timeToRead }) => {
         )}
 
         <header>
-          <small className="">{date}</small>
+          <small>{date}</small>
           <div>
             <h2 itemProp="headline" className={styles.underline}>
               {title || fields.slug}
             </h2>
           </div>
-          <TimeToRead readTime={timeToRead} />
+          <small>{timeToRead} minute read</small>
         </header>
       </article>
     </Link>

@@ -1,9 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { FiSun } from '@react-icons/all-files/fi/FiSun';
 import { BsMoon } from '@react-icons/all-files/bs/BsMoon';
-
 import CircleButton from './circleButton';
-
 import * as styles from './themeToggle.module.css';
 
 const ThemeToggle = () => {

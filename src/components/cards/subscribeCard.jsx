@@ -19,7 +19,7 @@ const SubscribeCard = () => {
 
   return (
     <div className={cardStyles.link} style={gradientColors}>
-      <div className={cardStyles.card}>
+      <div className={`animate-colors ${cardStyles.card}`}>
         <form className={styles.form} name={formName} method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value={formName} />
           <h3>Subscribe for the latest posts</h3>

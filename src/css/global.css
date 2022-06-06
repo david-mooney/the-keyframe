@@ -98,32 +98,6 @@ a {
   font-weight: var(--fontWeight-medium);
 }
 
-.underline {
-  position: relative;
-  outline: none;
-  text-decoration: none;
-  color: inherit;
-}
-
-.underline::after {
-  content: '';
-  position: absolute;
-  display: block;
-  height: 2px;
-  transform: scaleX(0);
-  transition: var(--timing-fast) transform var(--ease-in-out-quad);
-  transform-origin: left;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  background-color: var(--color-text);
-}
-
-.underline:focus::after,
-.underline:hover::after {
-  transform: scaleX(1);
-}
-
 #___gatsby,
 #gatsby-focus-wrapper {
   height: 100%;
@@ -131,26 +105,18 @@ a {
   flex-direction: column;
 }
 
-.sr-only {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+.underline {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+  display: inline;
+  background: linear-gradient(var(--color-text), var(--color-text)) 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 2px;
+  transition: background-size var(--timing-fast);
 }
 
-.skip-to-content {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  opacity: 0;
-  transition: var(--timing-fast) opacity var(--ease-in-out-quad);
-  z-index: var(--z-front);
-}
-
-.skip-to-content:focus {
-  opacity: 1;
+.underline:focus,
+.underline:hover {
+  background-size: 100% 2px;
 }

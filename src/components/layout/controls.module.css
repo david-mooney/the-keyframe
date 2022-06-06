@@ -13,7 +13,7 @@
   -webkit-overflow-scrolling: touch;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .navigation {
     top: 0;
     right: 0;
@@ -35,7 +35,7 @@
   align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .navigation ul {
     flex-direction: column;
   }
@@ -45,7 +45,7 @@
   padding-right: var(--spacing-6);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .navigation li {
     padding-right: var(--spacing-0);
     padding-bottom: var(--spacing-6);

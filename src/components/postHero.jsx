@@ -1,6 +1,5 @@
 import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import TimeToRead from './timeToRead';
 import * as styles from './postHero.module.css';
 
 const PostHero = ({ data, readTime }) => (
@@ -10,7 +9,7 @@ const PostHero = ({ data, readTime }) => (
       <h1 id="main-title" itemProp="headline">
         {data.title}
       </h1>
-      <TimeToRead readTime={readTime} />
+      <small>{readTime} minute read</small>
     </div>
 
     <div className={styles.frame}>

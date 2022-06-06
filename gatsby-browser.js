@@ -6,4 +6,5 @@ import './src/css/colors.css';
 import './src/css/spacing.css';
 import './src/css/typography.css';
 import './src/css/animations.css';
+import './src/css/accessibility.css';
 import './src/css/global.css';

@@ -7,15 +7,14 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 ## TODO's
 
 - [ ] Mobile
-- [ ] Code theme for markdown
 - [ ] Article images grow on click
 - [ ] Card and hero images to split background images and background-blend-mode
-- [ ] Lazy motion optimization
 - [ ] Unsplash photographer credit
-- [ ] Hijack vertical scroll
+- [ ] Add underline animation to post links
 
 ## Potential Additions
 
+- [ ] Add a search bar (Algolia?)
 - [ ] RSS feed
 - [ ] Import articles from Notion API
 - [ ] Commenting system

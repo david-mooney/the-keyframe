@@ -62,7 +62,10 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        colorA
+        colorB
       }
+      timeToRead
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
       fields {
@@ -70,7 +73,10 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        colorA
+        colorB
       }
+      timeToRead
     }
   }
 `;

@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './header';
-import Controls from '../controls';
-// import { motion } from 'framer-motion';
+import Controls from '../layout/controls';
 import * as styles from './pageLayout.module.css';
 
 const PageLayout = ({ title, children, css }) => (
