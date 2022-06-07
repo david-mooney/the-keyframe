@@ -5,8 +5,6 @@ import * as styles from './postFooter.module.css';
 const PostFooter = ({ data }) => {
   const { previous, next } = data;
 
-  console.log('data', data);
-
   return (
     <nav className={styles.container} title="Blog posts navigation">
       <ul className={styles.list}>

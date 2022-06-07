@@ -2,8 +2,6 @@ import { Link } from 'gatsby';
 import React from 'react';
 import * as styles from './header.module.css';
 
-/* TODO: skip should auto focus on first element in main */
-
 const Header = ({ title }) => (
   <header className={`animate-colors ${styles.header}`}>
     <a className="skip-to-content underline" href="#main">

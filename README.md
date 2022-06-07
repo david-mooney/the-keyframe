@@ -14,9 +14,11 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 
 ## Potential Additions
 
-- [ ] Add a search bar (Algolia?)
-- [ ] RSS feed
-- [ ] Import articles from Notion API
-- [ ] Commenting system
-- [ ] 'Like' system for for posts
-- [ ] system for localisation of articles
+- [?] Add a search bar (Algolia?)
+- [?] RSS feed
+- [?] Import articles from Notion API
+- [?] Commenting system
+- [?] 'Like' system for for posts
+- [?] system for localisation of articles
+- [?] chapters in the article progress bar
+- [?] skip to content should autofocus

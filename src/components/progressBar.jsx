@@ -1,5 +1,3 @@
-// TODO: chapters
-
 import React, { useRef, useEffect, useState } from 'react';
 import throttle from 'lodash/throttle';
 import clamp from 'lodash/clamp';
