@@ -11,3 +11,8 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--spacing-24);
 }
+
+.list p {
+  text-align: center;
+  padding-bottom: var(--spacing-12);
+}

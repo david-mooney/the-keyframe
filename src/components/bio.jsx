@@ -25,7 +25,6 @@ const Bio = () => {
       <p>
         Written by <strong>{author.name}</strong>
       </p>
-      <hr />
     </div>
   );
 };
