@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import * as cardStyles from './postCard.module.css';
 import * as styles from './subscribeCard.module.css';
 
+/* TODO: replace temporary implementation */
+
 const SubscribeCard = () => {
   const formName = 'subscribe';
 
@@ -15,7 +17,7 @@ const SubscribeCard = () => {
       body: data,
     })
       .then(() => {
-        form.innerHTML = `<div class="form--success">Almost there! Check your inbox for a confirmation e-mail.</div>`;
+        form.innerHTML = `<div class="form--success">I don't work yet, but thanks for your interest</div>`;
       })
       .catch(error => {
         form.innerHTML = `<div class="form--error">Error: ${error}</div>`;
@@ -48,11 +50,11 @@ const SubscribeCard = () => {
           data-netlify="true"
           netlify-honeypot="bot-field"
         >
-          <label>
-            Don’t fill this out if you’re human: <input name="bot-field" />
+          <h3>Subscribe for the latest posts</h3>
+          <label className="hidden">
+            Are you a human? <input name="bot-field" />
           </label>
           <input type="hidden" name="form-name" value={formName} />
-          <h3>Subscribe for the latest posts</h3>
           <input type="email" name="email" placeholder="Your email" required />
           <button type="submit">Subscribe</button>
           <small>I will never share your email and you can unsubscribe at any time</small>

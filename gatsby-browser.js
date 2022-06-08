@@ -8,3 +8,7 @@ import './src/css/typography.css';
 import './src/css/animations.css';
 import './src/css/accessibility.css';
 import './src/css/global.css';
+
+import zoomImage from './src/utilities/image-zoom';
+
+export const onRouteUpdate = zoomImage;

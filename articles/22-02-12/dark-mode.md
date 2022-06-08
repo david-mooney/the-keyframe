@@ -66,6 +66,8 @@ Village and the subline of her own road, the Line Lane. Pityful a rhetoric
 question ran over her cheek, then she continued her way. On her way she met a
 copy.
 
+<img src="./desert.jpg" alt="cool" data-zoomable="true" />
+
 > The copy warned the Little Blind Text, that where it came from it would have
 > been rewritten a thousand times and everything that was left from its origin
 > would be the word "and" and the Little Blind Text should turn around and

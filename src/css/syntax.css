@@ -17,8 +17,8 @@ pre[class*='language-'] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  background: #1a161b;
-  color: #2578ab;
+  background: #1c1a23;
+  color: #6fbec5;
   border-radius: var(--border-radius-1);
 }
 
@@ -78,7 +78,7 @@ pre[class*='language-'] {
 
 .token.property,
 .token.function {
-  color: #57718e;
+  color: #f5f7f4;
 }
 
 .token.tag-id,

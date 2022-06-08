@@ -105,6 +105,7 @@ a {
   flex-direction: column;
 }
 
+article a,
 .underline {
   outline: none;
   text-decoration: none;
@@ -116,7 +117,13 @@ a {
   transition: background-size var(--timing-fast);
 }
 
+article a:focus,
+article a:hover,
 .underline:focus,
 .underline:hover {
   background-size: 100% 2px;
+}
+
+.hidden {
+  display: none;
 }

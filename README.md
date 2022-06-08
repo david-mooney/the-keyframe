@@ -7,18 +7,16 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 ## TODO's
 
 - [ ] Mobile
-- [ ] Article images grow on click
-- [ ] Card and hero images to split background images and background-blend-mode
+- [ ] Figure out Gatsby Link transition jumping issue
+- [ ] Set background-blend-mode for post images
 - [ ] Unsplash photographer credit
-- [ ] Add underline animation to post links
 
 ## Potential Additions
 
 - [?] Add a search bar (Algolia?)
 - [?] RSS feed
-- [?] Import articles from Notion API
-- [?] Commenting system
 - [?] 'Like' system for for posts
+- [?] Commenting system
 - [?] system for localisation of articles
 - [?] chapters in the article progress bar
 - [?] skip to content should autofocus
