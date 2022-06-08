@@ -7,9 +7,8 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 ## TODO's
 
 - [ ] Mobile
-- [ ] Figure out Gatsby Link transition jumping issue
 - [ ] Set background-blend-mode for post images
-- [ ] Unsplash photographer credit
+- [ ] Figure out Gatsby Link transition jumping issue
 
 ## Potential Additions
 

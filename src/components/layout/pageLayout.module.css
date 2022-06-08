@@ -1,5 +1,8 @@
 .main {
+  position: relative;
   width: 100vw;
+  z-index: 0;
+  background-color: var(--color-background);
 }
 
 @media screen and (min-width: 800px) {

@@ -21,7 +21,8 @@ const Bio = () => {
 
   return (
     <div className={styles.bio}>
-      <hr />
+      <hr className="animate-colors" />
+
       <p>
         Written by <strong>{author.name}</strong>
       </p>

@@ -91,6 +91,7 @@ function applyZoomEffect({ excludedSelector, includedSelector, ...options }) {
 }
 
 const onRouteUpdate = (_, pluginOptions) => {
+  /* TODO */
   const options = { ...defaultOptions, ...pluginOptions };
 
   injectStyles(options);

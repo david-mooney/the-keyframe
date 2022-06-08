@@ -12,16 +12,14 @@ const PostHero = ({ data, readTime }) => (
       <small>{readTime} minute read</small>
     </div>
 
-    <div className={styles.frame}>
-      <div className={styles.imageWrapper}>
-        {data.image?.childImageSharp && (
-          <GatsbyImage
-            className={styles.image}
-            image={data.image.childImageSharp.gatsbyImageData}
-            alt={`Image for article: "${data.title}"`}
-          />
-        )}
-      </div>
+    <div className={styles.imageWrapper}>
+      {data.image?.childImageSharp && (
+        <GatsbyImage
+          className={styles.image}
+          image={data.image.childImageSharp.gatsbyImageData}
+          alt={`Image for article: "${data.title}"`}
+        />
+      )}
     </div>
   </header>
 );

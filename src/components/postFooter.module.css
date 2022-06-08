@@ -5,11 +5,18 @@
 
 .list {
   list-style: none;
-  padding: 0;
+  padding: var(--spacing-12) 0;
   margin: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: var(--spacing-24);
+}
+
+@media screen and (min-width: 800px) {
+  .list {
+    padding: 0;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .list p {

@@ -17,7 +17,7 @@
   position: relative;
   width: 100vw;
   height: 2px;
-  background-color: var(--color-text-faint);
+  background-color: hsla(var(--color-text-raw), 0.3);
 }
 
 @media (min-width: 800px) {

@@ -1,29 +1,24 @@
-/* Light Mode */
-
 :root {
-  /* Base Colors */
-  --color-white: hsl(0, 0%, 100%);
-  --color-text: hsl(233, 13%, 14%);
-  --color-shadow: hsla(233, 13%, 14%, 0.2);
+  /* Theme Colors */
+  --color-light-h: 75;
+  --color-light-s: 12%;
+  --color-light-l: 93%;
 
-  /* A11y */
-  --focus: var(--color-text);
+  --color-dark-h: 230;
+  --color-dark-s: 14%;
+  --color-dark-l: 9%;
 
-  /* Typography */
-  --color-text: hsl(233, 13%, 14%);
-  --color-text-faint: hsl(233, 13%, 86%);
-  --color-background: hsl(0, 0%, 100%);
+  /* Light Mode */
+  --color-text: hsl(var(--color-dark-h), var(--color-dark-s), var(--color-dark-l));
+  --color-background: hsl(var(--color-light-h), var(--color-light-s), var(--color-light-l));
+  --color-text-raw: var(--color-dark-h), var(--color-dark-s), var(--color-dark-l);
+  --color-background-raw: var(--color-light-h), var(--color-light-s), var(--color-light-l);
 }
 
-/* Dark Mode */
-
 :root.-dark {
-  /* A11y */
-  --focus: var(--color-text);
-
-  /* Typography */
-  --color-text: hsl(0, 0%, 100%);
-  --color-shadow: hsla(0, 0%, 100%, 0.2);
-  --color-text-faint: hsl(0, 0%, 50%);
-  --color-background: hsl(233, 13%, 14%);
+  /* Dark Mode */
+  --color-text: hsl(var(--color-light-h), var(--color-light-s), var(--color-light-l));
+  --color-background: hsl(var(--color-dark-h), var(--color-dark-s), var(--color-dark-l));
+  --color-text-raw: var(--color-light-h), var(--color-light-s), var(--color-light-l);
+  --color-background-raw: var(--color-dark-h), var(--color-dark-s), var(--color-dark-l);
 }

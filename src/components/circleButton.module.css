@@ -9,6 +9,4 @@
   border-radius: 50%;
   border: 2px solid var(--color-text);
   cursor: pointer;
-
-  /* box-shadow: var(--box-shadow-small); */
 }
