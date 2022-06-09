@@ -37,6 +37,13 @@
 @media screen and (min-width: 800px) {
   .imageWrapper {
     display: block;
+    background-image: url(../images/rocket.png), url(../images/rocket-top.png),
+      linear-gradient(to right, var(--gradientA), var(--gradientB));
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-blend-mode: normal, hard-light;
+    border: 1px solid var(--color-text);
   }
 }
 

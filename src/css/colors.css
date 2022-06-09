@@ -1,14 +1,17 @@
 :root {
-  /* Theme Colors */
+  /* Base Color HSL Values */
   --color-light-h: 75;
   --color-light-s: 12%;
   --color-light-l: 93%;
-
   --color-dark-h: 230;
   --color-dark-s: 14%;
   --color-dark-l: 9%;
 
-  /* Light Mode */
+  /* Fixed Colors */
+  --color-light: hsl(var(--color-light-h), var(--color-light-s), var(--color-light-l));
+  --color-dark: hsl(var(--color-dark-h), var(--color-dark-s), var(--color-dark-l));
+
+  /* Light Theme */
   --color-text: hsl(var(--color-dark-h), var(--color-dark-s), var(--color-dark-l));
   --color-background: hsl(var(--color-light-h), var(--color-light-s), var(--color-light-l));
   --color-text-raw: var(--color-dark-h), var(--color-dark-s), var(--color-dark-l);
@@ -16,7 +19,7 @@
 }
 
 :root.-dark {
-  /* Dark Mode */
+  /* Dark Theme */
   --color-text: hsl(var(--color-light-h), var(--color-light-s), var(--color-light-l));
   --color-background: hsl(var(--color-dark-h), var(--color-dark-s), var(--color-dark-l));
   --color-text-raw: var(--color-light-h), var(--color-light-s), var(--color-light-l);

@@ -2,8 +2,8 @@
 title: 'Who cares about good engineering?'
 date: '2022-01-01'
 description: 'Hello World'
-colorA: rgba(166,239,253,1)
-colorB: rgba(97,186,255,1)
+colorA: rgba(58, 96, 115,1)
+colorB: rgba(58, 123, 213,1)
 image: './watch.jpg'
 ---
 
