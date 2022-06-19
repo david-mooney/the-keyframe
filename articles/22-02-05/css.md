@@ -3,7 +3,7 @@ title: Vanilla CSS is all the CSS you need
 date: '2022-02-05'
 colorA: rgba(218,185,252,1)
 colorB: rgba(125,89,252,1)
-image: './rocket.jpg'
+image: './test.png'
 ---
 
 Well blow me down? Prepare to be boarded. The existence of the sea means the existence of pirates. The Code is more like guidelines, really. How much does the pirate pay for an ear piercing? … A buccaneer! (buck- in- ear…)

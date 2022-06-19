@@ -4,7 +4,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import * as styles from './postCard.module.css';
 
 const PostCard = ({ frontmatter, fields, timeToRead }) => {
-  const { title, date, colorA, colorB, image } = frontmatter;
+  const { title, date, colorA, colorB, image, imageB } = frontmatter;
   const gradientColors = {
     '--gradientA': colorA,
     '--gradientB': colorB,
@@ -24,12 +24,19 @@ const PostCard = ({ frontmatter, fields, timeToRead }) => {
               image={image.childImageSharp.gatsbyImageData}
               alt={`Image for article: ${title}`}
             />
+            {imageB?.childImageSharp && (
+              <GatsbyImage
+                className={styles.image}
+                image={imageB.childImageSharp.gatsbyImageData}
+                alt={`Image for article: ${title}`}
+              />
+            )}
           </div>
         )}
 
         <header>
           <small>{date}</small>
-          <div>
+          <div className={styles.title}>
             <h2 itemProp="headline" className={styles.underline}>
               {title || fields.slug}
             </h2>

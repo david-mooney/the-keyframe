@@ -1,6 +1,6 @@
 import React from 'react';
-import ThemeToggle from '../themeToggle';
-import ScrollToTop from '../scrollToTop';
+import ThemeToggle from '../buttons/themeToggle';
+import ScrollToTop from '../buttons/scrollToTop';
 import * as styles from './controls.module.css';
 
 const isBrowser = typeof window !== 'undefined';

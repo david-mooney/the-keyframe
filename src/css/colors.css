@@ -21,7 +21,8 @@
 :root.-dark {
   /* Dark Theme */
   --color-text: hsl(var(--color-light-h), var(--color-light-s), var(--color-light-l));
-  --color-background: hsl(var(--color-dark-h), var(--color-dark-s), var(--color-dark-l));
+  /* --color-background: hsl(var(--color-dark-h), var(--color-dark-s), var(--color-dark-l)); */
+  --color-background: #202433;
   --color-text-raw: var(--color-light-h), var(--color-light-s), var(--color-light-l);
   --color-background-raw: var(--color-dark-h), var(--color-dark-s), var(--color-dark-l);
 }

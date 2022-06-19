@@ -1,0 +1,12 @@
+.container {
+  position: relative;
+  height: var(--size);
+  width: var(--size);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid var(--color-text);
+  cursor: pointer;
+}

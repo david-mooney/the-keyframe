@@ -96,6 +96,7 @@ small {
 a {
   color: var(--color-text);
   font-weight: var(--fontWeight-medium);
+  cursor: pointer;
 }
 
 #___gatsby,
@@ -126,4 +127,12 @@ article a:hover,
 
 .hidden {
   display: none;
+}
+
+article a {
+  color: var(--gradientB);
+}
+
+:root.-dark article a {
+  color: var(--gradientA);
 }

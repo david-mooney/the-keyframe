@@ -55,7 +55,13 @@ const SubscribeCard = () => {
             Are you a human? <input name="bot-field" />
           </label>
           <input type="hidden" name="form-name" value={formName} />
-          <input type="email" name="email" placeholder="Your email" required />
+          <input
+            type="email"
+            className="animate-colors"
+            name="email"
+            placeholder="Your email"
+            required
+          />
           <button type="submit">Subscribe</button>
           <small>I will never share your email and you can unsubscribe at any time</small>
         </form>

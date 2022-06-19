@@ -4,7 +4,8 @@ date: '2022-02-12'
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt.
 colorA: rgba(245,177,97,1)
 colorB: rgba(236,54,110,1)
-image: './desert.jpg'
+image: './coffee.png'
+imageB: './coffee-top.png'
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

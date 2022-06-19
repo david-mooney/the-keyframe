@@ -1,10 +1,12 @@
 :root {
   /* timings */
-  --timing-fastest: 0.15s;
-  --timing-fast: 0.25s;
-  --timing-intermediate: 0.45s;
-  --timing-slow: 0.55s;
-  --timing-slowest: 0.85s;
+  --timing-fastest: 150ms;
+  --timing-faster: 250ms;
+  --timing-fast: 350ms;
+  --timing-intermediate: 450ms;
+  --timing-slow: 550ms;
+  --timing-slower: 650ms;
+  --timing-slowest: 750ms;
 
   /* easings */
   --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -15,7 +17,7 @@
 }
 
 .animate-colors {
-  transition: var(--timing-intermediate) background-color var(--ease-out-quad),
-    var(--timing-intermediate) color var(--ease-out-quad),
-    var(--timing-intermediate) border-color var(--ease-out-quad);
+  transition: var(--timing-fast) background-color var(--ease-out-quad),
+    var(--timing-faster) color var(--ease-out-quad),
+    var(--timing-faster) border-color var(--ease-out-quad);
 }

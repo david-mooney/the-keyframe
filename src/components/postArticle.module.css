@@ -12,10 +12,6 @@
   }
 }
 
-.article a {
-  color: var(--gradientB);
-}
-
 .article img {
   border-radius: var(--border-radius-1);
 }

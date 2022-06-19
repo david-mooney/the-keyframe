@@ -54,6 +54,11 @@ export const pageQuery = graphql`
             gatsbyImageData(layout: CONSTRAINED)
           }
         }
+        imageB {
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED)
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

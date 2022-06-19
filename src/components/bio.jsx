@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import * as styles from './bio.module.css';
 
 const Bio = () => {
@@ -24,7 +24,10 @@ const Bio = () => {
       <hr className="animate-colors" />
 
       <p>
-        Written by <strong>{author.name}</strong>
+        Written by{' '}
+        <Link to="/about" className="underline animate-colors" itemProp="url">
+          {author.name}
+        </Link>
       </p>
     </div>
   );
