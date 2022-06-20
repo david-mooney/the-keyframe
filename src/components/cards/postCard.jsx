@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
+
 import * as styles from './postCard.module.css';
 
-const PostCard = ({ frontmatter, fields, timeToRead }) => {
+const PostCard = ({ frontmatter, fields, timeToRead, index }) => {
   const { title, date, colorA, colorB, image, imageB } = frontmatter;
   const gradientColors = {
     '--gradientA': colorA,

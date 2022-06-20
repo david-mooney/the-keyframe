@@ -3,7 +3,8 @@ title: 'The cult of Agile'
 date: '2021-12-28'
 colorA: rgba(96,221,142,1)
 colorB: rgba(24,138,141,1)
-image: './agile.jpg'
+image: './testA.png'
+imageB: './testB.png'
 ---
 
 This is my first post on my new fake blog! How exciting!

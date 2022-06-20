@@ -1,13 +1,11 @@
 import React, { useCallback, useState } from 'react';
 import { FiSun } from '@react-icons/all-files/fi/FiSun';
 import { BsMoon } from '@react-icons/all-files/bs/BsMoon';
-import CircleButton from './circleButton';
+import { circle } from './circleButton.module.css';
 import * as styles from './themeToggle.module.css';
 
 const ThemeToggle = () => {
   const id = 'themeToggle';
-  const height = '50%';
-  const width = '50%';
   const [checked, setChecked] = useState(window.theme === window.themes.DARK);
 
   const handleChange = useCallback(
@@ -20,24 +18,24 @@ const ThemeToggle = () => {
   );
 
   return (
-    <CircleButton label={id}>
+    <label labelfor={id} className={circle}>
       <div className={`${styles.icon} ${styles.sun}`} data-active={!checked}>
-        <FiSun style={{ height, width }} />
+        <FiSun />
       </div>
 
       <div className={`${styles.icon} ${styles.moon}`} data-active={checked}>
-        <BsMoon style={{ height, width }} />
+        <BsMoon />
       </div>
 
       <input
         id={id}
-        className="sr-only"
         type="checkbox"
+        className="sr-only"
+        aria-label="Toggle dark mode"
         defaultChecked={checked}
         onChange={handleChange}
-        aria-label="Toggle Dark Mode"
       />
-    </CircleButton>
+    </label>
   );
 };
 

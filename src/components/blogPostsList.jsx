@@ -5,9 +5,9 @@ import * as styles from './blogPostsList.module.css';
 
 const BlogPostsList = ({ posts }) => (
   <ol id="main" className={styles.list}>
-    {posts.map(post => (
+    {posts.map((post, index) => (
       <li className={styles.item} key={post.fields.slug}>
-        <PostCard {...post} />
+        <PostCard {...post} index={index} />
       </li>
     ))}
 

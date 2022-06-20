@@ -4,7 +4,8 @@ date: '2022-01-01'
 description: 'Hello World'
 colorA: rgba(58, 123, 213,1)
 colorB: rgba(58, 96, 115,1)
-image: './watch.jpg'
+image: './testA.png'
+imageB: './testB.png'
 ---
 
 This is my first post on my new fake blog! How exciting!

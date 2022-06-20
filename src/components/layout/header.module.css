@@ -8,6 +8,7 @@
   z-index: var(--z-front);
   background-color: var(--color-background);
   border-bottom: 1px solid;
+  padding: var(--spacing-3);
   overflow: hidden; /* For Safari iOS  */
   -webkit-overflow-scrolling: touch;
 }
@@ -16,8 +17,7 @@
   .header {
     bottom: 0;
     right: unset;
-    width: 25vw;
-    padding: var(--spacing-0) var(--spacing-4);
+    width: 5vw;
     border-bottom: none;
     border-right: 1px solid;
   }

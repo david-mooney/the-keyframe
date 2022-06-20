@@ -1,14 +1,14 @@
 .main {
   position: relative;
-  width: 100vw;
-  z-index: 0;
+  width: 90vw;
+  margin: 0 auto;
   background-color: var(--color-background);
+  z-index: 0;
 }
 
 @media screen and (min-width: 800px) {
   .main {
-    width: calc(75vw - 69px); /* TODO - magic number */
-    margin-left: 25vw;
-    margin-right: auto;
+    width: 80vw;
+    max-width: 1200px; /* TODO */
   }
 }

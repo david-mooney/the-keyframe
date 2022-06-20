@@ -6,19 +6,15 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 
 ## TODO's
 
-- [] Unify circle button code
 - [] Responsive tweaks
 - [] Article content spacing
-- [] Code sample container styling
 - [] Icon for header and favicon
-- [] Parallax effect on cards
-- [] Handle form submissions (mailchimp?)
-- [] Remove TODO's, comments, etc.
 - [] Add a About page
+- [] Remove TODO's, comments, etc.
+- [] Handle form submissions (mailchimp?)
 
 ## Potential Additions
 
-- Change list to horizontal scroll, add transitions
 - Add a search bar (Algolia?)
 - RSS feed
 - 'Like' system for for posts

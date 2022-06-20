@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import Back from '../buttons/backButton';
+// import Back from '../buttons/backButton';
 import * as styles from './header.module.css';
 
 const Header = ({ title }) => (
@@ -9,7 +9,7 @@ const Header = ({ title }) => (
       Skip to content
     </a>
 
-    <Back />
+    {/* <Back /> */}
 
     <nav className={styles.nav}>
       <ul className={styles.list}>

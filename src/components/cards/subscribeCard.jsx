@@ -51,7 +51,7 @@ const SubscribeCard = () => {
           netlify-honeypot="bot-field"
         >
           <h3>Subscribe for the latest posts</h3>
-          <label className="hidden">
+          <label className="not-displayed">
             Are you a human? <input name="bot-field" />
           </label>
           <input type="hidden" name="form-name" value={formName} />
