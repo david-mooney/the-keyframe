@@ -9,8 +9,8 @@ const BlogIndex = ({ data, location }) => {
   const { nodes } = data.allMarkdownRemark;
 
   return (
-    <PageLayout location={location} title={title}>
-      <Seo title="All posts" />
+    <PageLayout title={title}>
+      <Seo title="All posts" location={location} />
       <BlogPostsList posts={nodes} />
     </PageLayout>
   );

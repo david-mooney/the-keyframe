@@ -139,3 +139,8 @@ article a {
 :root.-dark article a {
   color: var(--gradientA);
 }
+
+/* Gatsby image bs */
+.gatsby-image-wrapper {
+  position: unset !important;
+}

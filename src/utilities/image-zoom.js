@@ -20,9 +20,9 @@ const applyZoomEffect = ({ excludedSelector, includedSelector, ...options }) => 
   }
 };
 
-const onRouteUpdate = (_, pluginOptions) => {
+const zoomImage = pluginOptions => {
   const options = { ...defaultOptions, ...pluginOptions };
   applyZoomEffect(options);
 };
 
-export default onRouteUpdate;
+export default zoomImage;

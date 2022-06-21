@@ -8,7 +8,7 @@
 
 @media (min-width: 800px) {
   .aside {
-    left: calc(30vw);
+    left: 15vw;
     top: 25vh;
   }
 }

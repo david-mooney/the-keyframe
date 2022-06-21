@@ -1,5 +1,4 @@
 .list {
-  border: 1px dashed red;
   list-style: none;
   display: grid;
   grid-auto-flow: row;

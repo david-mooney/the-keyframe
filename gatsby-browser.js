@@ -11,4 +11,6 @@ import './src/css/global.css';
 
 import zoomImage from './src/utilities/image-zoom';
 
-export const onRouteUpdate = zoomImage;
+export const onRouteUpdate = () => {
+  zoomImage();
+};
