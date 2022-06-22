@@ -1,16 +1,10 @@
 .main {
   position: relative;
-  width: 95vw;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: var(--color-background);
-  z-index: 0;
+  margin: 0 var(--fixed-element-width);
 }
 
 @media screen and (min-width: 800px) {
   :global(.home) .main {
-    width: 75vw;
-    margin-left: auto;
-    margin-right: 65px; /* TODO */
+    margin-left: calc(25vw + var(--fixed-element-width));
   }
 }

@@ -18,8 +18,8 @@
   transition: var(--timing-fast) opacity var(--ease-out-quad);
 }
 
-.circle > svg {
-  height: 80%;
-  width: 80%;
+.circle svg {
+  height: 60%;
+  width: 60%;
   fill: var(--color-text);
 }

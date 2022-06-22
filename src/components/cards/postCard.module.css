@@ -7,6 +7,7 @@
   border-radius: var(--border-radius-1);
   box-shadow: var(--box-shadow-large);
   transition: var(--timing-fast) background-color var(--ease-in-out-quad);
+  overflow: hidden;
 }
 
 .image {
@@ -16,7 +17,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: var(--border-radius-1);
 }
 
 .image:nth-of-type(2) {
@@ -31,7 +31,6 @@
   box-shadow: none;
   outline-color: transparent;
   outline-style: solid;
-  border-radius: var(--border-radius-1);
   transition: var(--timing-fast) box-shadow var(--ease-in-out-quad);
 }
 

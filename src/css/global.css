@@ -11,7 +11,7 @@
 html,
 body {
   margin: 0;
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; TODO - Chrome bug */
 }
 
 html {

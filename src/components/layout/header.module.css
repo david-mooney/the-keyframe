@@ -1,14 +1,7 @@
 .header {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  width: 100vw;
-  display: flex;
-  padding: var(--spacing-3) var(--spacing-4);
-  z-index: var(--z-front);
-  border-bottom: 1px solid;
-  padding: var(--spacing-3);
+  left: var(--fixed-element-width);
   overflow: hidden; /* For Safari iOS  */
   -webkit-overflow-scrolling: touch;
 }
@@ -16,16 +9,14 @@
 @media screen and (min-width: 800px) {
   .header {
     bottom: 0;
-    left: -20vw;
     width: 25vw;
-    right: unset;
-    border-bottom: none;
     border-right: 1px solid;
-    transition: var(--timing-faster) left var(--ease-out-quad);
+    transform: translateX(-100%);
+    transition: var(--timing-intermediate) transform var(--ease-out-quart);
   }
 
   :global(.home) .header {
-    left: 0;
+    transform: translateX(0);
   }
 }
 

@@ -1,7 +1,7 @@
 .icon {
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   display: flex;
@@ -12,12 +12,12 @@
 
 .sun {
   transform: rotate(45deg);
-  transform-origin: 50% 150%;
+  transform-origin: 50% 200%;
 }
 
 .moon {
   transform: rotate(-45deg);
-  transform-origin: 50% 150%;
+  transform-origin: 50% 200%;
 }
 
 .sun[data-active='true'],

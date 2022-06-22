@@ -4,8 +4,8 @@
   grid-auto-flow: row;
   grid-auto-columns: 1fr;
   grid-gap: var(--spacing-36);
-  width: min(80%, 600px);
-  padding: 50vh 0;
+  padding: var(--spacing-36) var(--spacing-8);
+  width: min(80%, 608px);
   margin: auto;
   justify-items: center;
   align-items: center;
