@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--spacing-6) var(--spacing-3);
+  padding: var(--spacing-3);
   background-color: var(--color-background);
   border-top: 1px solid;
   z-index: var(--z-front);
@@ -22,6 +22,7 @@
     width: var(--fixed-element-width);
     border-top: none;
     border-left: 1px solid;
+    padding: var(--spacing-6) var(--spacing-3);
   }
 }
 

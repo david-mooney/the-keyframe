@@ -1,10 +1,16 @@
 .main {
   position: relative;
-  margin: 0 var(--fixed-element-width);
+  overflow-x: hidden; /* TODO - this might cause issues */
+  margin: var(--fixed-element-width) var(--fixed-element-width);
 }
 
 @media screen and (min-width: 800px) {
+  .main {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   :global(.home) .main {
-    margin-left: calc(25vw + var(--fixed-element-width));
+    margin-left: calc(var(--non-fixed-element-width) + var(--fixed-element-width));
   }
 }

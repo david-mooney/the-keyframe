@@ -23,3 +23,7 @@
   width: 60%;
   fill: var(--color-text);
 }
+
+.circle:focus-within {
+  background-color: blueviolet;
+}

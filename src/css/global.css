@@ -144,3 +144,12 @@ article a {
 .gatsby-image-wrapper {
   position: unset !important;
 }
+
+.medium-zoom-overlay {
+  z-index: 4;
+}
+
+.medium-zoom-image {
+  z-index: 4;
+  border-radius: 2px;
+}

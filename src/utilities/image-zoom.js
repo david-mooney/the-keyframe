@@ -1,13 +1,9 @@
 import mediumZoom from 'medium-zoom';
 
 const defaultOptions = {
-  margin: 24,
-  scrollOffset: 40,
-  container: null,
-  template: null,
-  excludedSelector: null,
+  margin: 0,
+  scrollOffset: 25,
   background: 'var(--color-background)',
-  zIndex: 'var(--z-modal)',
 };
 
 const applyZoomEffect = ({ excludedSelector, includedSelector, ...options }) => {
@@ -21,8 +17,7 @@ const applyZoomEffect = ({ excludedSelector, includedSelector, ...options }) => 
 };
 
 const zoomImage = pluginOptions => {
-  const options = { ...defaultOptions, ...pluginOptions };
-  applyZoomEffect(options);
+  applyZoomEffect({ ...defaultOptions, ...pluginOptions });
 };
 
 export default zoomImage;

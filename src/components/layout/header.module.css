@@ -9,14 +9,15 @@
 @media screen and (min-width: 800px) {
   .header {
     bottom: 0;
-    width: 25vw;
     border-right: 1px solid;
+    width: var(--non-fixed-element-width);
     transform: translateX(-100%);
     transition: var(--timing-intermediate) transform var(--ease-out-quart);
   }
 
   :global(.home) .header {
     transform: translateX(0);
+    transition-delay: var(--timing-fastest);
   }
 }
 

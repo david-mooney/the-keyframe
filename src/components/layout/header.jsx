@@ -4,10 +4,6 @@ import * as styles from './header.module.css';
 
 const Header = ({ title }) => (
   <header className={`animate-colors ${styles.header}`}>
-    <a className="skip-to-content underline" href="#main">
-      Skip to content
-    </a>
-
     <nav className={styles.nav}>
       <ul className={styles.list}>
         <li>

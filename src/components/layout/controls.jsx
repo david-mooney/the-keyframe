@@ -5,7 +5,7 @@ import * as styles from './controls.module.css';
 
 const isBrowser = typeof window !== 'undefined';
 
-const Navigation = () => {
+const Controls = () => {
   return (
     <div className={`animate-colors ${styles.navigation}`}>
       <ul>
@@ -18,4 +18,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default Controls;

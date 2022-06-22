@@ -7,6 +7,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: clamp(1rem, 80vh, 35rem);
+  grid-gap: var(--spacing-24);
   overflow: hidden;
 }
 
@@ -25,7 +26,6 @@
   justify-content: center;
   align-items: flex-end;
   text-align: right;
-  padding-right: var(--spacing-24);
 }
 
 .imageWrapper {
@@ -55,11 +55,12 @@
   width: calc(100% + 2 * var(--offset));
   height: calc(100% + 2 * var(--offset));
   background: linear-gradient(to right, var(--gradientA), var(--gradientB));
-  transition: transform var(--timing-fast) var(--ease-out-quad);
   box-shadow: var(--box-shadow-small);
   z-index: var(--z-back);
   transform: rotate(8deg);
 }
+
+/* TODO - image border radius || maybe some cool header design instead */
 
 .image {
   position: absolute;
@@ -68,7 +69,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: var(--border-radius-1);
 }
 
 .image:nth-of-type(2) {
