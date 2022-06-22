@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from './navigation';
-import Header from './Header';
-import Controls from '../layout/controls';
+import Header from './header';
+import Controls from './controls';
 import * as styles from './pageLayout.module.css';
 
 const PageLayout = ({ title, children, css }) => (
