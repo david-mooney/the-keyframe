@@ -11,7 +11,9 @@
     "@fontsource/aleo": "^4.5.7",
     "@fontsource/lato": "^4.5.8",
     "@react-icons/all-files": "^4.1.0",
+    "algoliasearch": "^4.13.1",
     "gatsby": "^4.16.0",
+    "gatsby-plugin-algolia": "^0.26.0",
     "gatsby-plugin-feed": "^4.16.0",
     "gatsby-plugin-gatsby-cloud": "^4.16.0",
     "gatsby-plugin-image": "^2.16.0",
@@ -32,7 +34,8 @@
     "prismjs": "^1.28.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-instantsearch-hooks-web": "^6.29.0"
   },
   "devDependencies": {
     "prettier": "^2.6.2"
@@ -48,7 +51,7 @@
     "url": "git+https://github.com/david-mooney/the-key-frame.git"
   },
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby clean && gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby clean && gatsby develop --open",

@@ -9,7 +9,7 @@ import './src/css/animations.css';
 import './src/css/accessibility.css';
 import './src/css/global.css';
 
-import zoomImage from './src/utilities/image-zoom';
+import zoomImage from './src/utilities/imageZoom';
 
 export const onRouteUpdate = () => {
   zoomImage();

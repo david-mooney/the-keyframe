@@ -1,0 +1,41 @@
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-6);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--color-text);
+  text-align: center;
+  border-bottom: 2px solid hsla(var(--color-text-raw), 0.25);
+}
+
+input::placeholder {
+  color: hsla(var(--color-text-raw), 0.5);
+}
+
+input:focus {
+  border-color: var(--color-text);
+}
+
+input:focus::placeholder {
+  color: hsla(var(--color-text-raw), 1);
+}
+
+.icon {
+  position: absolute;
+  right: 0;
+  transform: translateX(-var(--spacing-6));
+  pointer-events: none;
+  color: hsla(var(--color-text-raw), 0.5);
+}
+
+input:focus + .icon {
+  color: hsla(var(--color-text-raw), 1);
+}

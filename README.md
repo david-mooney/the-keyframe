@@ -12,10 +12,10 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 - [] Add a About page
 - [] Remove TODO's, comments, etc.
 - [] Handle form submissions (mailchimp?)
+- [] Replace react-icons
 
 ## Potential Additions
 
-- Add a search bar (Algolia?)
 - Preact for faster rendering
 - RSS feed
 - 'Like' system for for posts

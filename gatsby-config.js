@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: 'The Keyframe',
@@ -119,6 +123,14 @@ module.exports = {
         icon_options: {
           purpose: `any maskable`,
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        queries: require('./src/utilities/algoliaQueries'),
       },
     },
     'gatsby-plugin-offline',
