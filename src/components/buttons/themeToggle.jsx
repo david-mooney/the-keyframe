@@ -6,7 +6,9 @@ import * as styles from './themeToggle.module.css';
 
 const ThemeToggle = () => {
   const id = 'themeToggle';
-  const [checked, setChecked] = useState(window.theme === window.themes.DARK);
+  const [checked, setChecked] = useState(
+    typeof window !== 'undefined' ? window.theme === window.themes.DARK : true
+  );
 
   const handleChange = useCallback(
     event => {

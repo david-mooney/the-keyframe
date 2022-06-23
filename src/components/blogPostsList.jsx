@@ -1,6 +1,5 @@
 import React from 'react';
 import { useHits } from 'react-instantsearch-hooks-web';
-import SearchInput from './inputs/search.jsx';
 import PostCard from './cards/postCard.jsx';
 import SubscribeCard from './cards/subscribeCard.jsx';
 import * as styles from './blogPostsList.module.css';
@@ -31,16 +30,13 @@ const BlogPostsList = ({ posts }) => {
   };
 
   return (
-    <>
-      <SearchInput placeholder="Search for posts" />
-      <ol id="main" className={styles.list}>
-        {renderList()}
+    <ol id="main" className={styles.list}>
+      {renderList()}
 
-        <li className={styles.item}>
-          <SubscribeCard />
-        </li>
-      </ol>
-    </>
+      <li className={styles.item}>
+        <SubscribeCard />
+      </li>
+    </ol>
   );
 };
 
