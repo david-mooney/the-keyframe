@@ -3,6 +3,8 @@
   width: 100%;
   display: flex;
   align-items: center;
+  width: min(80%, 608px);
+  margin: var(--spacing-36) auto 0;
 }
 
 .input {

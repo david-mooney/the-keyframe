@@ -13,13 +13,13 @@ const BlogPostsList = ({ posts }) => {
 
     if (filteredPosts.length === 0) {
       return (
-        <div>
+        <li>
           <p>Sorry, I couldn't find any posts, but here's a joke instead:</p>
           <h4>
             As I handed my Dad his 50th birthday card, he looked at me with tears in his eyes and
             said, “You know, one would have been enough.”
           </h4>
-        </div>
+        </li>
       );
     }
 
@@ -31,15 +31,16 @@ const BlogPostsList = ({ posts }) => {
   };
 
   return (
-    <ol id="main" className={styles.list}>
+    <>
       <SearchInput placeholder="Search for posts" />
+      <ol id="main" className={styles.list}>
+        {renderList()}
 
-      {renderList()}
-
-      <li className={styles.item}>
-        <SubscribeCard />
-      </li>
-    </ol>
+        <li className={styles.item}>
+          <SubscribeCard />
+        </li>
+      </ol>
+    </>
   );
 };
 

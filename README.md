@@ -6,7 +6,6 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 
 ## TODO's
 
-- [] Responsive tweaks
 - [] Article content spacing
 - [] Icon for header and favicon
 - [] Add a About page
@@ -16,7 +15,6 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 
 ## Potential Additions
 
-- Preact for faster rendering
 - RSS feed
 - 'Like' system for for posts
 - system for localisation of articles

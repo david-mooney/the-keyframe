@@ -12,7 +12,7 @@
     border-right: 1px solid;
     width: var(--non-fixed-element-width);
     transform: translateX(-100%);
-    transition: var(--timing-intermediate) transform var(--ease-out-quart);
+    transition: var(--timing-slow) transform var(--ease-out-quart);
   }
 
   :global(.home) .header {
