@@ -17,7 +17,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-image',
-    'gatsby-plugin-preact',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
