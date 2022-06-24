@@ -5,10 +5,13 @@ import SubscribeCard from './cards/subscribeCard.jsx';
 import * as styles from './blogPostsList.module.css';
 
 const BlogPostsList = ({ posts }) => {
-  const { hits } = useHits();
+  const { hits, results } = useHits();
+  let filteredPosts = posts;
 
   const renderList = () => {
-    const filteredPosts = posts.filter(post => hits.find(hit => hit.slug === post.fields.slug));
+    if (results.query) {
+      filteredPosts = posts.filter(post => hits.find(hit => hit.slug === post.fields.slug));
+    }
 
     if (filteredPosts.length === 0) {
       return (

@@ -7,11 +7,25 @@ import PageLayout from '../components/layout/pageLayout';
 import Seo from '../components/seo';
 import BlogPostsList from '../components/blogPostsList.jsx';
 
+let firstLoad = true;
+
 const BlogIndex = ({ data, location }) => {
-  const searchClient = useMemo(
+  const algoliaClient = useMemo(
     () => algoliaSearch(process.env.GATSBY_ALGOLIA_APP_ID, process.env.GATSBY_ALGOLIA_SEARCH_KEY),
     []
   );
+
+  const searchClient = {
+    search(requests) {
+      if (firstLoad === true) {
+        firstLoad = false;
+        return Promise.resolve({
+          results: [{ hits: [] }],
+        });
+      }
+      return algoliaClient.search(requests);
+    },
+  };
 
   const title = data.site.siteMetadata?.title || 'Title';
   const { nodes } = data.allMarkdownRemark;

@@ -6,6 +6,7 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 
 ## TODO's
 
+- [] Fix this theme toggle issue once and for all
 - [] Article content spacing
 - [] Icon for header and favicon
 - [] Add a About page
@@ -15,7 +16,6 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 
 ## Potential Additions
 
-- RSS feed
 - 'Like' system for for posts
 - system for localisation of articles
 - chapters in the article progress bar
