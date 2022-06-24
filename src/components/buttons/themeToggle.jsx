@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiSun } from '@react-icons/all-files/fi/FiSun';
 import { BsMoon } from '@react-icons/all-files/bs/BsMoon';
 import { circle } from './circleButton.module.css';
@@ -8,14 +8,11 @@ const ThemeToggle = () => {
   const id = 'themeToggle';
   const [checked, setChecked] = useState(false);
 
-  const handleChange = useCallback(
-    event => {
-      const isChecked = event.target.checked;
-      setChecked(isChecked);
-      window.setTheme(isChecked ? window.themes.DARK : window.themes.LIGHT);
-    },
-    [setChecked]
-  );
+  const handleClick = event => {
+    const isChecked = event.target.checked;
+    setChecked(isChecked);
+    window.setTheme(isChecked ? window.themes.DARK : window.themes.LIGHT);
+  };
 
   useEffect(() => {
     setChecked(window.theme === window.themes.DARK);
@@ -37,7 +34,7 @@ const ThemeToggle = () => {
         className="sr-only"
         aria-label="Toggle dark mode"
         defaultChecked={checked}
-        onChange={handleChange}
+        onClick={handleClick}
       />
     </label>
   );
