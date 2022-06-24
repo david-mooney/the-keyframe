@@ -3,7 +3,7 @@ import ProgressBar from '../components/progressBar';
 import Bio from '../components/bio';
 import * as styles from './postArticle.module.css';
 
-const PostArticle = ({ post }) => {
+const PostArticle = ({ html }) => {
   const postRef = useRef(null);
 
   return (
@@ -17,7 +17,7 @@ const PostArticle = ({ post }) => {
       <ProgressBar ref={postRef} />
 
       <section
-        dangerouslySetInnerHTML={{ __html: post.html }}
+        dangerouslySetInnerHTML={{ __html: html }}
         itemProp="articleBody"
         aria-labelledby="main-title"
       />

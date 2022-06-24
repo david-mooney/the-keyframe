@@ -8,8 +8,9 @@ const ThemeToggle = () => {
   const id = 'themeToggle';
   const [checked, setChecked] = useState(false);
 
-  const handleClick = event => {
-    const isChecked = event.target.checked;
+  const handleClick = () => {
+    const isChecked = !checked;
+
     setChecked(isChecked);
     window.setTheme(isChecked ? window.themes.DARK : window.themes.LIGHT);
   };

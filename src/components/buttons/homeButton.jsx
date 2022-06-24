@@ -4,7 +4,7 @@ import CircleButton from './circleButton';
 
 /* TODO - circleLink component */
 const Back = () => (
-  <CircleButton label="Home">
+  <CircleButton label="Home" href="/">
     <FaHome />
   </CircleButton>
 );

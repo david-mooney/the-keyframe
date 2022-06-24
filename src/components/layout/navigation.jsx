@@ -6,7 +6,7 @@ import Back from '../buttons/backButton';
 import * as styles from './navigation.module.css';
 
 const Navigation = ({ title }) => (
-  <nav className={`animate-colors ${styles.nav}`}>
+  <nav className={`animate-colors ${styles.nav}`} aria-label="Main navigation">
     <a className="skip-to-content underline" href="#main">
       Skip to content
     </a>
