@@ -1,32 +1,25 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import PageLayout from '../components/layout/pageLayout';
 import Seo from '../components/seo';
 import PostHero from '../components/postHero';
 import PostArticle from '../components/postArticle';
 import PostFooter from '../components/postFooter';
 
 const BlogPostTemplate = ({ data, location }) => {
-  const post = data.markdownRemark;
-  const siteTitle = data.site.siteMetadata?.title || 'Title';
-
-  const gradientColors = {
-    '--gradientA': post.frontmatter.colorA,
-    '--gradientB': post.frontmatter.colorB,
-  };
+  const { html, excerpt, frontmatter, timeToRead } = data.markdownRemark;
 
   return (
-    <PageLayout title={siteTitle} css={gradientColors}>
+    <>
       <Seo
         location={location}
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        title={frontmatter.title}
+        description={frontmatter.description || excerpt}
       />
 
-      <PostHero data={post.frontmatter} readTime={post.timeToRead} />
-      <PostArticle post={post} />
+      <PostHero data={frontmatter} readTime={timeToRead} />
+      <PostArticle html={html} />
       <PostFooter data={data} />
-    </PageLayout>
+    </>
   );
 };
 

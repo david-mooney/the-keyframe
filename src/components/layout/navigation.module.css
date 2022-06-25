@@ -12,6 +12,7 @@
   z-index: var(--z-front);
   overflow: hidden; /* For Safari iOS  */
   -webkit-overflow-scrolling: touch;
+  z-index: 2;
 }
 
 @media screen and (min-width: 800px) {
@@ -20,7 +21,6 @@
     right: unset;
     bottom: 0;
     border-bottom: none;
-    border-right: 1px solid;
     padding: var(--spacing-6) var(--spacing-3);
   }
 }
@@ -48,4 +48,23 @@
   .list li {
     padding-bottom: var(--spacing-6);
   }
+}
+
+.subMenu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: var(--fixed-element-width);
+  width: var(--non-fixed-element-width);
+  background-color: var(--color-background);
+  overflow: hidden; /* For Safari iOS  */
+  -webkit-overflow-scrolling: touch;
+  border-right: 1px solid;
+  transform: translateX(calc(-100% + 1px));
+  transition: var(--timing-slow) transform var(--ease-out-quart);
+  z-index: 1;
+}
+
+.subMenu[data-open='true'] {
+  transform: translateX(0);
 }

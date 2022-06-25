@@ -1,4 +1,5 @@
 const React = require('react');
+const Layout = require('./src/components/layout/pageLayout').default;
 
 const html = () => {
   window.themes = {
@@ -57,3 +58,5 @@ exports.onRenderBody = ({ setHeadComponents }) => {
     />,
   ]);
 };
+
+exports.wrapPageElement = ({ element, props }) => <Layout {...props}>{element}</Layout>;

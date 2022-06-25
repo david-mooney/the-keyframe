@@ -16,6 +16,5 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 ## Potential Additions
 
 - 'Like' system for for posts
-- system for localisation of articles
+- system for localization of articles
 - chapters in the article progress bar
-- skip to content should autofocus

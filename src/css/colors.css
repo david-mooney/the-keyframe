@@ -1,8 +1,8 @@
 :root {
   /* Base Color HSL Values */
-  --color-light-h: 75;
-  --color-light-s: 12%;
-  --color-light-l: 93%;
+  --color-light-h: 0;
+  --color-light-s: 5%;
+  --color-light-l: 97%;
   --color-dark-h: 227;
   --color-dark-s: 23%;
   --color-dark-l: 16%;
