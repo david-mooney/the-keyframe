@@ -25,7 +25,10 @@ const Navigation = () => {
   const prevLocation = usePrevious(location);
   const ref = useRef();
 
-  useClickOutside(ref, () => setIsOpen(false));
+  useClickOutside(ref, () => {
+    setIsOpen(false);
+    setTabIndex(-1);
+  });
 
   useEffect(() => {
     if (location !== prevLocation) {
@@ -41,8 +44,8 @@ const Navigation = () => {
   };
 
   return (
-    <>
-      <nav className={`animate-colors ${styles.nav}`} aria-label="Main navigation">
+    <nav ref={ref} aria-label="Main navigation">
+      <div className={`animate-colors ${styles.nav}`}>
         <a className="skip-to-content underline" href="#main">
           Skip to content
         </a>
@@ -54,15 +57,20 @@ const Navigation = () => {
             </CircleButton>
           </li>
           <li>
-            <CircleButton label="Home" handleClick={toggleMenu}>
+            <CircleButton
+              label="Toggle submenu with page links"
+              aria-expanded={isOpen}
+              aria-controls="submenu"
+              handleClick={toggleMenu}
+            >
               {isOpen ? <RiMenuFoldFill /> : <RiMenuUnfoldFill />}
             </CircleButton>
           </li>
         </ul>
-      </nav>
+      </div>
 
-      <div className={styles.subMenu} data-open={isOpen} ref={ref}>
-        <ol>
+      <div className={styles.subMenu} data-open={isOpen} id="submenu">
+        <ol className={styles.subMenuList}>
           <li>
             <Link to="/about" className="underline" tabIndex={tabIndex}>
               About
@@ -73,9 +81,14 @@ const Navigation = () => {
               Subscribe
             </Link>
           </li>
+          <li>
+            <Link to="/privacy" className="underline" tabIndex={tabIndex}>
+              Privacy
+            </Link>
+          </li>
         </ol>
       </div>
-    </>
+    </nav>
   );
 };
 

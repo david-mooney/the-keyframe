@@ -145,10 +145,9 @@ article a {
 }
 
 .medium-zoom-overlay {
-  z-index: 4;
+  z-index: var(--z-modal-backdrop);
 }
 
-.medium-zoom-image {
-  z-index: 4;
-  border-radius: 2px;
+.medium-zoom-image--opened {
+  z-index: var(--z-modal);
 }

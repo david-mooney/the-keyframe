@@ -3,8 +3,8 @@
   width: 100%;
   display: flex;
   align-items: center;
-  width: min(80%, 608px);
-  margin: var(--spacing-36) auto 0;
+  width: min(80%, var(--maxWidth-lg));
+  margin: var(--spacing-28) auto 0;
 }
 
 .input {

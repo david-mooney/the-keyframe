@@ -1,18 +1,20 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PageWrapper from '../components/pageWrapper';
+import SubscribeCard from '../components/cards/subscribeCard.jsx';
 
 import Seo from '../components/seo';
 
-const AboutPage = () => (
+const SubscribePage = () => (
   <PageWrapper>
-    <Seo title="About" />
-    <h1>About</h1>
-    <p>This is the personal development blog of David Mooney.</p>
+    <Seo title="Subscribe" />
+    <h1>Keep up to date</h1>
+    <br />
+    <SubscribeCard />
   </PageWrapper>
 );
 
-export default AboutPage;
+export default SubscribePage;
 
 export const pageQuery = graphql`
   query {

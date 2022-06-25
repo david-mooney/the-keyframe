@@ -15,7 +15,7 @@
   left: 50%;
   opacity: 0;
   transition: var(--timing-fast) opacity var(--ease-in-out-quad);
-  z-index: var(--z-front);
+  z-index: var(--z-fixed);
   pointer-events: none;
 }
 
