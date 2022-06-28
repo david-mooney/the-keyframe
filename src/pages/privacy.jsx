@@ -9,25 +9,34 @@ const PrivacyPage = () => (
     <h1>Privacy & Terms</h1>
     <p>
       This is my personal blog; I have no intention of monetising it through the sale of your data
-      or information. I have added zero tracking software, analytics software, or data-sharing API's
-      to this site.
+      or usage metrics. I have added zero tracking software, marketing software, or data-sharing
+      API's to this site.
+    </p>
+
+    <p>
+      You can see for yourself, this entire site is{' '}
+      <a href="https://github.com/david-mooney/the-key-frame">open source on Github</a>.
     </p>
 
     <h2>Cookies</h2>
-    <p>The keyframe uses no cookies, period. Enjoy not having your privacy violated for once.</p>
+    <p>The Keyframe uses no cookies. Enjoy the lack of cookie banners, it's rare these days.</p>
 
     <h2>Log Files</h2>
     <p>
-      The keyframe uses no log files to store information. This includes your IP address, internet
-      service provider, location, usage analytics, etc. etc. I do not track any of that data.
+      The Keyframe uses no log files to store information. Many websites use these to track data
+      like your IP address, internet service provider, location, usage analytics, etc. etc. The
+      Keyframe does not track any of that.
     </p>
 
     <h2>Data Retention</h2>
     <p>
-      If you decide to fill out the subscription form, your email is stored in a secure database. I
-      will only use that data to send you an email notification whenever a new post is published,
-      that data is never sold to or shared with any third-party by me. You can unsubscribe at any
-      time, and upon doing so your email will be removed from the database.
+      If you decide to fill out the subscription form, your email, and optionally your first name,
+      is stored with{' '}
+      <a href="https://convertkit.com/privacy" target="_blank" rel="noopener noreferrer">
+        ConvertKit
+      </a>
+      . I will only use that data to send you an email notification whenever a new post is
+      published. You can unsubscribe at any time.
     </p>
 
     <h2>Copyright Information</h2>

@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { FaHome } from '@react-icons/all-files/fa/FaHome';
 import { RiMenuUnfoldFill } from '@react-icons/all-files/ri/RiMenuUnfoldFill';
 import { RiMenuFoldFill } from '@react-icons/all-files/ri/RiMenuFoldFill';
-import CircleButton from '../buttons/circleButton';
+import { CircleButton, CircleLink } from '../buttons/circleButton';
 import useClickOutside from '../../utilities/useClickOutside';
 import * as styles from './navigation.module.css';
 
@@ -52,9 +52,9 @@ const Navigation = () => {
 
         <ul className={styles.list}>
           <li>
-            <CircleButton label="Home" href="/">
+            <CircleLink label="Home" href="/">
               <FaHome />
-            </CircleButton>
+            </CircleLink>
           </li>
           <li>
             <CircleButton
@@ -85,6 +85,17 @@ const Navigation = () => {
             <Link to="/privacy" className="underline" tabIndex={tabIndex}>
               Privacy
             </Link>
+          </li>
+          <li>
+            <a
+              href="/rss.xml"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+              tabIndex={tabIndex}
+            >
+              RSS
+            </a>
           </li>
         </ol>
       </div>

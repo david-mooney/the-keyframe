@@ -14,7 +14,7 @@
   top: 0;
   left: 50%;
   opacity: 0;
-  transition: var(--timing-fast) opacity var(--ease-in-out-quad);
+  transition: var(--timing-fast) opacity var(--ease-inOut);
   z-index: var(--z-fixed);
   pointer-events: none;
 }

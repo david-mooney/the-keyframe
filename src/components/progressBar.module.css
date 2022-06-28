@@ -1,9 +1,11 @@
 .aside {
+  --barSize: 3px;
+
   position: fixed;
   left: 0;
-  top: 0;
+  top: 66px;
   opacity: 0;
-  transition: var(--timing-fast) opacity var(--ease-in-out-quad);
+  transition: var(--timing-fast) opacity var(--ease-inOut);
 }
 
 @media (min-width: 800px) {
@@ -16,13 +18,13 @@
 .progressTrack {
   position: relative;
   width: 100vw;
-  height: 2px;
+  height: var(--barSize);
   background-color: hsla(var(--color-text-raw), 0.2);
 }
 
 @media (min-width: 800px) {
   .progressTrack {
-    width: 2px;
+    width: var(--barSize);
     height: 60vh;
   }
 }
@@ -34,7 +36,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: var(--barSize);
   background-image: linear-gradient(to bottom, var(--gradientA), var(--gradientB));
   transition: var(--timing-fastest) transform linear;
   transform: scaleX(var(--progress));
@@ -44,7 +46,7 @@
 
 @media (min-width: 800px) {
   .progressBar {
-    width: 2px;
+    width: var(--barSize);
     height: 100%;
     transform: scaleY(var(--progress));
     -webkit-transform: scaleY(var(--progress));

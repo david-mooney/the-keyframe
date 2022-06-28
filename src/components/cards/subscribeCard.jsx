@@ -1,27 +1,38 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as cardStyles from './postCard.module.css';
 import * as styles from './subscribeCard.module.css';
 
-/* TODO: replace temporary implementation */
+const formName = 'subscribe';
+
+const states = {
+  loading: 'loading',
+  success: 'success',
+  error: 'error',
+};
+
+const gradientColors = {
+  '--gradientA': 'rgba(162,102,246,1)',
+  '--gradientB': 'rgba(203,159,249,1)',
+};
 
 const SubscribeCard = () => {
-  const formName = 'subscribe';
+  const [state, setState] = useState(null);
 
-  const submitForm = form => {
+  const submitForm = async form => {
     const data = new FormData(form);
 
-    data.append('form-name', formName);
+    try {
+      const response = await fetch('/', { method: 'POST', body: data });
+      const json = await response.json();
+      setState(states.success);
 
-    fetch('/', {
-      method: 'POST',
-      body: data,
-    })
-      .then(() => {
-        form.innerHTML = `<div class="form--success">I don't work yet, but thanks for your interest</div>`;
-      })
-      .catch(error => {
-        form.innerHTML = `<div class="form--error">Error: ${error}</div>`;
-      });
+      if (json.data.subscription?.state === 'active') {
+        /* TODO - already subscribed */
+      }
+    } catch (error) {
+      setState(states.error);
+      console.warn('[Form]', error);
+    }
   };
 
   useEffect(() => {
@@ -35,11 +46,6 @@ const SubscribeCard = () => {
     });
   }, []);
 
-  const gradientColors = {
-    '--gradientA': 'rgba(162,102,246,1)',
-    '--gradientB': 'rgba(203,159,249,1)',
-  };
-
   return (
     <div className={cardStyles.link} style={gradientColors}>
       <div className={`animate-colors ${cardStyles.card}`}>
@@ -50,20 +56,31 @@ const SubscribeCard = () => {
           data-netlify="true"
           netlify-honeypot="bot-field"
         >
-          <h3>Subscribe for the latest posts</h3>
+          <h3>Stay up to date</h3>
+
           <label className="not-displayed">
             Are you a human? <input name="bot-field" />
           </label>
-          <input type="hidden" name="form-name" value={formName} />
-          <input
-            type="email"
-            className="animate-colors"
-            name="email"
-            placeholder="Your email"
-            required
-          />
-          <button type="submit">Subscribe</button>
-          <small>I will never share your email and you can unsubscribe at any time</small>
+
+          <div className={styles.inputs}>
+            <input type="hidden" name="form-name" value={formName} />
+            <input
+              type="text"
+              name="first_name"
+              className={`animate-colors ${styles.input}`}
+              placeholder="First name (optional)"
+            />
+            <input
+              type="email"
+              className={`animate-colors ${styles.input}`}
+              name="email"
+              placeholder="Email address"
+              required
+            />
+          </div>
+          <button type="submit" className={styles.button}>
+            Subscribe
+          </button>
         </form>
       </div>
     </div>

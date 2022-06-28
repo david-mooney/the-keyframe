@@ -59,7 +59,7 @@
   border-right: 1px solid;
   z-index: var(--z-front);
   transform: translateX(-100%);
-  transition: var(--timing-slow) transform var(--ease-out-quart);
+  transition: var(--timing-fast) transform var(--ease-inOut);
   overflow: hidden; /* For Safari iOS  */
   -webkit-overflow-scrolling: touch;
 }

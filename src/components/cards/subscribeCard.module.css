@@ -3,37 +3,55 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: var(--spacing-6) var(--spacing-12);
 }
 
 .form h3 {
-  margin: 0 0 var(--spacing-6) 0;
+  margin: 0 0 var(--spacing-3) 0;
 }
 
-.form input {
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  padding: var(--spacing-3) 0;
+}
+
+.input {
   width: 100%;
-  margin: 0 0 var(--spacing-6) 0;
-  padding: var(--spacing-2);
-  border-radius: var(--border-radius-1);
-  border: 1px solid var(--color-text);
+  padding: 0 var(--spacing-3) var(--spacing-3) var(--spacing-3);
+  background-color: transparent;
+  border: none;
+  outline: none;
   color: var(--color-text);
-  background-color: var(--color-background);
-  text-align: center;
+  border-bottom: 2px solid hsla(var(--color-text-raw), 0.25);
 }
 
-.form button {
+.input::placeholder {
+  color: hsla(var(--color-text-raw), 0.5);
+}
+
+.input:focus {
+  border-color: var(--color-text);
+}
+
+.input:focus::placeholder {
+  color: hsla(var(--color-text-raw), 1);
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--color-text);
+  -webkit-box-shadow: 0 0 0px 1000px var(--color-background) inset;
+  transition: var(--timing-fast) -webkit-box-shadow var(--ease-out);
+}
+
+.button {
+  color: var(--color-background);
+  background-color: var(--color-text);
   padding: var(--spacing-4) var(--spacing-12);
+  margin: var(--spacing-3) 0 0 0;
+  font-weight: var(--fontWeight-bold);
   border-radius: var(--border-radius-1);
   border: none;
   cursor: pointer;
-  font-weight: var(--fontWeight-bold);
-  color: var(--color-background);
-  background-color: var(--color-text);
-}
-
-.form small {
-  padding-top: var(--spacing-6);
-  font-size: var(font-size-0);
-  font-weight: var(--fontWeight-medium);
 }

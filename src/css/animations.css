@@ -1,5 +1,4 @@
 :root {
-  /* timings */
   --timing-fastest: 150ms;
   --timing-faster: 250ms;
   --timing-fast: 350ms;
@@ -8,17 +7,13 @@
   --timing-slower: 650ms;
   --timing-slowest: 750ms;
 
-  /* easings */
-  --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  --ease-in-out-back: cubic-bezier(0.68, -0.6, 0.32, 1.6);
-  --ease-out-quad: cubic-bezier(0.5, 1, 0.89, 1);
-  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
-  --ease-in-quad: cubic-bezier(0.11, 0, 0.5, 0);
-  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-in: cubic-bezier(0.42, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.58, 1);
+  --ease-inOut: cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .animate-colors {
-  transition: var(--timing-fast) background-color var(--ease-out-quad),
-    var(--timing-faster) color var(--ease-out-quad),
-    var(--timing-faster) border-color var(--ease-out-quad);
+  transition: var(--timing-fast) background-color var(--ease-out),
+    var(--timing-faster) color var(--ease-out), var(--timing-faster) border-color var(--ease-out);
 }

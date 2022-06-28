@@ -1,11 +1,10 @@
 import React, { useState, useLayoutEffect } from 'react';
 import { FiSun } from '@react-icons/all-files/fi/FiSun';
 import { BsMoon } from '@react-icons/all-files/bs/BsMoon';
-import { circle } from './circleButton.module.css';
+import { CircleButton } from './circleButton.jsx';
 import * as styles from './themeToggle.module.css';
 
 const ThemeToggle = () => {
-  const id = 'themeToggle';
   const [checked, setChecked] = useState(false);
 
   const handleClick = () => {
@@ -20,7 +19,7 @@ const ThemeToggle = () => {
   }, []);
 
   return (
-    <label labelfor={id} className={circle}>
+    <CircleButton label="Toggle dark mode" handleClick={handleClick}>
       <div className={`${styles.icon} ${styles.sun}`} data-active={!checked}>
         <FiSun />
       </div>
@@ -28,16 +27,7 @@ const ThemeToggle = () => {
       <div className={`${styles.icon} ${styles.moon}`} data-active={checked}>
         <BsMoon />
       </div>
-
-      <input
-        id={id}
-        type="checkbox"
-        className="sr-only"
-        aria-label="Toggle dark mode"
-        defaultChecked={checked}
-        onClick={handleClick}
-      />
-    </label>
+    </CircleButton>
   );
 };
 

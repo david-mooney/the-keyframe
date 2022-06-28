@@ -1,29 +1,33 @@
-.circle {
-  --size: 40px;
+.button {
   position: relative;
-  height: var(--size);
-  width: var(--size);
-  min-height: var(--size);
-  min-width: var(--size);
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);
   cursor: pointer;
+  border: none;
+  overflow: hidden;
+  border-radius: 50%;
   background-color: transparent;
-  border: 2px solid var(--color-text);
-  transition: var(--timing-fast) opacity var(--ease-out-quad);
+  transition: var(--timing-intermediate) opacity var(--ease-inOut);
 }
 
-.circle svg {
+.button[data-visible='false'] {
+  opacity: 0;
+}
+
+.button svg:nth-of-type(2) {
   height: 60%;
   width: 60%;
   fill: var(--color-text);
 }
 
-.circle:focus-within {
-  background-color: blueviolet;
+.button:focus {
+  outline: none;
+}
+
+.button:hover :global(.innerCircle),
+.button:focus :global(.innerCircle) {
+  stroke-dashoffset: 0;
 }

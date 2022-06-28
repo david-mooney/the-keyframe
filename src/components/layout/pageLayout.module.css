@@ -1,6 +1,6 @@
 .main {
   position: relative;
-  overflow-x: hidden; /* TODO - this might cause issues */
+  overflow-x: hidden;
   margin: var(--fixed-element-width) 0;
 }
 

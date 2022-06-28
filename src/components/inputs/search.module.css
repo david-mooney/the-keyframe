@@ -10,11 +10,11 @@
 .input {
   width: 100%;
   padding: var(--spacing-3) var(--spacing-6);
-  background-color: transparent;
   border: none;
   outline: none;
-  color: var(--color-text);
   text-align: center;
+  color: var(--color-text);
+  background-color: transparent;
   border-bottom: 2px solid hsla(var(--color-text-raw), 0.25);
 }
 

@@ -29,7 +29,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <>
       <Seo title="All posts" location={location} />
-      <InstantSearch searchClient={searchClient} indexName="Pages">
+      <InstantSearch searchClient={searchClient} routing={true} indexName="Pages">
         <SearchInput placeholder="Search for posts" />
         <BlogPostsList posts={data.allMarkdownRemark.nodes} />
       </InstantSearch>
