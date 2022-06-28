@@ -13,7 +13,6 @@
     "@react-icons/all-files": "^4.1.0",
     "algoliasearch": "^4.13.1",
     "gatsby": "^4.17.0",
-    "gatsby-plugin-algolia": "^0.26.0",
     "gatsby-plugin-feed": "^4.17.0",
     "gatsby-plugin-gatsby-cloud": "^4.17.0",
     "gatsby-plugin-image": "^2.17.0",
@@ -51,10 +50,10 @@
     "url": "git+https://github.com/david-mooney/the-key-frame.git"
   },
   "scripts": {
-    "build": "gatsby clean && gatsby build",
-    "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby clean && gatsby develop --open",
+    "develop": "gatsby develop",
+    "build": "gatsby clean && gatsby build",
     "serve": "gatsby serve --open",
     "clean": "gatsby clean"
   }
