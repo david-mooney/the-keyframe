@@ -24,9 +24,10 @@ const SubscribeCard = () => {
 
     try {
       const response = await fetch('/', { method: 'POST', body: data });
-      const json = await response.json();
 
-      console.log('json', json);
+      console.log('response', response);
+
+      const json = await response.json();
 
       if (json.subscription?.state === 'active') {
         setState(states.existing);
@@ -80,8 +81,6 @@ const SubscribeCard = () => {
       </div>
     );
   }
-
-  console.log('state', state);
 
   return (
     <div className={cardStyles.link} style={gradientColors}>

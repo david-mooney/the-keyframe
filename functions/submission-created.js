@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 exports.handler = async event => {
   const apiKey = process.env.GATSBY_CONVERTKIT_API_KEY;
   const formId = process.env.GATSBY_CONVERTKIT_FORM_ID;
@@ -8,9 +10,7 @@ exports.handler = async event => {
 
     const response = await fetch(`https://api.convertkit.com/v3/forms/${formId}/subscribe`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ api_key: apiKey, first_name, email }),
     });
 
@@ -23,7 +23,7 @@ exports.handler = async event => {
   } catch (error) {
     return {
       statusCode: 500,
-      body: JSON.stringify(error.message),
+      body: JSON.stringify(error?.message || error),
     };
   }
 };
