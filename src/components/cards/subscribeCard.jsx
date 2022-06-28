@@ -23,7 +23,11 @@ const SubscribeCard = () => {
 
     try {
       const response = await fetch('/', { method: 'POST', body: data });
+      console.log({ response });
+
       const json = await response.json();
+      console.log({ json });
+
       setState(states.success);
 
       if (json.data.subscription?.state === 'active') {
@@ -45,6 +49,8 @@ const SubscribeCard = () => {
       submitForm(formElement);
     });
   }, []);
+
+  console.log('state', state);
 
   return (
     <div className={cardStyles.link} style={gradientColors}>
