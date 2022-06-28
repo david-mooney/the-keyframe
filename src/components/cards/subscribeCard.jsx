@@ -7,6 +7,7 @@ const formName = 'subscribe';
 const states = {
   loading: 'loading',
   success: 'success',
+  existing: 'existing',
   error: 'error',
 };
 
@@ -23,16 +24,16 @@ const SubscribeCard = () => {
 
     try {
       const response = await fetch('/', { method: 'POST', body: data });
-      console.log({ response });
-
       const json = await response.json();
-      console.log({ json });
+
+      console.log('json', json);
+
+      if (json.subscription?.state === 'active') {
+        setState(states.existing);
+        return;
+      }
 
       setState(states.success);
-
-      if (json.data.subscription?.state === 'active') {
-        /* TODO - already subscribed */
-      }
     } catch (error) {
       setState(states.error);
       console.warn('[Form]', error);
@@ -49,6 +50,36 @@ const SubscribeCard = () => {
       submitForm(formElement);
     });
   }, []);
+
+  if (state === states.existing) {
+    return (
+      <div className={cardStyles.link} style={gradientColors}>
+        <div className={`animate-colors ${cardStyles.card}`}>
+          <p>That email is already subscribed</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (state === states.error) {
+    return (
+      <div className={cardStyles.link} style={gradientColors}>
+        <div className={`animate-colors ${cardStyles.card}`}>
+          <p>Sorry, something went wrong</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (state === states.success) {
+    return (
+      <div className={cardStyles.link} style={gradientColors}>
+        <div className={`animate-colors ${cardStyles.card}`}>
+          <p>Check your email to confirm your subscription</p>
+        </div>
+      </div>
+    );
+  }
 
   console.log('state', state);
 
