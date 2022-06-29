@@ -5,7 +5,7 @@
   grid-auto-columns: 1fr;
   grid-gap: var(--spacing-28);
   padding: var(--spacing-28) 0;
-  width: min(80%, var(--maxWidth-lg));
+  width: min(90%, var(--maxWidth-2xl));
   margin: auto;
   justify-items: center;
   align-items: center;

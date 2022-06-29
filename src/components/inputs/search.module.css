@@ -16,17 +16,19 @@
   color: var(--color-text);
   background-color: transparent;
   border-bottom: 2px solid hsla(var(--color-text-raw), 0.25);
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
 }
 
-input::placeholder {
+.input::placeholder {
   color: hsla(var(--color-text-raw), 0.5);
 }
 
-input:focus {
+.input:focus {
   border-color: var(--color-text);
 }
 
-input:focus::placeholder {
+.input:focus::placeholder {
   color: hsla(var(--color-text-raw), 1);
 }
 
@@ -38,6 +40,6 @@ input:focus::placeholder {
   color: hsla(var(--color-text-raw), 0.5);
 }
 
-input:focus + .icon {
+.input:focus + .icon {
   color: hsla(var(--color-text-raw), 1);
 }

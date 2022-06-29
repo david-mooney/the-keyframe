@@ -1,6 +1,6 @@
 pre[class*='language-'] {
   border-radius: var(--border-radius-2);
-  box-shadow: var(--box-shadow-large);
+  box-shadow: var(--box-shadow-high);
 }
 
 code[class*='language-'],

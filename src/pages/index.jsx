@@ -16,7 +16,9 @@ const BlogIndex = ({ data, location }) => {
 
   const searchClient = {
     search(requests) {
-      if (firstLoad === true) {
+      const savedQuery = requests[0]?.params?.query;
+
+      if (firstLoad === true && !savedQuery) {
         firstLoad = false;
         return Promise.resolve({
           results: [{ hits: [] }],

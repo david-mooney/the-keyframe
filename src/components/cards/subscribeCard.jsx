@@ -86,7 +86,7 @@ const SubscribeCard = () => {
         >
           <h3>Stay up to date</h3>
 
-          <label className="not-displayed">
+          <label className={styles.honeyPot}>
             Are you a human? <input name="bot-field" />
           </label>
 

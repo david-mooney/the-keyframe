@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--spacing-3);
+  padding: var(--spacing-1);
   background-color: var(--color-background);
   border-bottom: 1px solid;
   overflow: hidden; /* For Safari iOS  */

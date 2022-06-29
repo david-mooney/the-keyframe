@@ -1,3 +1,38 @@
+.link {
+  --underline-size: 2px;
+  display: flex;
+  height: 100%;
+  text-decoration: none;
+  box-shadow: none;
+  outline-color: transparent;
+  outline-style: solid;
+  transition: var(--timing-fast) box-shadow var(--ease-inOut);
+}
+
+.link:hover .underline,
+.link:focus-visible .underline {
+  background-size: 100% var(--underline-size);
+}
+
+.link:hover .card,
+.link:focus-visible .card,
+.link:focus-within .card {
+  border-color: var(--color-text);
+}
+
+.card {
+  width: 100%;
+  padding: var(--spacing-6);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: var(--color-background);
+  /* border: 1px solid hsla(var(--color-text-raw), 0.25); */
+  border-radius: var(--border-radius-1);
+  box-shadow: var(--box-shadow-high);
+}
+
 .imageWrapper {
   position: relative;
   width: 30%;
@@ -5,7 +40,6 @@
   height: 100%;
   background-image: linear-gradient(to right, var(--gradientA), var(--gradientB));
   border-radius: var(--border-radius-1);
-  box-shadow: var(--box-shadow-large);
   transition: var(--timing-fast) background-color var(--ease-inOut);
   overflow: hidden;
 }
@@ -23,44 +57,6 @@
   mix-blend-mode: multiply;
 }
 
-.link {
-  --underline-size: 2px;
-  display: flex;
-  height: 100%;
-  text-decoration: none;
-  box-shadow: none;
-  outline-color: transparent;
-  outline-style: solid;
-  transition: var(--timing-fast) box-shadow var(--ease-inOut);
-}
-
-/* trigger the underline animation */
-.link:hover .underline,
-.link:focus-visible .underline {
-  background-size: 100% var(--underline-size);
-}
-
-/* rotate the gradient card out of view */
-.link:hover .card::before,
-.link:focus-visible .card::before,
-.link:focus-within .card::before {
-  transform: rotate(3deg) scale(0.95);
-}
-
-.card {
-  width: 100%;
-  padding: var(--spacing-6);
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  background-color: var(--color-background);
-  box-shadow: var(--box-shadow-small);
-  border: 1px solid var(--color-text);
-  border-radius: var(--border-radius-1);
-  box-shadow: var(--box-shadow-large);
-}
-
 .card header {
   width: 100%;
   display: flex;
@@ -74,26 +70,10 @@
   align-self: flex-start;
 }
 
-.card::before {
-  --offset: 0.75rem;
-  content: '';
-  position: absolute;
-  top: calc(-1 * var(--offset));
-  left: calc(-1 * var(--offset));
-  width: calc(100% + 2 * var(--offset));
-  height: calc(100% + 2 * var(--offset));
-  transform: rotate(-3deg);
-  background: linear-gradient(to right, var(--gradientA), var(--gradientB));
-  transition: transform var(--timing-faster) var(--ease-out);
-  border-radius: var(--border-radius-1);
-  box-shadow: var(--box-shadow-small);
-  z-index: var(--z-back);
-}
-
 .underline {
   display: inline;
   background: linear-gradient(var(--color-text), var(--color-text)) 0 100%;
   background-repeat: no-repeat;
   background-size: 0 var(--underline-size);
-  transition: background-size var(--timing-slow);
+  transition: background-size var(--timing-intermediate);
 }

@@ -9,7 +9,10 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 - [] Article content spacing
 - [] Icon for header and favicon
 - [] Remove TODO's, comments, etc.
-- [] Replace react-icons
+- [] Replace react-icons (with Lottie animations?)
+- [] Add a "About" page
+- [] Add a "Contact" page
+- [] Cross browser compatibility
 
 ## Potential Additions
 

@@ -115,20 +115,18 @@ article a,
   transition: background-size var(--timing-fast);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  article a,
+  .underline {
+    transition: none;
+  }
+}
+
 article a:focus,
 article a:hover,
 .underline:focus,
 .underline:hover {
   background-size: 100% 2px;
-}
-
-.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.not-displayed {
-  display: none;
 }
 
 article a {

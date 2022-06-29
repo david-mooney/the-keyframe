@@ -1,5 +1,5 @@
 .aside {
-  --barSize: 3px;
+  --barSize: 2px;
 
   position: fixed;
   left: 0;
@@ -37,7 +37,8 @@
   left: 0;
   width: 100%;
   height: var(--barSize);
-  background-image: linear-gradient(to bottom, var(--gradientA), var(--gradientB));
+  background-color: var(--color-text);
+  /* background-image: linear-gradient(to bottom, var(--gradientA), var(--gradientB)); */
   transition: var(--timing-fastest) transform linear;
   transform: scaleX(var(--progress));
   -webkit-transform: scaleX(var(--progress));

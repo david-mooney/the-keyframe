@@ -42,6 +42,12 @@
   --fixed-element-width: 4.5rem;
   --non-fixed-element-width: 25vw;
 
-  --box-shadow-small: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  --box-shadow-large: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  /* --box-shadow-lowest: 2px 4px 4px hsl(0deg 0% 0% / 0.44);
+  --box-shadow-low: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
+  --box-shadow-high: 6px 12px 12px hsl(0deg 0% 0% / 0.31);
+  --box-shadow-highest: 8px 16px 16px hsl(0deg 0% 0% / 0.25); */
+
+  /* TODO light shadows in dark mode? */
+  --box-shadow-high: rgb(0 0 0 / 22%) 0px 30px 60px -10px, rgb(0 0 0 / 25%) 0px 18px 36px -18px;
+  /* --box-shadow-high: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
 }
