@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import * as cardStyles from './postCard.module.css';
 import * as styles from './subscribeCard.module.css';
 
@@ -19,14 +19,13 @@ const gradientColors = {
 const SubscribeCard = () => {
   const [state, setState] = useState(null);
 
-  const submitForm = async form => {
+  const submitForm = async event => {
+    event.preventDefault();
+    const form = document.querySelector(`form[name="${formName}"]`);
     const data = new FormData(form);
 
     try {
       const response = await fetch('/', { method: 'POST', body: data });
-
-      console.log('response', response);
-
       const json = await response.json();
 
       if (json.subscription?.state === 'active') {
@@ -40,17 +39,6 @@ const SubscribeCard = () => {
       console.warn('[Form]', error);
     }
   };
-
-  useEffect(() => {
-    const formElement = document.querySelector(`form[name="${formName}"]`);
-
-    if (!formElement) return;
-
-    formElement.addEventListener('submit', event => {
-      event.preventDefault();
-      submitForm(formElement);
-    });
-  }, []);
 
   if (state === states.existing) {
     return (
@@ -91,6 +79,7 @@ const SubscribeCard = () => {
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
+          onSubmit={submitForm}
         >
           <h3>Stay up to date</h3>
 
