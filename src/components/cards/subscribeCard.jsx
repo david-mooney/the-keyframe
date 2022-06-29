@@ -23,9 +23,12 @@ const SubscribeCard = () => {
     event.preventDefault();
     const form = document.querySelector(`form[name="${formName}"]`);
     const data = new FormData(form);
+    const name = data.get('name');
+    const email = data.get('email');
+    const body = JSON.stringify({ name, email });
 
     try {
-      const response = await fetch('/', { method: 'POST', body: data });
+      const response = await fetch('/.netlify/functions/subscribe', { method: 'POST', body });
       const json = await response.json();
 
       if (json.subscription?.state === 'active') {
@@ -36,7 +39,7 @@ const SubscribeCard = () => {
       setState(states.success);
     } catch (error) {
       setState(states.error);
-      console.warn('[Form]', error);
+      console.warn(`[${formName} form]`, error);
     }
   };
 
@@ -91,7 +94,7 @@ const SubscribeCard = () => {
             <input type="hidden" name="form-name" value={formName} />
             <input
               type="text"
-              name="first_name"
+              name="name"
               className={`animate-colors ${styles.input}`}
               placeholder="First name (optional)"
             />
