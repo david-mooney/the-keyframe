@@ -28,7 +28,7 @@
   flex-direction: row;
   justify-content: flex-start;
   background-color: var(--color-background);
-  /* border: 1px solid hsla(var(--color-text-raw), 0.25); */
+  border: 1px solid hsla(var(--color-text-raw), 0.25);
   border-radius: var(--border-radius-1);
   box-shadow: var(--box-shadow-high);
 }

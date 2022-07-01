@@ -6,16 +6,19 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 
 ## TODO's
 
+- [] Animate colors consistency
 - [] Article content spacing
+- [] Article illustrations (use theme colors with filter?)
 - [] Icon for header and favicon
 - [] Remove TODO's, comments, etc.
-- [] Replace react-icons (with Lottie animations?)
 - [] Add a "About" page
 - [] Add a "Contact" page
 - [] Cross browser compatibility
+- [] SEO (meta tags, etc.)
 
 ## Potential Additions
 
 - 'Like' system for for posts
+- [] Replace react-icons (with Lottie animations?)
 - system for localization of articles
 - chapters in the article progress bar

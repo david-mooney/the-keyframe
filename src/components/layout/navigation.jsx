@@ -88,6 +88,17 @@ const Navigation = () => {
           </li>
           <li>
             <a
+              href="/sitemap/sitemap-0.xml"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+              tabIndex={tabIndex}
+            >
+              Sitemap.xml
+            </a>
+          </li>
+          <li>
+            <a
               href="/rss.xml"
               target="_blank"
               rel="noopener noreferrer"

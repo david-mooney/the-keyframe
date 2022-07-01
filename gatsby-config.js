@@ -126,5 +126,54 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        output: '/sitemap/',
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }`,
+        resolveSiteUrl: ({
+          site: {
+            siteMetadata: { siteUrl },
+          },
+        }) => siteUrl,
+        resolvePages: ({ allSitePage }) => {
+          const ignorePages = [
+            '/404/',
+            '/404.html',
+            '/dev-404-page/',
+            '/offline-plugin-app-shell-fallback/',
+          ];
+
+          return allSitePage.nodes.filter(page => !ignorePages.includes(page.path));
+        },
+        serialize: ({ path }) => {
+          const priorities = {
+            '/': 1.0,
+            '/about/': 0.5,
+            '/privacy/': 0.7,
+            '/subscribe/': 0.6,
+          };
+
+          return {
+            url: path,
+            lastmod: new Date(Date.now()),
+            priority: priorities[path] || 0.9,
+            changefreq: 'daily',
+          };
+        },
+      },
+    },
   ],
 };

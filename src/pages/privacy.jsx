@@ -28,7 +28,7 @@ const PrivacyPage = () => (
       Keyframe does not track any of that.
     </p>
 
-    <h2>Data Retention</h2>
+    <h2 id="data-retention">Data Retention</h2>
     <p>
       If you decide to fill out the subscription form, your email, and optionally your first name,
       is stored with{' '}

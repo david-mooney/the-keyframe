@@ -109,6 +109,7 @@ const SubscribeCard = () => {
           <button type="submit" className={styles.button}>
             Subscribe
           </button>
+          <a href="privacy#data-retention">Privacy Policy</a>
         </form>
       </div>
     </div>
