@@ -127,6 +127,14 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        queries: require('./src/utilities/algoliaQueries'),
+      },
+    },
+    {
       resolve: 'gatsby-plugin-sitemap',
       options: {
         output: '/sitemap/',
