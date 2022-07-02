@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiSun } from '@react-icons/all-files/fi/FiSun';
 import { BsMoon } from '@react-icons/all-files/bs/BsMoon';
 import { CircleButton } from './circleButton.jsx';
@@ -14,7 +14,7 @@ const ThemeToggle = () => {
     window.setTheme(isChecked ? window.themes.DARK : window.themes.LIGHT);
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setChecked(window.theme === window.themes.DARK);
   }, []);
 

@@ -1,23 +1,14 @@
-/* TODO: move these, sort box shadows */
-
 :root {
-  --maxWidth-xs: 20rem;
-  --maxWidth-sm: 24rem;
-  --maxWidth-md: 28rem;
   --maxWidth-lg: 32rem;
-  --maxWidth-xl: 36rem;
   --maxWidth-2xl: 42rem;
-  --maxWidth-3xl: 48rem;
   --maxWidth-4xl: 56rem;
   --maxWidth-full: '100%';
-  --maxWidth-wrapper: var(--maxWidth-3xl);
   --spacing-px: '1px';
   --spacing-0: 0;
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
   --spacing-3: 0.75rem;
   --spacing-4: 1rem;
-  --spacing-5: 1.25rem;
   --spacing-6: 1.5rem;
   --spacing-8: 2rem;
   --spacing-10: 2.5rem;
@@ -42,6 +33,5 @@
   --fixed-element-width: 4.5rem;
   --non-fixed-element-width: 25vw;
 
-  /* TODO light shadows in dark mode? */
   --box-shadow-high: rgb(0 0 0 / 22%) 0px 30px 60px -10px, rgb(0 0 0 / 25%) 0px 18px 36px -18px;
 }

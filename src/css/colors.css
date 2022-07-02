@@ -7,7 +7,7 @@
   --color-dark-s: 23%;
   --color-dark-l: 16%;
 
-  /* Fixed Colors */
+  /* Fixed Colors (same regardless of theme setting) */
   --color-light: hsl(var(--color-light-h), var(--color-light-s), var(--color-light-l));
   --color-dark: hsl(var(--color-dark-h), var(--color-dark-s), var(--color-dark-l));
 

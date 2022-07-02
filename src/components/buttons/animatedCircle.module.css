@@ -8,7 +8,7 @@
 }
 
 .circle {
-  stroke: transparent; /* hsla(var(--color-text-raw), 0.15); */
+  stroke: hsla(var(--color-text-raw), 0.15);
   stroke-width: 2;
   fill: transparent;
 }

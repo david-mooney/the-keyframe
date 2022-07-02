@@ -23,12 +23,15 @@
   outline: none;
   color: var(--color-text);
   border-bottom: 2px solid hsla(var(--color-text-raw), 0.25);
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
 }
 
 .input::placeholder {
   color: hsla(var(--color-text-raw), 0.5);
 }
 
+.input:hover,
 .input:focus {
   border-color: var(--color-text);
 }

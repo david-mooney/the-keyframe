@@ -23,7 +23,7 @@ const html = () => {
     }
   };
 
-  const findTheme = () => {
+  const osTheme = () => {
     try {
       return window.matchMedia('(prefers-color-scheme: dark)').matches
         ? window.themes.DARK
@@ -36,7 +36,7 @@ const html = () => {
   window.setTheme = (theme = null) => {
     const savedTheme = getSavedTheme();
 
-    window.theme = theme || savedTheme || findTheme();
+    window.theme = theme || savedTheme || osTheme();
     document.documentElement.classList.remove(window.themes.LIGHT, window.themes.DARK);
     document.documentElement.classList.add(window.theme);
 

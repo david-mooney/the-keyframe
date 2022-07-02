@@ -138,7 +138,6 @@ article a {
 }
 
 .gatsby-image-wrapper {
-  /* Gatsby being a little bit too clever with the image wrapper */
   position: unset !important;
 }
 

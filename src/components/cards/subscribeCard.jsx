@@ -11,11 +11,6 @@ const states = {
   error: 'error',
 };
 
-const gradientColors = {
-  '--gradientA': 'rgba(162,102,246,1)',
-  '--gradientB': 'rgba(203,159,249,1)',
-};
-
 const SubscribeCard = () => {
   const [state, setState] = useState(null);
 
@@ -25,10 +20,12 @@ const SubscribeCard = () => {
     const data = new FormData(form);
     const name = data.get('name');
     const email = data.get('email');
-    const body = JSON.stringify({ name, email });
 
     try {
-      const response = await fetch('/.netlify/functions/subscribe', { method: 'POST', body });
+      const response = await fetch('/.netlify/functions/subscribe', {
+        method: 'POST',
+        body: JSON.stringify({ name, email }),
+      });
       const json = await response.json();
 
       if (json.subscription?.state === 'active') {
@@ -45,7 +42,7 @@ const SubscribeCard = () => {
 
   if (state === states.existing) {
     return (
-      <div className={cardStyles.link} style={gradientColors}>
+      <div className={cardStyles.link}>
         <div className={`animate-colors ${cardStyles.card}`}>
           <p>That email is already subscribed</p>
         </div>
@@ -55,7 +52,7 @@ const SubscribeCard = () => {
 
   if (state === states.error) {
     return (
-      <div className={cardStyles.link} style={gradientColors}>
+      <div className={cardStyles.link}>
         <div className={`animate-colors ${cardStyles.card}`}>
           <p>Sorry, something went wrong</p>
         </div>
@@ -65,7 +62,7 @@ const SubscribeCard = () => {
 
   if (state === states.success) {
     return (
-      <div className={cardStyles.link} style={gradientColors}>
+      <div className={cardStyles.link}>
         <div className={`animate-colors ${cardStyles.card}`}>
           <p>Check your email to confirm your subscription</p>
         </div>
@@ -74,7 +71,7 @@ const SubscribeCard = () => {
   }
 
   return (
-    <div className={cardStyles.link} style={gradientColors}>
+    <div className={cardStyles.link}>
       <div className={`animate-colors ${cardStyles.card}`}>
         <form
           className={styles.form}
@@ -109,7 +106,12 @@ const SubscribeCard = () => {
           <button type="submit" className={styles.button}>
             Subscribe
           </button>
-          <a href="privacy#data-retention" target="_blank" rel="noopener noreferrer">
+          <a
+            className="underline"
+            href="privacy#data-retention"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Privacy Policy
           </a>
         </form>

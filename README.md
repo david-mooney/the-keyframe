@@ -6,12 +6,16 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 
 ## TODO's
 
-- [] Animate colors consistency
-- [] Article hero
 - [] Article content spacing
+- [] Animate colors consistency
+- [] Form loading states
+- [] Search loading state
+
+- [] Article hero
 - [] Article illustrations (use theme colors with filter?)
+
 - [] Icon for header and favicon
-- [] Remove TODO's, comments, etc.
+
 - [] Add a "About" page
 - [] Add a "Contact" page
 
