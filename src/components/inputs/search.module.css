@@ -24,6 +24,7 @@
   color: hsla(var(--color-text-raw), 0.5);
 }
 
+.input:hover,
 .input:focus {
   border-color: var(--color-text);
 }

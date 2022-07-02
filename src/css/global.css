@@ -97,13 +97,6 @@ a {
   cursor: pointer;
 }
 
-#___gatsby,
-#gatsby-focus-wrapper {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
 article a,
 .underline {
   outline: none;
@@ -137,8 +130,15 @@ article a {
   color: var(--gradientA);
 }
 
-/* Gatsby image bs */
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .gatsby-image-wrapper {
+  /* Gatsby being a little bit too clever with the image wrapper */
   position: unset !important;
 }
 

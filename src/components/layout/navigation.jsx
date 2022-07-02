@@ -94,7 +94,7 @@ const Navigation = () => {
               className="underline"
               tabIndex={tabIndex}
             >
-              Sitemap.xml
+              Sitemap
             </a>
           </li>
           <li>

@@ -89,4 +89,30 @@
 
 .subMenuList > li {
   padding-bottom: var(--spacing-3);
+  opacity: 0;
+  transition: var(--timing-fast) opacity var(--ease-inOut);
+}
+
+.subMenu[data-open='true'] .subMenuList > li {
+  opacity: 1;
+}
+
+.subMenu[data-open='true'] .subMenuList > li:nth-child(1) {
+  transition-delay: calc(var(--timing-fast) * 0.75);
+}
+
+.subMenu[data-open='true'] .subMenuList > li:nth-child(2) {
+  transition-delay: calc(var(--timing-fast) * 0.85);
+}
+
+.subMenu[data-open='true'] .subMenuList > li:nth-child(3) {
+  transition-delay: calc(var(--timing-fast) * 0.95);
+}
+
+.subMenu[data-open='true'] .subMenuList > li:nth-child(4) {
+  transition-delay: calc(var(--timing-fast) * 1.05);
+}
+
+.subMenu[data-open='true'] .subMenuList > li:nth-child(5) {
+  transition-delay: calc(var(--timing-fast) * 1.15);
 }

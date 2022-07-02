@@ -64,8 +64,6 @@
   transform: rotate(8deg);
 }
 
-/* TODO - image border radius || maybe some cool header design instead */
-
 .image {
   position: absolute;
   top: 0;

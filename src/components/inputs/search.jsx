@@ -3,7 +3,7 @@ import { useSearchBox } from 'react-instantsearch-hooks-web';
 import { FiSearch } from '@react-icons/all-files/fi/FiSearch';
 import * as styles from './search.module.css';
 
-const typingDelay = 200;
+const typingDelay = 250;
 
 let timer;
 

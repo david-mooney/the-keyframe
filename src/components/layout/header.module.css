@@ -12,7 +12,7 @@
     border-right: 1px solid;
     width: var(--non-fixed-element-width);
     transform: translateX(-100%);
-    transition: var(--timing-fast) transform var(--ease-out);
+    transition: var(--timing-fast) transform var(--ease-inOut);
   }
 
   :global(.home) .header {
@@ -30,6 +30,13 @@
 
 .nav h1 {
   margin: var(--spacing-0);
+  opacity: 0;
+  transition: var(--timing-fast) opacity var(--ease-inOut);
+}
+
+:global(.home) .nav h1 {
+  opacity: 1;
+  transition-delay: calc(var(--timing-fast) * 0.75);
 }
 
 .list {

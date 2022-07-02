@@ -3,6 +3,7 @@ require('dotenv').config({
 });
 
 module.exports = {
+  trailingSlash: 'never',
   siteMetadata: {
     title: 'The Keyframe',
     author: {
@@ -158,20 +159,22 @@ module.exports = {
         }) => siteUrl,
         resolvePages: ({ allSitePage }) => {
           const ignorePages = [
-            '/404/',
+            '/404',
             '/404.html',
-            '/dev-404-page/',
-            '/offline-plugin-app-shell-fallback/',
+            '/dev-404-page',
+            '/offline-plugin-app-shell-fallback',
           ];
+
+          console.log('!!!', allSitePage.nodes);
 
           return allSitePage.nodes.filter(page => !ignorePages.includes(page.path));
         },
         serialize: ({ path }) => {
           const priorities = {
             '/': 1.0,
-            '/about/': 0.5,
-            '/privacy/': 0.7,
-            '/subscribe/': 0.6,
+            '/about': 0.5,
+            '/privacy': 0.7,
+            '/subscribe': 0.6,
           };
 
           return {
