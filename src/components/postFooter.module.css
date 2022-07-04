@@ -11,7 +11,7 @@
   margin: 0;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: var(--spacing-24);
+  grid-gap: var(--spacing-12);
 }
 
 @media screen and (min-width: 800px) {

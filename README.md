@@ -13,11 +13,12 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 
 - [] Article hero
 - [] Article illustrations (use theme colors with filter?)
-
 - [] Icon for header and favicon
 
 - [] Add a "About" page
 - [] Add a "Contact" page
+
+- [] Optimize CSS
 
 ## Potential Additions
 

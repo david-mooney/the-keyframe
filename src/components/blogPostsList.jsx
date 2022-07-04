@@ -16,11 +16,8 @@ const BlogPostsList = ({ posts }) => {
     if (filteredPosts.length === 0) {
       return (
         <li>
-          <p>Sorry, I couldn't find any posts, but here's a joke instead:</p>
-          <h4>
-            As I handed my Dad his 50th birthday card, he looked at me with tears in his eyes and
-            said, “You know, one would have been enough.”
-          </h4>
+          <p>Sorry, I couldn't find any posts. Here's a joke instead:</p>
+          <h5>I was gonna tell a time traveling joke but you didn't like it</h5>
         </li>
       );
     }

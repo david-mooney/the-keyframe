@@ -38,7 +38,8 @@
   width: 30%;
   min-width: 30%;
   height: 100%;
-  background-image: linear-gradient(to right, var(--gradientA), var(--gradientB));
+  background-color: var(--color-background);
+  /* background-image: linear-gradient(to right, var(--gradientA), var(--gradientB)); */
   border-radius: var(--border-radius-1);
   transition: var(--timing-fast) background-color var(--ease-inOut);
   overflow: hidden;

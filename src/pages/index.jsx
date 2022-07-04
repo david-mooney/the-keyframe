@@ -20,10 +20,12 @@ const BlogIndex = ({ data, location }) => {
 
       if (firstLoad === true && !savedQuery) {
         firstLoad = false;
+
         return Promise.resolve({
-          results: [{ hits: [] }],
+          results: [{ hits: data.allMarkdownRemark.nodes }],
         });
       }
+
       return algoliaClient.search(requests);
     },
   };
@@ -32,7 +34,7 @@ const BlogIndex = ({ data, location }) => {
     <>
       <Seo title="All posts" location={location} />
       <InstantSearch searchClient={searchClient} routing={true} indexName="Pages">
-        <SearchInput placeholder="Search for posts" />
+        <SearchInput total={data.allMarkdownRemark.nodes.length} placeholder="Search for posts" />
         <BlogPostsList posts={data.allMarkdownRemark.nodes} />
       </InstantSearch>
     </>
