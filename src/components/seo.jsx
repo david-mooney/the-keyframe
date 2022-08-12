@@ -22,13 +22,14 @@ const Seo = ({ description, lang, meta, title, location }) => {
 
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
-  const locationClass = location?.pathname === '/' ? 'home ' : '';
+  const locationClass = location?.pathname === '/' ? 'home' : '';
 
   return (
     <Helmet
       htmlAttributes={{ lang }}
       bodyAttributes={{
-        class: `${locationClass}animate-colors`,
+        class: locationClass,
+        'data-animate': true,
       }}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}

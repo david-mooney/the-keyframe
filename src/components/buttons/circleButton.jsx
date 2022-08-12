@@ -24,7 +24,7 @@ export const CircleButton = ({ label = '', size = 44, visible = true, handleClic
     className={styles.button}
     onClick={handleClick}
     tabIndex={visible ? 0 : -1}
-    data-visible={visible}
+    data-visible={`${visible}`}
     style={{ '--size': `${size}px` }}
   >
     <AnimatedCircle size={size} />

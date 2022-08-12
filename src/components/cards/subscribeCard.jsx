@@ -43,7 +43,7 @@ const SubscribeCard = () => {
   if (state === states.existing) {
     return (
       <div className={cardStyles.link}>
-        <div className={`animate-colors ${cardStyles.card}`}>
+        <div className={cardStyles.card} data-animate="true">
           <p>That email is already subscribed</p>
         </div>
       </div>
@@ -53,7 +53,7 @@ const SubscribeCard = () => {
   if (state === states.error) {
     return (
       <div className={cardStyles.link}>
-        <div className={`animate-colors ${cardStyles.card}`}>
+        <div className={cardStyles.card} data-animate="true">
           <p>Sorry, something went wrong</p>
         </div>
       </div>
@@ -63,7 +63,7 @@ const SubscribeCard = () => {
   if (state === states.success) {
     return (
       <div className={cardStyles.link}>
-        <div className={`animate-colors ${cardStyles.card}`}>
+        <div className={cardStyles.card} data-animate="true">
           <p>Check your email to confirm your subscription</p>
         </div>
       </div>
@@ -72,7 +72,7 @@ const SubscribeCard = () => {
 
   return (
     <div className={cardStyles.link}>
-      <div className={`animate-colors ${cardStyles.card}`}>
+      <div className={cardStyles.card} data-animate="true">
         <form
           className={styles.form}
           name={formName}
@@ -92,12 +92,14 @@ const SubscribeCard = () => {
             <input
               type="text"
               name="name"
-              className={`animate-colors ${styles.input}`}
+              className={styles.input}
+              data-animate="true"
               placeholder="First name (optional)"
             />
             <input
               type="email"
-              className={`animate-colors ${styles.input}`}
+              className={styles.input}
+              data-animate="true"
               name="email"
               placeholder="Email address"
               required
