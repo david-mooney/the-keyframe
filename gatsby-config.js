@@ -126,6 +126,7 @@ module.exports = {
         },
       },
     },
+    'gatsby-plugin-preact',
     'gatsby-plugin-offline',
     {
       resolve: `gatsby-plugin-algolia`,
