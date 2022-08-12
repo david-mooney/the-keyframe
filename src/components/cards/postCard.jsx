@@ -14,7 +14,8 @@ const PostCard = ({ frontmatter, fields, timeToRead }) => {
   return (
     <Link to={fields.slug} className={styles.link} itemProp="url" style={gradientColors}>
       <article
-        className={`animate-colors ${styles.card}`}
+        className={styles.card}
+        data-animate="true"
         itemScope
         itemType="http://schema.org/Article"
       >

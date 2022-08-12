@@ -21,11 +21,11 @@ const Bio = () => {
 
   return (
     <div className={styles.bio}>
-      <hr className="animate-colors" />
+      <hr data-animate="true" />
 
       <p>
         Written by{' '}
-        <Link to="/about" className="underline animate-colors" itemProp="url">
+        <Link to="/about" className="underline" data-animate="true" itemProp="url">
           {author.name}
         </Link>
       </p>

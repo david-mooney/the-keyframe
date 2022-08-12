@@ -1,15 +1,12 @@
 .main {
   position: relative;
   overflow-x: hidden;
-  margin: var(--fixed-element-width) 0;
 }
 
-@media screen and (min-width: 800px) {
-  .main {
-    margin: 0 var(--fixed-element-width);
-  }
-
-  :global(.home) .main {
-    margin-left: calc(var(--non-fixed-element-width) + var(--fixed-element-width));
-  }
+.test {
+  position: absolute;
+  top: 0;
+  left: var(--fixed-element-width);
+  margin: var(--spacing-12) var(--spacing-6);
+  opacity: 0.1;
 }
