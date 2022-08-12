@@ -2,8 +2,8 @@ import React, { useMemo } from 'react';
 import { graphql } from 'gatsby';
 import algoliaSearch from 'algoliasearch/lite';
 import { InstantSearch } from 'react-instantsearch-hooks-web';
-import SearchInput from '../components/inputs/search.jsx';
 import Seo from '../components/seo';
+import SearchInput from '../components/inputs/search.jsx';
 import BlogPostsList from '../components/blogPostsList.jsx';
 
 let firstLoad = true;

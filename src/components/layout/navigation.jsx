@@ -45,7 +45,7 @@ const Navigation = () => {
 
   return (
     <nav ref={ref} aria-label="Main navigation">
-      <div className={`animate-colors ${styles.nav}`}>
+      <div className={styles.nav} data-animate="true">
         <a className="skip-to-content underline" href="#main">
           Skip to content
         </a>

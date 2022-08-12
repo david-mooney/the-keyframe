@@ -13,7 +13,7 @@
   --ease-inOut: cubic-bezier(0.42, 0, 0.58, 1);
 }
 
-.animate-colors {
+[data-animate='true'] {
   transition: var(--timing-fast) background-color var(--ease-out),
     var(--timing-faster) color var(--ease-out), var(--timing-faster) border-color var(--ease-out);
 }

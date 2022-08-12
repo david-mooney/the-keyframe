@@ -26,12 +26,13 @@ const CustomSearchBox = ({ total, placeholder }) => {
     <div className={styles.container}>
       <input
         type="search"
-        className={`animate-colors ${styles.input}`}
+        className={styles.input}
+        data-animate="true"
         placeholder={placeholder}
         value={value}
         onChange={handleChange}
       />
-      <div className={`animate-colors ${styles.icon}`}>
+      <div className={styles.icon} data-animate="true">
         <FiSearch />
       </div>
       <span className={styles.hits}>Showing {hitCount} posts</span>

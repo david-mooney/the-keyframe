@@ -4,7 +4,7 @@ import ScrollToTop from '../buttons/scrollToTop';
 import * as styles from './controls.module.css';
 
 const Controls = () => (
-  <aside className={`animate-colors ${styles.navigation}`} aria-label="Page Controls">
+  <aside className={styles.navigation} aria-label="Page Controls" data-animate="true">
     <ul>
       <li>
         <ThemeToggle />
