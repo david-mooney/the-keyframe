@@ -109,7 +109,6 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

@@ -37,7 +37,10 @@ const html = () => {
     const savedTheme = getSavedTheme();
 
     window.theme = theme || savedTheme || osTheme();
-    document.documentElement.classList.remove(window.themes.LIGHT, window.themes.DARK);
+    document.documentElement.classList.remove(
+      window.themes.LIGHT,
+      window.themes.DARK
+    );
     document.documentElement.classList.add(window.theme);
 
     if (window.theme !== savedTheme) {
@@ -48,7 +51,19 @@ const html = () => {
   window.setTheme();
 };
 
-exports.onRenderBody = ({ setHeadComponents }) => {
+exports.onRenderBody = ({
+  setHtmlAttributes,
+  setHeadComponents,
+  setBodyAttributes,
+}) => {
+  setHtmlAttributes({
+    lang: 'en',
+  });
+
+  setBodyAttributes({
+    'data-animate': true,
+  });
+
   setHeadComponents([
     <script
       key="theme-script"
@@ -59,4 +74,6 @@ exports.onRenderBody = ({ setHeadComponents }) => {
   ]);
 };
 
-exports.wrapPageElement = ({ element, props }) => <Layout {...props}>{element}</Layout>;
+exports.wrapPageElement = ({ element, props }) => (
+  <Layout {...props}>{element}</Layout>
+);

@@ -20,27 +20,23 @@ const usePrevious = value => {
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [tabIndex, setTabIndex] = useState(-1);
   const location = useLocation();
   const prevLocation = usePrevious(location);
   const ref = useRef();
 
   useClickOutside(ref, () => {
     setIsOpen(false);
-    setTabIndex(-1);
   });
 
   useEffect(() => {
     if (location !== prevLocation) {
       setIsOpen(false);
-      setTabIndex(-1);
     }
   }, [location, prevLocation, setIsOpen]);
 
   const toggleMenu = () => {
-    const newState = !isOpen;
-    setIsOpen(newState);
-    setTabIndex(newState ? 0 : -1);
+    const state = !isOpen;
+    setIsOpen(state);
   };
 
   return (
@@ -69,20 +65,20 @@ const Navigation = () => {
         </ul>
       </div>
 
-      <div className={styles.subMenu} data-open={isOpen} id="submenu">
-        <ol className={styles.subMenuList}>
+      <div id="submenu" className={styles.subMenu} data-open={isOpen}>
+        <ol className={styles.subMenuList} data-animate="true">
           <li>
-            <Link to="/about" className="underline" tabIndex={tabIndex}>
+            <Link to="/about" className="underline">
               About
             </Link>
           </li>
           <li>
-            <Link to="/subscribe" className="underline" tabIndex={tabIndex}>
+            <Link to="/subscribe" className="underline">
               Subscribe
             </Link>
           </li>
           <li>
-            <Link to="/privacy" className="underline" tabIndex={tabIndex}>
+            <Link to="/privacy" className="underline">
               Privacy
             </Link>
           </li>
@@ -92,7 +88,6 @@ const Navigation = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="underline"
-              tabIndex={tabIndex}
             >
               Sitemap
             </a>
@@ -103,7 +98,6 @@ const Navigation = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="underline"
-              tabIndex={tabIndex}
             >
               RSS
             </a>

@@ -17,4 +17,6 @@ export const onRouteUpdate = () => {
   zoomImage();
 };
 
-export const wrapPageElement = ({ element, props }) => <Layout {...props}>{element}</Layout>;
+export const wrapPageElement = ({ element, props }) => (
+  <Layout {...props}>{element}</Layout>
+);

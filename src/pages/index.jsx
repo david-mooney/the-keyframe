@@ -2,15 +2,21 @@ import React, { useMemo } from 'react';
 import { graphql } from 'gatsby';
 import algoliaSearch from 'algoliasearch/lite';
 import { InstantSearch } from 'react-instantsearch-hooks-web';
-import Seo from '../components/seo';
 import SearchInput from '../components/inputs/search.jsx';
 import BlogPostsList from '../components/blogPostsList.jsx';
+import Seo from '../components/seo';
 
 let firstLoad = true;
 
-const BlogIndex = ({ data, location }) => {
+export const Head = props => <Seo {...props} />;
+
+const BlogIndex = ({ data }) => {
   const algoliaClient = useMemo(
-    () => algoliaSearch(process.env.GATSBY_ALGOLIA_APP_ID, process.env.GATSBY_ALGOLIA_SEARCH_KEY),
+    () =>
+      algoliaSearch(
+        process.env.GATSBY_ALGOLIA_APP_ID,
+        process.env.GATSBY_ALGOLIA_SEARCH_KEY
+      ),
     []
   );
 
@@ -32,9 +38,11 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <>
-      <Seo title="All posts" location={location} />
       <InstantSearch searchClient={searchClient} routing={true} indexName="Pages">
-        <SearchInput total={data.allMarkdownRemark.nodes.length} placeholder="Search for posts" />
+        <SearchInput
+          total={data.allMarkdownRemark.nodes.length}
+          placeholder="Search for posts"
+        />
         <BlogPostsList posts={data.allMarkdownRemark.nodes} />
       </InstantSearch>
     </>
@@ -48,6 +56,10 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
+        author {
+          name
+        }
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

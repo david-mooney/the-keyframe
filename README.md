@@ -6,23 +6,14 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 
 ## TODO's
 
-- [] Article content spacing
-- [] Animate colors consistency
+- [] Progress bar
+- [] Navigation controls for mobile
 - [] Form loading states
 - [] Search loading state
-
-- [] Side menu theme animation
-- [] Article hero
-- [] Article illustrations (use theme colors with filter?)
 - [] Icon for header and favicon
-
 - [] Add a "About" page
 - [] Add a "Contact" page
 - [] Optimize CSS
 
-## Potential Additions
-
-- Like system for for posts
-- Replace react-icons (with Lottie animations?)
-- System for localization of articles
-- Chapters in the article progress bar?
+- [] System for localization of articles
+- [] Article illustrations

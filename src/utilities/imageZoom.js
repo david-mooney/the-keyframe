@@ -6,7 +6,7 @@ const defaultOptions = {
   background: 'var(--color-background)',
 };
 
-const applyZoomEffect = ({ excludedSelector, includedSelector, ...options }) => {
+const applyZoomEffect = ({ ...options }) => {
   const images = [...document.querySelectorAll('.gatsby-resp-image-image')].filter(
     image => !image.classList.contains('medium-zoom-image')
   );
