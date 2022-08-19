@@ -55,7 +55,6 @@
   bottom: 0;
   left: 0;
   width: 50vw;
-  background-color: var(--color-background);
   border-right: 1px solid;
   z-index: var(--z-front);
   transform: translateX(-100%);
@@ -78,6 +77,8 @@
 }
 
 .subMenuList {
+  background-color: var(--color-background);
+
   height: 100%;
   list-style: none;
   display: flex;
@@ -90,10 +91,14 @@
 .subMenuList > li {
   padding-bottom: var(--spacing-3);
   opacity: 0;
-  transition: var(--timing-fast) opacity var(--ease-inOut);
+  visibility: hidden;
+  transition-delay: 1s;
+  transition: var(--timing-fast) opacity var(--ease-inOut),
+    var(--timing-instant) visibility;
 }
 
 .subMenu[data-open='true'] .subMenuList > li {
+  visibility: visible;
   opacity: 1;
 }
 

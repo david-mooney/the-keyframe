@@ -1,87 +1,23 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
 
-const Seo = ({ description, lang, meta, title, location }) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            social {
-              twitter
-            }
-          }
-        }
-      }
-    `
-  );
+const Seo = ({ data }) => {
+  console.log('data', data);
 
-  const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = site.siteMetadata?.title;
-  const locationClass = location?.pathname === '/' ? 'home' : '';
+  const { title, description, author } = data.site.siteMetadata;
 
   return (
-    <Helmet
-      htmlAttributes={{ lang }}
-      bodyAttributes={{
-        class: locationClass,
-        'data-animate': true,
-      }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
-      meta={[
-        {
-          name: 'description',
-          content: metaDescription,
-        },
-        {
-          property: 'og:title',
-          content: title,
-        },
-        {
-          property: 'og:description',
-          content: metaDescription,
-        },
-        {
-          property: 'og:type',
-          content: 'website',
-        },
-        {
-          name: 'twitter:card',
-          content: 'summary',
-        },
-        {
-          name: 'twitter:creator',
-          content: site.siteMetadata?.social?.twitter || '',
-        },
-        {
-          name: 'twitter:title',
-          content: title,
-        },
-        {
-          name: 'twitter:description',
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
+    <>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta property="og:title" content={title}></meta>
+      <meta property="og:type" content="website"></meta>
+      <meta property="og:description" content={description}></meta>
+      <meta name="twitter:card" content="summary"></meta>
+      <meta name="twitter:creator" content={author}></meta>
+      <meta name="twitter:title" content={title}></meta>
+      <meta name="twitter:description" content={description}></meta>
+    </>
   );
-};
-
-Seo.defaultProps = {
-  lang: 'en',
-  meta: [],
-  description: '',
-};
-
-Seo.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
 };
 
 export default Seo;

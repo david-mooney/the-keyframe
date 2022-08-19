@@ -14,7 +14,7 @@ const PostArticle = ({ html }) => {
       className={styles.article}
       itemType="http://schema.org/Article"
     >
-      {/* <ProgressBar ref={postRef} /> */}
+      <ProgressBar ref={postRef} />
 
       <section
         dangerouslySetInnerHTML={{ __html: html }}

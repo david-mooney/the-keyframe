@@ -1,4 +1,5 @@
 :root {
+  --timing-instant: 0ms;
   --timing-fastest: 150ms;
   --timing-faster: 250ms;
   --timing-fast: 350ms;

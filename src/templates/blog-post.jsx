@@ -1,21 +1,36 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Seo from '../components/seo';
 import PostHero from '../components/postHero';
 import PostArticle from '../components/postArticle';
 import PostFooter from '../components/postFooter';
 
-const BlogPostTemplate = ({ data, location }) => {
-  const { html, excerpt, frontmatter, timeToRead } = data.markdownRemark;
+export const Head = ({ data }) => {
+  const { author, markdownRemark } = data;
+  const { excerpt, frontmatter } = markdownRemark;
 
   return (
     <>
-      <Seo
-        location={location}
-        title={frontmatter.title}
-        description={frontmatter.description || excerpt}
-      />
+      <title>{frontmatter.title}</title>
+      <meta name="description" content={frontmatter.description || excerpt} />
+      <meta property="og:title" content={frontmatter.title}></meta>
+      <meta property="og:type" content="website"></meta>
+      <meta
+        property="og:description"
+        content={frontmatter.description || excerpt}
+      ></meta>
+      <meta name="twitter:card" content="summary"></meta>
+      <meta name="twitter:creator" content={author}></meta>
+      <meta name="twitter:title" content={frontmatter.title}></meta>
+      <meta name="twitter:description" content={frontmatter.description}></meta>
+    </>
+  );
+};
 
+const BlogPostTemplate = ({ data }) => {
+  const { html, frontmatter, timeToRead } = data.markdownRemark;
+
+  return (
+    <>
       <PostHero data={frontmatter} readTime={timeToRead} />
       <PostArticle html={html} />
       <PostFooter data={data} />
