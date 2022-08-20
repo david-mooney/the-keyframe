@@ -12,7 +12,7 @@
   overflow: hidden;
   border-radius: 50%;
   background-color: transparent;
-  transition: var(--timing-intermediate) opacity var(--ease-inOut);
+  transition: var(--timing-intermediate) opacity var(--ease-in-out);
 }
 
 .button[data-visible='false'] {

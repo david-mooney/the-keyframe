@@ -1,7 +1,7 @@
 .header {
   position: relative;
   width: 100%;
-  max-width: var(--maxWidth-4xl);
+  max-width: var(--max-width-4xl);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: clamp(1rem, 80vh, 35rem);
@@ -28,41 +28,14 @@
 }
 
 .imageWrapper {
-  /* position: absolute; */
-  /* top: 10vh; */
-  /* right: 0; */
-  /* width: 50vw; */
-  /* height: 80%; */
   margin: auto;
-  /* border-radius: var(--border-radius-1); */
-  /* box-shadow: var(--box-shadow-high); */
-  /* background-image: linear-gradient(to right, var(--gradientA), var(--gradientB)); */
 }
 
 @media screen and (min-width: 800px) {
   .imageWrapper {
     position: relative;
-    /* right: unset;
-    top: unset;
-    width: 100%;
-    height: 100%; */
   }
 }
-
-/* .imageWrapper::before {
-  --offset: 0.5rem;
-  content: '';
-  position: absolute;
-  top: calc(-1 * var(--offset));
-  left: calc(-1 * var(--offset));
-  border-radius: var(--border-radius-1);
-  width: calc(100% + 2 * var(--offset));
-  height: calc(100% + 2 * var(--offset));
-  background: linear-gradient(to right, var(--gradientA), var(--gradientB));
-  box-shadow: var(--box-shadow-small);
-  z-index: var(--z-back);
-  transform: rotate(8deg);
-} */
 
 .image {
   position: absolute;

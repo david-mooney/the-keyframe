@@ -9,9 +9,9 @@
   padding: var(--spacing-1);
   background-color: var(--color-background);
   border-bottom: 1px solid;
+  z-index: var(--z-fixed);
   overflow: hidden; /* For Safari iOS  */
   -webkit-overflow-scrolling: touch;
-  z-index: var(--z-fixed);
 }
 
 @media screen and (min-width: 800px) {
@@ -58,7 +58,7 @@
   border-right: 1px solid;
   z-index: var(--z-front);
   transform: translateX(-100%);
-  transition: var(--timing-fast) transform var(--ease-inOut);
+  transition: var(--timing-fast) transform var(--ease-in-out);
   overflow: hidden; /* For Safari iOS  */
   -webkit-overflow-scrolling: touch;
 }
@@ -78,7 +78,6 @@
 
 .subMenuList {
   background-color: var(--color-background);
-
   height: 100%;
   list-style: none;
   display: flex;
@@ -92,9 +91,9 @@
   padding-bottom: var(--spacing-3);
   opacity: 0;
   visibility: hidden;
-  transition-delay: 1s;
-  transition: var(--timing-fast) opacity var(--ease-inOut),
+  transition: var(--timing-fast) opacity var(--ease-in-out),
     var(--timing-instant) visibility;
+  transition-delay: 1s;
 }
 
 .subMenu[data-open='true'] .subMenuList > li {

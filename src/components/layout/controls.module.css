@@ -1,14 +1,15 @@
 .navigation {
   position: fixed;
-  left: 0;
+  display: none;
+  top: 0;
   right: 0;
   bottom: 0;
-  display: flex;
+  width: var(--fixed-element-width);
+  padding: var(--spacing-6) var(--spacing-3);
+  border-left: 1px solid;
   justify-content: center;
   align-items: center;
-  padding: var(--spacing-1);
   background-color: var(--color-background);
-  border-top: 1px solid;
   z-index: var(--z-front);
   overflow: hidden; /* For Safari iOS  */
   -webkit-overflow-scrolling: touch;
@@ -16,13 +17,7 @@
 
 @media screen and (min-width: 800px) {
   .navigation {
-    top: 0;
-    right: 0;
-    left: unset;
-    width: var(--fixed-element-width);
-    border-top: none;
-    border-left: 1px solid;
-    padding: var(--spacing-6) var(--spacing-3);
+    display: flex;
   }
 }
 
