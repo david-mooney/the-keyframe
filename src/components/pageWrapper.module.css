@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 100%;
   margin: auto;
-  max-width: var(--maxWidth-4xl);
+  max-width: var(--max-width-4xl);
   padding: var(--spacing-24) var(--spacing-8);
 }
 

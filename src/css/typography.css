@@ -1,23 +1,21 @@
 :root {
-  --fontFamily-serif: 'Aleo', 'Cambria', 'Times New Roman', 'Times', 'serif';
-  --fontFamily-sans: 'Lato', 'Lucida Grande', 'Tahoma', 'Sans-Serif';
-  --font-heading: var(--fontFamily-serif);
-  --font-body: var(--fontFamily-sans);
-
-  --fontWeight-normal: 400;
-  --fontWeight-medium: 500;
-  --fontWeight-semiBold: 600;
-  --fontWeight-bold: 700;
-
-  --lineHeight-root: 1.75;
-  --lineHeight-heading: 1.3;
+  --font-family-serif: 'Aleo', 'Cambria', 'Times New Roman', 'Times', 'serif';
+  --font-family-sans: 'Lato', 'Lucida Grande', 'Tahoma', 'Sans-Serif';
+  --font-heading: var(--font-family-serif);
+  --font-body: var(--font-family-sans);
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --line-height-root: 1.75;
+  --line-height-heading: 1.3;
 
   /* Minor Third - https://type-scale.com */
-  --fontSize-0: 0.833em;
-  --fontSize-1: 100%;
-  --fontSize-2: 1.2em;
-  --fontSize-3: 1.44rem;
-  --fontSize-4: 1.728rem;
-  --fontSize-5: 2.074rem;
-  --fontSize-6: 2.488rem;
+  --font-size-0: 0.833em;
+  --font-size-1: 100%;
+  --font-size-2: 1.2em;
+  --font-size-3: 1.44rem;
+  --font-size-4: 1.728rem;
+  --font-size-5: 2.074rem;
+  --font-size-6: 2.488rem;
 }

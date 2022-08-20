@@ -1,4 +1,4 @@
-.sr-only {
+.srOnly {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -9,17 +9,17 @@
   width: 1px;
 }
 
-.skip-to-content {
+.skipToContent {
   position: fixed;
   top: var(--spacing-6);
   left: 10%;
   opacity: 0;
   display: block;
-  transition: var(--timing-fast) opacity var(--ease-inOut);
+  transition: var(--timing-fast) opacity var(--ease-in-out);
   z-index: var(--z-fixed);
   pointer-events: none;
 }
 
-.skip-to-content:focus {
+.skipToContent:focus {
   opacity: 1;
 }

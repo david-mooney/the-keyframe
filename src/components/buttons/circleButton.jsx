@@ -3,7 +3,13 @@ import { Link } from 'gatsby';
 import AnimatedCircle from './animatedCircle.jsx';
 import * as styles from './circleButton.module.css';
 
-export const CircleLink = ({ label = '', size = 44, visible = true, href, children }) => (
+export const CircleLink = ({
+  label = '',
+  size = 44,
+  visible = true,
+  href,
+  children,
+}) => (
   <Link
     to={href}
     itemProp="url"
@@ -14,11 +20,17 @@ export const CircleLink = ({ label = '', size = 44, visible = true, href, childr
   >
     <AnimatedCircle size={size} />
     {children}
-    <span className="sr-only">{label}</span>
+    <span className="srOnly">{label}</span>
   </Link>
 );
 
-export const CircleButton = ({ label = '', size = 44, visible = true, handleClick, children }) => (
+export const CircleButton = ({
+  label = '',
+  size = 44,
+  visible = true,
+  handleClick,
+  children,
+}) => (
   <button
     type="button"
     className={styles.button}
@@ -29,7 +41,7 @@ export const CircleButton = ({ label = '', size = 44, visible = true, handleClic
   >
     <AnimatedCircle size={size} />
     {children}
-    <span className="sr-only">{label}</span>
+    <span className="srOnly">{label}</span>
   </button>
 );
 

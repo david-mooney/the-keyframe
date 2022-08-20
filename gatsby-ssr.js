@@ -3,8 +3,8 @@ const Layout = require('./src/components/layout/pageLayout').default;
 
 const html = () => {
   window.themes = {
-    LIGHT: '-light',
-    DARK: '-dark',
+    LIGHT: 'light',
+    DARK: 'dark',
   };
 
   const saveTheme = theme => {

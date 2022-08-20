@@ -1,42 +1,30 @@
 :root {
   /* Base Color HSL Values */
-  --color-light-h: 0;
+  --color-light-h: 0deg;
   --color-light-s: 5%;
   --color-light-l: 97%;
-  --color-dark-h: 227;
+  --color-dark-h: 227deg;
   --color-dark-s: 23%;
   --color-dark-l: 16%;
 
   /* Fixed Colors (same regardless of theme setting) */
-  --color-light: hsl(
-    var(--color-light-h),
-    var(--color-light-s),
-    var(--color-light-l)
-  );
-
-  --color-dark: hsl(var(--color-dark-h), var(--color-dark-s), var(--color-dark-l));
+  --color-light: hsl(var(--color-light-h) var(--color-light-s) var(--color-light-l));
+  --color-dark: hsl(var(--color-dark-h) var(--color-dark-s) var(--color-dark-l));
 
   /* Light Theme */
-  --color-text: hsl(var(--color-dark-h), var(--color-dark-s), var(--color-dark-l));
+  --color-text: hsl(var(--color-dark-h) var(--color-dark-s) var(--color-dark-l));
   --color-background: #f5f4ee; /* hsl(var(--color-light-h), var(--color-light-s), var(--color-light-l)); */
-  --color-text-raw: var(--color-dark-h), var(--color-dark-s), var(--color-dark-l);
-  --color-background-raw: var(--color-light-h), var(--color-light-s),
+  --color-text-raw: var(--color-dark-h) var(--color-dark-s) var(--color-dark-l);
+  --color-background-raw: var(--color-light-h) var(--color-light-s)
     var(--color-light-l);
 }
 
-:root.-dark {
+:root.dark {
   /* Dark Theme */
-  --color-text: hsl(
-    var(--color-light-h),
-    var(--color-light-s),
-    var(--color-light-l)
-  );
+  --color-text: hsl(var(--color-light-h) var(--color-light-s) var(--color-light-l));
   --color-background: hsl(
-    var(--color-dark-h),
-    var(--color-dark-s),
-    var(--color-dark-l)
+    var(--color-dark-h) var(--color-dark-s) var(--color-dark-l)
   );
-  --color-text-raw: var(--color-light-h), var(--color-light-s), var(--color-light-l);
-  --color-background-raw: var(--color-dark-h), var(--color-dark-s),
-    var(--color-dark-l);
+  --color-text-raw: var(--color-light-h) var(--color-light-s) var(--color-light-l);
+  --color-background-raw: var(--color-dark-h) var(--color-dark-s) var(--color-dark-l);
 }

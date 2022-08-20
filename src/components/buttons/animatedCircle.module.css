@@ -1,5 +1,6 @@
 .container {
   --length: 139;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -8,7 +9,7 @@
 }
 
 .circle {
-  stroke: hsla(var(--color-text-raw), 0.15);
+  stroke: hsla(var(--color-text-raw) / 15%);
   stroke-width: 2;
   fill: transparent;
 }
