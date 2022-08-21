@@ -3,15 +3,16 @@
 
   position: fixed;
   left: 0;
-  top: 66px;
+  bottom: 0;
   opacity: 0;
   transition: var(--timing-fast) opacity var(--ease-in-out);
 }
 
 @media (min-width: 800px) {
   .aside {
-    left: 12vw;
-    top: 20vh;
+    left: calc(var(--fixed-element-width) / 2 - var(--bar-size));
+    top: 33.3vh;
+    z-index: var(--z-fixed);
   }
 }
 

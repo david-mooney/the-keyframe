@@ -8,10 +8,9 @@ export const Head = props => <Seo {...props} />;
 
 const SubscribePage = () => (
   <PageWrapper>
-    {/* <Seo title="Subscribe" /> */}
-    <h1>Keep up to date</h1>
+    <h1>Stay up to date</h1>
     <br />
-    <SubscribeCard />
+    <SubscribeCard showTitle={false} />
   </PageWrapper>
 );
 

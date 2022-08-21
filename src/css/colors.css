@@ -1,30 +1,29 @@
 :root {
-  /* Base Color HSL Values */
-  --color-light-h: 0deg;
-  --color-light-s: 5%;
-  --color-light-l: 97%;
-  --color-dark-h: 227deg;
-  --color-dark-s: 23%;
-  --color-dark-l: 16%;
+  /* Base HSL color values */
+  --light-h: 0deg;
+  --light-s: 5%;
+  --light-l: 97%;
+  --dark-h: 227deg;
+  --dark-s: 23%;
+  --dark-l: 16%;
 
-  /* Fixed Colors (same regardless of theme setting) */
-  --color-light: hsl(var(--color-light-h) var(--color-light-s) var(--color-light-l));
-  --color-dark: hsl(var(--color-dark-h) var(--color-dark-s) var(--color-dark-l));
+  /* Fixed colors (same regardless of theme setting) */
+  --color-light: hsl(var(--light-h) var(--light-s) var(--light-l));
+  --color-dark: hsl(var(--dark-h) var(--dark-s) var(--dark-l));
+  --color-light-raw: var(--light-h) var(--light-s) var(--light-l);
+  --color-dark-raw: var(--dark-h) var(--dark-s) var(--dark-l);
 
-  /* Light Theme */
-  --color-text: hsl(var(--color-dark-h) var(--color-dark-s) var(--color-dark-l));
-  --color-background: #f5f4ee; /* hsl(var(--color-light-h), var(--color-light-s), var(--color-light-l)); */
-  --color-text-raw: var(--color-dark-h) var(--color-dark-s) var(--color-dark-l);
-  --color-background-raw: var(--color-light-h) var(--color-light-s)
-    var(--color-light-l);
+  /* Light theme */
+  --color-text: var(--color-dark);
+  --color-background: var(--color-light);
+  --color-text-raw: var(--color-dark-raw);
+  --color-background-raw: var(--color-light-raw);
 }
 
 :root.dark {
-  /* Dark Theme */
-  --color-text: hsl(var(--color-light-h) var(--color-light-s) var(--color-light-l));
-  --color-background: hsl(
-    var(--color-dark-h) var(--color-dark-s) var(--color-dark-l)
-  );
-  --color-text-raw: var(--color-light-h) var(--color-light-s) var(--color-light-l);
-  --color-background-raw: var(--color-dark-h) var(--color-dark-s) var(--color-dark-l);
+  /* Dark theme */
+  --color-text: var(--color-light);
+  --color-background: var(--color-dark);
+  --color-text-raw: var(--color-light-raw);
+  --color-background-raw: var(--color-dark-raw);
 }

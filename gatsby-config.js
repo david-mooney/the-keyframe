@@ -165,8 +165,6 @@ module.exports = {
             '/offline-plugin-app-shell-fallback',
           ];
 
-          console.log('!!!', allSitePage.nodes);
-
           return allSitePage.nodes.filter(page => !ignorePages.includes(page.path));
         },
         serialize: ({ path }) => {

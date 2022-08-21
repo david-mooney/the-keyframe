@@ -6,14 +6,10 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 
 ## TODO's
 
-- [] Progress bar
-- [] Navigation controls for mobile
 - [] Form loading states
-- [] Search loading state
-- [] Icon for header and favicon
-- [] Add a "About" page
-- [] Add a "Contact" page
-- [] Optimize CSS
 
-- [] System for localization of articles
+- [] Icon for header and favicon
 - [] Article illustrations
+
+- [] Add a "About" page
+- [] System for localization of articles

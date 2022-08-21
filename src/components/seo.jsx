@@ -1,8 +1,6 @@
 import React from 'react';
 
 const Seo = ({ data }) => {
-  console.log('data', data);
-
   const { title, description, author } = data.site.siteMetadata;
 
   return (
