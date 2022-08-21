@@ -1,38 +1,16 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { useLocation } from '@reach/router';
+import React, { useState, useRef } from 'react';
 import { Link } from 'gatsby';
 import { FaHome } from '@react-icons/all-files/fa/FaHome';
 import { RiMenuUnfoldFill } from '@react-icons/all-files/ri/RiMenuUnfoldFill';
 import { RiMenuFoldFill } from '@react-icons/all-files/ri/RiMenuFoldFill';
 import { CircleButton, CircleLink } from '../buttons/circleButton';
-import useClickOutside from '../../utilities/useClickOutside';
+import Drawer from './drawer';
+import ThemeToggle from '../buttons/themeToggle';
 import * as styles from './navigation.module.css';
 
-const usePrevious = value => {
-  const ref = useRef();
-
-  useEffect(() => {
-    ref.current = value;
-  });
-
-  return ref.current;
-};
-
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-  const prevLocation = usePrevious(location);
   const ref = useRef();
-
-  useClickOutside(ref, () => {
-    setIsOpen(false);
-  });
-
-  useEffect(() => {
-    if (location !== prevLocation) {
-      setIsOpen(false);
-    }
-  }, [location, prevLocation, setIsOpen]);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     const state = !isOpen;
@@ -55,34 +33,42 @@ const Navigation = () => {
           <li>
             <CircleButton
               label="Toggle submenu with page links"
-              aria-expanded={isOpen}
               aria-controls="submenu"
+              aria-expanded={isOpen}
               handleClick={toggleMenu}
             >
               {isOpen ? <RiMenuFoldFill /> : <RiMenuUnfoldFill />}
             </CircleButton>
           </li>
+          <li>
+            <ThemeToggle />
+          </li>
         </ul>
       </div>
 
-      <div id="submenu" className={styles.subMenu} data-open={isOpen}>
-        <ol className={styles.subMenuList} data-animate="true">
-          <li>
+      <Drawer id="navigation-menu" parent={ref} open={isOpen} setOpen={setIsOpen}>
+        <ol className={styles.subMenu} data-animate="true">
+          <li className={styles.subMenuItem}>
+            <Link to="/" className="underline">
+              Home
+            </Link>
+          </li>
+          <li className={styles.subMenuItem}>
             <Link to="/about" className="underline">
               About
             </Link>
           </li>
-          <li>
+          <li className={styles.subMenuItem}>
             <Link to="/subscribe" className="underline">
               Subscribe
             </Link>
           </li>
-          <li>
+          <li className={styles.subMenuItem}>
             <Link to="/privacy" className="underline">
               Privacy
             </Link>
           </li>
-          <li>
+          <li className={styles.subMenuItem}>
             <a
               href="/sitemap/sitemap-0.xml"
               target="_blank"
@@ -92,7 +78,7 @@ const Navigation = () => {
               Sitemap
             </a>
           </li>
-          <li>
+          <li className={styles.subMenuItem}>
             <a
               href="/rss.xml"
               target="_blank"
@@ -103,7 +89,7 @@ const Navigation = () => {
             </a>
           </li>
         </ol>
-      </div>
+      </Drawer>
     </nav>
   );
 };

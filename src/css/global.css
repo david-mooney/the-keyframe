@@ -130,6 +130,11 @@ article a:hover,
   color: var(--gradient-a);
 }
 
+.mainTitle {
+  text-align: center;
+  margin: var(--spacing-24) 0;
+}
+
 /* stylelint-disable-next-line selector-id-pattern */
 #___gatsby,
 #gatsby-focus-wrapper {

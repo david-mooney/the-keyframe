@@ -11,7 +11,7 @@ const states = {
   error: 'error',
 };
 
-const SubscribeCard = () => {
+const SubscribeCard = ({ showTitle = true }) => {
   const [state, setState] = useState(null);
 
   const submitForm = async event => {
@@ -81,7 +81,7 @@ const SubscribeCard = () => {
           netlify-honeypot="bot-field"
           onSubmit={submitForm}
         >
-          <h3>Stay up to date</h3>
+          {showTitle && <h3>Stay up to date</h3>}
 
           <label className={styles.honeyPot}>
             Are you a human? <input name="bot-field" />
@@ -109,10 +109,10 @@ const SubscribeCard = () => {
             Subscribe
           </button>
           <a
-            className="underline"
-            href="privacy#data-retention"
             target="_blank"
+            className="underline"
             rel="noopener noreferrer"
+            href="privacy#data-retention"
           >
             Privacy Policy
           </a>

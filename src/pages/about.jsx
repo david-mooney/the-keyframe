@@ -7,9 +7,17 @@ export const Head = props => <Seo {...props} />;
 
 const AboutPage = () => (
   <PageWrapper>
-    {/* <Seo title="About" /> */}
     <h1>About</h1>
-    <p>This is the personal development blog of David Mooney.</p>
+    <p>
+      This is the personal development blog of me, David Mooney. I've been a
+      developer{' '}
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      You can reach me at{' '}
+      <a href="mailto:thekeyframe@gmail.com">thekeyframe@gmail.com</a>
+    </p>
   </PageWrapper>
 );
 

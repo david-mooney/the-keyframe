@@ -9,10 +9,12 @@ const useClickOutside = (ref, handler) => {
 
     document.addEventListener('mousedown', listener);
     document.addEventListener('touchstart', listener);
+    document.addEventListener('keydown', listener);
 
     return () => {
       document.removeEventListener('mousedown', listener);
       document.removeEventListener('touchstart', listener);
+      document.removeEventListener('keydown', listener);
     };
   }, [ref, handler]);
 };

@@ -1,4 +1,5 @@
 :root {
+  /* timings */
   --timing-instant: 0ms;
   --timing-fastest: 150ms;
   --timing-faster: 250ms;
@@ -7,6 +8,8 @@
   --timing-slow: 550ms;
   --timing-slower: 650ms;
   --timing-slowest: 750ms;
+
+  /* easings */
   --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
   --ease-in: cubic-bezier(0.42, 0, 1, 1);
   --ease-out: cubic-bezier(0, 0, 0.58, 1);

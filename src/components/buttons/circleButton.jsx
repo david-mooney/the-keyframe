@@ -4,6 +4,7 @@ import AnimatedCircle from './animatedCircle.jsx';
 import * as styles from './circleButton.module.css';
 
 export const CircleLink = ({
+  id = null,
   label = '',
   size = 44,
   visible = true,
@@ -14,6 +15,7 @@ export const CircleLink = ({
     to={href}
     itemProp="url"
     tabIndex={visible ? 0 : -1}
+    id={id}
     className={styles.button}
     data-visible={visible}
     style={{ '--size': `${size}px` }}

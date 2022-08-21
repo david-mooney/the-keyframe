@@ -7,7 +7,6 @@ export const Head = props => <Seo {...props} />;
 
 const PrivacyPage = () => (
   <PageWrapper>
-    {/* <Seo title="Privacy" /> */}
     <h1>Privacy & Terms</h1>
     <p>
       This is my personal blog; I have no intention of monetising it through the sale
