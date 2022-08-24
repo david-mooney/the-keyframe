@@ -9,6 +9,7 @@
   border: 1px solid hsla(var(--color-text-raw) / 25%);
   border-radius: var(--border-radius-1);
   box-shadow: var(--box-shadow-high);
+  overflow: hidden;
 }
 
 .underline {

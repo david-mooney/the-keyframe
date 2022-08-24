@@ -37,7 +37,6 @@
 
   /* Fixed UI element sizes */
   --fixed-element-width: 4.5rem;
-  --non-fixed-element-width: 25vw;
 
   /* Box shadows */
   --box-shadow-high: rgb(0 0 0 / 22%) 0 30px 60px -10px,

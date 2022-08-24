@@ -1,5 +1,5 @@
 import '@fontsource/lato';
-import '@fontsource/aleo';
+import '@fontsource/merriweather';
 import './src/css/syntax.css';
 import './src/css/normalize.css';
 import './src/css/colors.css';

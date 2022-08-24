@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Loader from '../loader';
 import * as cardStyles from './postCard.module.css';
 import * as styles from './subscribeCard.module.css';
 
@@ -7,12 +8,12 @@ const formName = 'subscribe';
 const states = {
   loading: 'loading',
   success: 'success',
-  existing: 'existing',
   error: 'error',
 };
 
 const SubscribeCard = ({ showTitle = true }) => {
   const [state, setState] = useState(null);
+  const [message, setMessage] = useState('Something went wrong');
 
   const submitForm = async event => {
     event.preventDefault();
@@ -22,6 +23,8 @@ const SubscribeCard = ({ showTitle = true }) => {
     const email = data.get('email');
 
     try {
+      setState(states.loading);
+
       const response = await fetch('/.netlify/functions/subscribe', {
         method: 'POST',
         body: JSON.stringify({ name, email }),
@@ -29,96 +32,92 @@ const SubscribeCard = ({ showTitle = true }) => {
       const json = await response.json();
 
       if (json.subscription?.state === 'active') {
-        setState(states.existing);
-        return;
+        throw new Error('This email is already subscribed.');
       }
 
       setState(states.success);
+      setTimeout(() => setState(null), 3000);
     } catch (error) {
       setState(states.error);
-      console.warn(`[${formName} form]`, error);
+      setMessage('Sorry, something went wrong');
+      setTimeout(() => setState(null), 3000);
     }
   };
 
-  if (state === states.existing) {
-    return (
-      <div className={cardStyles.link}>
-        <div className={cardStyles.card} data-animate="true">
-          <p>That email is already subscribed</p>
-        </div>
-      </div>
-    );
-  }
+  const renderLoader = () => (
+    <div className={`${styles.center} ${styles.appear}`}>
+      <Loader />
+    </div>
+  );
 
-  if (state === states.error) {
-    return (
-      <div className={cardStyles.link}>
-        <div className={cardStyles.card} data-animate="true">
-          <p>Sorry, something went wrong</p>
-        </div>
-      </div>
-    );
-  }
+  const renderSuccess = () => (
+    <div className={`${styles.center} ${styles.appear}`}>
+      <span>Check your email to confirm your subscription</span>
+    </div>
+  );
 
-  if (state === states.success) {
-    return (
-      <div className={cardStyles.link}>
-        <div className={cardStyles.card} data-animate="true">
-          <p>Check your email to confirm your subscription</p>
-        </div>
-      </div>
-    );
-  }
+  const renderError = () => (
+    <div className={`${styles.center} ${styles.appear}`}>
+      <span>{message}</span>
+    </div>
+  );
 
   return (
-    <div className={cardStyles.link}>
-      <div className={cardStyles.card} data-animate="true">
-        <form
-          className={styles.form}
-          name={formName}
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          onSubmit={submitForm}
-        >
-          {showTitle && <h3>Stay up to date</h3>}
+    <>
+      <div className={cardStyles.link}>
+        <div className={cardStyles.card} data-animate="true">
+          {state === states.loading && renderLoader()}
+          {state === states.success && renderSuccess()}
+          {state === states.error && renderError()}
 
-          <label className={styles.honeyPot}>
-            Are you a human? <input name="bot-field" />
-          </label>
-
-          <div className={styles.inputs}>
-            <input type="hidden" name="form-name" value={formName} />
-            <input
-              type="text"
-              name="name"
-              className={styles.input}
-              data-animate="true"
-              placeholder="First name (optional)"
-            />
-            <input
-              type="email"
-              className={styles.input}
-              data-animate="true"
-              name="email"
-              placeholder="Email address"
-              required
-            />
-          </div>
-          <button type="submit" className={styles.button}>
-            Subscribe
-          </button>
-          <a
-            target="_blank"
-            className="underline"
-            rel="noopener noreferrer"
-            href="privacy#data-retention"
+          <form
+            className={styles.form}
+            name={formName}
+            method="POST"
+            data-state={state}
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            onSubmit={submitForm}
           >
-            Privacy Policy
-          </a>
-        </form>
+            {showTitle && <h3>Stay up to date</h3>}
+
+            <label className={styles.honeyPot}>
+              Are you a human? <input name="bot-field" />
+            </label>
+
+            <div className={styles.inputs}>
+              <input
+                type="email"
+                className={styles.input}
+                data-animate="true"
+                name="email"
+                placeholder="Email address"
+                required
+              />
+              <button type="submit" className={styles.button}>
+                Subscribe
+              </button>
+            </div>
+
+            <a
+              target="_blank"
+              className="underline"
+              rel="noopener noreferrer"
+              href="privacy#data-retention"
+            >
+              Privacy Policy
+            </a>
+          </form>
+        </div>
       </div>
-    </div>
+
+      <br />
+
+      <button onClick={() => setState(null)}>Default</button>
+      <button onClick={() => setState(states.loading)}>Loading</button>
+      <button onClick={() => setState(states.success)}>success</button>
+      <button onClick={() => setState(states.error)}>error</button>
+    </>
   );
 };
 

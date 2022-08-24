@@ -6,7 +6,7 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 
 ## TODO's
 
-- [] Form loading states
+- [] Postcss load order issue [bug?]
 
 - [] Icon for header and favicon
 - [] Article illustrations

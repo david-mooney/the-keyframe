@@ -11,13 +11,42 @@
 
 .inputs {
   display: flex;
+  align-items: center;
   gap: var(--spacing-6);
   padding: var(--spacing-3) 0;
+  opacity: 1;
+  transition: var(--timing-fast) opacity var(--ease-in-out);
+}
+
+.form[data-state='loading'] .inputs,
+.form[data-state='success'] .inputs,
+.form[data-state='error'] .inputs {
+  opacity: 0;
+}
+
+.form a,
+.form h3 {
+  transition: var(--timing-fast) transform var(--ease-in-out),
+    var(--timing-fast) opacity var(--ease-in);
+}
+
+.form[data-state='loading'] h3,
+.form[data-state='success'] h3,
+.form[data-state='error'] h3 {
+  transform: translateY(-200%);
+  opacity: 0;
+}
+
+.form[data-state='loading'] a,
+.form[data-state='success'] a,
+.form[data-state='error'] a {
+  transform: translateY(300%);
+  opacity: 0;
 }
 
 .input {
   width: 100%;
-  padding: 0 var(--spacing-3) var(--spacing-3) var(--spacing-3);
+  padding: var(--spacing-3);
   background-color: transparent;
   border: none;
   outline: none;
@@ -50,7 +79,7 @@
 .button {
   color: var(--color-background);
   background-color: var(--color-text);
-  padding: var(--spacing-4) var(--spacing-12);
+  padding: var(--spacing-3) var(--spacing-12);
   margin: var(--spacing-6) 0 var(--spacing-3);
   font-weight: var(--font-weight-bold);
   border-radius: var(--border-radius-1);
@@ -60,4 +89,27 @@
 
 .honeyPot {
   display: none;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.appear {
+  opacity: 0;
+  animation: var(--timing-fast) appear var(--ease-in-out) forwards;
+  animation-delay: var(--timing-fastest);
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
