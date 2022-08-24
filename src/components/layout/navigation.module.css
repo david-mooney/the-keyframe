@@ -62,14 +62,20 @@
 }
 
 .subMenu {
-  background-color: var(--color-background);
   height: 100%;
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 0;
+  align-items: flex-start;
+  padding: 0 var(--fixed-element-width);
+  background-color: var(--color-background);
+}
+
+@media screen and (min-width: 800px) {
+  .subMenu {
+    padding: 0 var(--fixed-element-width) 0 var(--spacing-3);
+  }
 }
 
 .subMenuItem {

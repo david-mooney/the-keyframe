@@ -1,5 +1,5 @@
 :root {
-  --font-family-serif: 'Aleo', 'Cambria', 'Times New Roman', 'Times', 'serif';
+  --font-family-serif: 'Merriweather', 'Cambria', 'Times New Roman', 'serif';
   --font-family-sans: 'Lato', 'Lucida Grande', 'Tahoma', 'Sans-Serif';
   --font-heading: var(--font-family-serif);
   --font-body: var(--font-family-sans);
