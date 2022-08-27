@@ -63,61 +63,56 @@ const SubscribeCard = ({ showTitle = true }) => {
   );
 
   return (
-    <>
-      <div className={cardStyles.link}>
-        <div className={cardStyles.card} data-animate="true">
-          {state === states.loading && renderLoader()}
-          {state === states.success && renderSuccess()}
-          {state === states.error && renderError()}
+    <div
+      className={cardStyles.link}
+      aria-live="polite"
+      aria-busy={state === states.loading}
+    >
+      <div className={cardStyles.card} data-animate="true">
+        {state === states.loading && renderLoader()}
+        {state === states.success && renderSuccess()}
+        {state === states.error && renderError()}
 
-          <form
-            className={styles.form}
-            name={formName}
-            method="POST"
-            data-state={state}
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            onSubmit={submitForm}
+        <form
+          className={styles.form}
+          name={formName}
+          method="POST"
+          data-state={state}
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          onSubmit={submitForm}
+        >
+          {showTitle && <h3>Stay up to date</h3>}
+
+          <label className={styles.honeyPot}>
+            Are you a human? <input name="bot-field" />
+          </label>
+
+          <div className={styles.inputs}>
+            <input
+              type="email"
+              className={styles.input}
+              data-animate="true"
+              name="email"
+              placeholder="Email address"
+              required
+            />
+            <button type="submit" className={styles.button}>
+              Subscribe
+            </button>
+          </div>
+
+          <a
+            target="_blank"
+            className="underline"
+            rel="noopener noreferrer"
+            href="privacy#data-retention"
           >
-            {showTitle && <h3>Stay up to date</h3>}
-
-            <label className={styles.honeyPot}>
-              Are you a human? <input name="bot-field" />
-            </label>
-
-            <div className={styles.inputs}>
-              <input
-                type="email"
-                className={styles.input}
-                data-animate="true"
-                name="email"
-                placeholder="Email address"
-                required
-              />
-              <button type="submit" className={styles.button}>
-                Subscribe
-              </button>
-            </div>
-
-            <a
-              target="_blank"
-              className="underline"
-              rel="noopener noreferrer"
-              href="privacy#data-retention"
-            >
-              Privacy Policy
-            </a>
-          </form>
-        </div>
+            Privacy Policy
+          </a>
+        </form>
       </div>
-
-      <br />
-
-      <button onClick={() => setState(null)}>Default</button>
-      <button onClick={() => setState(states.loading)}>Loading</button>
-      <button onClick={() => setState(states.success)}>success</button>
-      <button onClick={() => setState(states.error)}>error</button>
-    </>
+    </div>
   );
 };
 

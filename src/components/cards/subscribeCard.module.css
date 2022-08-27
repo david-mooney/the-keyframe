@@ -101,7 +101,7 @@
 .appear {
   opacity: 0;
   animation: var(--timing-fast) appear var(--ease-in-out) forwards;
-  animation-delay: var(--timing-fastest);
+  animation-delay: var(--timing-fast);
 }
 
 @keyframes appear {
