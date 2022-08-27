@@ -11,5 +11,8 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 - [] Icon for header and favicon
 - [] Article illustrations
 
+- [] h1 block animations (favicon example)
+- [] prefers-reduced-motion
+
 - [] Add a "About" page
 - [] System for localization of articles

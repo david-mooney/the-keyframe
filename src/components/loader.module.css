@@ -1,10 +1,11 @@
 .loader {
   --path: hsla(var(--color-text-raw) / 15%);
   --dot: var(--color-text);
-  --duration: 3s;
+  --timing: 1800ms;
+  --size: 44px;
 
-  width: 44px;
-  height: 44px;
+  width: var(--size);
+  height: var(--size);
   position: relative;
   display: inline-block;
 }
@@ -20,7 +21,7 @@
   top: 37px;
   left: 19px;
   transform: translate(-18px, -18px);
-  animation: dot-rect var(--duration) var(--ease-in-out) reverse infinite;
+  animation: var(--timing) dot-rect var(--ease-in-out) reverse infinite;
 }
 
 .loader svg {
@@ -37,7 +38,7 @@
   stroke-linecap: round;
   stroke-dasharray: calc(256 / 4 * 3) calc(256 / 4) calc(256 / 4 * 3) calc(256 / 4);
   stroke-dashoffset: 0;
-  animation: path-rect 3s var(--ease-in-out) reverse infinite;
+  animation: var(--timing) path-rect var(--ease-in-out) reverse infinite;
 }
 
 @keyframes path-rect {
