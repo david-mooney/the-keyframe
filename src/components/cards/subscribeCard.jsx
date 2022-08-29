@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Loader from '../loader';
-import * as cardStyles from './postCard.module.css';
 import * as styles from './subscribeCard.module.css';
 
+const timeout = 5000;
 const formName = 'subscribe';
 
 const states = {
@@ -17,14 +17,14 @@ const SubscribeCard = ({ showTitle = true }) => {
 
   const submitForm = async event => {
     event.preventDefault();
+    setState(states.loading);
+
     const form = document.querySelector(`form[name="${formName}"]`);
     const data = new FormData(form);
     const name = data.get('name');
     const email = data.get('email');
 
     try {
-      setState(states.loading);
-
       const response = await fetch('/.netlify/functions/subscribe', {
         method: 'POST',
         body: JSON.stringify({ name, email }),
@@ -36,11 +36,11 @@ const SubscribeCard = ({ showTitle = true }) => {
       }
 
       setState(states.success);
-      setTimeout(() => setState(null), 3000);
+      setTimeout(() => setState(null), timeout);
     } catch (error) {
       setState(states.error);
-      setMessage('Sorry, something went wrong');
-      setTimeout(() => setState(null), 3000);
+      setMessage('Sorry, something went wrong.\n Please try again.');
+      setTimeout(() => setState(null), timeout);
     }
   };
 
@@ -64,11 +64,11 @@ const SubscribeCard = ({ showTitle = true }) => {
 
   return (
     <div
-      className={cardStyles.link}
+      className={styles.link}
       aria-live="polite"
       aria-busy={state === states.loading}
     >
-      <div className={cardStyles.card} data-animate="true">
+      <div className={styles.card} data-animate="true">
         {state === states.loading && renderLoader()}
         {state === states.success && renderSuccess()}
         {state === states.error && renderError()}
@@ -102,14 +102,16 @@ const SubscribeCard = ({ showTitle = true }) => {
             </button>
           </div>
 
-          <a
-            target="_blank"
-            className="underline"
-            rel="noopener noreferrer"
-            href="privacy#data-retention"
-          >
-            Privacy Policy
-          </a>
+          <div className={styles.footer}>
+            <a
+              target="_blank"
+              className="underline"
+              rel="noopener noreferrer"
+              href="privacy#data-retention"
+            >
+              Privacy Policy
+            </a>
+          </div>
         </form>
       </div>
     </div>

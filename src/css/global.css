@@ -115,19 +115,11 @@ article a,
   }
 }
 
-article a {
-  color: var(--gradient-b);
-}
-
 article a:focus,
 article a:hover,
 .underline:focus,
 .underline:hover {
   background-size: 100% 2px;
-}
-
-:root.dark article a {
-  color: var(--gradient-a);
 }
 
 .mainTitle {

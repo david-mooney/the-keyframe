@@ -4,15 +4,17 @@
 
 My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog).
 
-## TODO's
+## Possible features to add
 
-- [] Postcss load order issue [bug?]
+- system for localisation of articles (via Github pull-requests)
+- like system for articles
+- comments system for articles
 
-- [] Icon for header and favicon
-- [] Article illustrations
-
-- [] h1 block animations (favicon example)
-- [] prefers-reduced-motion
-
-- [] Add a "About" page
-- [] System for localization of articles
+* accent colour for the site?
+* typography heading styles
+* skip to content position on mobile
+* article headings on mobile
+* Icon for header and favicon
+* Article illustrations
+* Homepage main title block animation (favicon example)
+* Add a "About" page

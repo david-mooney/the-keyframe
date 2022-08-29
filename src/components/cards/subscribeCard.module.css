@@ -1,3 +1,33 @@
+.card {
+  width: 100%;
+  padding: var(--spacing-6);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: var(--color-background);
+  border: 1px solid hsla(var(--color-text-raw) / 25%);
+  border-radius: var(--border-radius-1);
+  box-shadow: var(--box-shadow-high);
+  overflow: hidden;
+}
+
+.link {
+  display: flex;
+  height: 100%;
+  text-decoration: none;
+  box-shadow: none;
+  outline-color: transparent;
+  outline-style: solid;
+  transition: var(--timing-fast) box-shadow var(--ease-in-out);
+}
+
+.link:hover .card,
+.link:focus-visible .card,
+.link:focus-within .card {
+  border-color: var(--color-text);
+}
+
 .form {
   width: 100%;
   display: flex;
@@ -24,7 +54,11 @@
   opacity: 0;
 }
 
-.form a,
+.footer {
+  margin-top: var(--spacing-6);
+}
+
+.footer,
 .form h3 {
   transition: var(--timing-fast) transform var(--ease-in-out),
     var(--timing-fast) opacity var(--ease-in);
@@ -37,9 +71,9 @@
   opacity: 0;
 }
 
-.form[data-state='loading'] a,
-.form[data-state='success'] a,
-.form[data-state='error'] a {
+.form[data-state='loading'] .footer,
+.form[data-state='success'] .footer,
+.form[data-state='error'] .footer {
   transform: translateY(300%);
   opacity: 0;
 }
@@ -96,6 +130,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: pre-wrap;
 }
 
 .appear {
