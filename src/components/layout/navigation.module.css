@@ -87,6 +87,12 @@
   transition-delay: 1s;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .subMenuItem {
+    transition: none;
+  }
+}
+
 *[data-open='true'] .subMenuItem {
   visibility: visible;
   opacity: 1;

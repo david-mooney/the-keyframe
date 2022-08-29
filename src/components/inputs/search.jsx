@@ -10,7 +10,9 @@ const CustomSearchBox = ({ total, placeholder }) => {
   const { hits } = useHits();
   const { query, refine } = useSearchBox();
   const [value, setValue] = useState(query);
-  const [hitCount, setHitCount] = useState(hits.length === total ? 'all' : hits.length);
+  const [hitCount, setHitCount] = useState(
+    hits.length === total ? 'all' : hits.length
+  );
 
   const handleChange = event => {
     setValue(event.target.value);
@@ -35,7 +37,9 @@ const CustomSearchBox = ({ total, placeholder }) => {
       <div className={styles.icon} data-animate="true">
         <FiSearch />
       </div>
-      <span className={styles.hits}>Showing {hitCount} posts</span>
+      <span className={styles.hits}>
+        Showing {hitCount} post{hitCount !== 1 && 's'}
+      </span>
     </div>
   );
 };

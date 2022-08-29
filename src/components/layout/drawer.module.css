@@ -7,6 +7,12 @@
   -webkit-overflow-scrolling: touch;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .drawer {
+    transition: none;
+  }
+}
+
 .drawer[data-position='left'] {
   top: 0;
   bottom: 0;

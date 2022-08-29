@@ -20,6 +20,13 @@
   transition: background-size var(--timing-intermediate);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  article a,
+  .underline {
+    transition: none;
+  }
+}
+
 .link {
   --underline-size: 2px;
 

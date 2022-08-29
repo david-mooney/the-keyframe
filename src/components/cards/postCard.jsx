@@ -1,18 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-
 import * as styles from './postCard.module.css';
 
 const PostCard = ({ frontmatter, fields, timeToRead }) => {
-  const { title, date, colorA, colorB, image, imageB } = frontmatter;
-  const gradientColors = {
-    '--gradientA': colorA,
-    '--gradientB': colorB,
-  };
+  const { title, date, image, imageB } = frontmatter;
 
   return (
-    <Link to={fields.slug} className={styles.link} itemProp="url" style={gradientColors}>
+    <Link to={fields.slug} className={styles.link} itemProp="url">
       <article
         className={styles.card}
         data-animate="true"
