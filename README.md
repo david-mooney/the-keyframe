@@ -10,11 +10,12 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 - like system for articles
 - comments system for articles
 
-* accent colour for the site?
-* typography heading styles
-* skip to content position on mobile
-* article headings on mobile
-* Icon for header and favicon
-* Article illustrations
-* Homepage main title block animation (favicon example)
 * Add a "About" page
+* accent colour for the site?
+* What to do about anchor links, visually?
+
+* article headings on mobile\*\*
+* card images on mobile\*\*
+* Icon for header and favicon\*\*
+* Article illustrations\*\*
+* Homepage main title block animation (favicon example)\*\*

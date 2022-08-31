@@ -1,23 +1,10 @@
-import mediumZoom from 'medium-zoom';
+import imageZoom from 'fast-image-zoom';
 
-const defaultOptions = {
-  margin: 0,
-  scrollOffset: 25,
-  background: 'var(--color-background)',
+const zoom = () => {
+  imageZoom({
+    selector: '.gatsby-resp-image-image',
+    // exceed: true,
+  });
 };
 
-const applyZoomEffect = ({ ...options }) => {
-  const images = [...document.querySelectorAll('.gatsby-resp-image-image')].filter(
-    image => !image.classList.contains('medium-zoom-image')
-  );
-
-  if (images.length > 0) {
-    mediumZoom(images, options);
-  }
-};
-
-const zoomImage = pluginOptions => {
-  applyZoomEffect({ ...defaultOptions, ...pluginOptions });
-};
-
-export default zoomImage;
+export default zoom;

@@ -10,11 +10,14 @@ import './src/css/accessibility.css';
 import './src/css/global.css';
 
 import React from 'react';
+import imageZoom from 'fast-image-zoom';
 import Layout from './src/components/layout/pageLayout';
-import zoomImage from './src/utilities/imageZoom';
 
-export const onRouteUpdate = () => {
-  zoomImage();
+export const onClientEntry = () => {
+  imageZoom({
+    selector: '.gatsby-resp-image-image',
+    exceed: true,
+  });
 };
 
 export const wrapPageElement = ({ element, props }) => (

@@ -1,8 +1,7 @@
 .article {
   position: relative;
   margin: 0 auto;
-  max-width: var(--max-width-4xl);
-  padding: var(--spacing-12) var(--spacing-12);
+  width: min(90%, var(--max-width-4xl));
   font-size: var(--font-size-2);
 }
 
