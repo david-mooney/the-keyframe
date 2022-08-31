@@ -19,13 +19,6 @@ const PostHero = ({ data, readTime }) => (
           image={data.image.childImageSharp.gatsbyImageData}
           alt={`Image for article: ${data.image.title}`}
         />
-        {data.imageB?.childImageSharp && (
-          <GatsbyImage
-            className={styles.image}
-            image={data.imageB.childImageSharp.gatsbyImageData}
-            alt={`Image for article: ${data.image.title}`}
-          />
-        )}
       </div>
     )}
   </header>

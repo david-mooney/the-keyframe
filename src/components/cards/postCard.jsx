@@ -4,6 +4,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import * as styles from './postCard.module.css';
 
 const PostCard = ({ frontmatter, fields, timeToRead }) => {
+  // TODO - remove the 2nd images
   const { title, date, image, imageB } = frontmatter;
 
   return (

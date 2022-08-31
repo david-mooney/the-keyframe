@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--spacing-1);
+  padding: var(--spacing-2);
   background-color: var(--color-background);
   border-bottom: 1px solid;
   z-index: var(--z-fixed);
