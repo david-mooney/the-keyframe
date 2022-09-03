@@ -2,10 +2,7 @@
 title: Adding a dark mode toggle in Gatsby
 date: '2022-02-12'
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt.
-colorA: rgba(245,177,97,1)
-colorB: rgba(236,54,110,1)
 image: './testA.png'
-imageB: './testB.png'
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

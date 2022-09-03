@@ -4,8 +4,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import * as styles from './postCard.module.css';
 
 const PostCard = ({ frontmatter, fields, timeToRead }) => {
-  // TODO - remove the 2nd images
-  const { title, date, image, imageB } = frontmatter;
+  const { title, date, image } = frontmatter;
 
   return (
     <Link to={fields.slug} className={styles.link} itemProp="url">
@@ -22,13 +21,6 @@ const PostCard = ({ frontmatter, fields, timeToRead }) => {
               image={image.childImageSharp.gatsbyImageData}
               alt={`Image for article: ${title}`}
             />
-            {imageB?.childImageSharp && (
-              <GatsbyImage
-                className={styles.image}
-                image={imageB.childImageSharp.gatsbyImageData}
-                alt={`Image for article: ${title}`}
-              />
-            )}
           </div>
         )}
 

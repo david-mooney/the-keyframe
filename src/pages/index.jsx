@@ -74,14 +74,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
-          colorA
-          colorB
           image {
-            childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED)
-            }
-          }
-          imageB {
             childImageSharp {
               gatsbyImageData(layout: CONSTRAINED)
             }

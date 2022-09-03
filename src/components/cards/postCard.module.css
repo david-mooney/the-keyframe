@@ -70,10 +70,6 @@
   object-fit: cover;
 }
 
-.image:nth-of-type(2) {
-  mix-blend-mode: multiply;
-}
-
 .card header {
   width: 100%;
   display: flex;

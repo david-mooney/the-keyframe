@@ -2,10 +2,7 @@
 title: Do you need Babel anymore?
 date: '2022-02-01'
 description: 'Hello World'
-colorA: rgba(255,182,172,1)
-colorB: rgba(255,123,172,1)
 image: './testA.png'
-imageB: './testB.png'
 ---
 
 This is my first post on my new fake blog! How exciting!
