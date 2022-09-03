@@ -24,21 +24,20 @@ const PrivacyPage = () => (
 
     <h2>Cookies</h2>
     <p>
-      The Keyframe uses no cookies. Enjoy the lack of cookie banners, it's rare these
-      days.
+      The Keyframe uses no cookies - enjoy the lack of cookie banners and 'we respect
+      your privacy' platitudes.
     </p>
 
     <h2>Log Files</h2>
     <p>
       The Keyframe uses no log files to store information. Many websites use these to
       track data like your IP address, internet service provider, location, usage
-      analytics, etc. etc. The Keyframe does not track any of that.
+      analytics, etc. The Keyframe does not track any of that.
     </p>
 
     <h2 id="data-retention">Data Retention</h2>
     <p>
-      If you decide to fill out the subscription form, your email, and optionally
-      your first name, is stored with{' '}
+      If you decide to fill out the subscription form, your email is stored with{' '}
       <a
         href="https://convertkit.com/privacy"
         target="_blank"
@@ -47,7 +46,8 @@ const PrivacyPage = () => (
         ConvertKit
       </a>
       . I will only use that data to send you an email notification whenever a new
-      post is published. You can unsubscribe at any time.
+      post is published; I will never share it with any third party. You can
+      unsubscribe at any time.
     </p>
 
     <h2>Copyright Information</h2>
@@ -58,7 +58,7 @@ const PrivacyPage = () => (
     <p>
       Feel free to copy and/or quote content and replicate it online or in print, but
       please give me credit and link back to this site. All rights reserved © David
-      Mooney {new Date().getFullYear()}
+      Mooney, {new Date().getFullYear()}
     </p>
 
     <h2>Contact</h2>

@@ -52,6 +52,7 @@
     "type": "git",
     "url": "git+https://github.com/david-mooney/the-key-frame.git"
   },
+  "browserslist": [">0.25%", "not dead"],
   "scripts": {
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby clean && gatsby develop --open",

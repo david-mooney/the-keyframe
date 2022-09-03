@@ -35,7 +35,7 @@ hr {
 
 a {
   color: var(--color-text);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-normal);
   cursor: pointer;
 }
 
@@ -94,14 +94,14 @@ p {
 
 small {
   font-size: var(--font-size-1);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-bold);
 }
 
 article a {
-  /* color: rgb(112 209 165); */
+  /* TODO accent color?  */
+  color: rgb(112 209 165);
 }
 
-article a,
 .underline {
   outline: none;
   text-decoration: none;
@@ -148,6 +148,12 @@ article a:hover,
 .image-zoom {
   transition: 300ms cubic-bezier(0.25, 0.1, 0.25, 1) !important;
 }
+
+/* stylelint-disable-next-line selector-class-pattern */
+.gatsby-resp-image-image {
+  cursor: zoom-in;
+}
+
 /* stylelint-disable-next-line selector-class-pattern */
 .image-zoom-wrapper::after {
   background-color: var(--color-background) !important;

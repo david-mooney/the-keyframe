@@ -1,5 +1,7 @@
-import '@fontsource/lato';
-import '@fontsource/merriweather';
+import '@fontsource/merriweather/700.css';
+import '@fontsource/lato/400.css';
+import '@fontsource/lato/700.css';
+
 import './src/css/syntax.css';
 import './src/css/normalize.css';
 import './src/css/colors.css';

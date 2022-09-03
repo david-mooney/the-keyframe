@@ -1,8 +1,6 @@
 ---
 title: Vanilla CSS is all the CSS you need
 date: '2022-02-05'
-colorA: rgba(218,185,252,1)
-colorB: rgba(125,89,252,1)
 image: './test.png'
 ---
 

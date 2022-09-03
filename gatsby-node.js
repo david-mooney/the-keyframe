@@ -7,7 +7,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
       {
-        allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }, limit: 1000) {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: ASC }
+          limit: 1000
+        ) {
           nodes {
             id
             fields {
@@ -20,7 +23,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   );
 
   if (result.errors) {
-    reporter.panicOnBuild('There was an error loading your blog posts', result.errors);
+    reporter.panicOnBuild(
+      'There was an error loading your blog posts',
+      result.errors
+    );
     return;
   }
 
@@ -83,8 +89,6 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
 
     type Frontmatter {
-      colorA: String
-      colorB: String
       title: String
       description: String
       date: Date @dateformat
