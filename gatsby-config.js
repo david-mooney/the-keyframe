@@ -126,7 +126,7 @@ module.exports = {
       },
     },
     // 'gatsby-plugin-preact', // preact disabled until compatible with React v18
-    'gatsby-plugin-offline',
+    // 'gatsby-plugin-offline',
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
