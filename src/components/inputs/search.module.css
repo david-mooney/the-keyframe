@@ -2,13 +2,14 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: min(80%, var(--max-width-lg));
-  margin: 0 auto;
+  width: min(80%, var(--max-width-1));
+  margin: 0 auto var(--spacing-8);
 }
 
 .input {
   width: 100%;
   padding: var(--spacing-3);
+  padding-right: var(--spacing-7);
   border: none;
   outline: none;
   text-align: left;
@@ -37,12 +38,12 @@
 
 .hits {
   position: absolute;
-  bottom: -2.25rem;
+  top: var(--spacing-8);
   right: 0;
-  padding: var(--spacing-0) var(--spacing-2);
+  padding: var(--spacing-0) var(--spacing-3);
   border-radius: var(--border-radius-1);
-  color: var(--color-background);
-  background-color: hsla(var(--color-text-raw) / 50%);
+  color: hsla(var(--color-text-raw) / 80%);
+  background-color: hsla(var(--color-text-raw) / 20%);
   font-size: var(--font-size-0);
   font-weight: var(--font-weight-bold);
 }
@@ -52,7 +53,6 @@
   right: var(--spacing-3);
   display: flex;
   color: hsla(var(--color-text-raw) / 50%);
-  transform: translateX(--spacing-6);
   pointer-events: none;
 }
 

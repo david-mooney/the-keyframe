@@ -2,38 +2,27 @@
   position: fixed;
   width: auto;
   z-index: var(--z-front);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-right: 1px solid;
+  transform: translateX(-100%);
   transition: var(--timing-fast) transform var(--ease-in-out);
   overflow: hidden; /* For Safari iOS  */
   -webkit-overflow-scrolling: touch;
+}
+
+@media screen and (min-width: 800px) {
+  .drawer {
+    left: var(--fixed-element-width);
+    transform: translateX(calc(-100% + 1px));
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .drawer {
     transition: none;
   }
-}
-
-.drawer[data-position='left'] {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  border-right: 1px solid;
-  transform: translateX(-100%);
-}
-
-@media screen and (min-width: 800px) {
-  .drawer[data-position='left'] {
-    left: var(--fixed-element-width);
-    transform: translateX(calc(-100% + 1px));
-  }
-}
-
-.drawer[data-position='right'] {
-  top: 0;
-  bottom: 0;
-  right: 0;
-  border-left: 1px solid;
-  transform: translateX(100%);
 }
 
 .drawer[data-open='true'] {

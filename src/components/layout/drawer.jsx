@@ -4,7 +4,7 @@ import usePrevious from '../../utilities/usePrevious';
 import useClickOutside from '../../utilities/useClickOutside';
 import * as styles from './drawer.module.css';
 
-const Drawer = ({ children, id, parent, open, setOpen, position = 'left' }) => {
+const Drawer = ({ children, id, parent, open, setOpen }) => {
   const location = useLocation();
   const prevLocation = usePrevious(location);
 
@@ -19,7 +19,7 @@ const Drawer = ({ children, id, parent, open, setOpen, position = 'left' }) => {
   }, [location, prevLocation, setOpen]);
 
   return (
-    <div id={id} className={styles.drawer} data-open={open} data-position={position}>
+    <div id={id} className={styles.drawer} data-open={open}>
       {children}
     </div>
   );

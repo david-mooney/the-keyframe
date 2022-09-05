@@ -3,9 +3,9 @@
   display: grid;
   grid-auto-flow: row;
   grid-auto-columns: 1fr;
-  grid-gap: var(--spacing-28);
-  padding: var(--spacing-28) 0;
-  width: min(90%, var(--max-width-2xl));
+  grid-gap: var(--spacing-11);
+  padding: var(--spacing-11) 0;
+  width: min(90%, var(--max-width-2));
   margin: auto;
   justify-items: center;
   align-items: center;

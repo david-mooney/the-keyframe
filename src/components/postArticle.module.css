@@ -1,14 +1,8 @@
 .article {
   position: relative;
   margin: 0 auto;
-  width: min(90%, var(--max-width-4xl));
+  width: min(90%, var(--max-width-read));
   font-size: var(--font-size-2);
-}
-
-@media (min-width: 800px) {
-  .article {
-    padding: 0 var(--spacing-12);
-  }
 }
 
 .article img {

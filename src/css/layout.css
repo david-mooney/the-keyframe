@@ -1,35 +1,36 @@
 :root {
   /* Width limiters */
-  --max-width-lg: 32rem;
-  --max-width-2xl: 42rem;
-  --max-width-4xl: 56rem;
+  --max-width-1: 512px;
+  --max-width-2: 672px;
+  --max-width-3: 896px;
+  --max-width-read: 608px;
   --max-width-full: '100%';
 
   /* Padding & margin gaps */
-  --spacing-px: '1px';
   --spacing-0: 0;
-  --spacing-1: 0.25rem;
-  --spacing-2: 0.5rem;
-  --spacing-3: 0.75rem;
-  --spacing-4: 1rem;
-  --spacing-6: 1.5rem;
-  --spacing-8: 2rem;
-  --spacing-10: 2.5rem;
-  --spacing-12: 3rem;
-  --spacing-16: 4rem;
-  --spacing-20: 5rem;
-  --spacing-24: 6rem;
-  --spacing-28: 7rem;
-  --spacing-32: 8rem;
-  --spacing-36: 10rem;
+  --spacing-1: 1px;
+  --spacing-2: 4px;
+  --spacing-3: 8px;
+  --spacing-4: 10px;
+  --spacing-5: 16px;
+  --spacing-6: 24px;
+  --spacing-7: 32px;
+  --spacing-8: 48px;
+  --spacing-9: 64px;
+  --spacing-10: 80px;
+  --spacing-11: 96px;
+  --spacing-12: 120px;
+  --spacing-13: 160px;
+  --spacing-14: 200px;
+  --spacing-15: 240px;
 
   /* Border radii */
-  --border-radius-1: 0.5rem;
-  --border-radius-2: 1.5rem;
+  --border-radius-0: 4px;
+  --border-radius-1: 8px;
+  --border-radius-2: 16px;
+  --border-radius-3: 24px;
 
   /* Z-indices */
-  --z-modal: 5;
-  --z-modal-backdrop: 4;
   --z-fixed: 3;
   --z-front: 2;
   --z-middle: 1;
@@ -39,6 +40,7 @@
   --fixed-element-width: 4.5rem;
 
   /* Box shadows */
-  --box-shadow-high: rgb(0 0 0 / 22%) 0 30px 60px -10px,
-    rgb(0 0 0 / 25%) 0 18px 36px -18px;
+  --box-shadow-high: 0 8px 16px hsla(0deg 0% 15% / 20%);
+
+  /* --box-shadow-high: rgb(0 0 0 / 22%) 0 30px 60px -10px, rgb(0 0 0 / 25%) 0 18px 36px -18px; */
 }

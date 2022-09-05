@@ -1,19 +1,19 @@
 .header {
   position: relative;
   width: 100%;
-  max-width: var(--max-width-4xl);
+  max-width: var(--max-width-3);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: clamp(1rem, 80vh, 35rem);
-  padding: 0 var(--spacing-12);
+  padding: 0 var(--spacing-10);
   margin: 0 auto;
   overflow: hidden;
 }
 
 @media screen and (min-width: 800px) {
   .header {
-    padding: var(--spacing-24);
-    grid-gap: var(--spacing-24);
+    padding: var(--spacing-8);
+    grid-gap: var(--spacing-8);
     grid-template-columns: 1fr 1fr;
   }
 }
