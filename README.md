@@ -6,16 +6,23 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 
 ## Possible features to add
 
-- system for localisation of articles (via Github pull-requests)
+- system for localization of articles (via Github pull-requests)
 - like system for articles
 - comments system for articles
 
-* Add a "About" page
-* accent colour for the site?
-* What to do about anchor links, visually?
+- production errors
+- colors? (hue rotation over alpha)
 
-* article headings on mobile\*\*
-* card images on mobile\*\*
-* Icon for header and favicon\*\*
-* Article illustrations\*\*
-* Homepage main title block animation (favicon example)\*\*
+- adjust box shadows (+ animation on focus)
+- better nav menu animation
+- lower icon contrast (-50% lightness)
+- heavy vs. soft borders
+- baseline aline text instead of centering
+- letter spacing needed? 0 default, trust font creators
+- color shades and hue rotation for contrast - site background vs. posts for example
+- icon animations (e.g. nav expand)
+- what to do about anchor links, visually?
+- choose an accent color (or none?)
+- homepage main title block animation (favicon example)
+- article illustrations
+- add a "About" page

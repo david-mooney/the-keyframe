@@ -54,7 +54,7 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(var(--font-size-4), 1vw + 1rem, var(--font-size-6));
+  font-size: clamp(var(--font-size-4), 1vw + 1.5rem, var(--font-size-6));
 }
 
 h2 {
@@ -128,7 +128,7 @@ article a:hover,
 
 .mainTitle {
   text-align: center;
-  margin: var(--spacing-24) 0;
+  margin: var(--spacing-8) 0 var(--spacing-10);
 }
 
 /* stylelint-disable-next-line selector-id-pattern */
@@ -147,6 +147,11 @@ article a:hover,
 /* stylelint-disable-next-line selector-class-pattern */
 .image-zoom {
   transition: 300ms cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.image-zoom-zoomed {
+  border-radius: 0 !important;
 }
 
 /* stylelint-disable-next-line selector-class-pattern */

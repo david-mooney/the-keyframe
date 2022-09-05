@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
 import { FaHome } from '@react-icons/all-files/fa/FaHome';
 import { RiMenuUnfoldFill } from '@react-icons/all-files/ri/RiMenuUnfoldFill';
@@ -8,14 +8,67 @@ import Drawer from './drawer';
 import ThemeToggle from '../buttons/themeToggle';
 import * as styles from './navigation.module.css';
 
+const links = [
+  {
+    label: 'Home',
+    destination: '/',
+  },
+  {
+    label: 'About',
+    destination: '/about',
+  },
+  {
+    label: 'Subscribe',
+    destination: '/subscribe',
+  },
+  {
+    label: 'Privacy',
+    destination: '/privacy',
+  },
+
+  {
+    label: 'Sitemap',
+    destination: '/sitemap/sitemap-0.xml',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  },
+  {
+    label: 'Rss',
+    destination: '/rss.xml',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  },
+];
+
 const Navigation = () => {
   const ref = useRef();
+  const subMenuRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    const state = !isOpen;
-    setIsOpen(state);
+    setIsOpen(!isOpen);
   };
+
+  const renderLink = ({ destination, label, target = null, rel = null }) => (
+    <li key={destination} className={styles.subMenuItem}>
+      <Link to={destination} className="underline" target={target} rel={rel}>
+        {label}
+      </Link>
+    </li>
+  );
+
+  useEffect(() => {
+    let timeout;
+
+    if (isOpen) {
+      subMenuRef.current.style.visibility = 'visible';
+    } else {
+      timeout = setTimeout(() => {
+        subMenuRef.current.style.visibility = 'hidden';
+      }, 350);
+    }
+    return () => clearTimeout(timeout);
+  }, [isOpen]);
 
   return (
     <nav ref={ref} aria-label="Main navigation">
@@ -46,48 +99,9 @@ const Navigation = () => {
         </ul>
       </div>
 
-      <Drawer id="navigation-menu" parent={ref} open={isOpen} setOpen={setIsOpen}>
-        <ol className={styles.subMenu} data-animate="true">
-          <li className={styles.subMenuItem}>
-            <Link to="/" className="underline">
-              Home
-            </Link>
-          </li>
-          <li className={styles.subMenuItem}>
-            <Link to="/about" className="underline">
-              About
-            </Link>
-          </li>
-          <li className={styles.subMenuItem}>
-            <Link to="/subscribe" className="underline">
-              Subscribe
-            </Link>
-          </li>
-          <li className={styles.subMenuItem}>
-            <Link to="/privacy" className="underline">
-              Privacy
-            </Link>
-          </li>
-          <li className={styles.subMenuItem}>
-            <a
-              href="/sitemap/sitemap-0.xml"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline"
-            >
-              Sitemap
-            </a>
-          </li>
-          <li className={styles.subMenuItem}>
-            <a
-              href="/rss.xml"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline"
-            >
-              RSS
-            </a>
-          </li>
+      <Drawer id="navigationMenu" parent={ref} open={isOpen} setOpen={setIsOpen}>
+        <ol ref={subMenuRef} className={styles.subMenu} data-animate="true">
+          {links.map(link => renderLink(link))}
         </ol>
       </Drawer>
     </nav>

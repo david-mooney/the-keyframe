@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Loader from '../loader';
+import { FiMail } from '@react-icons/all-files/fi/FiMail';
 import * as styles from './subscribeCard.module.css';
 
 const timeout = 5000;
@@ -89,14 +90,19 @@ const SubscribeCard = ({ showTitle = true }) => {
           </label>
 
           <div className={styles.inputs}>
-            <input
-              type="email"
-              className={styles.input}
-              data-animate="true"
-              name="email"
-              placeholder="Email address"
-              required
-            />
+            <div className={styles.container}>
+              <input
+                type="email"
+                className={styles.input}
+                data-animate="true"
+                name="email"
+                placeholder="Email address"
+                required
+              />
+              <div className={styles.icon} data-animate="true">
+                <FiMail />
+              </div>
+            </div>
             <button type="submit" className={styles.button}>
               Subscribe
             </button>

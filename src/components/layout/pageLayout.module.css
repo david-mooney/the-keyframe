@@ -1,12 +1,11 @@
 .main {
   position: relative;
   overflow-x: hidden;
+  padding-top: var(--fixed-element-width);
 }
 
-.test {
-  position: absolute;
-  top: 0;
-  left: var(--fixed-element-width);
-  margin: var(--spacing-12) var(--spacing-6);
-  opacity: 0.1;
+@media screen and (min-width: 800px) {
+  .main {
+    padding: 0 var(--fixed-element-width);
+  }
 }
