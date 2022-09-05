@@ -103,7 +103,7 @@ const SubscribeCard = ({ showTitle = true }) => {
                 <FiMail />
               </div>
             </div>
-            <button type="submit" className={styles.button}>
+            <button type="submit" className={styles.button} data-animate="true">
               Subscribe
             </button>
           </div>

@@ -2,7 +2,7 @@
 
 pre[class*='language-'] {
   border-radius: var(--border-radius-1);
-  box-shadow: var(--box-shadow-high);
+  box-shadow: var(--box-shadow-1);
 }
 
 code[class*='language-'],
@@ -48,7 +48,7 @@ code[class*='language-'] ::selection {
 
 /* Code blocks */
 pre[class*='language-'] {
-  padding: var(--spacing-8);
+  padding: var(--spacing-6);
   margin: var(--spacing-8) 0;
   overflow: auto;
 }

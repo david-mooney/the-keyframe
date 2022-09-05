@@ -10,7 +10,7 @@
   background-color: var(--color-background);
   border: 1px solid hsla(var(--color-text-raw) / 25%);
   border-radius: var(--border-radius-1);
-  box-shadow: var(--box-shadow-high);
+  box-shadow: var(--box-shadow-1);
   overflow: hidden;
 }
 
