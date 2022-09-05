@@ -97,11 +97,6 @@ small {
   font-weight: var(--font-weight-bold);
 }
 
-article a {
-  /* TODO accent color?  */
-  color: rgb(112 209 165);
-}
-
 .underline {
   outline: none;
   text-decoration: none;
@@ -113,14 +108,11 @@ article a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  article a,
   .underline {
     transition: none;
   }
 }
 
-article a:focus,
-article a:hover,
 .underline:focus,
 .underline:hover {
   background-size: 100% 2px;

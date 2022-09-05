@@ -82,9 +82,8 @@
 
 .subMenuItem {
   padding-bottom: var(--spacing-3);
-  transform: translateX(-5rem);
-  transition: var(--timing-fast) transform cubic-bezier(0.82, 0.085, 0.395, 0.895),
-    visibility 0s;
+  transform: translateX(-100%) scale(0.5);
+  transition: var(--timing-fast) transform var(--ease-in-out), visibility 0s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -94,5 +93,5 @@
 }
 
 [id='navigationMenu'][data-open='true'] .subMenuItem {
-  transform: translateX(0);
+  transform: translateX(0) scale(1);
 }

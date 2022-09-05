@@ -9,8 +9,8 @@ const AboutPage = () => (
   <PageWrapper>
     <h1>About</h1>
     <p>
-      This is the personal development blog of me, David Mooney. I've been a
-      developer{' '}
+      This is the personal development blog of me, David Mooney. I don't like talking
+      about myself, so this section is currently a work in progress.
     </p>
 
     <h2>Contact</h2>

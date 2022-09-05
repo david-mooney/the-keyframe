@@ -2,9 +2,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: auto;
-  max-width: var(--max-width-read);
-  padding: var(--spacing-10);
+  margin: var(--spacing-8) auto;
+  max-width: min(90%, var(--max-width-read));
 }
 
 .wrapper h1 {
