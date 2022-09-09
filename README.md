@@ -7,13 +7,11 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 ## Features to add
 
 - update the "About" page
-- system for localization of articles (via Github pull-requests)
-- like system for articles
-- comments system for articles
+- system for localization of articles
+- comments system for articles?
 
-- heavy vs. soft borders
-- hue rotations? (instead of opacity, icon contrast -50% lightness)
+- address TODO comments
+- fix gatsby images inline bs
 - icon animations (e.g. nav expand)
-- choose an accent color (or none?)
 - homepage main title block animation (favicon example)
 - article illustrations

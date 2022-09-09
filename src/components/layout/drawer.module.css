@@ -5,7 +5,7 @@
   top: 0;
   bottom: 0;
   left: 0;
-  border-right: 1px solid;
+  border-right: 2px solid hsla(var(--color-text-raw) / 25%);
   transform: translateX(-100%);
   transition: var(--timing-fast) transform var(--ease-in-out);
   overflow: hidden; /* For Safari iOS  */
