@@ -5,7 +5,7 @@ description: This is a custom description for SEO and Open Graph purposes.
 image: './testA.png'
 ---
 
-TODO - box shadow + button animation
+Future post content: box shadow + button animation
 
 Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove

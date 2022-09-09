@@ -56,7 +56,6 @@
   border-radius: var(--border-radius-1);
   transition: var(--timing-fast) background-color var(--ease-in-out);
   overflow: hidden;
-  border-radius: 50%;
 }
 
 .image {

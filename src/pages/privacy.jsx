@@ -30,9 +30,8 @@ const PrivacyPage = () => (
 
     <h2>Log Files</h2>
     <p>
-      The Keyframe uses no log files to store information. Many websites use these to
-      track data like your IP address, internet service provider, location, usage
-      analytics, etc. The Keyframe does not track any of that.
+      Many websites use these to track data like your IP address, internet service
+      provider, location, usage analytics, etc. The Keyframe does not.
     </p>
 
     <h2 id="data-retention">Data Retention</h2>
@@ -52,7 +51,7 @@ const PrivacyPage = () => (
 
     <h2>Copyright Information</h2>
     <p>
-      Everything written on this site is, unless otherwise indicated, property of me,
+      Everything written on this site is, unless otherwise indicated, property of
       David Mooney.
     </p>
     <p>

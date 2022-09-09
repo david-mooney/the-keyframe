@@ -17,6 +17,7 @@ const PostHero = ({ data, readTime }) => (
         <GatsbyImage
           className={styles.image}
           image={data.image.childImageSharp.gatsbyImageData}
+          objectFit="contain"
           alt={`Image for article: ${data.image.title}`}
         />
       </div>
