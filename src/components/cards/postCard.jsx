@@ -18,7 +18,6 @@ const PostCard = ({ frontmatter, fields, timeToRead }) => {
           <div className={styles.imageWrapper}>
             <GatsbyImage
               className={styles.image}
-              objectFit="contain"
               image={image.childImageSharp.gatsbyImageData}
               alt={`Image for article: ${title}`}
             />
