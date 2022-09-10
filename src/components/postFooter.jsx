@@ -7,11 +7,9 @@ const PostFooter = ({ data }) => {
 
   return (
     <nav className={styles.container} title="Blog posts navigation">
-      <h3>More posts from the Keyframe</h3>
-      <br />
       <ul className={styles.list}>
-        <li>{previous && <PostCard {...previous} />}</li>
-        <li>{next && <PostCard {...next} />}</li>
+        <li>{previous && <PostCard {...data.previous} />}</li>
+        <li>{next && <PostCard {...data.next} />}</li>
       </ul>
     </nav>
   );

@@ -55,7 +55,6 @@
   background-color: transparent;
   border-radius: var(--border-radius-1);
   transition: var(--timing-fast) background-color var(--ease-in-out);
-  overflow: hidden;
 }
 
 .image {
@@ -82,5 +81,6 @@
 }
 
 .title {
+  padding: var(--spacing-6) 0;
   align-self: flex-start;
 }
