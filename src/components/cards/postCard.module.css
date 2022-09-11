@@ -1,14 +1,14 @@
 .card {
+  position: relative;
   width: 100%;
   padding: var(--spacing-6);
-  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   background-color: var(--color-background);
-  border: 2px solid hsla(var(--color-text-raw) / 20%);
+  border: 1px solid hsla(var(--color-text-raw) / 20%);
   border-radius: var(--border-radius-1);
-  box-shadow: var(--box-shadow-1);
+  box-shadow: var(--box-shadow-4);
   overflow: hidden;
 }
 
@@ -49,12 +49,13 @@
 
 .imageWrapper {
   position: relative;
-  width: 30%;
-  min-width: 30%;
+  width: min(30%, 12rem);
+  min-width: min(30%, 12rem);
   height: 100%;
   background-color: transparent;
   border-radius: var(--border-radius-1);
   transition: var(--timing-fast) background-color var(--ease-in-out);
+  overflow: hidden;
 }
 
 .image {

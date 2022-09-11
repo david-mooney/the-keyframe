@@ -9,3 +9,37 @@
     padding: 0 var(--fixed-element-width);
   }
 }
+
+.main[data-path='\/about'],
+.main[data-path='\/subscribe'],
+.main[data-path='\/privacy'] {
+  width: 100%;
+  max-width: min(90%, var(--max-width-read));
+  margin: var(--spacing-8) auto;
+  padding: 0;
+}
+
+.main[data-path='\/about'] h1,
+.main[data-path='\/subscribe'] h1,
+.main[data-path='\/privacy'] h1 {
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+}
+
+.main a:not([class]) {
+  outline: none;
+  text-decoration: none;
+  border-bottom: 2px solid hsla(var(--color-text-raw) / 20%);
+  transition: var(--timing-faster) border-color var(--ease-out);
+}
+
+.main a:not([class]):hover,
+.main a:not([class]):focus {
+  border-color: var(--color-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main a:not([class]) {
+    transition: none;
+  }
+}

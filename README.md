@@ -11,6 +11,7 @@ My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.
 - comments system for articles?
 
 - fix gatsby images inline bs
+- quote sections in articles
 - icon animations (e.g. nav expand)
 - homepage main title block animation (favicon example)
 - article illustrations

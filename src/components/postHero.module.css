@@ -36,6 +36,8 @@
   order: 1;
   position: relative;
   max-height: 50vw;
+  overflow: hidden;
+  border-radius: var(--border-radius-1);
 }
 
 @media screen and (min-width: 800px) {

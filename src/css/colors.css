@@ -4,9 +4,9 @@
   --light-h: 0deg;
   --light-s: 5%;
   --light-l: 97%;
-  --dark-h: 227deg;
-  --dark-s: 23%;
-  --dark-l: 16%;
+  --dark-h: 0deg;
+  --dark-s: 0%;
+  --dark-l: 19%;
 
   /* Fixed colors (same regardless of theme setting) */
   --color-light: hsl(var(--light-h) var(--light-s) var(--light-l));
