@@ -40,6 +40,9 @@
   --fixed-element-width: 4.5rem;
 
   /* Box shadows */
-  --box-shadow-1: hsla(var(--color-text-raw) / 15%) 0 12px 24px -4px,
-    hsla(var(--color-text-raw) / 30%) 0 8px 16px -8px;
+  --box-shadow-1: 0 4px 2px -4px hsla(0deg 0% 0% / 20%);
+  --box-shadow-2: 0 8px 4px -4px hsla(0deg 0% 0% / 20%);
+  --box-shadow-3: 0 16px 8px -4px hsla(0deg 0% 0% / 20%);
+  --box-shadow-4: 0 24px 16px -4px hsla(0deg 0% 0% / 20%);
+  --box-shadow-5: 0 32px 24px -4px hsla(0deg 0% 0% / 20%);
 }

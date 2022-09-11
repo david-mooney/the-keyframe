@@ -1,12 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import PageWrapper from '../components/pageWrapper';
 import Seo from '../components/seo';
 
 export const Head = props => <Seo {...props} />;
 
 const PrivacyPage = () => (
-  <PageWrapper>
+  <>
     <h1>Privacy & Terms</h1>
     <p>
       This is my personal blog; I have no intention of monetising it through the sale
@@ -65,7 +64,7 @@ const PrivacyPage = () => (
       If you have any questions, comments, or concerns, please email me at{' '}
       <a href="mailto:thekeyframe@gmail.com">thekeyframe@gmail.com</a>
     </p>
-  </PageWrapper>
+  </>
 );
 
 export default PrivacyPage;

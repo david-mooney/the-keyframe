@@ -39,44 +39,6 @@ a {
   cursor: pointer;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-heading);
-  letter-spacing: 0.025em;
-  margin-top: var(--spacing-6);
-  margin-bottom: var(--spacing-6);
-}
-
-h1 {
-  font-size: clamp(var(--font-size-4), 1vw + 1.5rem, var(--font-size-6));
-}
-
-h2 {
-  font-size: clamp(var(--font-size-2), 1vw + 1rem, var(--font-size-3));
-}
-
-h3 {
-  font-size: var(--font-size-3);
-}
-
-h4 {
-  font-size: var(--font-size-2);
-}
-
-h5 {
-  font-size: var(--font-size-1);
-}
-
-h6 {
-  font-size: var(--font-size-1);
-}
-
 h1 > a,
 h2 > a,
 h3 > a,

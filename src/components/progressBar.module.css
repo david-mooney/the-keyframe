@@ -10,8 +10,8 @@
 
 @media (min-width: 800px) {
   .aside {
-    left: calc(var(--fixed-element-width) / 2 - var(--bar-size));
     top: 33.3vh;
+    left: calc(var(--fixed-element-width) / 2 - var(--bar-size));
     z-index: var(--z-fixed);
   }
 }
