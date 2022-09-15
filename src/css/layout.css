@@ -37,6 +37,7 @@
   --z-back: -1;
 
   /* Fixed UI element sizes */
+  --min-card-height: 236px;
   --fixed-element-width: 4.5rem;
 
   /* Box shadows */
