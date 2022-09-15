@@ -61,7 +61,7 @@ exports.onRenderBody = ({
   });
 
   setBodyAttributes({
-    'data-animate': true,
+    'data-animate': "true",
   });
 
   setHeadComponents([
