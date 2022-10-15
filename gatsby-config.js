@@ -10,7 +10,7 @@ module.exports = {
       name: 'David Mooney',
       summary: null,
     },
-    description: "David Mooney's web development blog",
+    description: 'A web development blog owned by David Mooney',
     siteUrl: 'https://thekeyframe.dev/',
     social: {
       twitter: null,

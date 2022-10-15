@@ -26,7 +26,7 @@ h6 {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-heading);
-  letter-spacing: 0.025em;
+  letter-spacing: 0.033em;
   margin-top: var(--spacing-6);
   margin-bottom: var(--spacing-6);
 }

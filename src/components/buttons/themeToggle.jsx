@@ -20,11 +20,11 @@ const ThemeToggle = () => {
 
   return (
     <CircleButton label="Toggle dark mode" handleClick={handleClick}>
-      <span className={`${styles.icon} ${styles.sun}`} data-active={!checked}>
+      <span className={`${styles.icon} ${styles.sun}`} data-active={`${!checked}`}>
         <FiSun />
       </span>
 
-      <span className={`${styles.icon} ${styles.moon}`} data-active={checked}>
+      <span className={`${styles.icon} ${styles.moon}`} data-active={`${checked}`}>
         <BsMoon />
       </span>
     </CircleButton>

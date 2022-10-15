@@ -49,13 +49,17 @@ const Navigation = () => {
     setIsOpen(!isOpen);
   };
 
-  const renderLink = ({ destination, label, target = null, rel = null }) => (
-    <li key={destination} className={styles.subMenuItem}>
-      <Link to={destination} className="underline" target={target} rel={rel}>
+  const renderLink = ({ destination, label, target = null, rel = null }) => {
+    const Element = target ? (
+      <a href={destination} target={target} rel={rel}>
         {label}
-      </Link>
-    </li>
-  );
+      </a>
+    ) : (
+      <Link to={destination}>{label}</Link>
+    );
+
+    return <li key={destination} className={styles.subMenuItem}>{Element}</li>;
+  };
 
   useEffect(() => {
     let timeout;
