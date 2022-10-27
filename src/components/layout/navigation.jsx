@@ -51,14 +51,20 @@ const Navigation = () => {
 
   const renderLink = ({ destination, label, target = null, rel = null }) => {
     const Element = target ? (
-      <a href={destination} target={target} rel={rel}>
+      <a href={destination} target={target} rel={rel} className="underline">
         {label}
       </a>
     ) : (
-      <Link to={destination}>{label}</Link>
+      <Link className="underline" to={destination}>
+        {label}
+      </Link>
     );
 
-    return <li key={destination} className={styles.subMenuItem}>{Element}</li>;
+    return (
+      <li key={destination} className={styles.subMenuItem}>
+        {Element}
+      </li>
+    );
   };
 
   useEffect(() => {

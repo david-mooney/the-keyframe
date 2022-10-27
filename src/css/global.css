@@ -49,6 +49,24 @@ h6 > a {
   color: inherit;
 }
 
+a:not([class]) {
+  outline: none;
+  text-decoration: none;
+  border-bottom: 2px solid hsla(var(--color-text-raw) / 20%);
+  transition: var(--timing-faster) border-color var(--ease-out);
+}
+
+a:not([class]):hover,
+a:not([class]):focus {
+  border-color: var(--color-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a:not([class]) {
+    transition: none;
+  }
+}
+
 small,
 p {
   color: inherit;

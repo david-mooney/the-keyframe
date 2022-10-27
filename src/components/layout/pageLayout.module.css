@@ -25,21 +25,3 @@
   text-align: center;
   margin-bottom: var(--spacing-8);
 }
-
-.main a:not([class]) {
-  outline: none;
-  text-decoration: none;
-  border-bottom: 2px solid hsla(var(--color-text-raw) / 20%);
-  transition: var(--timing-faster) border-color var(--ease-out);
-}
-
-.main a:not([class]):hover,
-.main a:not([class]):focus {
-  border-color: var(--color-text);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .main a:not([class]) {
-    transition: none;
-  }
-}

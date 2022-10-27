@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import ProgressBar from '../components/progressBar';
 import Bio from '../components/bio';
 import * as styles from './postArticle.module.css';
 
@@ -14,8 +13,6 @@ const PostArticle = ({ html }) => {
       className={styles.article}
       itemType="http://schema.org/Article"
     >
-      <ProgressBar ref={postRef} />
-
       <section
         dangerouslySetInnerHTML={{ __html: html }}
         itemProp="articleBody"
