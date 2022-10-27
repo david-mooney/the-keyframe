@@ -35,9 +35,12 @@
 .imageWrapper {
   order: 1;
   position: relative;
-  max-height: 50vw;
+  height: 50vw;
+  max-height: 30rem;
+  aspect-ratio: 1 / 1;
   border-radius: var(--border-radius-1);
   overflow: hidden;
+  margin: auto;
 }
 
 @media screen and (min-width: 800px) {
