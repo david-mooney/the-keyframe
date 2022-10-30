@@ -9,11 +9,13 @@ const BlogPostsList = ({ posts }) => {
   let filteredPosts = posts;
 
   const renderList = () => {
-    if (results.query) {
-      filteredPosts = posts.filter(post => hits.find(hit => hit.slug === post.fields.slug));
+    if (hits.length > 0 && hits.length < posts.length) {
+      filteredPosts = posts.filter(post =>
+        hits.find(hit => hit.slug === post.fields.slug)
+      );
     }
 
-    if (filteredPosts.length === 0) {
+    if (hits.length === 0 && results.query !== '') {
       return (
         <li>
           <p>Sorry, I couldn't find any posts. Here's a joke instead:</p>

@@ -15,6 +15,7 @@
   --font-size-4: 32px;
   --font-size-5: 48px;
   --font-size-6: 64px;
+  --font-size-7: 64px;
 }
 
 h1,
@@ -32,7 +33,7 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(var(--font-size-4), 1vw + 1.25rem, var(--font-size-6));
+  font-size: clamp(var(--font-size-4), 1vw + 1.5rem, var(--font-size-6));
 }
 
 h2 {
