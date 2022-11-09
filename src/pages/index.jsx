@@ -71,12 +71,17 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "DD MMM YYYY")
+          date(formatString: "DD MMMM YYYY")
           title
           description
           image {
             childImageSharp {
-              gatsbyImageData(width: 500 layout: CONSTRAINED)
+              gatsbyImageData(
+                layout: CONSTRAINED
+                width: 300
+                placeholder: DOMINANT_COLOR
+                formats: [AUTO, WEBP, AVIF]
+              )
             }
           }
         }

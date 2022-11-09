@@ -82,4 +82,16 @@
 
 .subMenuItem {
   padding-bottom: var(--spacing-3);
+  opacity: 0;
+  transition: var(--timing-fast) opacity var(--ease-in-out), visibility 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .subMenuItem {
+    transition: none;
+  }
+}
+
+[id='navigationMenu'][data-open='true'] .subMenuItem {
+  opacity: 1;
 }

@@ -6,7 +6,7 @@
   flex-direction: row;
   justify-content: flex-start;
   background-color: var(--color-background);
-  border: 1px solid hsla(var(--color-text-raw) / 20%);
+  border: 2px solid hsla(var(--color-text-raw) / 20%);
   border-radius: var(--border-radius-1);
   box-shadow: var(--box-shadow-4);
   overflow: hidden;
@@ -56,6 +56,13 @@
   border-radius: var(--border-radius-1);
   transition: var(--timing-fast) background-color var(--ease-in-out);
   overflow: hidden;
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .imageWrapper {
+    display: block;
+  }
 }
 
 .image {

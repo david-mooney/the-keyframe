@@ -1,27 +1,22 @@
 .main {
   position: relative;
   overflow-x: hidden;
-  padding-top: var(--fixed-element-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--fixed-element-width) 0;
 }
 
-@media screen and (min-width: 800px) {
-  .main {
-    padding: 0 var(--fixed-element-width);
-  }
+.main h1 {
+  text-align: center;
+  margin: var(--spacing-6) 0 var(--spacing-8);
 }
 
 .main[data-path='\/about'],
 .main[data-path='\/subscribe'],
-.main[data-path='\/privacy'] {
-  width: 100%;
+.main[data-path='\/privacy'],
+.main[data-path='\/404'],
+.main[data-path='\/dev-404-page'],
+.main[data-path='\/404.html'],
+.main[data-path='\/offline-plugin-app-shell-fallback'] {
   max-width: min(90%, var(--max-width-read));
-  margin: var(--spacing-8) auto;
-  padding: 0;
-}
-
-.main[data-path='\/about'] h1,
-.main[data-path='\/subscribe'] h1,
-.main[data-path='\/privacy'] h1 {
-  text-align: center;
-  margin-bottom: var(--spacing-8);
 }

@@ -3,7 +3,7 @@ import Loader from '../loader';
 import { FiMail } from '@react-icons/all-files/fi/FiMail';
 import * as styles from './subscribeCard.module.css';
 
-const timeout = 5000;
+const timeout = 4000;
 const formName = 'subscribe';
 
 const states = {
