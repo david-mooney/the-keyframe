@@ -8,3 +8,41 @@
 .article img {
   border-radius: var(--border-radius-1);
 }
+
+blockquote {
+  text-align: center;
+  font-weight: 100;
+  font-size: var(--font-size-4);
+  max-width: 600px;
+  line-height: 1.4;
+  position: relative;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+blockquote::before,
+blockquote::after {
+  position: absolute;
+  font-size: var(--font-size-7);
+  width: 4rem;
+  height: 4rem;
+}
+
+blockquote::before {
+  content: '“';
+  left: calc(-1 * var(--spacing-6));
+  top: calc(-1 * var(--spacing-2));
+}
+
+blockquote::after {
+  content: '”';
+  right: calc(-1 * var(--spacing-6));
+  bottom: calc(-1 * var(--spacing-2));
+}
+
+cite {
+  font-size: 1.2rem;
+  font-weight: 100;
+  display: block;
+  margin-top: 1rem;
+}

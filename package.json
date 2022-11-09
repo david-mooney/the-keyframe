@@ -64,7 +64,6 @@
     "develop": "gatsby develop",
     "build": "gatsby clean && gatsby build",
     "serve": "gatsby serve --open",
-    "clean": "gatsby clean",
-    "deep-clean": "rm -rf .cache && rm -rf node_modules && npm install"
+    "clean": "gatsby clean"
   }
 }
