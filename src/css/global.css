@@ -98,11 +98,6 @@ small {
   background-size: 100% 2px;
 }
 
-.mainTitle {
-  text-align: center;
-  margin: var(--spacing-8) 0 var(--spacing-10);
-}
-
 /* stylelint-disable-next-line selector-id-pattern */
 #___gatsby,
 #gatsby-focus-wrapper {
