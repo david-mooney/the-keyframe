@@ -86,9 +86,7 @@ module.exports = {
               })),
             query: `
               {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
+                allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
                   nodes {
                     excerpt
                     html
@@ -126,7 +124,7 @@ module.exports = {
       },
     },
     // 'gatsby-plugin-offline',
-    'gatsby-plugin-preact',
+    // 'gatsby-plugin-preact',
     {
       resolve: `gatsby-plugin-algolia`,
       options: {

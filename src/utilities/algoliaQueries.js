@@ -10,6 +10,9 @@ const pageQuery = `{
   ) {
     edges {
       node {
+        internal {
+          contentDigest
+        }
         id
         frontmatter {
           title
