@@ -6,7 +6,7 @@
   padding: var(--fixed-element-width) 0;
 }
 
-.main h1 {
+.main > h1 {
   text-align: center;
   margin: var(--spacing-6) 0 var(--spacing-8);
 }

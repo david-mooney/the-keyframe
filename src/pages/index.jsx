@@ -38,7 +38,7 @@ const BlogIndex = ({ data }) => {
 
   return (
     <>
-      <h1 className="mainTitle">{data.site.siteMetadata.title}</h1>
+      <h1>{data.site.siteMetadata.title}</h1>
       <InstantSearch searchClient={searchClient} routing={true} indexName="Pages">
         <SearchInput
           total={data.allMarkdownRemark.nodes.length}
