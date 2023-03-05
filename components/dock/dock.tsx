@@ -26,7 +26,6 @@ const Dock = ({ children }) => {
   return (
     <DockContext.Provider value={{ hovered, width }}>
       <aside
-        tabIndex={10}
         ref={ref}
         className={styles.container}
         onMouseOver={() => setHovered(true)}
