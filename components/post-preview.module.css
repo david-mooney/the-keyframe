@@ -68,7 +68,7 @@
 
 .tag {
   border-radius: 1rem;
-  background: var(--color-text);
+  background: var(--color-brand);
   padding: var(--spacing-0) var(--spacing-5);
   text-transform: uppercase;
   color: var(--color-background);

@@ -2,6 +2,16 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fa20d50a-d2a8-4938-8ca6-855a04c3f0e6/deploy-status)](https://app.netlify.com/sites/thekeyframe/deploys)
 
+## Notes
+
+Until CSS environment variables are a thing, the breakpoints are hardcoded. The values used are:
+
+- `@media (min-width: 640px)`
+- `@media (min-width: 768px)`
+- `@media (min-width: 1024px)`
+- `@media (min-width: 1280px)`
+- `@media (min-width: 1536px)`
+
 ## TODO's
 
 - [ ] Add search

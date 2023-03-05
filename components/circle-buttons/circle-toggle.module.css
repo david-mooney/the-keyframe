@@ -20,8 +20,8 @@
 .button:hover,
 .button:focus {
   outline: none;
-  border-color: #3cffd0;
-  color: #3cffd0;
+  border-color: var(--color-brand);
+  color: var(--color-brand);
 }
 
 .button:hover :global(.inner-circle),

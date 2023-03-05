@@ -39,7 +39,7 @@ a:not([class]) {
   outline: none;
   border-bottom: var(--border-2);
   text-decoration: none;
-  color: #3cffd0;
+  color: var(--color-brand);
 
   /* TODO color: var(--color-text); */
 }
