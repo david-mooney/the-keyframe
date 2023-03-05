@@ -1,0 +1,37 @@
+.visually-hidden {
+  visibility: hidden;
+}
+
+.sr-only {
+  position: absolute;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.skip-to-content {
+  display: inline;
+  position: absolute;
+  top: var(--spacing-5);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: var(--timing-fast) opacity var(--ease-in-out);
+  visibility: hidden;
+  opacity: 0;
+  z-index: var(--z-fixed);
+  pointer-events: none;
+}
+
+@media screen and (min-width: 800px) {
+  .skip-to-content {
+    visibility: visible;
+  }
+}
+
+.skip-to-content:focus {
+  opacity: 1;
+}

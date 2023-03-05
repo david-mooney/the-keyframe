@@ -1,0 +1,47 @@
+.markdown blockquote {
+  position: relative;
+  margin: 0;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.markdown blockquote > p {
+  font-size: var(--font-size-4);
+}
+
+.markdown blockquote::before,
+.markdown blockquote::after {
+  position: absolute;
+  color: #3cffd0;
+  font-size: var(--font-size-6);
+}
+
+.markdown blockquote::before {
+  top: calc(-1 * var(--spacing-2));
+  left: calc(-1 * var(--spacing-2));
+  content: '“';
+}
+
+.markdown blockquote::after {
+  right: calc(-1 * var(--spacing-2));
+  bottom: calc(-1 * var(--spacing-2));
+  content: '”';
+}
+
+.markdown > p:first-of-type::first-letter {
+  float: left;
+  margin-top: -32px;
+  margin-right: 16px;
+  border: 5px solid #3cffd0 !important;
+  border-image: linear-gradient(0deg, #3cb3aa, #3cffd0) 10 !important;
+  background: none;
+  padding: 6px 32px 16px;
+  line-height: 1em;
+  color: #3cffd0; /* #ffafbd */
+  font-size: 105px;
+}
+
+.markdown *::selection {
+  background: #3cffd0;
+  color: #3cb3aa;
+}

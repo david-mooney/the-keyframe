@@ -1,0 +1,21 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.crumb {
+  font-weight: var(--font-weight-bold);
+}
+
+.crumb:not(:last-child)::after {
+  margin: 0 0.5rem;
+  content: '\203A';
+}
