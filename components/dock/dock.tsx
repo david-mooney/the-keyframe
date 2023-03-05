@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext, useRef } from 'react';
-import { MouseProvider } from '../../hooks/use-mouse';
+import { MouseProvider } from '@hooks/use-mouse';
 import DockItem from './dock-item';
 import styles from './dock.module.css';
 

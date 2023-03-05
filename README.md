@@ -19,6 +19,7 @@
 
 ## Cleanup
 
+- [ ] Consolidate transition easings
 - [ ] Search for TODO's and remove them
 - [ ] top down review and cleanup of all files
 - [ ] Lighthouse audit and fix issues

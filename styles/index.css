@@ -62,7 +62,7 @@ small {
 
 .underline {
   display: inline;
-  transition: background-size var(--timing-fast);
+  transition: var(--timing-fast) background-size var(--ease-in-out);
   outline: none;
   background: linear-gradient(var(--color-text), var(--color-text)) 0 100%;
   background-repeat: no-repeat;

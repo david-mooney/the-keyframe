@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "npm run open-browser && next",
     "build": "next build",
-    "start": "next start",
+    "start": "next build && next start",
     "lint": "next lint",
     "stylelint": "stylelint **/*.css",
     "typecheck": "tsc",

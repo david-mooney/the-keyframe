@@ -10,20 +10,26 @@
   /* Fixed colors (same regardless of theme setting) */
   --color-light: hsl(var(--light-h) var(--light-s) var(--light-l));
   --color-dark: hsl(var(--dark-h) var(--dark-s) var(--dark-l));
-  --color-light-raw: var(--light-h) var(--light-s) var(--light-l);
-  --color-dark-raw: var(--dark-h) var(--dark-s) var(--dark-l);
+  --color-light-25: hsla(var(--light-h) var(--light-s) var(--light-l) / 25%);
+  --color-dark-25: hsla(var(--dark-h) var(--dark-s) var(--dark-l) / 25%);
+  --color-light-50: hsla(var(--light-h) var(--light-s) var(--light-l) / 50%);
+  --color-dark-50: hsla(var(--dark-h) var(--dark-s) var(--dark-l) / 50%);
 
   /* Light theme */
   --color-text: var(--color-dark);
+  --color-text-25: var(--color-dark-25);
+  --color-text-50: var(--color-dark-50);
   --color-background: var(--color-light);
-  --color-text-raw: var(--color-dark-raw);
-  --color-background-raw: var(--color-light-raw);
+  --color-background-25: var(--color-light-25);
+  --color-background-50: var(--color-light-50);
 }
 
 :root.dark {
   /* Dark theme */
   --color-text: var(--color-light);
+  --color-text-25: var(--color-light-25);
+  --color-text-50: var(--color-light-50);
   --color-background: var(--color-dark);
-  --color-text-raw: var(--color-light-raw);
-  --color-background-raw: var(--color-dark-raw);
+  --color-background-25: var(--color-dark-25);
+  --color-background-50: var(--color-dark-50);
 }

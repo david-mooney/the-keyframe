@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import Container from '../../components/container';
-import Layout from '../../components/layout';
-import { getAllPosts, getAllTags } from '../../lib/api';
-import { CMS_NAME } from '../../lib/constants';
-import Post from '../../interfaces/post';
+import Container from '@components/container';
+import Layout from '@components/layout';
+import Search from '@components/inputs/search';
+import { getAllPosts, getAllTags } from '@lib/api';
+import { CMS_NAME } from '@lib/constants';
+import Post from '@interfaces/post';
 
 type Props = {
   allPosts: Post[];
@@ -32,6 +33,8 @@ export default function Index({ allPosts, allTags }: Props) {
       </Head>
 
       <Container>
+        <Search />
+
         {allTags.map((tag) => (
           <div key={tag}>
             <input

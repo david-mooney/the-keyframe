@@ -1,22 +1,21 @@
 import { AppProps } from 'next/app';
 import localFont from 'next/font/local';
-
 import {
   BsHouseFill,
   BsGithub,
   BsFillTagsFill,
   BsEnvelopeFill,
 } from 'react-icons/bs';
-import Dock from '../components/dock/dock';
-import ThemeToggle from '../components/circle-buttons/theme-toggle';
-import CircleLink from '../components/circle-buttons/circle-link';
+import Dock from '@/components/dock/dock';
+import ThemeToggle from '@/components/circle-buttons/theme-toggle';
+import CircleLink from '@/components/circle-buttons/circle-link';
 
-import '../styles/accessibility.css';
-import '../styles/animations.css';
-import '../styles/colors.css';
-import '../styles/typography.css';
-import '../styles/layout.css';
-import '../styles/index.css';
+import '@styles/accessibility.css';
+import '@styles/animations.css';
+import '@styles/colors.css';
+import '@styles/typography.css';
+import '@styles/layout.css';
+import '@styles/index.css';
 
 const sansFont = localFont({
   src: [

@@ -13,9 +13,9 @@
   z-index: var(--z-fixed);
   border: var(--border-1);
   border-radius: var(--border-radius-1);
-  background-color: hsla(var(--color-background-raw) / var(--window-pane));
+  background-color: var(--color-background-50);
   padding: var(--spacing-5);
-  height: 48px;
+  height: 40px;
   backdrop-filter: blur(16px) saturate(200%) brightness(100%);
   will-change: contents;
 }

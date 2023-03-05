@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import imageZoom from 'fast-image-zoom';
-import { KEYS } from '../lib/constants';
+import { KEYS } from '@lib/constants';
 import markdownStyles from './markdown.module.css';
 import styles from './post-body.module.css';
 

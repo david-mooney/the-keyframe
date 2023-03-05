@@ -24,7 +24,7 @@ export const CircleToggle = ({
     className={styles.button}
     onClick={handleClick}
   >
-    <AnimatedCircle />
+    {/* <AnimatedCircle /> */}
     {children}
   </button>
 );

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './animated-circle.module.css';
 
-const AnimatedCircle = ({ stroke = 2 }) => {
+const AnimatedCircle = ({ stroke = 1 }) => {
   return (
     <svg className={styles.container} aria-hidden="true">
       <circle

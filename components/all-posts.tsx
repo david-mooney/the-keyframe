@@ -1,6 +1,6 @@
-import PostPreview from './post-preview';
-import type Post from '../interfaces/post';
-import styles from './all-posts.module.css';
+import type Post from '@interfaces/post';
+import PostPreview from '@components/post-preview';
+import styles from '@components/all-posts.module.css';
 
 type Props = {
   posts: Post[];
