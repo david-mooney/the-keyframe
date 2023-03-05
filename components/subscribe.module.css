@@ -31,7 +31,7 @@
 }
 
 .input::placeholder {
-  color: hsla(var(--color-text-raw) / 50%);
+  color: var(--color-text-50);
 }
 
 .input:hover,

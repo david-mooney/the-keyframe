@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import useSubscribe, { Form } from '../hooks/use-subscribe';
+import useSubscribe, { Form } from '@hooks/use-subscribe';
 import styles from './subscribe.module.css';
 
 const Subscribe = () => {

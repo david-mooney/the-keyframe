@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Search from './search';
 import styles from './header.module.css';
 
 interface HeadingProps {
@@ -30,7 +29,6 @@ const Header = ({ level = 1 }: HeadingProps) => {
       <a className="skip-to-content underline" href="#main">
         Skip to content
       </a>
-      <Search />
 
       {isHome ? titleOnly : titleWithLink}
     </header>

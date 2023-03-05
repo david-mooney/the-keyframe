@@ -23,7 +23,7 @@ export const CircleLink = ({
     href={href}
     className={styles.anchor}
   >
-    <AnimatedCircle />
+    {/* <AnimatedCircle /> */}
     <span className={styles.icon} aria-hidden="true">
       {children}
     </span>

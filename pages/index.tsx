@@ -1,10 +1,10 @@
-import Container from '../components/container';
-import AllPosts from '../components/all-posts';
-import Layout from '../components/layout';
-import { getAllPosts } from '../lib/api';
+import Container from '@components/container';
+import AllPosts from '@components/all-posts';
+import Layout from '@components/layout';
+import { getAllPosts } from '@lib/api';
 import Head from 'next/head';
-import { CMS_NAME, FIELDS } from '../lib/constants';
-import Post from '../interfaces/post';
+import { CMS_NAME, FIELDS } from '@lib/constants';
+import Post from '@interfaces/post';
 
 type Props = {
   allPosts: Post[];

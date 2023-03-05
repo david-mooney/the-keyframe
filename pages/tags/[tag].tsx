@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import Container from '../../components/container';
-import PostHeader from '../../components/post-header';
-import Layout from '../../components/layout';
-import { getPostsByTag, getAllTags } from '../../lib/api';
 import Head from 'next/head';
-import type PostType from '../../interfaces/post';
+import Container from '@components/container';
+import PostHeader from '@components/post-header';
+import Layout from '@components/layout';
+import { getPostsByTag, getAllTags } from '@lib/api';
+import type PostType from '@interfaces/post';
 
 type Props = {
   posts: PostType[];
