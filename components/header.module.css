@@ -1,0 +1,8 @@
+.header {
+  padding: var(--spacing-5);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: var(--font-size-5);
+}

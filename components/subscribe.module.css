@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding-bottom: var(--spacing-9); /* todo - dock size, add to layout.css */
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  gap: var(--spacing-6);
+  padding: var(--spacing-6) 0;
+}
+
+.honey-pot {
+  display: none;
+}
+
+.input {
+  appearance: none;
+  outline: none;
+  border: none;
+  border-bottom: var(--border-2);
+  border-radius: 0;
+  background-color: transparent;
+  padding: var(--spacing-3);
+  padding-right: var(--spacing-7);
+  min-width: 20ch;
+  color: var(--color-text);
+}
+
+.input::placeholder {
+  color: hsla(var(--color-text-raw) / 50%);
+}
+
+.input:hover,
+.input:focus {
+  border-color: var(--color-text);
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:focus {
+  transition: var(--timing-fast) -webkit-box-shadow var(--ease-out);
+  box-shadow: 0 0 0 1000px var(--color-background) inset;
+  -webkit-text-fill-color: var(--color-text);
+}
+
+.button {
+  margin: 0;
+  border: none;
+  border-radius: var(--border-radius-0);
+  background-color: var(--color-text);
+  cursor: pointer;
+  padding: var(--spacing-4) var(--spacing-6);
+  color: var(--color-background);
+  font-weight: var(--font-weight-bold);
+}
