@@ -1,5 +1,4 @@
 import React from 'react';
-import AnimatedCircle from './animated-circle';
 import styles from './circle-toggle.module.css';
 
 export interface CircleToggleProps {
@@ -24,7 +23,6 @@ export const CircleToggle = ({
     className={styles.button}
     onClick={handleClick}
   >
-    {/* <AnimatedCircle /> */}
     {children}
   </button>
 );

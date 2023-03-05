@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import AnimatedCircle from './animated-circle';
 import styles from './circle-link.module.css';
 
 export interface CircleLinkProps {
@@ -23,7 +22,6 @@ export const CircleLink = ({
     href={href}
     className={styles.anchor}
   >
-    {/* <AnimatedCircle /> */}
     <span className={styles.icon} aria-hidden="true">
       {children}
     </span>
