@@ -1,9 +1,16 @@
 .square {
+  display: none;
   border-radius: var(--border-radius-1);
   width: 250px;
   min-width: 250px;
   height: 250px;
   overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .square {
+    display: block;
+  }
 }
 
 .image {

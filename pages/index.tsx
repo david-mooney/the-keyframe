@@ -1,4 +1,3 @@
-import Container from '@components/container';
 import AllPosts from '@components/all-posts';
 import Layout from '@components/layout';
 import { getAllPosts } from '@lib/api';
@@ -17,9 +16,7 @@ export default function Index({ allPosts }: Props) {
         <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
       </Head>
 
-      <Container>
-        <AllPosts posts={allPosts} />
-      </Container>
+      <AllPosts posts={allPosts} />
     </Layout>
   );
 }
