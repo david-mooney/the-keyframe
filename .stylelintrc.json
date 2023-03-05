@@ -1,12 +1,6 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": ["stylelint-config-standard", "stylelint-config-concentric-order"],
   "rules": {
-    "string-quotes": "single",
-    "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$",
-    "selector-id-pattern": "^[a-z][a-zA-Z0-9]+$",
-    "value-list-comma-newline-after": null,
-    "declaration-colon-newline-after": null,
-    "property-no-vendor-prefix": null,
     "selector-pseudo-class-no-unknown": [
       true,
       {
