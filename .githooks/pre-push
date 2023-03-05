@@ -1,0 +1,23 @@
+#!/bin/sh
+
+echo "Running pre-push hooks..."
+
+npm run lint
+if [ $? -ne 0 ]; then
+  echo "Lint failed."
+  exit 1
+fi
+
+npm run stylelint
+if [ $? -ne 0 ]; then
+  echo "Style lint failed."
+  exit 1
+fi
+
+npm run typecheck
+if [ $? -ne 0 ]; then
+  echo "Typechecking failed."
+  exit 1
+fi
+
+echo "Pre-push hooks complete."

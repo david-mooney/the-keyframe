@@ -1,17 +1,28 @@
+# The Keyframe
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fa20d50a-d2a8-4938-8ca6-855a04c3f0e6/deploy-status)](https://app.netlify.com/sites/thekeyframe/deploys)
 
-# The Key Frame
+## TODO's
 
-My Personal tech blog, forked from [Gatsby's Blog Starter](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog).
+- [ ] Add search
+- [ ] Add last updated date to posts at the end
+- [ ] Add "next" and "previous" links to posts
+- [ ] Add RSS feed
+- [ ] Add MDX support (?)
+- [ ] Add sitemap
+- [ ] Add "frame" animation behind logo
+- [ ] Add form confetti
+- [ ] Add scroll tracker with section headings
+- [ ] Add "back to top" button
+- [ ] get .underline class working with theme toggle transition
+- [ ] Consolidate circle button into more generic button component, make it scale with container
 
-## Features to add
+## Cleanup
 
-- update the "About" page
-- system for localization of articles
-- comments system for articles?
+- [ ] Search for TODO's and remove them
+- [ ] top down review and cleanup of all files
+- [ ] Lighthouse audit and fix issues
 
-- fix gatsby images inline bs
-- quote sections in articles
-- icon animations (e.g. nav expand)
-- homepage main title block animation (favicon example)
-- article illustrations
+## Future ideas
+
+- [ ] Swap React for Preact when it's compatible to reduce the bundle size

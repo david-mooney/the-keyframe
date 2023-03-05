@@ -1,0 +1,30 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-background);
+  width: 100%;
+  height: 100%;
+}
+
+.container :global(.inner-circle) {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: var(--timing-fast) stroke-dashoffset var(--ease-out);
+  stroke: var(--color-background);
+
+  /* stroke-dasharray: var(--length); */
+
+  /* stroke-dashoffset: var(--length); */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .container :global(.inner-circle) {
+    transition: none;
+  }
+}
+
+.circle {
+  stroke: hsla(var(--color-text-raw) / 15%); /* TODO - use a variable */
+  fill: transparent;
+}

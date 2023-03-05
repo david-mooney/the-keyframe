@@ -1,0 +1,41 @@
+.container {
+  --gap: var(--spacing-4);
+  --window-pane: 50%;
+
+  display: flex;
+  position: fixed;
+  bottom: var(--gap);
+  left: 50%;
+  flex-grow: 0;
+  gap: var(--gap);
+  align-items: flex-end;
+  transform: translateX(-50%);
+  z-index: var(--z-fixed);
+  border: var(--border-1);
+  border-radius: var(--border-radius-1);
+  background-color: hsla(var(--color-background-raw) / var(--window-pane));
+  padding: var(--spacing-5);
+  height: 48px;
+  backdrop-filter: blur(16px) saturate(200%) brightness(100%);
+  will-change: contents;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .container {
+    backdrop-filter: none;
+    background-color: var(--color-background);
+  }
+}
+
+/* todo mobile styles and overflow scroll */
+
+/* .tools {
+  display: flex;
+  gap: var(--spacing-3);
+  align-items: center;
+  overflow: auto hidden;
+}
+
+.tools > * {
+  flex-shrink: 0;
+} */

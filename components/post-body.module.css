@@ -1,0 +1,4 @@
+.article {
+  margin: var(--spacing-10) auto;
+  max-width: var(--max-width-2);
+}
