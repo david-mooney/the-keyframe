@@ -2,3 +2,7 @@
   padding-right: var(--gap);
   will-change: contents;
 }
+
+.item:last-child {
+  padding-right: 0;
+}
