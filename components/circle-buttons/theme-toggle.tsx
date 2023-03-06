@@ -36,20 +36,22 @@ const ThemeToggle = () => {
         handleClick={handleClick}
         label="Toggle dark mode"
       >
-        <span
-          className={`${styles.icon} ${styles.sun}`}
-          data-active={`${!checked}`}
-          aria-hidden="true"
-        >
-          <BsSunFill size="50%" />
-        </span>
-        <span
-          className={`${styles.icon} ${styles.moon}`}
-          data-active={`${checked}`}
-          aria-hidden="true"
-        >
-          <BsMoonFill size="50%" />
-        </span>
+        <div className={styles.icons}>
+          <span
+            className={`${styles.icon} ${styles.sun}`}
+            data-active={`${!checked}`}
+            aria-hidden="true"
+          >
+            <BsSunFill size="50%" />
+          </span>
+          <span
+            className={`${styles.icon} ${styles.moon}`}
+            data-active={`${checked}`}
+            aria-hidden="true"
+          >
+            <BsMoonFill size="50%" />
+          </span>
+        </div>
       </CircleToggle>
     )
   );
