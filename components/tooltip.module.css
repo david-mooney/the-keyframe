@@ -1,0 +1,22 @@
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-1 * var(--spacing-7)));
+  opacity: 0;
+  border: var(--border-1);
+  border-radius: var(--border-radius-1);
+  background-color: var(--color-background);
+  padding: var(--spacing-2) var(--spacing-3);
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--color-text);
+  font-size: var(--font-size-0);
+  pointer-events: none;
+}
+
+:global(.tooltip-anchor):hover .tooltip {
+  transition: var(--timing-faster) opacity var(--ease-in-out);
+  transition-delay: var(--timing-fast);
+  opacity: 1;
+}

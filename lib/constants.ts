@@ -21,6 +21,14 @@ export const LINKS = {
   },
   tags: {
     href: '/tags',
-    label: 'All Tags',
+    label: 'All posts',
+  },
+  email: {
+    label: 'Email',
+    href: 'mailto:thekeyframe@gmail.com',
+  },
+  github: {
+    label: 'Github',
+    href: 'https://github.com/david-mooney/the-keyframe',
   },
 };

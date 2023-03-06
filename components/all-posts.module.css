@@ -24,7 +24,7 @@
   grid-auto-flow: row;
   gap: var(--spacing-10);
   margin: 0;
-  padding: var(--spacing-10) var(--spacing-5);
+  padding: var(--spacing-5);
   list-style: none;
 }
 

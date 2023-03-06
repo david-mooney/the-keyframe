@@ -3,9 +3,11 @@ import localFont from 'next/font/local';
 import {
   BsHouseFill,
   BsGithub,
-  BsFillTagsFill,
+  BsSearch,
   BsEnvelopeFill,
 } from 'react-icons/bs';
+
+import { LINKS } from '@/lib/constants';
 import Dock from '@/components/dock/dock';
 import ThemeToggle from '@/components/circle-buttons/theme-toggle';
 import CircleLink from '@/components/circle-buttons/circle-link';
@@ -37,20 +39,16 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       `}</style>
 
       <Dock>
-        <CircleLink label="Home" href="/">
+        <CircleLink {...LINKS.home}>
           <BsHouseFill size="50%" />
         </CircleLink>
-        <CircleLink label="Tags" href="/tags">
-          <BsFillTagsFill size="50%" />
+        <CircleLink {...LINKS.tags}>
+          <BsSearch size="50%" />
         </CircleLink>
-        <CircleLink label="Email" href="mailto:thekeyframe@gmail.com">
+        <CircleLink {...LINKS.email}>
           <BsEnvelopeFill size="50%" />
         </CircleLink>
-        <CircleLink
-          label="Github"
-          href="https://github.com/david-mooney/nextjs-blog"
-          newTab
-        >
+        <CircleLink {...LINKS.github} newTab>
           <BsGithub size="50%" />
         </CircleLink>
         <ThemeToggle />

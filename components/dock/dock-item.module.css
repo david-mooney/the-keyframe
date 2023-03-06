@@ -1,3 +1,4 @@
 .item {
+  padding-right: var(--gap);
   will-change: contents;
 }

@@ -26,6 +26,7 @@ Until CSS environment variables are a thing, the breakpoints are hardcoded. The 
 - [ ] Add "back to top" button
 - [ ] get .underline class working with theme toggle transition
 - [ ] Consolidate circle button into more generic button component, make it scale with container
+- [ ] Add smooth scroll to anchor links
 
 ## Cleanup
 

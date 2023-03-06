@@ -14,12 +14,22 @@ const Header = ({ level = 1 }: HeadingProps) => {
   const router = useRouter();
   const isHome = router.pathname === '/';
 
-  const titleOnly = <Tag>The Keyframe</Tag>;
+  const titleOnly = (
+    <Tag>
+      <span>The</span>
+      <span>&nbsp;</span>
+      <span>Key</span>
+      <span>frame</span>
+    </Tag>
+  );
 
   const titleWithLink = (
     <Tag>
       <Link href="/" className="underline">
-        The Keyframe
+        <span>The</span>
+        <span>&nbsp;</span>
+        <span>Key</span>
+        <span>frame</span>
       </Link>
     </Tag>
   );
