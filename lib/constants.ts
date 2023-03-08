@@ -10,7 +10,15 @@ export const KEYS = {
 };
 
 export const FIELDS = {
-  preview: ['title', 'date', 'slug', 'coverImage', 'readTime', 'tags'],
+  preview: [
+    'title',
+    'excerpt',
+    'date',
+    'slug',
+    'coverImage',
+    'readTime',
+    'tags',
+  ],
   post: ['title', 'date', 'author', 'coverImage', 'readTime', 'tags'],
 };
 

@@ -1,11 +1,11 @@
 :root {
   /* Base HSL color values */
   --light-h: 0deg;
-  --light-s: 5%;
-  --light-l: 97%;
-  --dark-h: 0deg;
-  --dark-s: 0%;
-  --dark-l: 19%;
+  --light-s: 0%;
+  --light-l: 99%;
+  --dark-h: 270deg;
+  --dark-s: 11%;
+  --dark-l: 7%;
 
   /* Fixed colors (same regardless of theme setting) */
   --color-light: hsl(var(--light-h) var(--light-s) var(--light-l));

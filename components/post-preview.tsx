@@ -6,6 +6,7 @@ import styles from './post-preview.module.css';
 type Props = {
   order: number;
   title: string;
+  excerpt: string;
   coverImage: string;
   date: string;
   slug: string;
@@ -15,6 +16,7 @@ type Props = {
 
 const PostPreview = ({
   title,
+  excerpt,
   coverImage,
   date,
   slug,
@@ -29,9 +31,8 @@ const PostPreview = ({
 
         <header className={styles.header}>
           <Date dateString={date} />
-          <div className={styles.title}>
-            <h2 className={styles.underline}>{title}</h2>
-          </div>
+          <h2 className={styles.underline}>{title}</h2>
+          <p>{excerpt}</p>
           <small>{readTime}</small>
 
           <div className={styles.tags}>
