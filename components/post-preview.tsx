@@ -31,7 +31,9 @@ const PostPreview = ({
 
         <header className={styles.header}>
           <Date dateString={date} />
-          <h2 className={styles.underline}>{title}</h2>
+          <div className={styles.title}>
+            <h2 className={styles.underline}>{title}</h2>
+          </div>
           <p>{excerpt}</p>
           <small>{readTime}</small>
 
