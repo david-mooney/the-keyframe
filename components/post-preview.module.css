@@ -1,4 +1,6 @@
 .underline {
+  --underline-size: 2px;
+
   display: inline;
   transition: background-size var(--timing-fast);
   background: linear-gradient(var(--color-text), var(--color-text)) 0 100%;
@@ -13,8 +15,6 @@
 }
 
 .link {
-  --underline-size: 2px;
-
   display: flex;
   outline-style: solid;
   outline-color: transparent;
@@ -29,38 +29,33 @@
 
 .article {
   display: flex;
-  position: relative;
   flex-direction: column;
-  background-color: var(--color-background);
+  gap: var(--spacing-5);
 }
 
 .article p {
   font-size: var(--font-size-1);
-}
-
-.link:hover .article,
-.link:focus-visible .article,
-.link:focus-within .article {
-  border-color: var(--color-text);
+  line-clamp: 2;
 }
 
 .header {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   gap: var(--spacing-5);
-  padding: var(--spacing-5);
 }
 
-.header time {
+.meta {
+  display: flex;
+  justify-content: space-between;
   font-size: var(--font-size-0);
 }
 
-.header title {
-  align-self: flex-start;
+.title {
+  margin-bottom: var(--spacing-5);
 }
 
-.header h2 {
-  margin: 0;
+.title > h2 {
   font-size: var(--font-size-3);
   font-weight: var(--font-weight-bold);
 }
@@ -73,14 +68,15 @@
 .tags {
   display: flex;
   gap: var(--spacing-5);
+  margin-top: auto;
 }
 
 .tag {
   border-radius: 1rem;
   background: var(--color-brand);
-  padding: var(--spacing-0) var(--spacing-5);
+  padding: var(--spacing-0) var(--spacing-3);
   text-transform: uppercase;
   color: var(--color-background);
-  font-size: 13px; /* TODO */
+  font-size: var(--font-size-micro);
   font-weight: var(--font-weight-bold);
 }
