@@ -1,11 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion, useSpring, useTransform } from 'framer-motion';
+import {
+  m,
+  useSpring,
+  useTransform,
+  useReducedMotion,
+  LazyMotion,
+  domAnimation,
+} from 'framer-motion';
 import { useMouse } from '@hooks/use-mouse';
 import useEventListener from '@hooks/use-event-listener';
 import { useDock } from './dock';
 import styles from './dock-item.module.css';
-
-// TODO - if reduce motion disable animation
 
 export const DockItem = ({ children }) => {
   const SIZE = 48;
@@ -13,6 +18,7 @@ export const DockItem = ({ children }) => {
   const ref = useRef<HTMLDivElement>();
   const mouse = useMouse();
   const dock = useDock();
+  const reduceMotion = useReducedMotion();
   const [elCenterX, setElCenterX] = useState<number | null>(null);
 
   const dimension = useTransform(mouse.position.x, (mouseX) => {
@@ -47,21 +53,19 @@ export const DockItem = ({ children }) => {
   });
 
   return (
-    <motion.div
-      className={styles.item}
-      ref={ref}
-      style={{
-        width: spring,
-        height: spring,
-      }}
-    >
-      {children}
-    </motion.div>
+    <LazyMotion features={domAnimation}>
+      <m.div
+        className={styles.item}
+        ref={ref}
+        style={{
+          width: reduceMotion ? SIZE : spring,
+          height: reduceMotion ? SIZE : spring,
+        }}
+      >
+        {children}
+      </m.div>
+    </LazyMotion>
   );
 };
 
 export default DockItem;
-
-// TODO: set the length of the circle's stroke
-// const length = 2 * Math.PI * (val / 2);
-// ref.current.style.setProperty('--length', `${length}`);

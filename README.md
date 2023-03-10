@@ -32,6 +32,7 @@ Until CSS environment variables are a thing, the breakpoints are hardcoded. The 
 
 - [ ] Consolidate transition easings
 - [ ] Search for TODO's and remove them
+- [ ] Search for comments and remove them
 - [ ] top down review and cleanup of all files
 - [ ] Lighthouse audit and fix issues
 

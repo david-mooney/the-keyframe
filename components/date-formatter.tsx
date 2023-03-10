@@ -4,7 +4,7 @@ type Props = {
 
 const DateFormatter = ({ dateString }: Props) => {
   const formattedDate = new Intl.DateTimeFormat('en-GB', {
-    dateStyle: 'long',
+    dateStyle: 'medium',
   }).format(new Date(dateString));
 
   return <time dateTime={dateString}>{formattedDate}</time>;

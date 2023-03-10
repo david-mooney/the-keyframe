@@ -30,12 +30,16 @@ const PostPreview = ({
         <CoverImage priority={order === 0} title={title} src={coverImage} />
 
         <header className={styles.header}>
-          <Date dateString={date} />
+          <div className={styles.meta}>
+            <Date dateString={date} />
+            <span>{readTime}</span>
+          </div>
+
           <div className={styles.title}>
             <h2 className={styles.underline}>{title}</h2>
           </div>
+
           <p>{excerpt}</p>
-          <small>{readTime}</small>
 
           <div className={styles.tags}>
             {tags?.map((tag) => (
