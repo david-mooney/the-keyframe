@@ -1,5 +1,9 @@
 .item {
+  --tap-size: 50px;
+
   padding-right: var(--gap);
+  width: var(--tap-size);
+  height: var(--tap-size);
   will-change: contents;
 }
 

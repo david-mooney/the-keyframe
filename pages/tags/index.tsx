@@ -4,7 +4,6 @@ import Container from '@components/container';
 import Layout from '@components/layout';
 import Search from '@components/inputs/search';
 import { getAllPosts, getAllTags } from '@lib/api';
-import { CMS_NAME } from '@lib/constants';
 import Post from '@interfaces/post';
 
 type Props = {
@@ -29,7 +28,7 @@ export default function Index({ allPosts, allTags }: Props) {
   return (
     <Layout>
       <Head>
-        <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
+        <title>All Posts</title>
       </Head>
 
       <Container>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import useSubscribe, { Form } from '@hooks/use-subscribe';
 import styles from './subscribe.module.css';
@@ -61,13 +62,9 @@ const Subscribe = () => {
         </form>
 
         <div className={styles.footer}>
-          <a
-            className="underline"
-            rel="noopener noreferrer"
-            href="privacy#data-retention"
-          >
+          <Link className="underline" href="/privacy#data-retention">
             Privacy Policy
-          </a>
+          </Link>
         </div>
       </div>
     )

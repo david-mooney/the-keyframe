@@ -21,12 +21,12 @@
   .list {
     --column-count: 2;
 
-    column-gap: var(--spacing-8);
-    padding: var(--spacing-8);
+    column-gap: var(--spacing-10);
+    padding: var(--spacing-10);
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1600px) {
   .section {
     max-width: var(--max-width-xl);
   }
