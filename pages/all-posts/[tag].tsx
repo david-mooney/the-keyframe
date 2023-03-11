@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 import Container from '@components/container';
-import PostHeader from '@components/post-header';
+import PostHeader from '@components/post/post-header';
 import Layout from '@components/layout';
 import { getPostsByTag, getAllTags } from '@lib/api';
 import type PostType from '@interfaces/post';

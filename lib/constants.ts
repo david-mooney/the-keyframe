@@ -27,7 +27,7 @@ export const LINKS = {
     label: 'Home',
   },
   tags: {
-    href: '/tags',
+    href: '/all-posts',
     label: 'All posts',
   },
   email: {

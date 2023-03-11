@@ -1,8 +1,8 @@
-import Breadcrumbs from './breadcrumbs';
-import Avatar from './avatar';
-import DateFormatter from './date-formatter';
-import CoverImage from './cover-image';
+import Breadcrumbs from '@components/breadcrumbs';
+import DateFormatter from '@components/date-formatter';
+import CoverImage from '@components/cover-image';
 import PostTitle from './post-title';
+import Avatar from './avatar';
 import type Author from '@interfaces/author';
 import { LINKS } from '@lib/constants';
 
@@ -28,7 +28,7 @@ const PostHeader = ({
   if (tags.length) {
     tags.forEach((tag) =>
       breadcrumbs.push({
-        href: `/tags/${tag}`,
+        href: `/all-posts/${tag}`,
         label: tag,
       })
     );
