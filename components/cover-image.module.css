@@ -2,6 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: rgb(50 50 93 / 25%) 0 30px 60px -12px inset,
+    rgb(0 0 0 / 30%) 0 18px 36px -18px inset;
 
   /* border-radius: var(--border-radius-1); */
   background: var(--color-text-50);

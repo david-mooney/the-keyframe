@@ -15,7 +15,8 @@
   pointer-events: none;
 }
 
-:global(.tooltip-anchor):hover .tooltip {
+:global(.tooltip-anchor):hover .tooltip,
+:global(.tooltip-anchor):focus .tooltip {
   transition: var(--timing-faster) opacity var(--ease-in-out);
   transition-delay: var(--timing-fast);
   opacity: 1;

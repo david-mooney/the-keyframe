@@ -3,7 +3,6 @@ import {
   m,
   useSpring,
   useTransform,
-  useReducedMotion,
   LazyMotion,
   domAnimation,
 } from 'framer-motion';
@@ -18,7 +17,6 @@ export const DockItem = ({ children }) => {
   const ref = useRef<HTMLDivElement>();
   const mouse = useMouse();
   const dock = useDock();
-  const reduceMotion = useReducedMotion();
   const [elCenterX, setElCenterX] = useState<number | null>(null);
 
   const dimension = useTransform(mouse.position.x, (mouseX) => {
@@ -58,8 +56,8 @@ export const DockItem = ({ children }) => {
         className={styles.item}
         ref={ref}
         style={{
-          width: reduceMotion ? SIZE : spring,
-          height: reduceMotion ? SIZE : spring,
+          width: spring,
+          height: spring,
         }}
       >
         {children}
