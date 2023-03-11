@@ -17,6 +17,7 @@ export const useSubscribe = () => {
   const inputElement = useRef(null);
 
   async function subscribe(event) {
+    // TODO: debounce this
     event.preventDefault();
     setForm({ state: Form.Loading });
 
