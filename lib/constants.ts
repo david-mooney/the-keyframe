@@ -31,11 +31,11 @@ export const LINKS = {
     label: 'All posts',
   },
   email: {
-    label: 'Email',
     href: 'mailto:thekeyframe@gmail.com',
+    label: 'Email',
   },
   github: {
-    label: 'Github',
     href: 'https://github.com/david-mooney/the-keyframe',
+    label: 'Github',
   },
 };
