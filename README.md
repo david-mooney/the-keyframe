@@ -14,7 +14,6 @@ Until CSS environment variables are a thing, the breakpoints are hardcoded. The 
 
 ## TODO's
 
-- [ ] Add search
 - [ ] Add last updated date to posts at the end
 - [ ] Add "next" and "previous" links to posts
 - [ ] Add RSS feed
@@ -38,4 +37,5 @@ Until CSS environment variables are a thing, the breakpoints are hardcoded. The 
 
 ## Future ideas
 
+- [ ] Auto refresh posts-cache during local development
 - [ ] Swap React for Preact when it's compatible to reduce the bundle size

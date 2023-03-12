@@ -1,7 +1,7 @@
-import AllPosts from '@components/all-posts';
+import Head from 'next/head';
+import FeaturedPosts from '@components/featured-posts';
 import Layout from '@components/layout';
 import { getAllPosts } from '@lib/api';
-import Head from 'next/head';
 import { FIELDS } from '@lib/constants';
 import Post from '@interfaces/post';
 
@@ -16,7 +16,7 @@ export default function Index({ allPosts }: Props) {
         <title>The Keyframe</title>
       </Head>
 
-      <AllPosts posts={allPosts} />
+      <FeaturedPosts posts={allPosts} />
     </Layout>
   );
 }

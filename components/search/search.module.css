@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: 0 auto var(--spacing-8);
+  width: min(80%, var(--max-width-1));
+}
+
+.input {
+  appearance: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--color-text-25);
+  border-radius: 0;
+  background-color: transparent;
+  padding: var(--spacing-3);
+  padding-right: var(--spacing-8);
+  width: 100%;
+  text-align: left;
+  color: var(--color-text);
+  font-size: var(--font-size-2);
+}
+
+.input::-webkit-search-decoration,
+.input::-webkit-search-cancel-button,
+.input::-webkit-search-results-button,
+.input::-webkit-search-results-decoration {
+  display: none;
+}
+
+.input:-webkit-autofill {
+  box-shadow: 0 0 0 30px var(--color-background) inset;
+  -webkit-text-fill-color: var(--color-text);
+}
+
+.input::placeholder {
+  color: var(--color-text-50);
+  font-size: var(--font-size-2);
+}
+
+.input:hover,
+.input:focus {
+  border-color: var(--color-text);
+}
+
+.icon {
+  display: flex;
+  position: absolute;
+  right: var(--spacing-4);
+  bottom: var(--spacing-4);
+  transition: var(--timing-faster) color var(--ease-out);
+  z-index: 99;
+  color: var(--color-text-50);
+  font-size: var(--font-size-3);
+  pointer-events: none;
+}
+
+.icon[data-active='true'] {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.input:focus + .icon {
+  color: var(--color-text);
+}

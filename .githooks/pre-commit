@@ -20,4 +20,8 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
+echo "Creating new posts cache..."
+
+npm run cache-posts && git add posts-cache.js
+
 echo "Pre-commit hooks complete."

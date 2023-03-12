@@ -1,31 +1,35 @@
-import type Post from '@interfaces/post';
-import PostPreview from '@components/post-preview';
-import styles from '@components/all-posts.module.css';
+import Link from 'next/link';
+import Post from '@interfaces/post';
+import { useSearch } from '@hooks/use-search';
+import styles from './container.module.css';
 
+// TODO framer motion this, make the search results animate in/out, something cool
 type Props = {
   posts: Post[];
 };
 
 const AllPosts = ({ posts }: Props) => {
+  let postsToDisplay = posts;
+  const { results, query } = useSearch();
+
+  if (query) {
+    postsToDisplay = results.map((result) => result.item);
+  }
+
+  if (postsToDisplay.length === 0) {
+    return <p>No posts found.</p>;
+  }
+
   return (
-    <section className={styles.section}>
-      <ol className={styles.list}>
-        {posts.map((post, index) => (
-          <li key={post.slug}>
-            <PostPreview
-              order={index}
-              title={post.title}
-              excerpt={post.excerpt}
-              coverImage={post.coverImage}
-              date={post.date}
-              slug={post.slug}
-              readTime={post.readTime}
-              tags={post.tags}
-            />
-          </li>
-        ))}
-      </ol>
-    </section>
+    <div className={styles.container}>
+      {postsToDisplay.map((post) => (
+        <div key={post.slug}>
+          <h2>{post.title}</h2>
+          <p>{post.excerpt}</p>
+          <Link href={`/posts/${post.slug}`}>Read More</Link>
+        </div>
+      ))}
+    </div>
   );
 };
 

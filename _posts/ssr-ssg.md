@@ -3,7 +3,7 @@ title: 'SSR vs. SSG'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
 coverImage: '/assets/blog/ssr/demo.png'
 date: '2023-02-22T05:35:07.322Z'
-tags: ['next-js', 'react']
+tags: ['next-js', 'react', 'typescript']
 author:
   name: David Mooney
   picture: '/assets/blog/authors/dmooney.png'
