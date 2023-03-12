@@ -5,19 +5,25 @@ const matter = require('gray-matter');
 function postData() {
   const postsDirectory = path.join(process.cwd(), '_posts');
   const fileNames = fs.readdirSync(postsDirectory);
-  const posts = fileNames.map((fileName) => {
-    const slug = fileName.replace(/\.md$/, '');
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const matterResult = matter(fileContents);
+  const posts = fileNames
+    .map((fileName) => {
+      const slug = fileName.replace(/\.md$/, '');
+      const fullPath = path.join(postsDirectory, fileName);
+      const fileContents = fs.readFileSync(fullPath, 'utf8');
+      const matterResult = matter(fileContents);
 
-    return {
-      slug,
-      title: matterResult.data.title,
-      excerpt: matterResult.data.excerpt,
-      tags: matterResult.data.tags,
-    };
-  });
+      return {
+        slug,
+        title: matterResult.data.title,
+        excerpt: matterResult.data.excerpt,
+        tags: matterResult.data.tags,
+        date: matterResult.data.date,
+      };
+    })
+    .sort((a, b) => {
+      return new Date(b.date) - new Date(a.date);
+    });
+
   return `export const posts = ${JSON.stringify(posts)}`;
 }
 

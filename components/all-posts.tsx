@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import Post from '@interfaces/post';
+import DateFormatter from '@components/date-formatter';
 import { useSearch } from '@hooks/use-search';
-import styles from './container.module.css';
+import styles from './all-posts.module.css';
 
 // TODO framer motion this, make the search results animate in/out, something cool
 
@@ -24,7 +25,12 @@ const AllPosts = ({ posts }: Props) => {
   return (
     <div className={styles.container}>
       {postsToDisplay.map((post) => (
-        <div key={post.slug}>
+        <div key={post.slug} className={styles.post}>
+          <div className={styles.timeline}>
+            {post.date && (
+              <DateFormatter dateString={post.date} dateStyle="short" />
+            )}
+          </div>
           <h2>{post.title}</h2>
           <p>{post.excerpt}</p>
           <Link href={`/posts/${post.slug}`}>Read More</Link>
