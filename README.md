@@ -34,6 +34,7 @@ Until CSS environment variables are a thing, the breakpoints are hardcoded. The 
 - [ ] Search for comments and remove them
 - [ ] top down review and cleanup of all files
 - [ ] Lighthouse audit and fix issues
+- [ ] Add more interfaces
 
 ## Future ideas
 

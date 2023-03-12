@@ -4,6 +4,7 @@ import { useSearch } from '@hooks/use-search';
 import styles from './container.module.css';
 
 // TODO framer motion this, make the search results animate in/out, something cool
+
 type Props = {
   posts: Post[];
 };
@@ -12,11 +13,11 @@ const AllPosts = ({ posts }: Props) => {
   let postsToDisplay = posts;
   const { results, query } = useSearch();
 
-  if (query) {
+  if (query.length && results?.length) {
     postsToDisplay = results.map((result) => result.item);
   }
 
-  if (postsToDisplay.length === 0) {
+  if (results && !results?.length) {
     return <p>No posts found.</p>;
   }
 
