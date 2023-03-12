@@ -14,15 +14,17 @@ export const useSearch = () => {
 
 export const SearchProvider = ({ children }) => {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState(null);
 
   useEffect(() => {
     if (query.length > 0) {
       fetch(`/api/search?q=${query}`)
         .then((res) => res.json())
-        .then((data) => setResults(data));
+        .then((data) => {
+          setResults(data);
+        });
     } else {
-      setResults([]);
+      setResults(null);
     }
   }, [query]);
 
