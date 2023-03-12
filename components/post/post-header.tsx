@@ -28,7 +28,7 @@ const PostHeader = ({
   if (tags.length) {
     tags.forEach((tag) =>
       breadcrumbs.push({
-        href: `/all-posts/${tag}`,
+        href: `/all-posts/?q=${tag}`,
         label: tag,
       })
     );

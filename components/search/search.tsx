@@ -1,11 +1,9 @@
+import { useRouter } from 'next/router';
 import React, { useEffect, useRef } from 'react';
 import { BsSearch, BsFillXCircleFill } from 'react-icons/bs';
 import { useSearch } from '@hooks/use-search';
 import TagFilters from './tag-filters';
 import styles from './search.module.css';
-
-// TODO - search should highlight keywords in the post
-// TODO - debounce the search input handler
 
 type Props = {
   tags: string[];
@@ -13,7 +11,13 @@ type Props = {
 
 const Search = ({ tags }: Props) => {
   const ref = useRef<HTMLInputElement>();
+  const router = useRouter();
   const { query, setQuery } = useSearch();
+
+  useEffect(() => {
+    if (!router.isReady) return;
+    setQuery((router.query.q as string) || '');
+  }, [router.isReady, router.query, setQuery]);
 
   useEffect(() => {
     document.addEventListener('keyup', (event) => {
