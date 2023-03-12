@@ -30,6 +30,7 @@ export default function handler(
   });
 
   const fuse = new Fuse(postsWithTagsInQuery, {
+    includeScore: true,
     keys: ['title', 'excerpt', 'tags'],
   });
 

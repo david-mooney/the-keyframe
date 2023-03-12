@@ -14,14 +14,14 @@ Until CSS environment variables are a thing, the breakpoints are hardcoded. The 
 
 ## TODO's
 
+- [ ] Add MDX support (?)
+- [ ] Add scroll tracker with section headings
 - [ ] Add last updated date to posts at the end
 - [ ] Add "next" and "previous" links to posts
 - [ ] Add RSS feed
-- [ ] Add MDX support (?)
 - [ ] Add sitemap
 - [ ] Add "frame" animation behind logo
 - [ ] Add form confetti
-- [ ] Add scroll tracker with section headings
 - [ ] Add "back to top" button
 - [ ] get .underline class working with theme toggle transition
 - [ ] Consolidate circle button into more generic button component, make it scale with container
@@ -38,5 +38,5 @@ Until CSS environment variables are a thing, the breakpoints are hardcoded. The 
 ## Future ideas
 
 - [ ] Auto refresh posts-cache during local development
-- [ ] search can highlight keywords in the post using the `mark` tag and FuseJs includeMatches option
+- [ ] search should highlight keywords in the post using the `mark` tag and FuseJs includeMatches option
 - [ ] Swap React for Preact when it's compatible to reduce the bundle size
