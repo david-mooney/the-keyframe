@@ -1,6 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
+const DayJs = require('dayjs');
+
+function formatDate(date) {
+  const dateToFormat = new Date(date);
+  return DayJs(dateToFormat).format('DD MMM YYYY');
+}
 
 function postData() {
   const postsDirectory = path.join(process.cwd(), '_posts');
@@ -17,7 +23,7 @@ function postData() {
         title: matterResult.data.title,
         excerpt: matterResult.data.excerpt,
         tags: matterResult.data.tags,
-        date: matterResult.data.date,
+        date: formatDate(matterResult.data.date),
       };
     })
     .sort((a, b) => {
@@ -29,8 +35,9 @@ function postData() {
 
 fs.writeFile('posts-cache.js', postData(), function (error) {
   if (error) {
-    console.log(error);
+    console.error('Posts cache creation failed', error);
+    return;
   }
 
-  console.log('Posts cache created successfully');
+  console.info('Posts cache created successfully');
 });

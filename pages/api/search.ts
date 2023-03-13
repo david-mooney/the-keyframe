@@ -3,7 +3,7 @@ import Fuse from 'fuse.js';
 import { posts } from '../../posts-cache';
 
 const allTags = posts.reduce((acc, post) => {
-  return [...acc, ...post.tags];
+  return [...new Set([...acc, ...post.tags])];
 }, [] as string[]);
 
 type Data = {

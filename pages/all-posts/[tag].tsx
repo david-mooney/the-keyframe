@@ -51,16 +51,7 @@ type Params = {
 };
 
 export async function getStaticProps({ params }: Params) {
-  // TODO requesting each field sucks, make a function that returns all fields or preview fields
-  const posts = getPostsByTag(params.tag, [
-    'title',
-    'date',
-    'author',
-    'slug',
-    'ogImage',
-    'coverImage',
-    'tags',
-  ]);
+  const posts = getPostsByTag(params.tag);
 
   return {
     props: {

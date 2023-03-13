@@ -1,11 +1,17 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
-import DayJs from 'dayjs';
-
-// TODO clean up these messy endpoints
+import PostFields from '@interfaces/post-fields';
+import { FIELDS } from '@lib/constants';
+import formatDate from '@lib/format-date';
 
 const postsDirectory = join(process.cwd(), '_posts');
+
+const sortByDate = (current, next) => (current.date > next.date ? -1 : 1);
+
+const getAllPostSlugs = () => {
+  return fs.readdirSync(postsDirectory);
+};
 
 const calculateTimeToRead = (content: string) => {
   const wordsPerMinute = 225;
@@ -13,23 +19,18 @@ const calculateTimeToRead = (content: string) => {
   return `${Math.ceil(numberOfWords / wordsPerMinute)} minute read`;
 };
 
-export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory);
-}
-
 export function getPostBySlug(slug: string, fields: string[] = []) {
   const realSlug = slug.replace(/\.md$/, '');
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
-
-  type Items = {
-    [key: string]: string;
-  };
-
-  const items: Items = {};
+  const items: PostFields = {};
 
   fields.forEach((field) => {
+    if (typeof data[field] !== 'undefined') {
+      items[field] = data[field];
+    }
+
     if (field === 'slug') {
       items[field] = realSlug;
     }
@@ -43,53 +44,44 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     }
 
     if (field === 'date') {
-      const date = new Date(data[field]);
-      items[field] = DayJs(date).format('DD MMM YYYY');
-      return;
-    }
-
-    if (typeof data[field] !== 'undefined') {
-      items[field] = data[field];
+      items[field] = formatDate(data[field]);
     }
   });
 
   return items;
 }
 
-export function getPostsByTag(tag: string, fields: string[] = []) {
-  const slugs = getPostSlugs();
-  const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    .filter((post) => post.tags.includes(tag))
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-
-  return posts;
+export function getSinglePost(slug: string) {
+  return getPostBySlug(slug, FIELDS.post);
 }
 
-export function getAllPosts(fields: string[] = []) {
-  const slugs = getPostSlugs();
-  const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+export function getAllPosts(fields: string[] = FIELDS.post) {
+  const slugs = getAllPostSlugs();
+  return slugs.map((slug) => getPostBySlug(slug, fields)).sort(sortByDate);
+}
 
-  return posts;
+export function getAllPostPreviews() {
+  return getAllPosts(FIELDS.preview);
+}
+
+export function getPostsByTag(tag: string) {
+  const slugs = getAllPostSlugs();
+
+  return slugs
+    .map((slug) => getPostBySlug(slug, FIELDS.preview))
+    .filter((post) => post.tags.includes(tag))
+    .sort(sortByDate);
 }
 
 export function getAllTags() {
-  const slugs = getPostSlugs();
-  const tags = slugs
-    .map((slug) => getPostBySlug(slug, ['tags']))
-    .reduce((acc, post) => {
-      if (Array.isArray(post.tags)) {
-        post.tags.forEach((tag) => {
-          if (!acc.includes(tag)) {
-            acc.push(tag);
-          }
-        });
-      }
+  const slugs = getAllPostSlugs();
 
-      return acc;
-    }, []);
+  const getUniqueTags = (tags, post) => {
+    const uniqueTags = [...new Set([...tags, ...post.tags])];
+    return uniqueTags;
+  };
 
-  return tags;
+  return slugs
+    .map((slug) => getPostBySlug(slug, FIELDS.preview))
+    .reduce(getUniqueTags, []);
 }
