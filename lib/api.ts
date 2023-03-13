@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
+import DayJs from 'dayjs';
 
 // TODO clean up these messy endpoints
 
@@ -39,6 +40,12 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 
     if (field === 'readTime') {
       items[field] = calculateTimeToRead(content);
+    }
+
+    if (field === 'date') {
+      const date = new Date(data[field]);
+      items[field] = DayJs(date).format('DD MMM YYYY');
+      return;
     }
 
     if (typeof data[field] !== 'undefined') {

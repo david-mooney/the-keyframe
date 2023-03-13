@@ -24,6 +24,7 @@ export default function Index({ allPosts }: Props) {
 export const getStaticProps = async () => {
   const allPosts = getAllPosts(FIELDS.preview);
 
+  console.log({ allPosts });
   return {
     props: { allPosts },
   };

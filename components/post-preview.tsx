@@ -1,4 +1,3 @@
-import Date from './date-formatter';
 import CoverImage from './cover-image';
 import Link from 'next/link';
 import styles from './post-preview.module.css';
@@ -31,7 +30,7 @@ const PostPreview = ({
 
         <header className={styles.header}>
           <div className={styles.meta}>
-            <Date dateString={date} />
+            <span>{date}</span>
             <span>{readTime}</span>
           </div>
 
