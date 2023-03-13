@@ -1,5 +1,4 @@
 import Breadcrumbs from '@components/breadcrumbs';
-import DateFormatter from '@components/date-formatter';
 import CoverImage from '@components/cover-image';
 import PostTitle from './post-title';
 import Avatar from './avatar';
@@ -46,9 +45,7 @@ const PostHeader = ({
         <CoverImage title={title} src={coverImage} />
       </div>
       <div className="max-w-2xl mx-auto">
-        <div className="mb-6 text-lg">
-          <DateFormatter dateString={date} />
-        </div>
+        <div className="mb-6 text-lg">{date}</div>
       </div>
     </>
   );
