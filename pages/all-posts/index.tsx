@@ -3,10 +3,8 @@ import Container from '@components/container';
 import Layout from '@components/layout';
 import Search from '@components/search/search';
 import AllPosts from '@components/all-posts';
-
 import { SearchProvider } from '@hooks/use-search';
-
-import { getAllPosts, getAllTags } from '@lib/api';
+import { getAllPostPreviews, getAllTags } from '@lib/api';
 import Post from '@interfaces/post';
 
 type Props = {
@@ -33,16 +31,7 @@ export default function Index({ allPosts, allTags }: Props) {
 
 export const getStaticProps = async () => {
   const allTags = getAllTags();
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-    'readTime',
-    'tags',
-  ]);
+  const allPosts = getAllPostPreviews();
 
   return {
     props: {

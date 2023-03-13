@@ -6,7 +6,7 @@ import Container from '@components/container';
 import PostBody from '@components/post/post-body';
 import PostHeader from '@components/post/post-header';
 import PostTitle from '@components/post/post-title';
-import { getPostBySlug, getAllPosts } from '@lib/api';
+import { getSinglePost, getAllPosts } from '@lib/api';
 import markdownToHtml from '@lib/markdownToHtml';
 import type PostType from '@interfaces/post';
 
@@ -60,17 +60,7 @@ type Params = {
 };
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
-    'title',
-    'date',
-    'slug',
-    'author',
-    'content',
-    'ogImage',
-    'coverImage',
-    'readTime',
-    'tags',
-  ]);
+  const post = getSinglePost(params.slug);
   const content = await markdownToHtml(post.content || '');
 
   return {
@@ -87,13 +77,11 @@ export async function getStaticPaths() {
   const posts = getAllPosts(['slug']);
 
   return {
-    paths: posts.map((post) => {
-      return {
-        params: {
-          slug: post.slug,
-        },
-      };
-    }),
+    paths: posts.map(({ slug }) => ({
+      params: {
+        slug,
+      },
+    })),
     fallback: false,
   };
 }

@@ -18,7 +18,17 @@ export const FIELDS = {
     'readTime',
     'tags',
   ],
-  post: ['title', 'date', 'author', 'coverImage', 'readTime', 'tags'],
+  post: [
+    'title',
+    'author',
+    'content',
+    'date',
+    'slug',
+    'ogImage',
+    'coverImage',
+    'readTime',
+    'tags',
+  ],
 };
 
 export const LINKS = {

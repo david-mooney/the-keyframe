@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import FeaturedPosts from '@components/featured-posts';
 import Layout from '@components/layout';
-import { getAllPosts } from '@lib/api';
-import { FIELDS } from '@lib/constants';
+import { getAllPostPreviews } from '@lib/api';
 import Post from '@interfaces/post';
 
 type Props = {
@@ -22,9 +21,8 @@ export default function Index({ allPosts }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(FIELDS.preview);
+  const allPosts = getAllPostPreviews();
 
-  console.log({ allPosts });
   return {
     props: { allPosts },
   };
