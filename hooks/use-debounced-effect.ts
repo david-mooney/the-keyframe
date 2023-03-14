@@ -1,9 +1,15 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 const useDebouncedEffect = (effect: Function, deps: any[], delay: number) => {
-  useEffect(() => {
-    const handler = setTimeout(() => effect(), delay);
+  const firstRun = useRef(true);
 
+  useEffect(() => {
+    if (firstRun.current) {
+      firstRun.current = false;
+      return effect();
+    }
+
+    const handler = setTimeout(() => effect(), delay);
     return () => clearTimeout(handler);
   }, [...(deps || []), delay]);
 };

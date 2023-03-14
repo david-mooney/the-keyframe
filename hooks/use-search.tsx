@@ -1,20 +1,7 @@
 import { useRouter } from 'next/router';
-import React, { useState, useContext } from 'react';
-import useDebouncedEffect from './use-debounced-effect';
-
-export const setQueryParam = (query: string, route) => {
-  const url = new URL(window.location.href);
-  const searchParams = new URLSearchParams(url.search);
-
-  if (query.length > 0) {
-    searchParams.set('q', query);
-  } else {
-    searchParams.delete('q');
-  }
-
-  url.search = searchParams.toString();
-  route.push(url.toString(), undefined, { shallow: true });
-};
+import React, { useEffect, useState, useContext } from 'react';
+import setQueryParam from '@lib/set-query-param';
+import useDebouncedEffect from '@hooks/use-debounced-effect';
 
 type SearchProps = {
   query: string;
