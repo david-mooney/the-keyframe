@@ -28,8 +28,8 @@ export const useSearch = () => {
   return useContext(SearchContext);
 };
 
-export const SearchProvider = ({ children }) => {
-  const [query, setQuery] = useState('');
+export const SearchProvider = ({ children, initialQuery }) => {
+  const [query, setQuery] = useState(initialQuery || '');
   const [results, setResults] = useState(null);
   const router = useRouter();
 
