@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import PostFields from '@interfaces/post-fields';
 import { FIELDS } from '@lib/constants';
 import formatDate from '@lib/format-date';
+// import Fuse from 'fuse.js';
 
 const postsDirectory = join(process.cwd(), '_posts');
 
@@ -60,7 +61,13 @@ export function getAllPosts(fields: string[] = FIELDS.post) {
   return slugs.map((slug) => getPostBySlug(slug, fields)).sort(sortByDate);
 }
 
-export function getAllPostPreviews() {
+export function getAllPostPreviews(query: string) {
+  if (query) {
+    // move the search logic to the server
+    // filter out tags from the query
+    // then search the remaining tagged posts
+  }
+
   return getAllPosts(FIELDS.preview);
 }
 

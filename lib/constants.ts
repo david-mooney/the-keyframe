@@ -36,9 +36,13 @@ export const LINKS = {
     href: '/',
     label: 'Home',
   },
-  tags: {
-    href: '/all-posts',
+  posts: {
+    href: '/posts',
     label: 'All posts',
+  },
+  portfolio: {
+    href: '/portfolio',
+    label: 'Portfolio',
   },
   email: {
     href: 'mailto:thekeyframe@gmail.com',

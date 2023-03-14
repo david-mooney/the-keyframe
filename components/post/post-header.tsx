@@ -22,12 +22,12 @@ const PostHeader = ({
   readTime,
   tags,
 }: Props) => {
-  const breadcrumbs = [LINKS.home, LINKS.tags];
+  const breadcrumbs = [LINKS.home, LINKS.posts];
 
   if (tags.length) {
     tags.forEach((tag) =>
       breadcrumbs.push({
-        href: `/all-posts/?q=${tag}`,
+        href: `/posts/?q=${tag}`,
         label: tag,
       })
     );

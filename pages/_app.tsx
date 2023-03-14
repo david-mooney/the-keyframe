@@ -4,6 +4,7 @@ import {
   BsHouseFill,
   BsGithub,
   BsSearch,
+  BsFillPaletteFill,
   BsEnvelopeFill,
 } from 'react-icons/bs';
 
@@ -42,8 +43,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <CircleLink {...LINKS.home}>
           <BsHouseFill size="50%" />
         </CircleLink>
-        <CircleLink {...LINKS.tags}>
+        <CircleLink {...LINKS.posts}>
           <BsSearch size="50%" />
+        </CircleLink>
+        <CircleLink {...LINKS.portfolio}>
+          <BsFillPaletteFill size="50%" />
         </CircleLink>
         <CircleLink {...LINKS.email}>
           <BsEnvelopeFill size="50%" />

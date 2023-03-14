@@ -10,14 +10,5 @@ module.exports = withBundleAnalyzer(
     swcMinify: true,
     productionBrowserSourceMaps: true,
     publicRuntimeConfig: { version },
-    async redirects() {
-      return [
-        {
-          source: '/posts', // TODO should this be a page?
-          destination: '/',
-          permanent: true,
-        },
-      ];
-    },
   })
 );
