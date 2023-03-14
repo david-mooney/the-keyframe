@@ -9,21 +9,18 @@ const TagFilters = ({ tags }) => {
   const handleTagClick = (tag) => {
     let tagQuery = '';
 
-    if (query.toLowerCase().includes(tag)) {
-      tagQuery = query.replace(tag, '');
-    } else {
-      tagQuery = query ? `${query} ${tag}` : tag;
-    }
+    tagQuery = query.toLowerCase().includes(tag)
+      ? query.replace(tag, '')
+      : query
+      ? `${query} ${tag}`
+      : tag;
 
     setQuery(tagQuery.trim());
   };
 
-  const tagNotFound = (tag) => {
-    if (query.toLowerCase().includes(tag) || !results?.length) {
-      return false;
-    }
-
-    return results.every((result) => !result.tags.includes(tag));
+  const isDisabled = (tag) => {
+    if (query.toLowerCase().includes(tag)) return false;
+    return results?.every((result) => !result.tags.includes(tag));
   };
 
   return (
@@ -34,7 +31,7 @@ const TagFilters = ({ tags }) => {
           value={tag}
           callback={handleTagClick}
           checked={query.toLowerCase().includes(tag)}
-          disabled={tagNotFound(tag)}
+          disabled={isDisabled(tag)}
         />
       ))}
     </div>
