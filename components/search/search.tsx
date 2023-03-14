@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import React, { useEffect, useRef } from 'react';
 import { BsSearch, BsFillXCircleFill } from 'react-icons/bs';
 import { useSearch } from '@hooks/use-search';
@@ -11,13 +10,7 @@ type Props = {
 
 const Search = ({ tags }: Props) => {
   const ref = useRef<HTMLInputElement>();
-  const router = useRouter();
   const { query, setQuery } = useSearch();
-
-  useEffect(() => {
-    if (!router.isReady) return;
-    setQuery((router.query.q as string) || '');
-  }, [router.isReady, router.query, setQuery]);
 
   useEffect(() => {
     document.addEventListener('keyup', (event) => {

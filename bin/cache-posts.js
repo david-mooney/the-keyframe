@@ -33,7 +33,7 @@ function postData() {
   return `export const posts = ${JSON.stringify(posts)}`;
 }
 
-fs.writeFile('posts-cache.js', postData(), function (error) {
+fs.writeFile('cache/posts-cache.js', postData(), function (error) {
   if (error) {
     console.error('Posts cache creation failed', error);
     return;

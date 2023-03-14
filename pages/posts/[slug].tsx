@@ -7,7 +7,7 @@ import PostBody from '@components/post/post-body';
 import PostHeader from '@components/post/post-header';
 import PostTitle from '@components/post/post-title';
 import { getSinglePost, getAllPosts } from '@lib/api';
-import markdownToHtml from '@lib/markdownToHtml';
+import markdownToHtml from '@lib/markdown-to-html';
 import type PostType from '@interfaces/post';
 
 type Props = {

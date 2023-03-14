@@ -23,7 +23,7 @@ const TagFilters = ({ tags }) => {
       return false;
     }
 
-    return results.every((result) => !result.item.tags.includes(tag));
+    return results.every((result) => !result.tags.includes(tag));
   };
 
   return (

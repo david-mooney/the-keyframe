@@ -14,7 +14,7 @@ const AllPosts = ({ posts }: Props) => {
   const { results, query } = useSearch();
 
   if (query.length && results?.length) {
-    postsToDisplay = results.map((result) => result.item);
+    postsToDisplay = results;
   }
 
   if (results && !results?.length) {

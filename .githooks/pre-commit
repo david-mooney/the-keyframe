@@ -22,6 +22,6 @@ fi
 
 echo "Creating new posts cache..."
 
-npm run cache-posts && git add posts-cache.js
+npm run cache-posts && git add cache/posts-cache.js
 
 echo "Pre-commit hooks complete."

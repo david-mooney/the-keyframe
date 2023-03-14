@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import PostFields from '@interfaces/post-fields';
 import { FIELDS } from '@lib/constants';
 import formatDate from '@lib/format-date';
-// import Fuse from 'fuse.js';
+import fuzzySearch from './fuzzy-search';
 
 const postsDirectory = join(process.cwd(), '_posts');
 
@@ -63,9 +63,8 @@ export function getAllPosts(fields: string[] = FIELDS.post) {
 
 export function getAllPostPreviews(query: string) {
   if (query) {
-    // move the search logic to the server
-    // filter out tags from the query
-    // then search the remaining tagged posts
+    const results = fuzzySearch(query);
+    return results;
   }
 
   return getAllPosts(FIELDS.preview);
@@ -84,8 +83,7 @@ export function getAllTags() {
   const slugs = getAllPostSlugs();
 
   const getUniqueTags = (tags, post) => {
-    const uniqueTags = [...new Set([...tags, ...post.tags])];
-    return uniqueTags;
+    return [...new Set([...tags, ...post.tags])];
   };
 
   return slugs
