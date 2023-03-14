@@ -8,11 +8,11 @@ import { getAllPostPreviews, getAllTags } from '@lib/api';
 import Post from '@interfaces/post';
 
 type Props = {
-  allPosts: Post[];
+  posts: Post[];
   allTags: string[];
 };
 
-export default function Index({ allPosts, allTags }: Props) {
+export default function Index({ posts, allTags }: Props) {
   return (
     <Layout>
       <Head>
@@ -22,20 +22,20 @@ export default function Index({ allPosts, allTags }: Props) {
       <Container>
         <SearchProvider>
           <Search tags={allTags} />
-          <AllPosts posts={allPosts} />
+          <AllPosts posts={posts} />
         </SearchProvider>
       </Container>
     </Layout>
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async ({ query }) => {
   const allTags = getAllTags();
-  const allPosts = getAllPostPreviews();
+  const posts = getAllPostPreviews(query?.q);
 
   return {
     props: {
-      allPosts,
+      posts,
       allTags,
     },
   };
