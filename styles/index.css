@@ -19,7 +19,7 @@ main {
 
 html {
   text-rendering: optimizelegibility;
-  line-height: var(--line-height-root); /* TODO ? */
+  line-height: var(--line-height-root);
   font-size: var(--font-size-1);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,8 +41,6 @@ a:not([class]) {
   border-bottom: var(--border-2);
   text-decoration: none;
   color: var(--color-brand);
-
-  /* TODO color: var(--color-text); */
 }
 
 a:not([class]):hover,
