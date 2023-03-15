@@ -62,13 +62,7 @@ export function getAllPosts(fields: string[] = FIELDS.post) {
 }
 
 export function getAllPostPreviews(query?: string) {
-  // TODO: clean this up
-  let results = null;
-
-  if (query) {
-    results = fuzzySearch(query);
-  }
-
+  const results = query ? fuzzySearch(query) : [];
   return [getAllPosts(FIELDS.preview), results];
 }
 
