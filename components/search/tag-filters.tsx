@@ -19,22 +19,25 @@ const TagFilters = ({ tags }) => {
   };
 
   const isDisabled = (tag) => {
-    if (query.toLowerCase().includes(tag)) return false;
     return results?.every((result) => !result.tags.includes(tag));
   };
 
   return (
-    <div className={styles.container}>
-      {tags.map((tag) => (
-        <TagFilter
-          key={tag}
-          value={tag}
-          callback={handleTagClick}
-          checked={query.toLowerCase().includes(tag)}
-          disabled={isDisabled(tag)}
-        />
-      ))}
-    </div>
+    <>
+      <div>Filter by tag</div>
+
+      <div className={styles.container}>
+        {tags.map((tag) => (
+          <TagFilter
+            key={tag}
+            value={tag}
+            callback={handleTagClick}
+            checked={query.toLowerCase().includes(tag)}
+            disabled={isDisabled(tag)}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 

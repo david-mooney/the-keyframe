@@ -21,7 +21,7 @@ export default function Index({ allPosts }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPostPreviews('');
+  const [allPosts] = getAllPostPreviews();
 
   return {
     props: { allPosts },

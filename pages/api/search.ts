@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import fuzzySearch from '../../lib/fuzzy-search';
+import fuzzySearch from '@lib/fuzzy-search';
 
 type SearchResponse = {
   results: string[];
@@ -15,7 +15,6 @@ export default function handler(
     return;
   }
 
-  // TODO: await needed?
   const results = fuzzySearch(request.query.q as string);
 
   response.statusCode = 200;

@@ -15,9 +15,9 @@ export const useSearch = () => {
   return useContext(SearchContext);
 };
 
-export const SearchProvider = ({ children, initialQuery }) => {
+export const SearchProvider = ({ children, initialResults, initialQuery }) => {
   const [query, setQuery] = useState(initialQuery || '');
-  const [results, setResults] = useState(null);
+  const [results, setResults] = useState(initialResults || null);
   const router = useRouter();
 
   useDebouncedEffect(
@@ -35,7 +35,7 @@ export const SearchProvider = ({ children, initialQuery }) => {
       }
     },
     [query],
-    200
+    170
   );
 
   return (
