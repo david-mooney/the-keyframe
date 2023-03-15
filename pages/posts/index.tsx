@@ -9,13 +9,19 @@ import Post from '@interfaces/post';
 
 type Props = {
   posts: Post[];
+  initialResults: Post[] | null;
   allTags: string[];
   query?: {
     q: string;
   };
 };
 
-export default function Index({ posts, allTags, query }: Props) {
+export default function Index({
+  posts,
+  allTags,
+  query,
+  initialResults,
+}: Props) {
   return (
     <Layout>
       <Head>
@@ -23,7 +29,7 @@ export default function Index({ posts, allTags, query }: Props) {
       </Head>
 
       <Container>
-        <SearchProvider initialQuery={query?.q}>
+        <SearchProvider initialResults={initialResults} initialQuery={query?.q}>
           <Search tags={allTags} />
           <AllPosts posts={posts} />
         </SearchProvider>
@@ -34,11 +40,12 @@ export default function Index({ posts, allTags, query }: Props) {
 
 export const getServerSideProps = async ({ query }) => {
   const allTags = getAllTags();
-  const posts = getAllPostPreviews(query?.q);
+  const [posts, initialResults] = getAllPostPreviews(query?.q);
 
   return {
     props: {
       posts,
+      initialResults,
       allTags,
       query,
     },

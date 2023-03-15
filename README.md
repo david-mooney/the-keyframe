@@ -25,8 +25,6 @@ Until CSS environment variables are a thing, the breakpoints are hardcoded. The 
 - [ ] Add "back to top" button
 - [ ] Get .underline class working with theme toggle transition
 - [ ] Consolidate circle button into more generic button component, make it scale with container
-- [ ] Test fast-fuzzy to replace fuse.js
-- [ ] Fix flashing disabled state on filters page if there's a query on load
 
 ## Cleanup
 
@@ -40,6 +38,6 @@ Until CSS environment variables are a thing, the breakpoints are hardcoded. The 
 ## Future ideas
 
 - [ ] Auto refresh posts-cache during local development
-- [ ] search should highlight keywords in the post using the `mark` tag and FuseJs includeMatches option
+- [ ] search should highlight keywords in the post using the `mark` tag
 - [ ] Swap React for Preact when it's compatible to reduce the bundle size
 - [ ] Netlify functions can have a slow cold-start, an alternative might be needed

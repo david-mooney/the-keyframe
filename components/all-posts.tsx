@@ -10,20 +10,15 @@ type Props = {
 };
 
 const AllPosts = ({ posts }: Props) => {
-  let postsToDisplay = posts;
-  const { results, query } = useSearch();
+  const { results } = useSearch();
 
-  if (query.length && results?.length) {
-    postsToDisplay = results;
-  }
-
-  if (results && !results?.length) {
+  if (results && !results.length) {
     return <p>No posts found.</p>;
   }
 
   return (
     <div className={styles.container}>
-      {postsToDisplay.map((post) => (
+      {(results || posts).map((post) => (
         <div key={post.slug} className={styles.post}>
           <div className={styles.timeline}>
             {post.date && <span>{post.date}</span>}
@@ -31,6 +26,12 @@ const AllPosts = ({ posts }: Props) => {
           <h2>{post.title}</h2>
           <p>{post.excerpt}</p>
           <Link href={`/posts/${post.slug}`}>Read More</Link>
+
+          <div>
+            {post?.tags.map((tag) => (
+              <span key={tag}>{tag} </span>
+            ))}
+          </div>
         </div>
       ))}
     </div>
