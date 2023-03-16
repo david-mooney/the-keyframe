@@ -24,7 +24,7 @@ Until CSS environment variables are a thing, the breakpoints are hardcoded. The 
 - [ ] Add form confetti
 - [ ] Add "back to top" button
 - [ ] Get .underline class working with theme toggle transition
-- [ ] Consolidate circle button into more generic button component, make it scale with container
+- [ ] Consolidate circle button into more generic button component
 
 ## Cleanup
 

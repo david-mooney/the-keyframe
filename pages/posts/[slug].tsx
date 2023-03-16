@@ -8,17 +8,14 @@ import PostHeader from '@components/post/post-header';
 import PostTitle from '@components/post/post-title';
 import { getSinglePost, getAllPosts } from '@lib/api';
 import markdownToHtml from '@lib/markdown-to-html';
-import type PostType from '@interfaces/post';
+import PostType from '@interfaces/post';
 
 type Props = {
   post: PostType;
-  morePosts: PostType[];
   preview?: boolean;
 };
 
-// TODO - fix this eslint error
-/* eslint-disable @typescript-eslint/no-unused-vars */
-export default function Post({ post, morePosts, preview }: Props) {
+export default function Post({ post, preview }: Props) {
   const router = useRouter();
   const title = `${post.title} | The Keyframe`;
 

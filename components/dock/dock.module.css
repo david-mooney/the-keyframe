@@ -1,22 +1,32 @@
 .container {
   --gap: var(--spacing-4);
-  --window-pane: 50%;
+  --tap-size: 50px;
 
+  box-sizing: border-box;
   display: flex;
   position: fixed;
   bottom: var(--gap);
   left: 50%;
-  flex-grow: 0;
+  gap: var(--gap);
   align-items: flex-end;
   transform: translateX(-50%);
   z-index: var(--z-fixed);
   border: var(--border-1);
   border-radius: var(--border-radius-1);
   background-color: var(--color-background-50);
-  padding: var(--spacing-5);
-  height: 40px;
-  backdrop-filter: blur(16px) saturate(200%) brightness(100%);
+  padding: var(--gap);
+  padding-bottom: calc(var(--gap) + var(--spacing-3));
+  width: auto;
+  height: calc(var(--gap) * 2 + var(--spacing-3) + var(--tap-size));
   will-change: contents;
+  backdrop-filter: blur(16px) saturate(200%) brightness(100%);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 90vw;
+    overflow: auto hidden;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -25,16 +35,3 @@
     background-color: var(--color-background);
   }
 }
-
-/* todo mobile styles and overflow scroll */
-
-/* .tools {
-  display: flex;
-  gap: var(--spacing-3);
-  align-items: center;
-  overflow: auto hidden;
-}
-
-.tools > * {
-  flex-shrink: 0;
-} */

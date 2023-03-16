@@ -4,6 +4,7 @@
   left: 50%;
   transform: translate(-50%, calc(-1 * var(--spacing-7)));
   opacity: 0;
+  z-index: 99;
   border: var(--border-1);
   border-radius: var(--border-radius-1);
   background-color: var(--color-background);

@@ -11,7 +11,7 @@ import useEventListener from '@hooks/use-event-listener';
 import { useDock } from './dock';
 import styles from './dock-item.module.css';
 
-export const DockItem = ({ children }) => {
+export const DockItem = ({ children, animate }) => {
   const SIZE = 48;
   const SIZE_ENLARGED = 56;
   const ref = useRef<HTMLDivElement>();
@@ -55,10 +55,12 @@ export const DockItem = ({ children }) => {
       <m.div
         className={styles.item}
         ref={ref}
-        style={{
-          width: spring,
-          height: spring,
-        }}
+        style={
+          animate && {
+            width: spring,
+            height: spring,
+          }
+        }
       >
         {children}
       </m.div>
