@@ -19,29 +19,28 @@ const Dock = ({ children }) => {
   const ref = useRef<HTMLDivElement>();
   const [hovered, setHovered] = useState(false);
   const [width, setWidth] = useState<number | undefined>();
-  const hasMouse = useMediaQuery('(pointer:fine)');
+  const hasMouse = useMediaQuery('(pointer: fine)');
   const reducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
+  const animate = hasMouse && !reducedMotion;
 
   useEffect(() => {
     setWidth(ref.current.clientWidth);
   }, []);
-
-  const disableAnimation = !hasMouse || reducedMotion;
 
   return (
     <DockContext.Provider value={{ hovered, width }}>
       <aside
         ref={ref}
         className={styles.container}
-        onMouseOver={() =>
-          disableAnimation ? setHovered(false) : setHovered(true)
-        }
+        onMouseOver={() => setHovered(true)}
         onMouseOut={() => setHovered(false)}
         data-animate="true"
       >
         <MouseProvider>
           {children.map((item, index) => (
-            <DockItem key={index}>{item}</DockItem>
+            <DockItem key={index} animate={animate}>
+              {item}
+            </DockItem>
           ))}
         </MouseProvider>
       </aside>

@@ -1,12 +1,6 @@
 .item {
-  --tap-size: 50px;
-
-  padding-right: var(--gap);
   width: var(--tap-size);
   height: var(--tap-size);
+  aspect-ratio: 1/1;
   will-change: contents;
-}
-
-.item:last-child {
-  padding-right: 0;
 }

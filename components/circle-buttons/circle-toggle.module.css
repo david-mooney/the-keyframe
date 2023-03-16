@@ -1,6 +1,5 @@
 .button {
   display: flex;
-  position: relative;
   align-items: center;
   justify-content: center;
   transition: var(--timing-faster) color var(--ease-in-out),
