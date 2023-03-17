@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: var(--spacing-8);
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.container[data-visible='true'] {
+  opacity: 1;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: var(--spacing-5);
+  margin-left: var(--spacing-5);
+}
+
+.active {
+  color: var(--color-brand);
+}

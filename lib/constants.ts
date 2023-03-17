@@ -12,7 +12,7 @@ export const FIELDS = {
   preview: [
     'title',
     'excerpt',
-    'date',
+    'created',
     'slug',
     'coverImage',
     'readTime',
@@ -22,7 +22,8 @@ export const FIELDS = {
     'title',
     'author',
     'content',
-    'date',
+    'created',
+    'updated',
     'slug',
     'ogImage',
     'coverImage',

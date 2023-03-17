@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 import Layout from '@components/layout';
@@ -6,6 +7,7 @@ import Container from '@components/container';
 import PostBody from '@components/post/post-body';
 import PostHeader from '@components/post/post-header';
 import PostTitle from '@components/post/post-title';
+import TableOfContents from '@components/table-of-contents/table-of-contents';
 import { getSinglePost, getAllPosts } from '@lib/api';
 import markdownToHtml from '@lib/markdown-to-html';
 import PostType from '@interfaces/post';
@@ -15,9 +17,27 @@ type Props = {
   preview?: boolean;
 };
 
+type Section = {
+  element: HTMLElement;
+  title: string;
+};
+
 export default function Post({ post, preview }: Props) {
   const router = useRouter();
+  const [sections, setSections] = useState<Section[]>([]);
   const title = `${post.title} | The Keyframe`;
+
+  useEffect(() => {
+    const sections = [...document.querySelectorAll('h2')];
+
+    // TODO should be the whole section, not just the title
+    const postSections = sections.map((section) => ({
+      element: section,
+      title: section.innerText,
+    }));
+
+    setSections(postSections);
+  }, []);
 
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -37,11 +57,13 @@ export default function Post({ post, preview }: Props) {
             <PostHeader
               title={post.title}
               coverImage={post.coverImage}
-              date={post.date}
+              created={post.created}
+              updated={post.updated}
               author={post.author}
               readTime={post.readTime}
               tags={post.tags}
             />
+            <TableOfContents sections={sections} />
             <PostBody content={post.content} />
           </article>
         )}

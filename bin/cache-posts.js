@@ -23,11 +23,11 @@ function postData() {
         title: matterResult.data.title,
         excerpt: matterResult.data.excerpt,
         tags: matterResult.data.tags,
-        date: formatDate(matterResult.data.date),
+        created: formatDate(matterResult.data.created),
       };
     })
     .sort((a, b) => {
-      return new Date(b.date) - new Date(a.date);
+      return new Date(b.created) - new Date(a.created);
     });
 
   return `export const posts = ${JSON.stringify(posts)}`;

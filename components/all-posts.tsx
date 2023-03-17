@@ -21,7 +21,7 @@ const AllPosts = ({ posts }: Props) => {
       {(results || posts).map((post) => (
         <div key={post.slug} className={styles.post}>
           <div className={styles.timeline}>
-            {post.date && <span>{post.date}</span>}
+            <span>{post.created}</span>
           </div>
           <h2>{post.title}</h2>
           <p>{post.excerpt}</p>

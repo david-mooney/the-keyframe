@@ -12,8 +12,8 @@ import { useDock } from './dock';
 import styles from './dock-item.module.css';
 
 export const DockItem = ({ children, animate }) => {
-  const SIZE = 48;
-  const SIZE_ENLARGED = 56;
+  const SIZE = 50;
+  const SIZE_ENLARGED = 70;
   const ref = useRef<HTMLDivElement>();
   const mouse = useMouse();
   const dock = useDock();
@@ -50,18 +50,13 @@ export const DockItem = ({ children, animate }) => {
     setElCenterX(rect.x + rect.width / 2);
   });
 
+  const style = animate
+    ? { width: spring, height: spring }
+    : { width: `${SIZE}px`, height: `${SIZE}px` };
+
   return (
     <LazyMotion features={domAnimation}>
-      <m.div
-        className={styles.item}
-        ref={ref}
-        style={
-          animate && {
-            width: spring,
-            height: spring,
-          }
-        }
-      >
+      <m.div className={styles.item} ref={ref} style={style}>
         {children}
       </m.div>
     </LazyMotion>

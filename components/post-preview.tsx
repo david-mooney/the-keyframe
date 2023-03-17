@@ -7,7 +7,7 @@ type Props = {
   title: string;
   excerpt: string;
   coverImage: string;
-  date: string;
+  created: string;
   slug: string;
   readTime: string;
   tags?: string[];
@@ -17,7 +17,7 @@ const PostPreview = ({
   title,
   excerpt,
   coverImage,
-  date,
+  created,
   slug,
   readTime,
   order,
@@ -30,7 +30,7 @@ const PostPreview = ({
 
         <header className={styles.header}>
           <div className={styles.meta}>
-            <span>{date}</span>
+            <span>{created}</span>
             <span>{readTime}</span>
           </div>
 

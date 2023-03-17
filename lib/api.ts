@@ -8,7 +8,7 @@ import fuzzySearch from '@lib/fuzzy-search';
 
 const postsDirectory = join(process.cwd(), '_posts');
 
-const sortByDate = (current, next) => (current.date > next.date ? -1 : 1);
+const sortByDate = (current, next) => (current.created > next.created ? -1 : 1);
 
 const getAllPostSlugs = () => {
   return fs.readdirSync(postsDirectory);
@@ -44,7 +44,11 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
       items[field] = calculateTimeToRead(content);
     }
 
-    if (field === 'date') {
+    if (field === 'created') {
+      items[field] = formatDate(data[field]);
+    }
+
+    if (field === 'updated' && data[field]) {
       items[field] = formatDate(data[field]);
     }
   });

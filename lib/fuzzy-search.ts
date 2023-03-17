@@ -1,6 +1,8 @@
 import { Searcher } from 'fast-fuzzy';
 import { posts } from '../cache/posts-cache';
 
+// TODO use lunr instead of fast-fuzzy?
+
 const Fuzzy = new Searcher(posts, {
   threshold: 0.7,
   keySelector: (post) => {
