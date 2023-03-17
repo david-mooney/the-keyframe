@@ -17,7 +17,7 @@ const FeaturedPosts = ({ posts }: Props) => {
               title={post.title}
               excerpt={post.excerpt}
               coverImage={post.coverImage}
-              date={post.date}
+              created={post.created}
               slug={post.slug}
               readTime={post.readTime}
               tags={post.tags}

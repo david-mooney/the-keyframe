@@ -8,7 +8,8 @@ import { LINKS } from '@lib/constants';
 type Props = {
   title: string;
   coverImage: string;
-  date: string;
+  created: string;
+  updated: string;
   author: Author;
   readTime: string;
   tags?: string[];
@@ -17,7 +18,8 @@ type Props = {
 const PostHeader = ({
   title,
   coverImage,
-  date,
+  created,
+  updated,
   author,
   readTime,
   tags,
@@ -45,7 +47,8 @@ const PostHeader = ({
         <CoverImage title={title} src={coverImage} />
       </div>
       <div className="max-w-2xl mx-auto">
-        <div className="mb-6 text-lg">{date}</div>
+        <div className="mb-6 text-lg">{created}</div>
+        {updated && <div className="mb-6 text-lg">{updated}</div>}
       </div>
     </>
   );

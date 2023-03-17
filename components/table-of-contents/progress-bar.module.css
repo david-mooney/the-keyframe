@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  transition: var(--timing-fast) opacity var(--ease-in-out-quad);
+}
+
+.track {
+  position: relative;
+  background-color: var(--color-text-50);
+  width: 2px;
+  height: 50vh;
+}
+
+.progress {
+  --progress: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleY(var(--progress));
+  transform-origin: top;
+  transition: var(--timing-fastest) transform linear;
+  background-color: var(--color-text);
+  width: 2px;
+  height: 100%;
+}

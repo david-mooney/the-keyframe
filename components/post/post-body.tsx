@@ -8,19 +8,21 @@ type Props = {
   content: string;
 };
 
+export const ARTICLE_ID = 'post-article';
+
 const PostBody = ({ content }: Props) => {
+  // TODO: replace external script with custom implementation (hook)
   useEffect(() => {
-    // TODO: replace external script with custom implementation (hook)
     const zoomInitialized = document.getElementById('image-zoom-styles');
 
     if (!zoomInitialized) {
-      imageZoom({ selector: '.post-article img' });
+      imageZoom({ selector: `#${ARTICLE_ID} img` });
     }
   }, []);
 
   useEffect(() => {
     const images = document.querySelectorAll(
-      '.post-article img'
+      `#${ARTICLE_ID} img`
     ) as NodeListOf<HTMLImageElement>;
 
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -35,9 +37,10 @@ const PostBody = ({ content }: Props) => {
       image.addEventListener('keydown', handleKeyDown);
     });
   }, []);
+  // TODO: end of horrible code ( I hope)
 
   return (
-    <div className={`post-article ${styles.article}`}>
+    <div id={ARTICLE_ID} className={styles.article}>
       <div
         className={markdownStyles['markdown']}
         dangerouslySetInnerHTML={{ __html: content }}

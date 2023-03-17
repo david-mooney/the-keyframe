@@ -20,7 +20,6 @@
     "fast-image-zoom": "^7.0.1",
     "framer-motion": "^10.3.2",
     "gray-matter": "^4.0.3",
-    "lodash": "^4.17.21",
     "next": "latest",
     "next-transpile-modules": "^10.0.0",
     "react": "^18.2.0",

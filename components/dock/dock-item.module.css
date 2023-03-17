@@ -1,6 +1,11 @@
 .item {
+  padding-right: var(--spacing-4);
   width: var(--tap-size);
   height: var(--tap-size);
-  aspect-ratio: 1/1;
   will-change: contents;
+  aspect-ratio: 1/1;
+}
+
+.item:last-child {
+  padding-right: 0;
 }
