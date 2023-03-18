@@ -4,17 +4,19 @@
   justify-content: center;
   box-shadow: rgb(50 50 93 / 25%) 0 30px 60px -12px inset,
     rgb(0 0 0 / 30%) 0 18px 36px -18px inset;
-
-  /* border-radius: var(--border-radius-1); */
   background: var(--color-text-50);
   width: 100%;
   aspect-ratio: 1/1;
 }
 
 .image {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  transition: background-color 0.2s ease-in-out;
   border-radius: var(--border-radius-1);
   box-shadow: rgb(0 0 0 / 30%) 0 19px 38px, rgb(0 0 0 / 22%) 0 15px 12px;
-  background: var(--color-light);
-  width: 50%;
+  background: var(--color-background);
+  width: 70%;
   aspect-ratio: 1/1;
 }

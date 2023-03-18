@@ -1,14 +1,11 @@
-import Subscribe from './subscribe';
-import styles from './footer.module.css';
 import getConfig from 'next/config';
+import styles from '@components/layout/footer.module.css';
 
 const { publicRuntimeConfig } = getConfig();
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <Subscribe />
-
       <div className={styles.row}>
         <small className={styles.copyright}>
           All rights reserved © David Mooney {new Date().getFullYear()}

@@ -2,8 +2,7 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
-import Layout from '@components/layout';
-import Container from '@components/container';
+import Layout from '@components/layout/layout';
 import PostBody from '@components/post/post-body';
 import PostHeader from '@components/post/post-header';
 import PostTitle from '@components/post/post-title';
@@ -45,29 +44,27 @@ export default function Post({ post, preview }: Props) {
 
   return (
     <Layout preview={preview}>
-      <Container>
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <article className="mb-32">
-            <Head>
-              <title>{title}</title>
-              <meta property="og:image" content={post.ogImage.url} />
-            </Head>
-            <PostHeader
-              title={post.title}
-              coverImage={post.coverImage}
-              created={post.created}
-              updated={post.updated}
-              author={post.author}
-              readTime={post.readTime}
-              tags={post.tags}
-            />
-            <TableOfContents sections={sections} />
-            <PostBody content={post.content} />
-          </article>
-        )}
-      </Container>
+      {router.isFallback ? (
+        <PostTitle>Loading…</PostTitle>
+      ) : (
+        <article className="mb-32">
+          <Head>
+            <title>{title}</title>
+            <meta property="og:image" content={post.ogImage.url} />
+          </Head>
+          <PostHeader
+            title={post.title}
+            coverImage={post.coverImage}
+            created={post.created}
+            updated={post.updated}
+            author={post.author}
+            readTime={post.readTime}
+            tags={post.tags}
+          />
+          <TableOfContents sections={sections} />
+          <PostBody content={post.content} />
+        </article>
+      )}
     </Layout>
   );
 }

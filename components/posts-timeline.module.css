@@ -1,0 +1,41 @@
+.underline {
+  --underline-size: 2px;
+
+  display: inline;
+  transition: background-size var(--timing-fast);
+  background: linear-gradient(var(--color-text), var(--color-text)) 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 var(--underline-size);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .underline {
+    transition: none;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  outline-style: solid;
+  outline-color: transparent;
+  padding: var(--spacing-6) 0;
+  height: 100%;
+  text-decoration: none;
+}
+
+.container:hover .underline,
+.container:focus-visible .underline {
+  background-size: 100% var(--underline-size);
+}
+
+.title {
+  flex-grow: 1;
+  margin-left: var(--spacing-8);
+  line-height: var(--line-height-heading);
+}
+
+.title h2 {
+  font-size: var(--font-size-3);
+}

@@ -17,6 +17,7 @@ export const FIELDS = {
     'coverImage',
     'readTime',
     'tags',
+    'featured',
   ],
   post: [
     'title',

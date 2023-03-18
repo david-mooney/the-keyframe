@@ -1,6 +1,6 @@
 :root {
   /* Width limiters */
-  --max-width-l: 1080px;
+  --max-width-l: 1280px;
   --max-width-xl: 1600px;
   --max-width-read: 64ch;
   --max-width-full: 100%;

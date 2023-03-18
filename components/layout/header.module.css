@@ -1,11 +1,14 @@
 .header {
-  padding: var(--spacing-5);
+  padding: var(--spacing-10) var(--spacing-5);
 }
 
 .header h1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0;
   text-transform: uppercase;
-  font-size: var(--font-size-4);
+  font-size: 3rem;
 }
 
 .header h1,

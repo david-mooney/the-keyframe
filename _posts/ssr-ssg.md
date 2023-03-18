@@ -1,5 +1,6 @@
 ---
-title: 'SSR vs. SSG'
+featured: true
+title: 'SSR vs. SSG - How to Choose'
 excerpt: 'This post is about static site generation, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
 coverImage: '/assets/blog/ssr/demo.png'
 created: '2023-02-22T05:35:07.322Z'

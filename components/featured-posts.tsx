@@ -20,7 +20,6 @@ const FeaturedPosts = ({ posts }: Props) => {
               created={post.created}
               slug={post.slug}
               readTime={post.readTime}
-              tags={post.tags}
             />
           </li>
         ))}

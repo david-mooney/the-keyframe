@@ -1,5 +1,8 @@
 .nav {
   display: flex;
+  position: absolute;
+  top: var(--spacing-5);
+  left: var(--spacing-5);
   flex-wrap: wrap;
 }
 

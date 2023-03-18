@@ -1,7 +1,6 @@
-import Alert from './alert';
-import Header from './header';
-import Footer from './footer';
-import Meta from './meta';
+import Meta from '@components/meta';
+import Alert from '@components/alert';
+import Footer from '@components/layout/footer';
 
 type Props = {
   preview?: boolean;
@@ -12,7 +11,6 @@ const Layout = ({ preview, children }: Props) => {
   return (
     <>
       <Meta />
-      <Header level={1} />
       {preview && <Alert />}
       <main id="main">{children}</main>
       <Footer />

@@ -17,7 +17,7 @@ const getAllPostSlugs = () => {
 const calculateTimeToRead = (content: string) => {
   const wordsPerMinute = 225;
   const numberOfWords = content.split(/\s/g).length;
-  return `${Math.ceil(numberOfWords / wordsPerMinute)} minute read`;
+  return `${Math.ceil(numberOfWords / wordsPerMinute)} min read`;
 };
 
 export function getPostBySlug(slug: string, fields: string[] = []) {

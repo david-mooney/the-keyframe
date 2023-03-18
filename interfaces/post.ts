@@ -3,6 +3,7 @@ import type Author from './author';
 type PostType = {
   slug: string;
   title: string;
+  featured: boolean;
   created: string;
   updated: string;
   coverImage: string;

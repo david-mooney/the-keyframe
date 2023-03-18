@@ -10,7 +10,6 @@ type Props = {
   created: string;
   slug: string;
   readTime: string;
-  tags?: string[];
 };
 
 const PostPreview = ({
@@ -21,7 +20,6 @@ const PostPreview = ({
   slug,
   readTime,
   order,
-  tags,
 }: Props) => {
   return (
     <Link className={styles.link} as={`/posts/${slug}`} href="/posts/[slug]">
@@ -39,18 +37,9 @@ const PostPreview = ({
           </div>
 
           <p>{excerpt}</p>
-
-          <div className={styles.tags}>
-            {tags?.map((tag) => (
-              <div key={tag} className={styles.tag}>
-                {tag}
-              </div>
-            ))}
-          </div>
         </header>
       </article>
     </Link>
   );
 };
-
 export default PostPreview;

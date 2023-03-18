@@ -1,4 +1,8 @@
 .article {
-  margin: var(--spacing-10) auto;
+  margin: var(--spacing-15) auto;
   max-width: var(--max-width-read);
+}
+
+.article img {
+  max-width: 100%;
 }

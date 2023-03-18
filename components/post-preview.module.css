@@ -52,7 +52,7 @@
 }
 
 .title {
-  margin-bottom: var(--spacing-5);
+  line-height: var(--line-height-heading);
 }
 
 .title > h2 {
@@ -61,22 +61,10 @@
 }
 
 .header p {
-  margin: 0;
+  display: -webkit-box;
+  margin: auto 0 0;
+  overflow: hidden;
   font-size: var(--font-size-1);
-}
-
-.tags {
-  display: flex;
-  gap: var(--spacing-5);
-  margin-top: auto;
-}
-
-.tag {
-  border-radius: 1rem;
-  background: var(--color-brand);
-  padding: var(--spacing-0) var(--spacing-3);
-  text-transform: uppercase;
-  color: var(--color-background);
-  font-size: var(--font-size-micro);
-  font-weight: var(--font-weight-bold);
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
