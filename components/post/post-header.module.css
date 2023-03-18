@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  position: relative;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 50%;
+}
+
+.column:first-of-type {
+  padding: var(--spacing-5);
+}
+
+.column h1 {
+  padding: 0 var(--spacing-10);
+}
+
+.dates {
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.title {
+  margin: auto 0;
+}

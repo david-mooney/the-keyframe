@@ -1,4 +1,4 @@
-import Container from './container';
+import Container from '@components/layout/container';
 
 // TODO: add preview api's
 

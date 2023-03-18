@@ -17,6 +17,7 @@ Until CSS environment variables are a thing, the breakpoints are hardcoded. The 
 - [ ] Add MDX support (?)
 - [ ] Add "next" and "previous" links to posts
 - [ ] Add RSS feed
+- [ ] Header animation
 - [ ] Add sitemap
 - [ ] Add Sandpack
 - [ ] Add Share buttons

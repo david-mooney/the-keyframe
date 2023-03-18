@@ -1,5 +1,5 @@
 ---
-title: 'How to Pre-render Pages Using SSG with Next.js'
+title: 'How to Pre-render Pages'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
 coverImage: '/assets/blog/hello-world/demo.png'
 created: '2021-02-16T05:35:07.322Z'

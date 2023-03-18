@@ -6,9 +6,11 @@ type Props = {
   priority?: boolean;
 };
 
+// TODO - cleanup image stuff
+
 const CoverImage = ({}: Props) => (
   <div className={styles.frame}>
-    <div className={styles.image}></div>
+    <div className={styles.image} data-animate="true"></div>
   </div>
 );
 

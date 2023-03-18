@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Container from '@components/container';
-import Layout from '@components/layout';
+import Container from '@components/layout/container';
+import Layout from '@components/layout/layout';
 import Search from '@components/search/search';
 import AllPosts from '@components/all-posts';
 import { SearchProvider } from '@hooks/use-search';

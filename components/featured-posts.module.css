@@ -10,10 +10,10 @@
   display: grid;
   grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
   grid-auto-rows: 1fr;
-  row-gap: var(--spacing-9);
-  column-gap: var(--spacing-6);
+  row-gap: var(--spacing-10);
+  column-gap: var(--spacing-5);
   margin: 0;
-  padding: var(--spacing-6);
+  padding: 0;
   list-style: none;
 }
 
@@ -21,20 +21,16 @@
   .list {
     --column-count: 2;
 
-    column-gap: var(--spacing-10);
-    padding: var(--spacing-10);
+    row-gap: var(--spacing-11);
+    column-gap: var(--spacing-6);
   }
 }
 
-@media (min-width: 1600px) {
-  .section {
-    max-width: var(--max-width-xl);
-  }
-
+@media (min-width: 1080px) {
   .list {
     --column-count: 3;
 
-    column-gap: var(--spacing-10);
-    padding: var(--spacing-10);
+    row-gap: var(--spacing-12);
+    column-gap: var(--spacing-8);
   }
 }
