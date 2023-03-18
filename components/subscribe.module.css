@@ -1,16 +1,10 @@
 .wrapper {
-  margin: var(--spacing-9) 0;
+  margin: var(--spacing-9) auto;
   border-top: var(--border-1);
   border-bottom: var(--border-1);
-  text-align: center;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-6);
-  border: 1px dashed salmon;
   padding: var(--spacing-6) 0;
+  max-width: var(--max-width-l);
+  text-align: center;
 }
 
 .form {

@@ -28,7 +28,7 @@
 
 @media (min-width: 1080px) {
   .list {
-    --column-count: 3;
+    --column-count: 4;
 
     row-gap: var(--spacing-12);
     column-gap: var(--spacing-8);

@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
 import localFont from 'next/font/local';
+
 import {
   BsHouseFill,
   BsGithub,
