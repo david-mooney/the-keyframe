@@ -32,16 +32,14 @@
   float: left;
   margin-top: -32px;
   margin-right: 16px;
-  border: 5px solid var(--color-brand) !important;
-  border-image: linear-gradient(0deg, #3cb3aa, var(--color-brand)) 10 !important;
-  background: none;
+  border: 2px solid var(--color-brand);
+  border-radius: var(--border-radius-0);
   padding: 6px 32px 16px;
   line-height: 1em;
-  color: var(--color-brand); /* #ffafbd */
-  font-size: 105px;
+  color: var(--color-brand);
+  font-size: 100px;
 }
 
 .markdown *::selection {
-  background: var(--color-brand);
-  color: #3cb3aa;
+  background-color: var(--color-brand);
 }

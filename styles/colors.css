@@ -3,9 +3,9 @@
   --light-h: 0deg;
   --light-s: 0%;
   --light-l: 99%;
-  --dark-h: 270deg;
-  --dark-s: 11%;
-  --dark-l: 7%;
+  --dark-h: 0;
+  --dark-s: 0%;
+  --dark-l: 15%;
 
   /* Fixed colors (same regardless of theme setting) */
   --color-light: hsl(var(--light-h) var(--light-s) var(--light-l));
@@ -16,7 +16,7 @@
   --color-dark-50: hsla(var(--dark-h) var(--dark-s) var(--dark-l) / 50%);
 
   /* Light theme */
-  --color-brand: hsl(166deg 100% 40%);
+  --color-brand: hsl(27deg 100% 80%);
   --color-text: var(--color-dark);
   --color-text-25: var(--color-dark-25);
   --color-text-50: var(--color-dark-50);
@@ -27,7 +27,7 @@
 
 :root.dark {
   /* Dark theme */
-  --color-brand: hsl(166deg 100% 60%);
+  --color-brand: hsl(27deg 100% 80%);
   --color-text: var(--color-light);
   --color-text-25: var(--color-light-25);
   --color-text-50: var(--color-light-50);

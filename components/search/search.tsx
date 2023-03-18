@@ -12,19 +12,22 @@ const Search = ({ tags }: Props) => {
   const ref = useRef<HTMLInputElement>();
   const { query, setQuery } = useSearch();
 
+  const handleKeyUp = (event) => {
+    if (event.key !== '/' || event.ctrlKey || event.metaKey) return;
+
+    const isUsingInput = /^(?:input|textarea|select)$/i.test(
+      (event.target as HTMLInputElement).tagName
+    );
+
+    if (!isUsingInput) {
+      event.preventDefault();
+      document.getElementById('search').focus();
+    }
+  };
+
   useEffect(() => {
-    document.addEventListener('keyup', (event) => {
-      if (event.key !== '/' || event.ctrlKey || event.metaKey) return;
-
-      const isUsingInput = /^(?:input|textarea|select)$/i.test(
-        (event.target as HTMLInputElement).tagName
-      );
-
-      if (!isUsingInput) {
-        event.preventDefault();
-        document.getElementById('search').focus();
-      }
-    });
+    document.addEventListener('keyup', handleKeyUp);
+    return () => document.removeEventListener('keyup', handleKeyUp);
   }, []);
 
   const handleChange = (event) => {

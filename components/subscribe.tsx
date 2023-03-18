@@ -30,10 +30,7 @@ const Subscribe = () => {
       <div className={styles.wrapper}>
         <Container wide>
           <h2>Get notified about new posts</h2>
-          <p>
-            Just a newsletter - no spam, no sales pitches - unsubscribe at any
-            time
-          </p>
+          <p>No spam, unsubscribe at any time</p>
           <form
             onSubmit={subscribe}
             data-netlify="true"

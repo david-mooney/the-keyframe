@@ -1,5 +1,5 @@
 .article {
-  margin: var(--spacing-15) auto;
+  margin: var(--spacing-12) auto;
   max-width: var(--max-width-read);
 }
 
