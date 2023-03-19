@@ -2,13 +2,16 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
+import { MDXRemote } from 'next-mdx-remote';
+import { serialize } from 'next-mdx-remote/serialize';
+import mdxComponents from '@components/mdx';
 import Layout from '@components/layout/layout';
 import PostBody from '@components/post/post-body';
 import PostHeader from '@components/post/post-header';
 import PostTitle from '@components/post/post-title';
 import TableOfContents from '@components/table-of-contents/table-of-contents';
 import { getSinglePost, getAllPosts } from '@lib/api';
-import markdownToHtml from '@lib/markdown-to-html';
+
 import PostType from '@interfaces/post';
 
 type Props = {
@@ -61,8 +64,12 @@ export default function Post({ post, preview }: Props) {
             readTime={post.readTime}
             tags={post.tags}
           />
+
+          <PostBody>
+            <MDXRemote {...post.content} components={{ ...mdxComponents }} />
+          </PostBody>
+
           <TableOfContents sections={sections} />
-          <PostBody content={post.content} />
         </article>
       )}
     </Layout>
@@ -77,7 +84,13 @@ type Params = {
 
 export async function getStaticProps({ params }: Params) {
   const post = getSinglePost(params.slug);
-  const content = await markdownToHtml(post.content || '');
+
+  const content = await serialize(post.content, {
+    mdxOptions: {
+      remarkPlugins: [],
+      rehypePlugins: [],
+    },
+  });
 
   return {
     props: {

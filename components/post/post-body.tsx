@@ -5,12 +5,12 @@ import markdownStyles from './markdown.module.css';
 import styles from './post-body.module.css';
 
 type Props = {
-  content: string;
+  children: React.ReactNode | React.ReactNode[];
 };
 
 export const ARTICLE_ID = 'post-article';
 
-const PostBody = ({ content }: Props) => {
+const PostBody = ({ children }: Props) => {
   // TODO: replace external script with custom implementation (hook)
   useEffect(() => {
     const zoomInitialized = document.getElementById('image-zoom-styles');
@@ -41,10 +41,7 @@ const PostBody = ({ content }: Props) => {
 
   return (
     <div id={ARTICLE_ID} className={styles.article}>
-      <div
-        className={markdownStyles['markdown']}
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
+      <div className={markdownStyles['markdown']}>{children}</div>
     </div>
   );
 };

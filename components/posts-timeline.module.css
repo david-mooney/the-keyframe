@@ -31,6 +31,30 @@
   background-size: 100% var(--underline-size);
 }
 
+.year {
+  position: relative;
+  padding: var(--gap-text) 0;
+  text-align: center;
+}
+
+.year::before {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  z-index: var(--z-back);
+  background-color: var(--color-text-25);
+  width: 100%;
+  height: 1px;
+  content: '';
+}
+
+.year > span {
+  position: relative;
+  background-color: var(--color-background);
+  padding: 0 var(--gap-text);
+}
+
 .date {
   white-space: nowrap;
   font-weight: var(--font-weight-bold);
