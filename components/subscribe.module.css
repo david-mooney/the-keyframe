@@ -40,6 +40,7 @@
   padding-right: var(--gap-column); /* TODO */
   min-width: 30ch;
   color: var(--color-text);
+  font-size: var(--font-1);
 }
 
 .input::placeholder {
@@ -67,6 +68,7 @@
   cursor: pointer;
   padding: var(--gap-text) var(--gap-row-xl);
   color: var(--color-dark);
+  font-size: var(--font-1);
   font-weight: var(--font-weight-bold);
 }
 
