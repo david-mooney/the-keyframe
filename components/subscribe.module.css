@@ -1,18 +1,22 @@
 .wrapper {
-  margin: var(--spacing-9) auto;
-  border-top: var(--border-1);
-  border-bottom: var(--border-1);
-  padding: var(--spacing-6) 0;
-  max-width: var(--max-width-l);
+  margin: 0 auto;
+  border-top: var(--border-thin);
+  border-bottom: var(--border-thin);
+  padding: var(--gap-row) 0;
+  max-width: var(--max-width-wide);
   text-align: center;
+}
+
+.wrapper > h2 {
+  margin: var(--gap-text) 0;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-6);
+  gap: var(--gap-column);
   justify-content: center;
-  padding: var(--spacing-5) 0;
+  padding: var(--gap-text) 0;
 }
 
 @media (min-width: 768px) {
@@ -32,9 +36,9 @@
   border-bottom: var(--border-2);
   border-radius: 0;
   background-color: transparent;
-  padding: var(--spacing-3);
-  padding-right: var(--spacing-7);
-  min-width: 20ch;
+  padding: var(--gap-text);
+  padding-right: var(--gap-column); /* TODO */
+  min-width: 30ch;
   color: var(--color-text);
 }
 
@@ -56,12 +60,12 @@
 
 .button {
   align-self: center;
-  margin: var(--spacing-5);
+  margin: var(--gap-text);
   border: none;
   border-radius: var(--border-radius-0);
   background-color: var(--color-brand);
   cursor: pointer;
-  padding: var(--spacing-5) var(--spacing-8);
+  padding: var(--gap-text) var(--gap-row-xl);
   color: var(--color-dark);
   font-weight: var(--font-weight-bold);
 }
@@ -69,10 +73,16 @@
 @media screen and (min-width: 768px) {
   .button {
     margin: 0;
-    padding: var(--spacing-4) var(--spacing-6);
+    padding: var(--gap-text) var(--gap-row);
   }
 }
 
 .footer {
-  margin: 0.83em;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    margin: var(--gap-text) 0;
+  }
 }

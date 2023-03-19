@@ -21,12 +21,14 @@ export default function Index({ allPosts, featuredPosts }: Props) {
       </Head>
 
       <Container wide>
-        <Header level={1} />
+        <Header Level="h1" />
         <h2>Featured Posts</h2>
         <FeaturedPosts posts={featuredPosts} />
       </Container>
 
-      <Subscribe />
+      <Container wide>
+        <Subscribe />
+      </Container>
 
       <Container wide>
         <h2>Latest Posts</h2>

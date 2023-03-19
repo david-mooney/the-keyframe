@@ -6,7 +6,7 @@
   transition: var(--timing-faster) color var(--ease-in-out),
     var(--timing-faster) background-color var(--ease-in-out),
     var(--timing-faster) border-color var(--ease-in-out);
-  border: var(--border-1);
+  border: var(--border-thin);
   border-radius: 50%;
   background-color: var(--color-background);
   cursor: pointer;

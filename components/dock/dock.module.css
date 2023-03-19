@@ -10,7 +10,7 @@
   align-items: flex-end;
   transform: translateX(-50%);
   z-index: var(--z-fixed);
-  border: var(--border-1);
+  border: var(--border-thin);
   border-radius: var(--border-radius-1);
   background-color: var(--color-background-50);
   padding: var(--gap);

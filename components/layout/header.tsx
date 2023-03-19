@@ -3,36 +3,20 @@ import Link from 'next/link';
 import styles from './header.module.css';
 
 interface HeadingProps {
-  level: 1 | 2 | 3 | 5 | 6;
+  Level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   children?: React.ReactNode;
 }
 
-type HeadingTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+const Anchor = ({ children }) => (
+  <Link href="/" className="underline">
+    {children}
+  </Link>
+);
 
-const Header = ({ level = 1 }: HeadingProps) => {
-  const Tag = `h${level}` as HeadingTag;
+const Header = ({ Level = 'h1' }: HeadingProps) => {
   const router = useRouter();
   const isHome = router.pathname === '/';
-
-  const titleOnly = (
-    <Tag>
-      <span>The</span>
-      <span>&nbsp;</span>
-      <span>Key</span>
-      <span>frame</span>
-    </Tag>
-  );
-
-  const titleWithLink = (
-    <Tag>
-      <Link href="/" className="underline">
-        <span>The</span>
-        <span>&nbsp;</span>
-        <span>Key</span>
-        <span>frame</span>
-      </Link>
-    </Tag>
-  );
+  const Element = isHome ? Level : Anchor;
 
   return (
     <header className={styles.header} data-animate="true">
@@ -40,7 +24,12 @@ const Header = ({ level = 1 }: HeadingProps) => {
         Skip to content
       </a>
 
-      {isHome ? titleOnly : titleWithLink}
+      <Element>
+        <span>The</span>
+        <span>&nbsp;</span>
+        <span>Key</span>
+        <span>frame</span>
+      </Element>
     </header>
   );
 };

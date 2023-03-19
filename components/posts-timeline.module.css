@@ -21,7 +21,7 @@
   align-items: center;
   outline-style: solid;
   outline-color: transparent;
-  padding: var(--spacing-6) 0;
+  padding: var(--gap-text) 0;
   height: 100%;
   text-decoration: none;
 }
@@ -31,12 +31,22 @@
   background-size: 100% var(--underline-size);
 }
 
-.title {
-  flex-grow: 1;
-  margin-left: var(--spacing-8);
-  line-height: var(--line-height-heading);
+.date {
+  white-space: nowrap;
 }
 
-.title h2 {
-  font-size: var(--font-size-3);
+.title {
+  /* TODO - titles should scale at source - typography */
+  flex-grow: 1;
+  margin-left: var(--gap-column);
+}
+
+.button {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .button {
+    display: block;
+  }
 }

@@ -6,7 +6,7 @@
   transform: translate(-50%, calc(-1 * var(--spacing-7)));
   opacity: 0;
   z-index: var(--z-front);
-  border: var(--border-1);
+  border: var(--border-thin);
   border-radius: var(--border-radius-1);
   background-color: var(--color-background);
   padding: var(--spacing-2) var(--spacing-3);

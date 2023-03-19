@@ -14,6 +14,7 @@
   --font-size-4: 32px;
   --font-size-5: 48px;
   --font-size-6: 64px;
+  --font-size-giant: clamp(3rem, -1.875rem + 10.333vw, 7rem);
 }
 
 h1,
