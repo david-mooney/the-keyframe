@@ -1,18 +1,18 @@
 .header {
-  padding: var(--spacing-10) var(--spacing-5);
+  padding: var(--gap-row) 0 var(--gap-row-xl);
 }
 
-.header h1 {
+.header > h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0;
   text-transform: uppercase;
-  font-size: 7rem;
+  font-size: var(--font-size-giant);
 }
 
-.header h1,
-.header a {
+.header > h1,
+.header > a {
   color: var(--color-text);
 }
 

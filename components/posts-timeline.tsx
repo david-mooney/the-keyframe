@@ -6,23 +6,54 @@ type Props = {
   posts: Post[];
 };
 
-const AllPosts = ({ posts }: Props) => (
-  <div>
-    {posts.map((post) => (
-      <Link
-        href={`/posts/${post.slug}`}
-        key={post.slug}
-        className={styles.container}
-      >
-        <div>{post.created}</div>
-        <div className={styles.title}>
-          <h2 className={styles.underline}>{post.title}</h2>
-        </div>
+const AllPosts = ({ posts }: Props) => {
+  const postsByYear = posts.reduce((acc, post) => {
+    const [day, month, year] = post.created.split(' ');
 
-        <span className={styles.underline}>Read More</span>
-      </Link>
-    ))}
-  </div>
-);
+    if (acc[year]) {
+      acc[year] = [...acc[year], { [`${day} ${month}`]: [post] }];
+    } else {
+      acc[year] = [{ [`${day} ${month}`]: [post] }];
+    }
+
+    return acc;
+  }, {});
+
+  return (
+    <div>
+      {Object.keys(postsByYear)
+        .sort((a, b) => Number(b) - Number(a))
+        .map((year) => (
+          <div key={year}>
+            <h2 className={styles.year}>{year}</h2>
+            {postsByYear[year].map((post) => {
+              const [day, month] = Object.keys(post)[0].split(' ');
+              const postObj = post[`${day} ${month}`][0];
+
+              return (
+                <Link
+                  href={`/posts/${postObj.slug}`}
+                  key={postObj.slug}
+                  className={styles.container}
+                >
+                  <div className={styles.date}>
+                    {day} {month}
+                  </div>
+
+                  <div className={styles.title}>
+                    <h3 className={styles.underline}>{postObj.title}</h3>
+                  </div>
+
+                  <span className={`${styles.underline} ${styles.button}`}>
+                    Read More
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        ))}
+    </div>
+  );
+};
 
 export default AllPosts;

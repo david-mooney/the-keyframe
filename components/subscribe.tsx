@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import useSubscribe, { Form } from '@hooks/use-subscribe';
-import Container from '@components/layout/container';
 import styles from '@components/subscribe.module.css';
 
 const Subscribe = () => {
@@ -28,46 +27,37 @@ const Subscribe = () => {
   return (
     formReady && (
       <div className={styles.wrapper}>
-        <Container wide>
-          <h2>Get notified about new posts</h2>
-          <p>No spam, unsubscribe at any time</p>
-          <form
-            onSubmit={subscribe}
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            className={styles.form}
-          >
-            <input
-              className={styles.input}
-              placeholder="First Name (optional)"
-              type="text"
-              autoComplete="given-name"
-            />
+        <h2>Get notified about new posts</h2>
+        <p>No spam, unsubscribe at any time</p>
+        <form
+          onSubmit={subscribe}
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          className={styles.form}
+        >
+          <input
+            className={styles.input}
+            ref={inputElement}
+            placeholder="Email Address"
+            type="email"
+            autoComplete="email"
+            required
+          />
 
-            <input
-              className={styles.input}
-              ref={inputElement}
-              placeholder="Email Address"
-              type="email"
-              autoComplete="email"
-              required
-            />
+          <label className={styles['honey-pot']}>
+            Be you robot or human? <input name="bot-field" />
+          </label>
 
-            <label className={styles['honey-pot']}>
-              Be you robot or human? <input name="bot-field" />
-            </label>
+          <button type="submit" className={styles.button} data-animate="true">
+            {conditionalButtonText()}
+          </button>
+        </form>
 
-            <button type="submit" className={styles.button} data-animate="true">
-              {conditionalButtonText()}
-            </button>
-          </form>
-
-          <div className={styles.footer}>
-            <Link className="underline" href="/privacy#data-retention">
-              Privacy Policy
-            </Link>
-          </div>
-        </Container>
+        <div className={styles.footer}>
+          <Link className="underline" href="/privacy#data-retention">
+            Privacy Policy
+          </Link>
+        </div>
       </div>
     )
   );

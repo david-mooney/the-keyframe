@@ -2,7 +2,7 @@
 title: 'Test post #3'
 excerpt: 'This post is about static site generation, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
 coverImage: '/assets/blog/ssr/demo.png'
-created: '2023-01-01T05:35:07.322Z'
+created: '2022-01-01T05:35:07.322Z'
 tags: ['css', 'animation', 'framer-motion']
 author:
   name: David Mooney

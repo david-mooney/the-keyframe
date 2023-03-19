@@ -19,7 +19,6 @@ export default async function handler(
     //   headers: { 'Content-Type': 'application/json' },
     //   body: JSON.stringify({
     //     api_key: apiKey,
-    //     first_name: name,
     //     email: email,
     //   }),
     // });
