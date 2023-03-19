@@ -24,7 +24,12 @@ const AllPosts = ({ posts }: Props) => {
         .sort((a, b) => Number(b) - Number(a))
         .map((year) => (
           <div key={year}>
-            <h3>{year}</h3>
+            {year !== new Date().getFullYear().toString() && (
+              <h3 className={styles.year}>
+                <span data-animate="true">{year}</span>
+              </h3>
+            )}
+
             {postsByYear[year].map((post) => {
               const [day, month] = Object.keys(post)[0].split(' ');
               const postObj = post[`${day} ${month}`][0];

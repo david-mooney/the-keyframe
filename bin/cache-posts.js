@@ -3,6 +3,8 @@ const path = require('path');
 const matter = require('gray-matter');
 const DayJs = require('dayjs');
 
+/* TODO - move this to the api and run at build time? */
+
 function formatDate(date) {
   const dateToFormat = new Date(date);
   return DayJs(dateToFormat).format('DD MMM YYYY');
@@ -13,7 +15,7 @@ function postData() {
   const fileNames = fs.readdirSync(postsDirectory);
   const posts = fileNames
     .map((fileName) => {
-      const slug = fileName.replace(/\.md$/, '');
+      const slug = fileName.replace(/\.mdx$/, '');
       const fullPath = path.join(postsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, 'utf8');
       const matterResult = matter(fileContents);

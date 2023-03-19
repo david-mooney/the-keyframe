@@ -4,7 +4,6 @@
 
 ## TODO's
 
-- [ ] Add MDX support (?)
 - [ ] Add "next" and "previous" links to posts
 - [ ] Add RSS feed
 - [ ] Header animation
