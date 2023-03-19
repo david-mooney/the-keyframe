@@ -9,12 +9,11 @@ type Props = {
 const AllPosts = ({ posts }: Props) => {
   const postsByYear = posts.reduce((acc, post) => {
     const [day, month, year] = post.created.split(' ');
+    const key = `${day} ${month}`;
 
-    if (acc[year]) {
-      acc[year] = [...acc[year], { [`${day} ${month}`]: [post] }];
-    } else {
-      acc[year] = [{ [`${day} ${month}`]: [post] }];
-    }
+    acc[year] = acc[year]
+      ? [...acc[year], { [key]: [post] }]
+      : [{ [key]: [post] }];
 
     return acc;
   }, {});
@@ -25,7 +24,7 @@ const AllPosts = ({ posts }: Props) => {
         .sort((a, b) => Number(b) - Number(a))
         .map((year) => (
           <div key={year}>
-            <h2 className={styles.year}>{year}</h2>
+            <h3>{year}</h3>
             {postsByYear[year].map((post) => {
               const [day, month] = Object.keys(post)[0].split(' ');
               const postObj = post[`${day} ${month}`][0];
@@ -41,7 +40,7 @@ const AllPosts = ({ posts }: Props) => {
                   </div>
 
                   <div className={styles.title}>
-                    <h3 className={styles.underline}>{postObj.title}</h3>
+                    <h4 className={styles.underline}>{postObj.title}</h4>
                   </div>
 
                   <span className={`${styles.underline} ${styles.button}`}>

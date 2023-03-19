@@ -33,6 +33,7 @@
 
 .date {
   white-space: nowrap;
+  font-weight: var(--font-weight-bold);
 }
 
 .title {

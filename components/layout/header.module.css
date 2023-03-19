@@ -1,5 +1,5 @@
 .header {
-  padding: var(--gap-row) 0 var(--gap-row-xl);
+  padding-bottom: var(--gap-row-xl);
 }
 
 .header > h1 {

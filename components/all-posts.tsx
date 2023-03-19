@@ -24,7 +24,7 @@ const AllPosts = ({ posts }: Props) => {
             <span>{post.created}</span>
           </div>
           <h2>{post.title}</h2>
-          <p>{post.excerpt}</p>
+          {/* <p>{post.excerpt}</p> */}
           <Link href={`/posts/${post.slug}`}>Read More</Link>
 
           <div>
