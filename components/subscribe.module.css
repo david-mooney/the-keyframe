@@ -67,8 +67,8 @@
   background-color: var(--color-brand);
   cursor: pointer;
   padding: var(--gap-text) var(--gap-row-xl);
-  color: var(--color-dark);
-  font-size: var(--font-1);
+  color: var(--color-background);
+  font-size: var(--font-size-1);
   font-weight: var(--font-weight-bold);
 }
 

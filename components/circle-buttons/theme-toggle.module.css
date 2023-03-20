@@ -10,6 +10,12 @@
   height: 100%;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .icon {
+    transition: none;
+  }
+}
+
 .icons {
   position: relative;
   border-radius: 50%;

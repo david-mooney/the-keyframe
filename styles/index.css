@@ -88,10 +88,6 @@ small {
   border-radius: 0 !important;
 }
 
-.gatsby-resp-image-image {
-  cursor: zoom-in;
-}
-
 .image-zoom-wrapper::after {
   background-color: var(--color-background) !important;
 }

@@ -1,5 +1,5 @@
 .item {
-  padding-right: var(--spacing-4);
+  padding-right: var(--gap-text);
   width: var(--tap-size);
   height: var(--tap-size);
   will-change: contents;

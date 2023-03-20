@@ -31,6 +31,8 @@ export const DockItem = ({ children, animate }) => {
   });
 
   useEffect(() => {
+    if (!animate) return;
+
     return dimension.on('change', (val) => {
       if (dock.hovered) {
         spring.set(Math.round(val));
@@ -38,7 +40,7 @@ export const DockItem = ({ children, animate }) => {
         spring.set(SIZE);
       }
     });
-  }, [spring, dimension, dock.hovered]);
+  }, [spring, dimension, dock.hovered, animate]);
 
   useEffect(() => {
     const rect = ref.current.getBoundingClientRect();
@@ -50,9 +52,7 @@ export const DockItem = ({ children, animate }) => {
     setElCenterX(rect.x + rect.width / 2);
   });
 
-  const style = animate
-    ? { width: spring, height: spring }
-    : { width: `${SIZE}px`, height: `${SIZE}px` };
+  const style = { width: spring, height: spring };
 
   return (
     <LazyMotion features={domAnimation}>
