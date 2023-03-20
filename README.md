@@ -17,6 +17,7 @@
 - [ ] Consolidate circle button into more generic button component
 - [ ] Add next/seo to blog posts
 - [ ] Add command palette search
+- [ ] Add command a11y options (color controls, motion, etc.)
 - [ ] Add ability to dismiss the dock through command palette or icon
 
 ## Cleanup

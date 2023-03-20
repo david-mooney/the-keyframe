@@ -23,6 +23,7 @@ export const CircleToggle = ({
     aria-checked={checked}
     className={`${styles.button} tooltip-anchor`}
     onClick={handleClick}
+    data-animate="true"
   >
     <Tooltip>{label}</Tooltip>
     {children}

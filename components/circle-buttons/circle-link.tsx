@@ -27,6 +27,7 @@ export const CircleLink = ({
       aria-label={label}
       href={href}
       className={`${styles.anchor} tooltip-anchor`}
+      data-animate="true"
     >
       <Tooltip>{label}</Tooltip>
       <span className={styles.icon} aria-hidden="true">

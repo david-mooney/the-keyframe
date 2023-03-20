@@ -3,10 +3,12 @@ import localFont from 'next/font/local';
 
 import {
   BsHouseFill,
-  BsGithub,
+  // BsGithub,
   BsSearch,
   BsFillPaletteFill,
-  BsEnvelopeFill,
+  // BsEnvelopeFill,
+  BsUniversalAccess,
+  BsCommand,
 } from 'react-icons/bs';
 
 import { LINKS } from '@/lib/constants';
@@ -50,14 +52,21 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <CircleLink {...LINKS.portfolio}>
           <BsFillPaletteFill size="50%" />
         </CircleLink>
-        <CircleLink {...LINKS.email}>
+        <CircleLink href="" label="Accessibility">
+          <BsUniversalAccess size="50%" />
+        </CircleLink>
+        <CircleLink href="" label="Command Palette">
+          <BsCommand size="50%" />
+        </CircleLink>
+        {/* <CircleLink {...LINKS.email}>
           <BsEnvelopeFill size="50%" />
         </CircleLink>
         <CircleLink {...LINKS.github} newTab>
           <BsGithub size="50%" />
-        </CircleLink>
+        </CircleLink> */}
         <ThemeToggle />
       </Dock>
+
       <Component {...pageProps} />
     </>
   );

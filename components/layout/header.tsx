@@ -19,7 +19,7 @@ const Header = ({ Level = 'h1' }: HeadingProps) => {
   const Element = isHome ? Level : Anchor;
 
   return (
-    <header className={styles.header} data-animate="true">
+    <header className={styles.header}>
       <a className="skip-to-content underline" href="#main">
         Skip to content
       </a>
