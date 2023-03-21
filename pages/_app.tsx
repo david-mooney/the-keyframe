@@ -1,20 +1,6 @@
 import { AppProps } from 'next/app';
 import localFont from 'next/font/local';
-
-import {
-  BsHouseFill,
-  // BsGithub,
-  BsSearch,
-  BsFillPaletteFill,
-  // BsEnvelopeFill,
-  BsUniversalAccess,
-  BsCommand,
-} from 'react-icons/bs';
-
-import { LINKS } from '@/lib/constants';
-import Dock from '@/components/dock/dock';
-import ThemeToggle from '@/components/circle-buttons/theme-toggle';
-import CircleLink from '@/components/circle-buttons/circle-link';
+import GlobalComponents from '@components/global-components';
 
 import '@styles/accessibility.css';
 import '@styles/animations.css';
@@ -33,7 +19,7 @@ const sansFont = localFont({
   fallback: ['Helvetica', 'ui-sans-serif'],
 });
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+export default function TheKeyframe({ Component, pageProps }: AppProps) {
   return (
     <>
       <style jsx global>{`
@@ -42,31 +28,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         }
       `}</style>
 
-      <Dock>
-        <CircleLink {...LINKS.home}>
-          <BsHouseFill size="50%" />
-        </CircleLink>
-        <CircleLink {...LINKS.posts}>
-          <BsSearch size="50%" />
-        </CircleLink>
-        <CircleLink {...LINKS.portfolio}>
-          <BsFillPaletteFill size="50%" />
-        </CircleLink>
-        <CircleLink href="" label="Accessibility">
-          <BsUniversalAccess size="50%" />
-        </CircleLink>
-        <CircleLink href="" label="Command Palette">
-          <BsCommand size="50%" />
-        </CircleLink>
-        {/* <CircleLink {...LINKS.email}>
-          <BsEnvelopeFill size="50%" />
-        </CircleLink>
-        <CircleLink {...LINKS.github} newTab>
-          <BsGithub size="50%" />
-        </CircleLink> */}
-        <ThemeToggle />
-      </Dock>
-
+      <GlobalComponents />
       <Component {...pageProps} />
     </>
   );

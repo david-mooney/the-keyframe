@@ -26,7 +26,5 @@
 @media (min-width: 1024px) {
   .list {
     --column-count: 3;
-
-    column-gap: var(--gap-row-xl);
   }
 }

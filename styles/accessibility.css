@@ -16,9 +16,8 @@
 .skip-to-content {
   display: inline;
   position: absolute;
-  top: var(--spacing-5);
-  left: 50%;
-  transform: translateX(-50%);
+  top: var(--gap-text);
+  left: var(--gap-text);
   transition: var(--timing-fast) opacity var(--ease-in-out);
   visibility: hidden;
   opacity: 0;
