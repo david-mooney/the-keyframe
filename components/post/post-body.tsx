@@ -26,6 +26,7 @@ const PostBody = ({ children }: Props) => {
     ) as NodeListOf<HTMLImageElement>;
 
     const handleKeyDown = (event: KeyboardEvent) => {
+      // TODO use my new hook
       if (event.key === KEYS.ENTER || event.key === KEYS.SPACE) {
         event.preventDefault();
         (event.target as HTMLImageElement).click();

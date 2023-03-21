@@ -1,0 +1,6 @@
+.container {
+  border-radius: var(--border-radius-1);
+  background: var(--color-background);
+  width: 33.3vw;
+  aspect-ratio: 1/1;
+}

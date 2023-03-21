@@ -1,19 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BsSunFill, BsMoonFill } from 'react-icons/bs';
 import CircleToggle from './circle-toggle';
 import styles from './theme-toggle.module.css';
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState(null);
-  const [checked, setChecked] = useState(false);
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-    const initialTheme = root.classList.contains('dark') ? 'dark' : 'light';
-
-    setTheme(initialTheme);
-    setChecked(initialTheme === 'dark');
-  }, []);
+  const [theme, setTheme] = useState(
+    document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+  );
+  const [checked, setChecked] = useState(
+    document.documentElement.classList.contains('dark') ? true : false
+  );
 
   const handleClick = () => {
     const root = window.document.documentElement;
@@ -23,6 +19,7 @@ const ThemeToggle = () => {
       isDark ? 'dark' : 'light',
       isDark ? 'light' : 'dark'
     );
+
     window.localStorage.setItem('__theme', isDark ? 'light' : 'dark');
 
     setTheme(isDark ? 'light' : 'dark');
