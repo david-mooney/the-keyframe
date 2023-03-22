@@ -45,7 +45,7 @@ const AllPosts = ({ posts }: Props) => {
                   </div>
 
                   <div className={styles.title}>
-                    <h4 className={styles.underline}>{postObj.title}</h4>
+                    <h3 className={styles.underline}>{postObj.title}</h3>
                   </div>
 
                   <span className={`${styles.underline} ${styles.button}`}>

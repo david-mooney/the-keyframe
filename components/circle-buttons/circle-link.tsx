@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Tooltip from '@/components/tooltip';
 import { useRouter } from 'next/router';
 import styles from './circle-link.module.css';
 
@@ -26,10 +25,9 @@ export const CircleLink = ({
       target={newTab ? '_blank' : '_self'}
       aria-label={label}
       href={href}
-      className={`${styles.anchor} tooltip-anchor`}
+      className={styles.anchor}
       data-animate="true"
     >
-      <Tooltip>{label}</Tooltip>
       <span className={styles.icon} aria-hidden="true">
         {children}
       </span>

@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import Router from 'next/router';
 import { useState } from 'react';
 import {
   BsHouseFill,
@@ -10,7 +11,9 @@ import { LINKS } from '@/lib/constants';
 import Dock from '@/components/dock/dock';
 import CircleLink from '@/components/circle-buttons/circle-link';
 import CommandButton from '@components/command-palette/command-button';
+import Fireworks from '@/components/fireworks';
 import useKeyCommand from '@/hooks/use-key-command';
+import { ThemeProvider } from '@/hooks/use-theme';
 
 const ThemeToggle = dynamic(
   () => import('@/components/circle-buttons/theme-toggle'),
@@ -18,17 +21,20 @@ const ThemeToggle = dynamic(
 );
 
 const CommandPalette = dynamic(
-  () => import('@/components/command-palette/command-palette')
+  () => import('@/components/command-palette/command-palette'),
+  { ssr: false }
 );
 
 const GlobalComponents = () => {
   const [paletteOpen, setPaletteOpen] = useState(false);
 
-  useKeyCommand('Escape', () => setPaletteOpen(!paletteOpen));
+  useKeyCommand('Escape', () => setPaletteOpen(false));
   useKeyCommand('meta+k,ctrl+k', () => setPaletteOpen(!paletteOpen));
 
+  Router.events.on('routeChangeComplete', () => setPaletteOpen(false));
+
   return (
-    <>
+    <ThemeProvider>
       <Dock>
         <CircleLink {...LINKS.home}>
           <BsHouseFill size="50%" />
@@ -46,8 +52,9 @@ const GlobalComponents = () => {
         <ThemeToggle />
       </Dock>
 
+      <Fireworks />
       {paletteOpen && <CommandPalette close={() => setPaletteOpen(false)} />}
-    </>
+    </ThemeProvider>
   );
 };
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import Tooltip from '@/components/tooltip';
 import styles from './circle-toggle.module.css';
 
 export interface CircleToggleProps {
@@ -21,11 +20,10 @@ export const CircleToggle = ({
     role="switch"
     aria-label={label}
     aria-checked={checked}
-    className={`${styles.button} tooltip-anchor`}
+    className={styles.button}
     onClick={handleClick}
     data-animate="true"
   >
-    <Tooltip>{label}</Tooltip>
     {children}
   </button>
 );

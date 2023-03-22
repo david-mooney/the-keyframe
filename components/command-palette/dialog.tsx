@@ -1,41 +1,37 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import useTabTrap from '@/hooks/use-tab-trap';
 import styles from './dialog.module.css';
+import useLockScroll from '@hooks/use-lock-scroll';
 
 type DialogProps = {
   children: React.ReactNode;
-  close: () => void;
+  close: (e?) => void;
 };
 
-const Dialog = ({ children, close }: DialogProps) => {
+const Dialog = ({ close, children }: DialogProps) => {
   const ref = useRef(null);
+
   useTabTrap(ref);
+  useLockScroll();
 
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === 'Escape') {
-        event.preventDefault();
-        closeDialog();
-      }
-    };
-
-    // TODO add a hook and useLayoutEffect
-    document.body.style.overflow = 'hidden';
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  const closeDialog = () => {
-    close();
-    document.body.style.overflow = 'auto';
+  const clickOutside = (e) => {
+    if (ref.current && !ref.current.contains(e.target)) {
+      close();
+    }
   };
 
   return (
-    <div className={styles.overlay} onClick={closeDialog}>
+    <aside
+      className={styles.overlay}
+      onClick={clickOutside}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Command Palette"
+    >
       <div className={styles.dialog} ref={ref}>
         {children}
       </div>
-    </div>
+    </aside>
   );
 };
 

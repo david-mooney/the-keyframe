@@ -61,9 +61,12 @@
 }
 
 .title {
-  /* TODO - titles should scale at source - typography */
   flex-grow: 1;
   margin-left: var(--gap-column);
+}
+
+.title > h3 {
+  font-size: var(--font-size-2);
 }
 
 .button {

@@ -1,56 +1,45 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsSunFill, BsMoonFill } from 'react-icons/bs';
+import { useTheme } from '@hooks/use-theme';
+import useKeyCommand from '@hooks/use-key-command';
 import CircleToggle from './circle-toggle';
 import styles from './theme-toggle.module.css';
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState(
-    document.documentElement.classList.contains('dark') ? 'dark' : 'light'
-  );
+  const { theme, changeTheme } = useTheme();
   const [checked, setChecked] = useState(
-    document.documentElement.classList.contains('dark') ? true : false
+    document.documentElement.classList.contains('dark')
   );
 
-  const handleClick = () => {
-    const root = window.document.documentElement;
-    const isDark = root.classList.contains('dark');
+  useEffect(() => {
+    setChecked(theme === 'dark');
+  }, [theme]);
 
-    root.classList.replace(
-      isDark ? 'dark' : 'light',
-      isDark ? 'light' : 'dark'
-    );
-
-    window.localStorage.setItem('__theme', isDark ? 'light' : 'dark');
-
-    setTheme(isDark ? 'light' : 'dark');
-    setChecked(!isDark);
-  };
+  useKeyCommand('ctrl+t', () => changeTheme());
 
   return (
-    theme && (
-      <CircleToggle
-        checked={checked}
-        handleClick={handleClick}
-        label="Toggle dark mode"
-      >
-        <div className={styles.icons}>
-          <span
-            className={`${styles.icon} ${styles.sun}`}
-            data-active={`${!checked}`}
-            aria-hidden="true"
-          >
-            <BsSunFill size="50%" />
-          </span>
-          <span
-            className={`${styles.icon} ${styles.moon}`}
-            data-active={`${checked}`}
-            aria-hidden="true"
-          >
-            <BsMoonFill size="50%" />
-          </span>
-        </div>
-      </CircleToggle>
-    )
+    <CircleToggle
+      checked={checked}
+      handleClick={changeTheme}
+      label="Toggle dark mode"
+    >
+      <div className={styles.icons}>
+        <span
+          className={`${styles.icon} ${styles.sun}`}
+          data-active={`${!checked}`}
+          aria-hidden="true"
+        >
+          <BsSunFill size="50%" />
+        </span>
+        <span
+          className={`${styles.icon} ${styles.moon}`}
+          data-active={`${checked}`}
+          aria-hidden="true"
+        >
+          <BsMoonFill size="50%" />
+        </span>
+      </div>
+    </CircleToggle>
   );
 };
 

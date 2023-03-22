@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   border: var(--border-thin);
-  border-radius: 50%;
+  border-radius: var(--border-radius-1);
   background-color: var(--color-text);
   cursor: pointer;
   padding: 0;
