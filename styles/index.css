@@ -91,3 +91,10 @@ small {
 .image-zoom-wrapper::after {
   background-color: var(--color-background) !important;
 }
+
+[aria-describedby]:hover + [role='tooltip'],
+[aria-describedby]:focus + [role='tooltip'] {
+  transition: var(--timing-faster) opacity var(--ease-in-out);
+  transition-delay: var(--timing-fast);
+  opacity: 1;
+}

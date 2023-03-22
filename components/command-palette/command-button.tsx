@@ -1,13 +1,15 @@
 import { BsCommand } from 'react-icons/bs';
-import Button from '../buttons/button';
+import Button from '@components/buttons/button';
 
 const CommandButton = ({ setOpen }) => {
+  const id = 'command-button';
+
   const handleClick = () => {
     setOpen(true);
   };
 
   return (
-    <Button onClick={handleClick}>
+    <Button id={id} text="Open command palette" onClick={handleClick}>
       <BsCommand size="50%" />
     </Button>
   );

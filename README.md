@@ -8,11 +8,13 @@
 - [ ] Add RSS feed
 - [ ] Header animation
 - [ ] Add sitemap
+- [ ] React portal tooltips
 - [ ] Add Sandpack
 - [ ] Add Share buttons
 - [ ] Add "frame" animation behind logo
 - [ ] Add form confetti
 - [ ] Add "back to top" button
+- [ ] Remove SSR - too much of a PITA
 - [ ] Get .underline class working with theme toggle transition
 - [ ] Consolidate circle button into more generic button component
 - [ ] Add next/seo to blog posts
@@ -20,6 +22,7 @@
 - [ ] Add command a11y options (color controls, motion, etc.)
 - [ ] Fine tune the scaling across screen sizes
 - [ ] Add ability to dismiss the dock through command palette or icon
+- [ ] Move all strings into a JSON file
 
 ## Cleanup
 
@@ -37,3 +40,4 @@
 - [ ] search should highlight keywords in the post using the `mark` tag
 - [ ] Swap React for Preact when it's compatible to reduce the bundle size
 - [ ] Netlify functions can have a slow cold-start, an alternative might be needed
+- [ ] Look into localization for the site

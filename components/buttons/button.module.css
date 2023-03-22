@@ -10,5 +10,9 @@
   padding: 0;
   width: 100%;
   height: 100%;
-  color: rgb(157 220 157);
+  color: var(--color-background);
+}
+
+.button:hover {
+  background-color: var(--color-brand);
 }
