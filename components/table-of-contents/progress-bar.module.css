@@ -5,7 +5,7 @@
 
 .track {
   position: relative;
-  background-color: var(--color-text-50);
+  background-color: var(--color-text-25);
   width: 2px;
   height: 50vh;
 }
