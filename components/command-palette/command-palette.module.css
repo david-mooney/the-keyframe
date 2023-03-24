@@ -3,22 +3,17 @@
   flex-direction: column;
   border-radius: var(--border-radius-1);
   background: var(--color-background);
-  padding: var(--gap-text);
-  width: 33.3vw;
+  width: 50vw;
+  max-height: 50vh;
   overflow-y: auto;
-  aspect-ratio: 1/1;
 }
 
 .title {
   margin: 0;
   border-top: var(--border-thin);
   border-bottom: var(--border-thin);
-  padding: var(--gap-text) 0;
+  padding: var(--gap-text);
   font-size: var(--font-size-2);
-}
-
-.section:first-of-type .title {
-  border-top: none;
 }
 
 .list {
@@ -39,7 +34,7 @@
 
 .kbd {
   border-radius: var(--border-radius-1);
-  background: var(--color-brand);
+  background: var(--color-text);
   padding: var(--gap-mini);
   color: var(--color-background);
   font-size: var(--font-size-1);
@@ -52,4 +47,17 @@
 
 .kbd:last-of-type {
   margin-left: var(--gap-mini);
+}
+
+.search {
+  margin: 0;
+  border: none;
+  background: transparent;
+  padding: 24px var(--gap-text);
+  color: var(--color-text);
+  font-size: var(--font-size-1);
+}
+
+.search:focus {
+  outline: none;
 }

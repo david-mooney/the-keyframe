@@ -16,18 +16,16 @@ const shortcuts = [
 ];
 
 const Shortcut = ({ value }) => {
-  // split the shortcut around any + sign, and wrap the parts in a <kbd> element
   const parts = value.split('+').map((part) => (
     <kbd className={styles.kbd} key={part}>
       {part}
     </kbd>
   ));
 
-  // join the parts with a + sign
   return <>{parts.reduce((prev, curr) => [prev, ' + ', curr])}</>;
 };
 
-const CommandShortcuts = () => (
+const Shortcuts = () => (
   <ul className={styles.list}>
     {shortcuts.map(({ command, shortcut }) => (
       <li className={styles.item} key={command}>
@@ -38,4 +36,4 @@ const CommandShortcuts = () => (
   </ul>
 );
 
-export default CommandShortcuts;
+export default Shortcuts;
