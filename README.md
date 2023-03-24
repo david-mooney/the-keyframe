@@ -12,7 +12,6 @@
 - [ ] Add Sandpack
 - [ ] Add Share buttons
 - [ ] Add "frame" animation behind logo
-- [ ] Add form confetti
 - [ ] Add "back to top" button
 - [ ] Remove SSR - too much of a PITA
 - [ ] Get .underline class working with theme toggle transition

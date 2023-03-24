@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import imageZoom from 'fast-image-zoom';
 import { KEYS } from '@lib/constants';
 import markdownStyles from './markdown.module.css';
 import styles from './post-body.module.css';
@@ -11,13 +10,12 @@ type Props = {
 export const ARTICLE_ID = 'post-article';
 
 const PostBody = ({ children }: Props) => {
-  // TODO: replace external script with custom implementation (hook)
   useEffect(() => {
-    const zoomInitialized = document.getElementById('image-zoom-styles');
-
-    if (!zoomInitialized) {
-      imageZoom({ selector: `#${ARTICLE_ID} img` });
-    }
+    // TODO: replace external script with custom implementation (hook)
+    // const zoomInitialized = document.getElementById('image-zoom-styles');
+    // if (!zoomInitialized) {
+    //   imageZoom({ selector: `#${ARTICLE_ID} img` });
+    // }
   }, []);
 
   useEffect(() => {

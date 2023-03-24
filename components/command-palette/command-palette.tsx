@@ -1,7 +1,9 @@
-import Link from 'next/link';
+import { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import Dialog from './dialog';
-import CommandShortcuts from './command-shortcuts';
+import Shortcuts from './shortcuts';
+import Links from './links';
+import ExternalLinks from './external-links';
 import styles from './command-palette.module.css';
 
 type Props = {
@@ -9,46 +11,37 @@ type Props = {
 };
 
 const CommandPalette = ({ close }: Props) => {
+  const ref = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (ref.current) {
+      ref.current.focus();
+    }
+  }, []);
+
   return createPortal(
     <Dialog close={close}>
       <div className={styles.container}>
+        <input
+          ref={ref}
+          type="search"
+          className={styles.search}
+          placeholder="Search for posts"
+        />
+
         <section className={styles.section}>
           <h3 className={styles.title}>Shortcuts</h3>
-          <CommandShortcuts />
+          <Shortcuts />
         </section>
 
         <section className={styles.section}>
           <h3 className={styles.title}>Navigation</h3>
-          <ul className={styles.list}>
-            <li className={styles.item}>
-              <Link href="/">Home</Link>
-            </li>
-            <li className={styles.item}>
-              <Link href="/posts">All Posts</Link>
-            </li>
-            <li className={styles.item}>
-              <Link href="/portfolio">Portfolio</Link>
-            </li>
-            <li className={styles.item}>
-              <Link href="/privacy">Privacy Policy</Link>
-            </li>
-          </ul>
+          <Links />
         </section>
 
         <section className={styles.section}>
           <h3 className={styles.title}>External Links</h3>
-          <ul className={styles.list}>
-            <li className={styles.item}>
-              <a href="Github" className={styles.link}>
-                Github
-              </a>
-            </li>
-            <li className={styles.item}>
-              <a href="Twitter" className={styles.link}>
-                Twitter
-              </a>
-            </li>
-          </ul>
+          <ExternalLinks />
         </section>
       </div>
     </Dialog>,
