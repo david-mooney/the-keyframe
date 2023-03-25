@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from './command-palette.module.css';
 
 const Links = () => (
-  <ul className={styles.list}>
+  <ul className={styles.list} title="Internal Links">
     <li className={styles.item}>
       <Link href="/">Home</Link>
     </li>

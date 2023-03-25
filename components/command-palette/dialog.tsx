@@ -22,6 +22,16 @@ const Dialog = ({ close, children }: DialogProps) => {
     }
   };
 
+  const initial = {
+    opacity: 0,
+    scale: 0.9,
+  };
+
+  const final = {
+    opacity: 1,
+    scale: 1,
+  };
+
   return (
     <motion.aside
       initial={{ opacity: 0 }}
@@ -32,11 +42,12 @@ const Dialog = ({ close, children }: DialogProps) => {
       role="dialog"
       aria-modal="true"
       aria-label="Command Palette"
+      aria-roledescription="Quickly find posts or navigate to other pages. Press escape to close"
     >
       <motion.div
-        initial={{ y: 100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: 100, opacity: 0 }}
+        initial={initial}
+        animate={final}
+        exit={initial}
         transition={{
           type: 'spring',
           stiffness: 400,
