@@ -4,7 +4,7 @@
   align-items: center;
   margin: 0 auto var(--spacing-8);
   margin-top: var(--spacing-15);
-  width: min(80%, var(--max-width-1));
+  width: min(80%, var(--max-width));
 }
 
 .input {

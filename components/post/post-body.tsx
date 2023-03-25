@@ -16,6 +16,7 @@ const PostBody = ({ children }: Props) => {
     // if (!zoomInitialized) {
     //   imageZoom({ selector: `#${ARTICLE_ID} img` });
     // }
+    // e.g. https://codesandbox.io/s/framer-motion-image-zoom-07wkh?from-embed=&file=/src/Image.tsx
   }, []);
 
   useEffect(() => {

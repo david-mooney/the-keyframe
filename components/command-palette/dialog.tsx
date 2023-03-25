@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { motion } from 'framer-motion'; //TODO - use 'm' instead
 import useTabTrap from '@/hooks/use-tab-trap';
 import styles from './dialog.module.css';
 import useLockScroll from '@hooks/use-lock-scroll';
@@ -8,6 +9,7 @@ type DialogProps = {
   close: (e?) => void;
 };
 
+// TODO use reduced motion, use m instead of motion
 const Dialog = ({ close, children }: DialogProps) => {
   const ref = useRef(null);
 
@@ -21,17 +23,31 @@ const Dialog = ({ close, children }: DialogProps) => {
   };
 
   return (
-    <aside
+    <motion.aside
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       className={styles.overlay}
       onClick={clickOutside}
       role="dialog"
       aria-modal="true"
       aria-label="Command Palette"
     >
-      <div className={styles.dialog} ref={ref}>
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: 100, opacity: 0 }}
+        transition={{
+          type: 'spring',
+          stiffness: 400,
+          damping: 20,
+        }}
+        className={styles.dialog}
+        ref={ref}
+      >
         {children}
-      </div>
-    </aside>
+      </motion.div>
+    </motion.aside>
   );
 };
 
