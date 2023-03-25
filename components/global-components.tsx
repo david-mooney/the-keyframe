@@ -2,12 +2,7 @@ import dynamic from 'next/dynamic';
 import Router from 'next/router';
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import {
-  BsHouseFill,
-  BsSearch,
-  BsFillPaletteFill,
-  BsUniversalAccess,
-} from 'react-icons/bs';
+import { BsHouseFill, BsSearch, BsFillPaletteFill } from 'react-icons/bs';
 import { LINKS } from '@/lib/constants';
 import Dock from '@/components/dock/dock';
 import CircleLink from '@/components/circle-buttons/circle-link';
@@ -46,9 +41,6 @@ const GlobalComponents = () => {
         </CircleLink>
         <CircleLink {...LINKS.portfolio}>
           <BsFillPaletteFill size="50%" />
-        </CircleLink>
-        <CircleLink href="" label="Accessibility">
-          <BsUniversalAccess size="50%" />
         </CircleLink>
         <CommandButton setOpen={setPaletteOpen} />
         <ThemeToggle />

@@ -1,7 +1,7 @@
 import styles from './command-palette.module.css';
 
 const Links = () => (
-  <ul className={styles.list}>
+  <ul className={styles.list} title="External Links">
     <li className={styles.item}>
       <a
         href="https://github.com/david-mooney/the-keyframe"

@@ -31,13 +31,9 @@ const CommandPalette = ({ close }: Props) => {
 
         {/* TODO hide on mobile */}
         <section className={styles.section}>
-          <h3 className={styles.title}>Shortcuts</h3>
+          <h3 className={styles.title}>Keyboard Shortcuts</h3>
+          {/* TODO move the titles into the components */}
           <Shortcuts />
-        </section>
-
-        <section className={styles.section}>
-          <h3 className={styles.title}>Accessibility</h3>
-          <Links />
         </section>
 
         <section className={styles.section}>
