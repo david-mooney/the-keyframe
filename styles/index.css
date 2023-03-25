@@ -62,12 +62,6 @@ small {
   text-decoration: none;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .underline {
-    transition: none;
-  }
-}
-
 .underline:focus,
 .underline:hover {
   background-size: 100% 2px;

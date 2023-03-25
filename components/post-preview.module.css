@@ -8,12 +8,6 @@
   background-size: 0 var(--underline-size);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .underline {
-    transition: none;
-  }
-}
-
 .link {
   display: flex;
   outline-style: solid;

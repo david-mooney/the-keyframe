@@ -27,10 +27,3 @@
     overflow: auto hidden;
   }
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .container {
-    backdrop-filter: none;
-    background-color: var(--color-background);
-  }
-}

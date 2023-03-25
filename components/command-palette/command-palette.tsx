@@ -29,13 +29,19 @@ const CommandPalette = ({ close }: Props) => {
           placeholder="Search for posts"
         />
 
+        {/* TODO hide on mobile */}
         <section className={styles.section}>
           <h3 className={styles.title}>Shortcuts</h3>
           <Shortcuts />
         </section>
 
         <section className={styles.section}>
-          <h3 className={styles.title}>Navigation</h3>
+          <h3 className={styles.title}>Accessibility</h3>
+          <Links />
+        </section>
+
+        <section className={styles.section}>
+          <h3 className={styles.title}>Internal Links</h3>
           <Links />
         </section>
 

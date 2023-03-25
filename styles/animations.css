@@ -24,7 +24,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-animate='true'] {
-    transition: none;
+  * {
+    transition: none !important;
+    animation: none !important;
   }
 }

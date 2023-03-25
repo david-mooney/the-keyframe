@@ -15,12 +15,6 @@
   stroke-dashoffset: var(--length);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .container :global(.inner-circle) {
-    transition: none;
-  }
-}
-
 .circle {
   stroke: var(--color-text-25);
   fill: transparent;

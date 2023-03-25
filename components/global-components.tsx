@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 import Router from 'next/router';
 import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import {
   BsHouseFill,
   BsSearch,
@@ -30,6 +31,7 @@ const GlobalComponents = () => {
 
   useKeyCommand('Escape', () => setPaletteOpen(false));
   useKeyCommand('meta+k,ctrl+k', () => setPaletteOpen(!paletteOpen));
+  useKeyCommand('/', () => setPaletteOpen(!paletteOpen));
 
   Router.events.on('routeChangeComplete', () => setPaletteOpen(false));
 
@@ -53,7 +55,9 @@ const GlobalComponents = () => {
       </Dock>
 
       <Fireworks />
-      {paletteOpen && <CommandPalette close={() => setPaletteOpen(false)} />}
+      <AnimatePresence>
+        {paletteOpen && <CommandPalette close={() => setPaletteOpen(false)} />}
+      </AnimatePresence>
     </ThemeProvider>
   );
 };
