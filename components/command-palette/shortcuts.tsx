@@ -17,13 +17,17 @@ const shortcuts = [
 
 const Shortcut = ({ command, value }) => {
   const parts = value.split('+').map((part) => (
-    <kbd className={styles.kbd} key={part}>
+    <kbd className={styles.kbd} key={part} data-animate="true">
       {part}
     </kbd>
   ));
 
   return (
-    <span tabIndex={0} aria-label={`The shortcut to ${command} is ${value}`}>
+    <span
+      className={styles.shortcut}
+      tabIndex={0}
+      aria-label={`The shortcut to ${command} is ${value}`}
+    >
       {parts.reduce((prev, curr) => [prev, ' + ', curr])}
     </span>
   );

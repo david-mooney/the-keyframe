@@ -61,3 +61,12 @@
 .search:focus {
   outline: none;
 }
+
+.shortcut:focus {
+  outline: none;
+}
+
+.shortcut:focus .kbd {
+  outline: none;
+  background-color: var(--color-brand);
+}

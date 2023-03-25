@@ -47,11 +47,10 @@ const Dialog = ({ close, children }: DialogProps) => {
       <motion.div
         initial={initial}
         animate={final}
-        exit={initial}
         transition={{
           type: 'spring',
-          stiffness: 400,
-          damping: 20,
+          stiffness: 500,
+          damping: 30,
         }}
         className={styles.dialog}
         ref={ref}
