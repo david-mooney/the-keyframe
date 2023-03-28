@@ -1,6 +1,7 @@
 import Meta from '@components/meta';
 import Alert from '@components/alert';
 import Footer from '@components/layout/footer';
+import DynamicFooter from '@components/layout/dynamic-footer';
 
 type Props = {
   preview?: boolean;
@@ -12,8 +13,11 @@ const Layout = ({ preview, children }: Props) => {
     <>
       <Meta />
       {preview && <Alert />}
-      <main id="main">{children}</main>
-      <Footer />
+      <div id="page-wrapper">
+        <main id="main">{children}</main>
+        <Footer />
+      </div>
+      <DynamicFooter />
     </>
   );
 };

@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body data-animate="true">
+      <body>
         <Script id="themeToggle" strategy="beforeInteractive">
           {`
             const themes = {

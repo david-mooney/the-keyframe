@@ -1,9 +1,7 @@
 .wrapper {
-  margin: 0 auto;
   border-top: var(--border-thin);
   border-bottom: var(--border-thin);
   padding: var(--gap-row) 0;
-  max-width: var(--max-width-wide);
   text-align: center;
 }
 

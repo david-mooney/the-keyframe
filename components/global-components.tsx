@@ -2,10 +2,11 @@ import dynamic from 'next/dynamic';
 import Router from 'next/router';
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { BsHouseFill, BsSearch, BsFillPaletteFill } from 'react-icons/bs';
+import { BsHouseFill, BsFillPaletteFill } from 'react-icons/bs';
 import { LINKS } from '@/lib/constants';
 import Dock from '@/components/dock/dock';
 import CircleLink from '@/components/circle-buttons/circle-link';
+import SearchButton from '@components/search/search-button';
 import CommandButton from '@components/command-palette/command-button';
 import Fireworks from '@/components/fireworks';
 import useKeyCommand from '@/hooks/use-key-command';
@@ -36,9 +37,7 @@ const GlobalComponents = () => {
         <CircleLink {...LINKS.home}>
           <BsHouseFill size="50%" />
         </CircleLink>
-        <CircleLink {...LINKS.posts}>
-          <BsSearch size="50%" />
-        </CircleLink>
+        <SearchButton />
         <CircleLink {...LINKS.portfolio}>
           <BsFillPaletteFill size="50%" />
         </CircleLink>

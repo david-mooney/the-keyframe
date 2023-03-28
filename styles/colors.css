@@ -10,6 +10,8 @@
   /* Fixed colors (same regardless of theme setting) */
   --color-light: hsl(var(--light-h) var(--light-s) var(--light-l));
   --color-dark: hsl(var(--dark-h) var(--dark-s) var(--dark-l));
+  --color-light-15: hsla(var(--light-h) var(--light-s) var(--light-l) / 15%);
+  --color-dark-15: hsla(var(--dark-h) var(--dark-s) var(--dark-l) / 15%);
   --color-light-25: hsla(var(--light-h) var(--light-s) var(--light-l) / 25%);
   --color-dark-25: hsla(var(--dark-h) var(--dark-s) var(--dark-l) / 25%);
   --color-light-50: hsla(var(--light-h) var(--light-s) var(--light-l) / 50%);
@@ -27,6 +29,7 @@
 
   --color-brand: hsl(32deg 55% 54%);
   --color-text: var(--color-dark);
+  --color-text-15: var(--color-dark-15);
   --color-text-25: var(--color-dark-25);
   --color-text-50: var(--color-dark-50);
   --color-background: var(--color-light);
@@ -38,6 +41,7 @@
   /* Dark theme */
   --color-brand: hsl(27deg 100% 80%);
   --color-text: var(--color-light);
+  --color-text-15: var(--color-light-15);
   --color-text-25: var(--color-light-25);
   --color-text-50: var(--color-light-50);
   --color-background: var(--color-dark);

@@ -22,6 +22,7 @@
 - [ ] Fine tune the scaling across screen sizes
 - [ ] Add ability to dismiss the dock through command palette or icon
 - [ ] Move all strings into a JSON file
+- [ ] Console log some ASCII art
 
 ## Cleanup
 

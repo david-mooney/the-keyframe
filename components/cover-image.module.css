@@ -2,9 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: -11px 7px 25px 3px rgb(38 38 38 / 50%) inset;
-  background: var(--color-light); /* TODO: brand? */
-  width: 100%;
+  box-shadow: -11px 7px 25px 3px rgb(38 38 38 / 50%) inset; /* TODO: brand? */
+  background: var(--color-light);
+  height: 100%;
+  min-height: 100%;
   aspect-ratio: 1/1;
 }
 
@@ -15,10 +16,9 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--border-radius-1);
-  box-shadow: -22px 14px 50px 3px rgb(38 38 38 / 50%);
-  background: var(--color-background);
+  box-shadow: -22px 14px 50px 3px rgb(38 38 38 / 50%); /* TODO: brand? */
+  background-color: var(--color-background);
   width: 70%;
   height: 70%;
   overflow: hidden;
-  color: var(--color-brand);
 }

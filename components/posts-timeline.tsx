@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Link from 'next/link';
 import Post from '@interfaces/post';
 import styles from './posts-timeline.module.css';
@@ -19,11 +20,11 @@ const AllPosts = ({ posts }: Props) => {
   }, {});
 
   return (
-    <div>
+    <>
       {Object.keys(postsByYear)
         .sort((a, b) => Number(b) - Number(a))
         .map((year) => (
-          <div key={year}>
+          <Fragment key={year}>
             {year !== new Date().getFullYear().toString() && (
               <h3 className={styles.year}>
                 <span data-animate="true">{year}</span>
@@ -54,9 +55,9 @@ const AllPosts = ({ posts }: Props) => {
                 </Link>
               );
             })}
-          </div>
+          </Fragment>
         ))}
-    </div>
+    </>
   );
 };
 

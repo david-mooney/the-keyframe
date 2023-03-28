@@ -1,11 +1,18 @@
 :root {
   /* Width limiters */
   --max-width: 50rem;
-  --max-width-wide: 70rem;
+  --max-width-wide: 75rem;
   --max-width-read: 64ch;
   --max-width-full: 100%;
 
   /* Padding & margin gaps */
+  --gap-zero: 0;
+  --gap-s: 16px;
+  --gap-m: 24px;
+  --gap-l: 32px;
+  --gap-xl: 48px;
+  --gap-xxl: 64px;
+  --gap-xxxl: 80px;
   --gap-row: 32px;
   --gap-row-xl: 64px;
   --gap-column: 32px;
