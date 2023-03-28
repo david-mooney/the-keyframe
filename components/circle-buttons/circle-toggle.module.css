@@ -3,7 +3,7 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  border: 1px solid transparent;
+  border: 1px solid var(--color-text-15);
   border-radius: var(--border-radius-1);
   box-shadow: var(--box-shadow-thin);
   background-color: var(--color-background);

@@ -29,14 +29,17 @@ const PostPreview = ({
         <header className={styles.header}>
           <div className={styles.meta}>
             <span>{created}</span>
-            <span>{readTime}</span>
           </div>
 
           <div className={styles.title}>
-            <h2 className={styles.underline}>{title}</h2>
+            <h3 className={styles.underline}>{title}</h3>
           </div>
 
           <p>{excerpt}</p>
+
+          <div className={styles.footer}>
+            <span>{readTime}</span>
+          </div>
         </header>
       </article>
     </Link>

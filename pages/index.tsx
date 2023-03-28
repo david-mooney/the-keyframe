@@ -20,8 +20,9 @@ export default function Index({ allPosts, featuredPosts }: Props) {
         <title>The Keyframe</title>
       </Head>
 
+      <Header Level="h1" />
+
       <Container wide>
-        <Header Level="h1" />
         <h2>Featured Posts</h2>
         <FeaturedPosts posts={featuredPosts} />
       </Container>
@@ -31,7 +32,7 @@ export default function Index({ allPosts, featuredPosts }: Props) {
       </Container>
 
       <Container wide>
-        <h2>Latest Posts</h2>
+        <h2>All Posts</h2>
         <PostsTimeline posts={allPosts} />
       </Container>
     </Layout>

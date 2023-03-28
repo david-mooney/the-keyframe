@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   border-top: var(--border-thin);
-  padding: var(--gap-text);
+  padding: 40px var(--gap-m);
 }
 
 @media screen and (max-width: 768px) {

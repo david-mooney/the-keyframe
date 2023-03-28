@@ -14,7 +14,7 @@ const Dialog = ({ close, children }: DialogProps) => {
   const ref = useRef(null);
 
   useTabTrap(ref);
-  useLockScroll();
+  useLockScroll(); // TODO - use class from the button state to lock scroll?
 
   const clickOutside = (e) => {
     if (ref.current && !ref.current.contains(e.target)) {

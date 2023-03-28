@@ -86,3 +86,21 @@ small {
   transition-delay: var(--timing-fast);
   opacity: 1;
 }
+
+/* TODO: move, just testing */
+#page-wrapper {
+  transition: transform 0.65s cubic-bezier(0.45, 0.02, 0.09, 0.98) 0s;
+  overflow: auto;
+  scrollbar-gutter: stable;
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#page-wrapper[data-search-open='true'] {
+  transform: translateY(-50vh);
+  overflow: hidden;
+}
