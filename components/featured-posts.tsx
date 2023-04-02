@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { motion, useSpring } from 'framer-motion';
 import type Post from '@interfaces/post';
 import styles from '@components/featured-posts.module.css';
 
@@ -30,12 +30,12 @@ const FeaturedPosts = ({ posts }: Props) => {
 
     window.addEventListener('wheel', onWheel);
     return () => window.removeEventListener('wheel', onWheel);
-  }, []);
+  }, [scrollX]);
 
   return (
     <section className={styles.section}>
       <motion.ol className={styles.list} ref={ref}>
-        {posts.map((post, index) => (
+        {posts.map((post) => (
           <li key={post.slug}>
             <span>POST</span>
           </li>
