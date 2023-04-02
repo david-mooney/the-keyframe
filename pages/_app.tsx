@@ -1,3 +1,4 @@
+import { StrictMode } from 'react';
 import { AppProps } from 'next/app';
 import localFont from 'next/font/local';
 import GlobalComponents from '@components/global-components';
@@ -21,7 +22,7 @@ const sansFont = localFont({
 
 export default function TheKeyframe({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <StrictMode>
       <style jsx global>{`
         :root {
           --font-family-sans: ${sansFont.style.fontFamily};
@@ -30,6 +31,6 @@ export default function TheKeyframe({ Component, pageProps }: AppProps) {
 
       <GlobalComponents />
       <Component {...pageProps} />
-    </>
+    </StrictMode>
   );
 }

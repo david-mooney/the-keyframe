@@ -1,5 +1,6 @@
+import { useRef, useEffect } from 'react';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 import type Post from '@interfaces/post';
-import PostPreview from '@components/post-preview';
 import styles from '@components/featured-posts.module.css';
 
 type Props = {
@@ -7,23 +8,39 @@ type Props = {
 };
 
 const FeaturedPosts = ({ posts }: Props) => {
+  const ref = useRef(null);
+  const scrollX = useSpring(0, {
+    stiffness: 100,
+    damping: 20,
+    mass: 0.2,
+  });
+
+  useEffect(() => {
+    scrollX.on('change', (latest) => {
+      ref.current.scrollLeft += latest;
+      scrollX.set(0);
+    });
+
+    const onWheel = (event) => {
+      // const delta = event.deltaY + event.deltaX;
+      // scrollX.set(scrollX.get() + delta);
+
+      ref.current.scrollLeft += event.deltaY + event.deltaX;
+    };
+
+    window.addEventListener('wheel', onWheel);
+    return () => window.removeEventListener('wheel', onWheel);
+  }, []);
+
   return (
     <section className={styles.section}>
-      <ol className={styles.list}>
+      <motion.ol className={styles.list} ref={ref}>
         {posts.map((post, index) => (
           <li key={post.slug}>
-            <PostPreview
-              order={index}
-              title={post.title}
-              excerpt={post.excerpt}
-              coverImage={post.coverImage}
-              created={post.created}
-              slug={post.slug}
-              readTime={post.readTime}
-            />
+            <span>POST</span>
           </li>
         ))}
-      </ol>
+      </motion.ol>
     </section>
   );
 };

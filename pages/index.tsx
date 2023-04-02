@@ -21,20 +21,7 @@ export default function Index({ allPosts, featuredPosts }: Props) {
       </Head>
 
       <Header Level="h1" />
-
-      <Container wide>
-        <h2>Featured Posts</h2>
-        <FeaturedPosts posts={featuredPosts} />
-      </Container>
-
-      <Container wide>
-        <Subscribe />
-      </Container>
-
-      <Container wide>
-        <h2>All Posts</h2>
-        <PostsTimeline posts={allPosts} />
-      </Container>
+      <FeaturedPosts posts={allPosts} />
     </Layout>
   );
 }
