@@ -7,7 +7,9 @@
 }
 
 main {
+  display: flex;
   flex: 1;
+  flex-direction: column;
 }
 
 html {
@@ -89,6 +91,9 @@ small {
 
 /* TODO: move, just testing */
 #page-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   transition: transform 0.65s cubic-bezier(0.45, 0.02, 0.09, 0.98) 0s;
   overflow: auto;
   scrollbar-gutter: stable;
