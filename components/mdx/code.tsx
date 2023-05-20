@@ -1,5 +1,4 @@
-import Highlight, { defaultProps } from 'prism-react-renderer';
-import theme from 'prism-react-renderer/themes/duotoneDark';
+import { Highlight, themes } from 'prism-react-renderer';
 import styles from './code.module.css';
 
 const Code = ({ children }) => {
@@ -10,7 +9,7 @@ const Code = ({ children }) => {
   // theme={{ plain: {}, styles: [] }}
 
   return (
-    <Highlight {...defaultProps} theme={theme} code={code} language={language}>
+    <Highlight theme={themes.duotoneDark} code={code} language={language}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={`${className} ${styles.code}`} style={style}>
           {tokens.map((line, i) => (
