@@ -67,7 +67,7 @@
   --box-shadow: rgb(0 0 0 / 30%) 0 19px 38px, rgb(0 0 0 / 22%) 0 15px 12px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (width >= 1024px) {
   :root {
     --gap-row: 48px;
     --gap-row-xl: 80px;
@@ -75,7 +75,7 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (width >= 1280px) {
   :root {
     --gap-row: 64px;
     --gap-row-xl: 96px;

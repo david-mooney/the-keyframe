@@ -1,10 +1,7 @@
 import Head from 'next/head';
 import FeaturedPosts from '@components/featured-posts';
-import PostsTimeline from '@components/posts-timeline';
 import Header from '@components/layout/header';
 import Layout from '@components/layout/layout';
-import Container from '@components/layout/container';
-import Subscribe from '@components/subscribe';
 import { getAllPostPreviews } from '@lib/api';
 import Post from '@interfaces/post';
 
@@ -13,7 +10,7 @@ type Props = {
   featuredPosts: Post[];
 };
 
-export default function Index({ allPosts, featuredPosts }: Props) {
+export default function Index({ allPosts }: Props) {
   return (
     <Layout>
       <Head>
@@ -21,20 +18,7 @@ export default function Index({ allPosts, featuredPosts }: Props) {
       </Head>
 
       <Header Level="h1" />
-
-      <Container wide>
-        <h2>Featured Posts</h2>
-        <FeaturedPosts posts={featuredPosts} />
-      </Container>
-
-      <Container wide>
-        <Subscribe />
-      </Container>
-
-      <Container wide>
-        <h2>All Posts</h2>
-        <PostsTimeline posts={allPosts} />
-      </Container>
+      <FeaturedPosts posts={allPosts} />
     </Layout>
   );
 }

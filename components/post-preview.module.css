@@ -23,8 +23,9 @@
 
 .article {
   display: flex;
+
+  /* flex-direction: column; */
   gap: var(--gap-l);
-  align-items: center;
 }
 
 .header {

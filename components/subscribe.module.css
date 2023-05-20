@@ -17,7 +17,7 @@
   padding: var(--gap-text) 0;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .form {
     flex-direction: row;
   }
@@ -70,7 +70,7 @@
   font-weight: var(--font-weight-bold);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (width >= 768px) {
   .button {
     margin: 0;
     padding: var(--gap-text) var(--gap-row);
@@ -81,7 +81,7 @@
   margin: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (width >= 768px) {
   .footer {
     margin: var(--gap-text) 0;
   }
