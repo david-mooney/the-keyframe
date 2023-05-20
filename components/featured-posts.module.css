@@ -1,6 +1,7 @@
 .section {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   justify-content: center;
   margin: 0;
   width: 100%;
@@ -8,24 +9,21 @@
 }
 
 .list {
-  box-sizing: border-box;
   display: flex;
+  flex-grow: 1;
   flex-wrap: nowrap;
-  gap: 10vw;
+  gap: 15vw;
   align-items: center;
   margin: 0;
-  padding: 0 10vw;
-  height: 50%;
-  overflow: hidden;
-  list-style: none;
+  padding: 0 25vw;
+  overflow: scroll;
 }
 
 .list li {
   box-sizing: border-box;
   display: flex;
-  background: crimson;
-  width: 33vw;
-  min-width: 33vw;
-  height: 80%;
+  width: 45vw;
+  min-width: 45vw;
+  height: 250px;
   overflow: hidden;
 }

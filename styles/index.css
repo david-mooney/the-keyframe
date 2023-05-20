@@ -99,13 +99,8 @@ small {
   scrollbar-gutter: stable;
 }
 
-/* stylelint-disable-next-line no-duplicate-selectors */
-body {
-  height: 100vh;
-  overflow: hidden;
-}
-
 #page-wrapper[data-search-open='true'] {
   transform: translateY(-50vh);
-  overflow: hidden;
+
+  /* overflow: hidden; */
 }

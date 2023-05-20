@@ -2,8 +2,8 @@ import { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import Dialog from './dialog';
 import Shortcuts from './shortcuts';
-import Links from './links';
-import ExternalLinks from './external-links';
+// import Links from './links';
+// import ExternalLinks from './external-links';
 import styles from './command-palette.module.css';
 
 type Props = {
@@ -33,16 +33,6 @@ const CommandPalette = ({ close }: Props) => {
         <section className={styles.section}>
           <h3 className={styles.title}>Keyboard Shortcuts</h3>
           <Shortcuts />
-        </section>
-
-        <section className={styles.section}>
-          <h3 className={styles.title}>Internal Links</h3>
-          <Links />
-        </section>
-
-        <section className={styles.section}>
-          <h3 className={styles.title}>External Links</h3>
-          <ExternalLinks />
         </section>
       </div>
     </Dialog>,

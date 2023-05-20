@@ -20,29 +20,28 @@ const PostPreview = ({
   slug,
   readTime,
   order,
-}: Props) => {
-  return (
-    <Link className={styles.link} as={`/posts/${slug}`} href="/posts/[slug]">
-      <article className={styles.article} data-animate="true">
-        <CoverImage priority={order === 0} title={title} src={coverImage} />
+}: Props) => (
+  <Link className={styles.link} as={`/posts/${slug}`} href="/posts/[slug]">
+    <article className={styles.article} data-animate="true">
+      <CoverImage priority={order === 0} title={title} src={coverImage} />
 
-        <header className={styles.header}>
-          <div className={styles.meta}>
-            <span>{created}</span>
-          </div>
+      <header className={styles.header}>
+        <div className={styles.meta}>
+          <span>{created}</span>
+        </div>
 
-          <div className={styles.title}>
-            <h3 className={styles.underline}>{title}</h3>
-          </div>
+        <div className={styles.title}>
+          <h3 className={styles.underline}>{title}</h3>
+        </div>
 
-          <p>{excerpt}</p>
+        <p>{excerpt}</p>
 
-          <div className={styles.footer}>
-            <span>{readTime}</span>
-          </div>
-        </header>
-      </article>
-    </Link>
-  );
-};
+        <div className={styles.footer}>
+          <span>{readTime}</span>
+        </div>
+      </header>
+    </article>
+  </Link>
+);
+
 export default PostPreview;
