@@ -23,7 +23,8 @@
 
 .article {
   display: flex;
-  flex-direction: column;
+
+  /* flex-direction: column; */
   gap: var(--gap-l);
 }
 

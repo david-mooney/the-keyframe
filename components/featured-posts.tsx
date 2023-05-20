@@ -1,5 +1,6 @@
+import Lenis from '@studio-freight/lenis';
 import { useRef, useEffect } from 'react';
-import { motion, useSpring } from 'framer-motion';
+import PostPreview from '@components/post-preview';
 import type Post from '@interfaces/post';
 import styles from '@components/featured-posts.module.css';
 
@@ -8,39 +9,41 @@ type Props = {
 };
 
 const FeaturedPosts = ({ posts }: Props) => {
-  const ref = useRef(null);
-  const scrollX = useSpring(0, {
-    stiffness: 100,
-    damping: 20,
-    mass: 0.2,
-  });
+  const wrapper = useRef(null);
 
   useEffect(() => {
-    scrollX.on('change', (latest) => {
-      ref.current.scrollLeft += latest;
-      scrollX.set(0);
+    const lenis = new Lenis({
+      wrapper: wrapper.current,
+      orientation: 'horizontal',
+      gestureOrientation: 'both',
+      lerp: 0.09,
     });
 
-    const onWheel = (event) => {
-      // const delta = event.deltaY + event.deltaX;
-      // scrollX.set(scrollX.get() + delta);
-
-      ref.current.scrollLeft += event.deltaY + event.deltaX;
+    const raf = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     };
 
-    window.addEventListener('wheel', onWheel);
-    return () => window.removeEventListener('wheel', onWheel);
-  }, [scrollX]);
+    requestAnimationFrame(raf);
+  }, []);
 
   return (
     <section className={styles.section}>
-      <motion.ol className={styles.list} ref={ref}>
-        {posts.map((post) => (
+      <ol className={styles.list} ref={wrapper}>
+        {posts.map((post, index) => (
           <li key={post.slug}>
-            <span>POST</span>
+            <PostPreview
+              order={index}
+              title={post.title}
+              excerpt={post.excerpt}
+              coverImage={post.coverImage}
+              created={post.created}
+              slug={post.slug}
+              readTime={post.readTime}
+            />
           </li>
         ))}
-      </motion.ol>
+      </ol>
     </section>
   );
 };
