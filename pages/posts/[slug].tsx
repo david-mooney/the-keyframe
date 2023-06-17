@@ -1,10 +1,11 @@
+import React from 'react';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
-import { MDXRemote } from 'next-mdx-remote';
+// import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
-import mdxComponents from '@components/mdx';
+// import mdxComponents from '@components/mdx';
 import Layout from '@components/layout/layout';
 import PostBody from '@components/post/post-body';
 import PostHeader from '@components/post/post-header';
@@ -66,7 +67,7 @@ export default function Post({ post, preview }: Props) {
           />
 
           <PostBody>
-            <MDXRemote {...post.content} components={{ ...mdxComponents }} />
+            {/* <MDXRemote {...post.content} components={mdxComponents} /> */}
           </PostBody>
 
           <TableOfContents sections={sections} />
