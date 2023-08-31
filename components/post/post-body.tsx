@@ -6,7 +6,6 @@ import styles from './post-body.module.css';
 type Props = {
   children: React.ReactNode | React.ReactNode[];
 };
-
 export const ARTICLE_ID = 'post-article';
 
 const PostBody = ({ children }: Props) => {
@@ -16,7 +15,7 @@ const PostBody = ({ children }: Props) => {
     // if (!zoomInitialized) {
     //   imageZoom({ selector: `#${ARTICLE_ID} img` });
     // }
-    // e.g. https://codesandbox.io/s/framer-motion-image-zoom-07wkh?from-embed=&file=/src/Image.tsx
+    // e.g. https://codesandbox.io/s/fwwwwramer-motion-image-zoom-07wkh?from-embed=&file=/src/Image.tsx
   }, []);
 
   useEffect(() => {
