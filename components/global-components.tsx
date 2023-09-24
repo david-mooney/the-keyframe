@@ -1,14 +1,13 @@
 import dynamic from 'next/dynamic';
 import Router from 'next/router';
 import { useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
+// import { AnimatePresence } from 'framer-motion';
 import { BsHouseFill, BsFillPaletteFill } from 'react-icons/bs';
 import { LINKS } from '@/lib/constants';
 import Dock from '@/components/dock/dock';
 import CircleLink from '@/components/circle-buttons/circle-link';
 import SearchButton from '@components/search/search-button';
-import CommandButton from '@components/command-palette/command-button';
-import Fireworks from '@/components/fireworks';
+// import CommandButton from '@components/command-palette/command-button';
 import useKeyCommand from '@/hooks/use-key-command';
 import { ThemeProvider } from '@/hooks/use-theme';
 
@@ -17,10 +16,10 @@ const ThemeToggle = dynamic(
   { ssr: false }
 );
 
-const CommandPalette = dynamic(
-  () => import('@/components/command-palette/command-palette'),
-  { ssr: false }
-);
+// const CommandPalette = dynamic(
+//   () => import('@/components/command-palette/command-palette'),
+//   { ssr: false }
+// );
 
 const GlobalComponents = () => {
   const [paletteOpen, setPaletteOpen] = useState(false);
@@ -41,14 +40,13 @@ const GlobalComponents = () => {
         <CircleLink {...LINKS.portfolio}>
           <BsFillPaletteFill size="50%" />
         </CircleLink>
-        <CommandButton setOpen={setPaletteOpen} />
         <ThemeToggle />
       </Dock>
 
-      <Fireworks />
-      <AnimatePresence>
+      {/* TODO - this is a nice pattern, but maybe not needed */}
+      {/* <AnimatePresence>
         {paletteOpen && <CommandPalette close={() => setPaletteOpen(false)} />}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </ThemeProvider>
   );
 };

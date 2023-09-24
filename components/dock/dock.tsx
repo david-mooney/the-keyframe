@@ -11,9 +11,7 @@ type DockProps = {
 
 const DockContext = React.createContext<DockProps | null>(null);
 
-export const useDock = () => {
-  return useContext(DockContext);
-};
+export const useDock = () => useContext(DockContext);
 
 const Dock = ({ children }) => {
   const ref = useRef<HTMLDivElement>();

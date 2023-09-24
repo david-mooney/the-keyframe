@@ -21,17 +21,13 @@
     "fast-image-zoom": "^7.0.1",
     "framer-motion": "^10.16.4",
     "gray-matter": "^4.0.3",
-    "js-confetti": "^0.11.0",
     "next": "latest",
     "next-mdx-remote": "^4.4.1",
     "next-transpile-modules": "^10.0.1",
-    "prism-react-renderer": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
-    "remark": "^15.0.1",
-    "scroller-motion": "^1.2.3",
-    "typescript": "^5.2.2"
+    "remark": "^15.0.1"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^13.5.2",
@@ -47,6 +43,7 @@
     "prettier": "^3.0.3",
     "stylelint": "^15.10.3",
     "stylelint-config-concentric-order": "^5.2.0",
-    "stylelint-config-standard": "^34.0.0"
+    "stylelint-config-standard": "^34.0.0",
+    "typescript": "^5.2.2"
   }
 }

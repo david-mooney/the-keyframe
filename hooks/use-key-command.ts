@@ -12,6 +12,7 @@ const useKeyCommand = (command: string, callback: () => void) => {
       const commands = command.split(',');
       const matches = commands.map((command) => {
         const keys = command.split('+');
+
         return keys.every((key) => {
           if (key === 'ctrl') return event.ctrlKey;
           if (key === 'shift') return event.shiftKey;
