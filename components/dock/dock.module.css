@@ -21,7 +21,7 @@
   backdrop-filter: blur(16px) saturate(200%) brightness(100%);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width <= 768px) {
   .container {
     max-width: 90vw;
     overflow: auto hidden;

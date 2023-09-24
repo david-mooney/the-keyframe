@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next build && next start",
     "lint": "next lint",
-    "stylelint": "stylelint **/*.css",
+    "stylelint": "stylelint \"**/*.css\"",
     "typecheck": "tsc",
     "analyze": "ANALYZE=true next build",
     "clean": "rm -rf .next",
