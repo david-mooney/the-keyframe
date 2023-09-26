@@ -1,23 +1,38 @@
 .frame {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: -11px 7px 25px 3px rgb(38 38 38 / 50%) inset; /* TODO: brand? */
-  background: var(--color-light);
-  min-height: 100%;
-  aspect-ratio: 1/1;
-}
+  --shadow: 0 15px 25px rgb(0 0 0 / 15%), 0 5px 10px rgb(0 0 0 / 5%);
 
-.image {
   display: flex;
   position: relative;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: var(--border-radius-1);
-  box-shadow: -22px 14px 50px 3px rgb(38 38 38 / 50%); /* TODO: brand? */
-  background-color: var(--color-background);
-  width: 70%;
-  height: 70%;
-  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: linear-gradient(0deg, hsl(350deg 100% 84%), hsl(22deg 100% 81%));
+  max-width: 25vw;
+  min-height: 100%;
+  aspect-ratio: 1/2;
+}
+
+.frame::before,
+.frame::after {
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  box-shadow: var(--shadow);
+  background-color: var(--color-text-15);
+  width: 1px;
+  height: var(--gap);
+  content: '';
+}
+
+.frame::before {
+  left: var(--spacing-5);
+}
+
+.frame::after {
+  right: var(--spacing-5);
+}
+
+.image {
+  /* todo */
 }

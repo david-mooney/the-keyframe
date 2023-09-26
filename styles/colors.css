@@ -29,7 +29,7 @@
 
   /* nice (AA) blue: 2C7B91 */
 
-  --color-brand: hsl(32deg 55% 54%);
+  --color-brand: hsl(22deg 100% 81%);
   --color-text: var(--color-dark);
   --color-text-15: var(--color-dark-15);
   --color-text-25: var(--color-dark-25);
@@ -41,7 +41,6 @@
 
 :root.dark {
   /* Dark theme */
-  --color-brand: hsl(27deg 100% 80%);
   --color-text: var(--color-light);
   --color-text-15: var(--color-light-15);
   --color-text-25: var(--color-light-25);

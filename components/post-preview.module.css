@@ -9,10 +9,7 @@
 }
 
 .link {
-  display: flex;
-  outline-style: solid;
-  outline-color: transparent;
-  height: 100%;
+  outline: none;
   text-decoration: none;
 }
 
@@ -23,9 +20,8 @@
 
 .article {
   display: flex;
-
-  /* flex-direction: column; */
   gap: var(--gap-l);
+  height: 100%;
 }
 
 .header {
@@ -33,6 +29,7 @@
   flex-direction: column;
   flex-grow: 1;
   gap: var(--gap-text);
+  justify-content: flex-end;
 }
 
 .meta {
@@ -47,14 +44,38 @@
 }
 
 .title {
-  margin-top: auto;
   line-height: var(--line-height-heading);
 }
 
-.header p {
-  display: -webkit-box;
-  overflow: hidden;
+.button {
+  display: flex;
+  position: relative;
+  transition: var(--timing-faster) outline var(--ease-out);
+  margin: var(--gap-l) auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: var(--gap-s) var(--gap-m);
+  line-height: var(--line-height-heading);
+  color: var(--color-text);
   font-size: var(--font-size-2);
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+}
+
+.button::after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--timing-fast) var(--ease-out);
+  background-color: var(--color-text);
+  width: 100%;
+  height: 2px;
+  content: '';
+}
+
+.link:hover .button::after,
+.link:focus-visible .button::after {
+  transform: scaleX(1);
 }

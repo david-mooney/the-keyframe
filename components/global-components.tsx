@@ -36,10 +36,10 @@ const GlobalComponents = () => {
         <CircleLink {...LINKS.home}>
           <BsHouseFill size="50%" />
         </CircleLink>
-        <SearchButton />
         <CircleLink {...LINKS.portfolio}>
           <BsFillPaletteFill size="50%" />
         </CircleLink>
+        <SearchButton />
         <ThemeToggle />
       </Dock>
 
