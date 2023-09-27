@@ -49,3 +49,16 @@
   --color-background-25: var(--color-dark-25);
   --color-background-50: var(--color-dark-50);
 }
+
+:root,
+:root.dark {
+  @media (prefers-contrast: more) {
+    --color-text: var(--color-light);
+    --color-text-15: var(--color-light);
+    --color-text-25: var(--color-light);
+    --color-text-50: var(--color-light);
+    --color-background: var(--color-dark);
+    --color-background-25: var(--color-dark);
+    --color-background-50: var(--color-dark);
+  }
+}

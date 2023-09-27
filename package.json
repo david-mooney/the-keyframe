@@ -15,7 +15,6 @@
     "prepare": "git config core.hooksPath .githooks"
   },
   "dependencies": {
-    "@studio-freight/lenis": "^1.0.23",
     "dayjs": "^1.11.10",
     "fast-fuzzy": "^1.12.0",
     "fast-image-zoom": "^7.0.1",
@@ -30,14 +29,14 @@
     "remark": "^15.0.1"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^13.5.2",
-    "@types/node": "^20.6.3",
-    "@types/react": "^18.2.22",
-    "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@next/bundle-analyzer": "^13.5.3",
+    "@types/node": "^20.7.1",
+    "@types/react": "^18.2.23",
+    "@types/react-dom": "^18.2.8",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
     "autoprefixer": "^10.4.16",
     "eslint": "8.50.0",
-    "eslint-config-next": "^13.5.2",
+    "eslint-config-next": "^13.5.3",
     "eslint-config-prettier": "^9.0.0",
     "postcss": "^8.4.30",
     "prettier": "^3.0.3",

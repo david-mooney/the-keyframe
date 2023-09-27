@@ -16,7 +16,6 @@ export default function Index({ allPosts }: Props) {
         <title>The Keyframe</title>
       </Head>
 
-      {/* <Header Level="h1" /> */}
       <FeaturedPosts posts={allPosts} />
     </Layout>
   );
