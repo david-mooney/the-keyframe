@@ -15,10 +15,27 @@
 }
 
 .crumb {
+  display: flex;
+  height: 2rem;
+  line-height: var(--line-height-root);
+  font-size: var(--font-size-2);
   font-weight: var(--font-weight-bold);
 }
 
 .crumb:not(:last-child)::after {
-  margin: 0 0.5rem;
+  margin: 0 var(--spacing-5);
   content: '\203A';
+}
+
+.icon {
+  transition: var(--timing-faster) color var(--ease-out);
+  margin-right: var(--spacing-3);
+  width: var(--spacing-6);
+  height: auto;
+  color: var(--color-text-25);
+}
+
+.crumb:hover .icon,
+.crumb:focus-visible .icon {
+  color: var(--color-text);
 }

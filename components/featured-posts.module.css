@@ -1,6 +1,6 @@
 .section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-grow: 1;
   justify-content: center;
   margin: 0;
@@ -9,7 +9,8 @@
 }
 
 .list {
-  --gap: 10vh;
+  --height: 70vh;
+  --gap: 15vh;
 
   display: flex;
   flex-direction: column;
@@ -22,5 +23,6 @@
 
 .list li {
   box-sizing: border-box;
-  height: 80vh;
+  display: flex;
+  height: var(--height);
 }

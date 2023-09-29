@@ -50,6 +50,7 @@ a:not([class]):focus {
 }
 
 small {
+  color: var(--color-text-50);
   font-size: var(--font-size-0);
   font-weight: var(--font-weight-normal);
 }

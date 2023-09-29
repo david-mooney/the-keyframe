@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import CoverImage from './cover-image';
 import styles from './post-preview.module.css';
 
@@ -20,18 +21,24 @@ const PostPreview = ({
   order,
 }: Props) => (
   <article className={styles.article} data-animate="true">
-    <CoverImage priority={order === 0} title={title} src={coverImage} />
+    <span>0{order + 1}</span>
+
+    <CoverImage
+      priority={order === 0}
+      title={title}
+      src={coverImage}
+      id={`post-image-${slug}`}
+    />
 
     <header className={styles.header}>
       <div className={styles.meta}>
         <span>{created}</span>
       </div>
-
       <Link className={styles.link} as={`/posts/${slug}`} href="/posts/[slug]">
-        <div className={styles.title}>
-          {/* TODO - header component */}
-          <h2 className={styles.underline}>{title}</h2>
-        </div>
+        {/* TODO - header component */}
+        <motion.h2 className={styles.title} layoutId={`post-title-${slug}`}>
+          {title}
+        </motion.h2>
         <button className={styles.button}>Read More</button>
       </Link>
       <div className={styles.footer}>

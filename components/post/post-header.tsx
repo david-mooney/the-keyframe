@@ -1,4 +1,5 @@
 import Breadcrumbs from '@components/breadcrumbs';
+import { motion } from 'framer-motion';
 import CoverImage from '@components/cover-image';
 import { LINKS } from '@lib/constants';
 import type Author from '@interfaces/author';
@@ -11,41 +12,28 @@ type Props = {
   updated: string;
   author: Author;
   readTime: string;
+  slug: string;
   tags?: string[];
 };
 
-const PostHeader = ({
-  title,
-  coverImage,
-  created,
-  updated,
-  tags = [],
-}: Props) => {
-  const breadcrumbs = [LINKS.home, LINKS.posts];
+const PostHeader = ({ title, coverImage, created, updated, slug }: Props) => (
+  <div className={styles.container}>
+    <Breadcrumbs links={[LINKS.home]} />
+    <div className={styles.column}>
+      <CoverImage title={title} src={coverImage} id={`post-image-${slug}`} />
+    </div>
 
-  tags.forEach((tag) =>
-    breadcrumbs.push({
-      href: `/posts/?q=${tag}`,
-      label: tag,
-    })
-  );
+    <div className={styles.column}>
+      <motion.h2 layoutId={`post-title-${slug}`} className={styles.title}>
+        {title}
+      </motion.h2>
 
-  return (
-    <div className={styles.container}>
-      <Breadcrumbs links={breadcrumbs} />
-      <div className={styles.column}>
-        <h1 className={styles.title}>{title}</h1>
-
-        <div className={styles.dates}>
-          <div>Created: {created}</div>
-          {updated && <div>Last Updated: {updated}</div>}
-        </div>
-      </div>
-      <div className={styles.column}>
-        <CoverImage title={title} src={coverImage} />
+      <div className={styles.dates}>
+        <div>Created: {created}</div>
+        {updated && <div>Last Updated: {updated}</div>}
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default PostHeader;

@@ -3,7 +3,7 @@
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, calc(-1 * var(--spacing-7)));
+  transform: translate(-50%);
   opacity: 0;
   z-index: var(--z-front);
   border: var(--border-thin);

@@ -10,6 +10,7 @@ type PostType = {
   coverImage: string;
   author: Author;
   excerpt: string;
+  order: number;
   ogImage: {
     url: string;
   };

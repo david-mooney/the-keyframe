@@ -10,25 +10,9 @@ type Props = {
 const FeaturedPosts = ({ posts }: Props) => {
   const wrapper = useRef(null);
 
-  // useEffect(() => {
-  //   const lenis = new Lenis({
-  //     wrapper: wrapper.current,
-  //     orientation: 'horizontal',
-  //     gestureOrientation: 'both',
-  //     lerp: 0.09,
-  //   });
-
-  //   const raf = (time) => {
-  //     lenis.raf(time);
-  //     requestAnimationFrame(raf);
-  //   };
-
-  //   requestAnimationFrame(raf);
-  // }, []);
-
   return (
     <section className={styles.section}>
-      <ol className={styles.list} ref={wrapper}>
+      <ol className={styles.list} ref={wrapper} id="horiz">
         {posts.map((post, index) => (
           <li key={post.slug}>
             <PostPreview

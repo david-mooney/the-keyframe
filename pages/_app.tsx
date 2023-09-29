@@ -1,7 +1,9 @@
 import { StrictMode } from 'react';
 import { AppProps } from 'next/app';
 import localFont from 'next/font/local';
+import { LayoutGroup } from 'framer-motion';
 import GlobalComponents from '@components/global-components';
+import usePreserveScroll from '@hooks/use-preserve-scroll';
 
 import '@styles/accessibility.css';
 import '@styles/animations.css';
@@ -21,6 +23,8 @@ const sansFont = localFont({
 });
 
 export default function TheKeyframe({ Component, pageProps }: AppProps) {
+  usePreserveScroll();
+
   return (
     <StrictMode>
       <style jsx global>{`
@@ -30,7 +34,9 @@ export default function TheKeyframe({ Component, pageProps }: AppProps) {
       `}</style>
 
       <GlobalComponents />
-      <Component {...pageProps} />
+      <LayoutGroup>
+        <Component {...pageProps} />
+      </LayoutGroup>
     </StrictMode>
   );
 }
