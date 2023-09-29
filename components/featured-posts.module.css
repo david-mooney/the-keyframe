@@ -12,29 +12,17 @@
   --height: 70vh;
   --gap: 15vh;
 
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   gap: var(--gap);
   margin: 0 auto;
   padding: var(--gap) 0;
   max-width: var(--max-width-wide);
-  list-style: none; */
-
-  display: flex;
-  flex-grow: 1;
-  flex-wrap: nowrap;
-  gap: 15vw;
-  align-items: center;
-  margin: 0;
-  padding: 0 25vw;
-  overflow: scroll;
+  list-style: none;
 }
 
 .list li {
   box-sizing: border-box;
   display: flex;
-  width: 45vw;
-  min-width: 45vw;
   height: var(--height);
-  overflow: hidden;
 }

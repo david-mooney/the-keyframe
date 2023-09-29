@@ -62,7 +62,7 @@ export default function Post({ post, preview }: Props) {
             created={post.created}
             updated={post.updated}
             author={post.author}
-            order={post.slug}
+            slug={post.slug}
             readTime={post.readTime}
             tags={post.tags}
           />

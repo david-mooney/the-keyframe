@@ -12,46 +12,28 @@ type Props = {
   updated: string;
   author: Author;
   readTime: string;
-  order: string;
+  slug: string;
   tags?: string[];
 };
 
-const PostHeader = ({
-  title,
-  coverImage,
-  created,
-  updated,
-  order,
-  tags = [],
-}: Props) => {
-  const breadcrumbs = [LINKS.home, LINKS.posts];
+const PostHeader = ({ title, coverImage, created, updated, slug }: Props) => (
+  <div className={styles.container}>
+    <Breadcrumbs links={[LINKS.home]} />
+    <div className={styles.column}>
+      <CoverImage title={title} src={coverImage} id={`post-image-${slug}`} />
+    </div>
 
-  tags.forEach((tag) =>
-    breadcrumbs.push({
-      href: `/posts/?q=${tag}`,
-      label: tag,
-    })
-  );
+    <div className={styles.column}>
+      <motion.h2 layoutId={`post-title-${slug}`} className={styles.title}>
+        {title}
+      </motion.h2>
 
-  return (
-    <div className={styles.container}>
-      <Breadcrumbs links={breadcrumbs} />
-      <div className={styles.column}>
-        <CoverImage title={title} src={coverImage} id={`post-image-${order}`} />
-      </div>
-
-      <div className={styles.column}>
-        <motion.h2 layoutId={`post-title-${order}`} className={styles.title}>
-          {title}
-        </motion.h2>
-
-        <div className={styles.dates}>
-          <div>Created: {created}</div>
-          {updated && <div>Last Updated: {updated}</div>}
-        </div>
+      <div className={styles.dates}>
+        <div>Created: {created}</div>
+        {updated && <div>Last Updated: {updated}</div>}
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default PostHeader;

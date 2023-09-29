@@ -6,6 +6,7 @@
 
 - [ ] Add "next" and "previous" links to posts
 - [ ] Add RSS feed
+- [ ] prefers high contrast mode
 - [ ] Header animation
 - [ ] Add sitemap
 - [ ] React portal tooltips

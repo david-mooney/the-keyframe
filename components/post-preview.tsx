@@ -34,11 +34,11 @@ const PostPreview = ({
       <div className={styles.meta}>
         <span>{created}</span>
       </div>
-      <motion.h2 layoutId={`post-title-${slug}`} className={styles.underline}>
-        {title}
-      </motion.h2>
       <Link className={styles.link} as={`/posts/${slug}`} href="/posts/[slug]">
-        <div className={styles.title}>{/* TODO - header component */}</div>
+        {/* TODO - header component */}
+        <motion.h2 className={styles.title} layoutId={`post-title-${slug}`}>
+          {title}
+        </motion.h2>
         <button className={styles.button}>Read More</button>
       </Link>
       <div className={styles.footer}>
