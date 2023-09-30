@@ -24,9 +24,9 @@ const PostHeader = ({ title, coverImage, created, updated, slug }: Props) => (
     </div>
 
     <div className={styles.column}>
-      <motion.h2 layoutId={`post-title-${slug}`} className={styles.title}>
+      <motion.h1 layoutId={`post-title-${slug}`} className={styles.title}>
         {title}
-      </motion.h2>
+      </motion.h1>
 
       <div className={styles.dates}>
         <div>Created: {created}</div>

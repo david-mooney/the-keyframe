@@ -90,12 +90,7 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
   const post = getSinglePost(params.slug);
 
-  const content = await serialize(post.content, {
-    mdxOptions: {
-      remarkPlugins: [],
-      rehypePlugins: [],
-    },
-  });
+  const content = await serialize(post.content);
 
   return {
     props: {

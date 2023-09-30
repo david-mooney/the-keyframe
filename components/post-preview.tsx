@@ -35,7 +35,7 @@ const PostPreview = ({
         <span>{created}</span>
       </div>
       <Link className={styles.link} as={`/posts/${slug}`} href="/posts/[slug]">
-        {/* TODO - header component */}
+        {/* TODO - header component - style + type */}
         <motion.h2 className={styles.title} layoutId={`post-title-${slug}`}>
           {title}
         </motion.h2>
