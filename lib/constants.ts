@@ -46,6 +46,10 @@ export const LINKS = {
     href: '/portfolio',
     label: 'Portfolio',
   },
+  privacy: {
+    href: '/privacy',
+    label: 'privacy',
+  },
   email: {
     href: 'mailto:thekeyframe@gmail.com',
     label: 'Email',

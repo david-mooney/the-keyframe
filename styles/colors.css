@@ -18,17 +18,6 @@
   --color-dark-50: hsla(var(--dark-h) var(--dark-s) var(--dark-l) / 50%);
 
   /* Light theme */
-
-  /* nice blue: 338da6 */
-
-  /* nice gold: ca8f4b */
-
-  /* nice red: e84048 */
-
-  /* nice orange: ff906f */
-
-  /* nice (AA) blue: 2C7B91 */
-
   --color-brand: hsl(22deg 100% 81%);
   --color-text: var(--color-dark);
   --color-text-15: var(--color-dark-15);

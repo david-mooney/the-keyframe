@@ -4,34 +4,13 @@ import { useEffect, useRef } from 'react';
 export const usePreserveScroll = () => {
   const router = useRouter();
 
-  const scrollPositions = useRef<{ [url: string]: number }>({});
-  const isBack = useRef(false);
-
   useEffect(() => {
-    router.beforePopState(() => {
-      isBack.current = true;
-      return true;
-    });
-
     const onRouteChangeStart = () => {
-      const url = router.pathname;
-      const horiz = document.getElementById('horiz');
-
-      if (horiz) {
-        scrollPositions.current[url] = horiz.scrollLeft;
-      }
+      console.log('a');
     };
 
     const onRouteChangeComplete = (url: any) => {
-      if (isBack.current && scrollPositions.current[url]) {
-        const horiz = document.getElementById('horiz');
-
-        if (horiz) {
-          horiz.scrollLeft = scrollPositions.current[url];
-        }
-      }
-
-      isBack.current = false;
+      console.log('b');
     };
 
     router.events.on('routeChangeStart', onRouteChangeStart);

@@ -1,9 +1,12 @@
 import { useScroll } from 'framer-motion';
 import React from 'react';
 
-const useProgress = () => {
+const useProgress = ({ target }) => {
   const [progress, setProgress] = React.useState(0);
-  const { scrollYProgress } = useScroll();
+  const { scrollYProgress } = useScroll({
+    target,
+    offset: ['start start', 'end end'],
+  });
 
   React.useEffect(
     () =>

@@ -8,11 +8,5 @@
 }
 
 .container[data-wide='true'] {
-  max-width: var(--max-width);
-
-  /* max-width: var(--max-width-wide); */
-}
-
-.container > h2 {
-  margin: 0 0 var(--gap-row);
+  max-width: var(--max-width-wide);
 }

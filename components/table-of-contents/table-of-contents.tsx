@@ -4,12 +4,10 @@ import useProgress from '@hooks/use-progress';
 import ProgressBar from '@components/table-of-contents/progress-bar';
 import styles from './table-of-contents.module.css';
 
-// TODO make this relative to the article, not the document
-
-const TableOfContents = ({ sections }) => {
+const TableOfContents = ({ sections, target }) => {
   const elements = sections.map(({ element }) => element);
   const [activeIndex] = useScrollSpy(elements, { offset: 0 });
-  const progress = useProgress();
+  const progress = useProgress({ target });
   const isVisible = progress > 0 && progress < 1;
 
   return (

@@ -30,7 +30,6 @@ export const ThemeProvider = ({ children }) => {
     );
 
     window.localStorage.setItem('__theme', isDark ? 'light' : 'dark');
-
     setTheme(isDark ? 'light' : 'dark');
   };
 

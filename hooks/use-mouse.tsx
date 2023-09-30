@@ -34,14 +34,8 @@ export const MouseProvider = ({ children }) => {
 
   const mouse = useMemo(
     () => ({
-      position: {
-        x,
-        y,
-      },
-      velocity: {
-        x: velocityX,
-        y: velocityY,
-      },
+      position: { x, y },
+      velocity: { x: velocityX, y: velocityY },
     }),
     [x, y, velocityX, velocityY]
   );
