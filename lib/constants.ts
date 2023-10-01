@@ -39,10 +39,6 @@ export const LINKS = {
     label: 'Home',
     scrollToTop: false,
   },
-  posts: {
-    href: '/posts',
-    label: 'All posts',
-  },
   portfolio: {
     href: '/portfolio',
     label: 'Portfolio',

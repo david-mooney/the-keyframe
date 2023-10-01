@@ -8,7 +8,9 @@
   z-index: var(--z-middle);
   border-radius: var(--border-radius-1);
   box-shadow: var(--shadow);
-  background: linear-gradient(0deg, hsl(350deg 100% 84%), hsl(22deg 100% 81%));
+  background: var(--color-brand);
+
+  /* background: var(--color-background-25); */
   max-width: min(25rem, 25vw);
   min-height: 100%;
   aspect-ratio: 1/2;

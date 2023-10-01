@@ -7,9 +7,6 @@ const Links = () => (
       <Link href="/">Home</Link>
     </li>
     <li className={styles.item}>
-      <Link href="/posts">All Posts</Link>
-    </li>
-    <li className={styles.item}>
       <Link href="/portfolio">Portfolio</Link>
     </li>
     <li className={styles.item}>

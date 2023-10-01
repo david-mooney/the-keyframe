@@ -37,7 +37,7 @@ const AllPosts = ({ posts }: Props) => {
 
               return (
                 <Link
-                  href={`/posts/${postObj.slug}`}
+                  href={`/${postObj.slug}`}
                   key={postObj.slug}
                   className={styles.container}
                 >

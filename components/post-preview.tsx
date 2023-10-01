@@ -34,7 +34,7 @@ const PostPreview = ({
       <div className={styles.meta}>
         <span>{created}</span>
       </div>
-      <Link className={styles.link} as={`/posts/${slug}`} href="/posts/[slug]">
+      <Link className={styles.link} as={`/${slug}`} href="/[slug]">
         <motion.h2 className={styles.title}>{title}</motion.h2>
         <button className={styles.button}>Read More</button>
       </Link>
