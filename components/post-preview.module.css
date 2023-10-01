@@ -8,6 +8,12 @@
   background-size: 0 var(--underline-size);
 }
 
+.order {
+  color: var(--color-text-25);
+  font-size: var(--font-size-2);
+  font-style: italic;
+}
+
 .link {
   outline: none;
   text-decoration: none;
@@ -20,7 +26,8 @@
 
 .article {
   display: flex;
-  gap: var(--gap-l);
+  gap: var(--gap-xl);
+  align-items: center;
   height: 100%;
 }
 
@@ -34,17 +41,20 @@
 
 .meta {
   display: flex;
-  font-size: var(--font-size-1);
+  color: var(--color-text-25);
+  font-size: var(--font-size-2);
 }
 
 .footer {
   display: flex;
   justify-content: flex-end;
-  font-size: var(--font-size-1);
+  color: var(--color-text-25);
+  font-size: var(--font-size-2);
 }
 
 .title {
   line-height: var(--line-height-heading);
+  font-size: var(--font-size-5);
 }
 
 .button {

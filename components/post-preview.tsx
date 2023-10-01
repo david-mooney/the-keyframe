@@ -21,7 +21,7 @@ const PostPreview = ({
   order,
 }: Props) => (
   <article className={styles.article} data-animate="true">
-    <span>0{order + 1}</span>
+    <span className={styles.order}>0{order + 1}</span>
 
     <CoverImage
       priority={order === 0}
@@ -35,10 +35,7 @@ const PostPreview = ({
         <span>{created}</span>
       </div>
       <Link className={styles.link} as={`/posts/${slug}`} href="/posts/[slug]">
-        {/* TODO - header component - style + type */}
-        <motion.h2 className={styles.title} layoutId={`post-title-${slug}`}>
-          {title}
-        </motion.h2>
+        <motion.h2 className={styles.title}>{title}</motion.h2>
         <button className={styles.button}>Read More</button>
       </Link>
       <div className={styles.footer}>

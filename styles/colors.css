@@ -39,6 +39,8 @@
   --color-background-50: var(--color-dark-50);
 }
 
+/*
+  TODO: test this
 :root,
 :root.dark {
   @media (prefers-contrast: more) {
@@ -50,4 +52,4 @@
     --color-background-25: var(--color-dark);
     --color-background-50: var(--color-dark);
   }
-}
+} */

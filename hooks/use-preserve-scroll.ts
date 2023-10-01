@@ -10,10 +10,7 @@ export const usePreserveScroll = () => {
       const url = router.pathname;
 
       if (url === targetUrl) {
-        window.scroll({
-          top: 0,
-          behavior: 'auto',
-        });
+        window.scroll({ top: 0, behavior: 'auto' });
       }
 
       if (url === '/') {
@@ -22,12 +19,10 @@ export const usePreserveScroll = () => {
     };
 
     const onRouteChangeComplete = (url: any) => {
-      if (scrollPositions.current[url]) {
-        window.scroll({
-          top: scrollPositions.current[url],
-          behavior: 'auto',
-        });
-      }
+      window.scroll({
+        top: scrollPositions.current[url] || 0,
+        behavior: 'auto',
+      });
     };
 
     router.events.on('routeChangeStart', onRouteChangeStart);

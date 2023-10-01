@@ -1,7 +1,5 @@
-import Breadcrumbs from '@components/breadcrumbs';
 import { motion } from 'framer-motion';
 import CoverImage from '@components/cover-image';
-import { LINKS } from '@lib/constants';
 import type Author from '@interfaces/author';
 import styles from './post-header.module.css';
 
@@ -18,7 +16,6 @@ type Props = {
 
 const PostHeader = ({ title, coverImage, created, updated, slug }: Props) => (
   <div className={styles.container}>
-    <Breadcrumbs links={[LINKS.home]} />
     <div className={styles.column}>
       <CoverImage title={title} src={coverImage} id={`post-image-${slug}`} />
     </div>
