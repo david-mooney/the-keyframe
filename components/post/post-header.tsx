@@ -1,23 +1,12 @@
 import { motion } from 'framer-motion';
 import CoverImage from '@components/cover-image';
-import type Author from '@interfaces/author';
+import type Post from '@interfaces/post';
 import styles from './post-header.module.css';
 
-type Props = {
-  title: string;
-  coverImage: string;
-  created: string;
-  updated: string;
-  author: Author;
-  readTime: string;
-  slug: string;
-  tags?: string[];
-};
-
-const PostHeader = ({ title, coverImage, created, updated, slug }: Props) => (
+const PostHeader = ({ title, coverImage, created, updated, id }: Post) => (
   <div className={styles.container}>
     <div className={styles.column}>
-      <CoverImage title={title} src={coverImage} id={`post-image-${slug}`} />
+      <CoverImage id={id} title={title} src={coverImage} />
     </div>
 
     <div className={styles.column}>

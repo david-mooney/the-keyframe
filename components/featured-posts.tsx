@@ -10,15 +10,8 @@ const FeaturedPosts = ({ posts }: FeaturedPostsProps) => (
   <section className={styles.section}>
     <ol className={styles.list}>
       {posts.map((post, index) => (
-        <li key={post.slug}>
-          <PostPreview
-            order={index}
-            title={post.title}
-            coverImage={post.coverImage}
-            created={post.created}
-            slug={post.slug}
-            readTime={post.readTime}
-          />
+        <li key={post.id}>
+          <PostPreview {...post} order={index} />
         </li>
       ))}
     </ol>

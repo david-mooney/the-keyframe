@@ -10,6 +10,7 @@ export const KEYS = {
 
 export const FIELDS = {
   preview: [
+    'id',
     'title',
     'excerpt',
     'created',
@@ -20,6 +21,7 @@ export const FIELDS = {
     'featured',
   ],
   post: [
+    'id',
     'title',
     'author',
     'content',

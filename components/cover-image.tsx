@@ -11,10 +11,8 @@ type Props = {
 const CoverImage = ({ id }: Props) => (
   <motion.div
     id={id}
+    layoutId={id}
     className={styles.frame}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
     transition={{
       type: 'spring',
       damping: 20,

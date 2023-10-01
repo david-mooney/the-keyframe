@@ -2,7 +2,6 @@
   --shadow: 0 15px 25px rgb(0 0 0 / 15%), 0 5px 10px rgb(0 0 0 / 5%);
 
   display: flex;
-  position: relative;
   align-items: center;
   justify-content: center;
   z-index: var(--z-middle);

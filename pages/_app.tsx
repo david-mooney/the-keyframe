@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { AppProps } from 'next/app';
 import localFont from 'next/font/local';
-import { AnimatePresence } from 'framer-motion';
+import { LayoutGroup } from 'framer-motion';
 import GlobalComponents from '@components/global-components';
 import usePreserveScroll from '@hooks/use-preserve-scroll';
 
@@ -25,6 +25,8 @@ const sansFont = localFont({
 export default function TheKeyframe({ Component, pageProps }: AppProps) {
   usePreserveScroll();
 
+  // TODO - MotionConfig
+
   return (
     <StrictMode>
       <style jsx global>{`
@@ -34,9 +36,12 @@ export default function TheKeyframe({ Component, pageProps }: AppProps) {
       `}</style>
 
       <GlobalComponents />
-      <AnimatePresence mode="wait" initial={false}>
+      {/* <AnimatePresence mode="wait" initial={false}>
         <Component {...pageProps} />
-      </AnimatePresence>
+      </AnimatePresence> */}
+      <LayoutGroup>
+        <Component {...pageProps} />
+      </LayoutGroup>
     </StrictMode>
   );
 }

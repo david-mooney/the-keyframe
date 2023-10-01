@@ -2,6 +2,7 @@ import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import type Author from './author';
 
 type PostType = {
+  id: string;
   slug: string;
   title: string;
   featured: boolean;

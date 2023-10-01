@@ -57,16 +57,7 @@ export default function Post({ post, preview }: Props) {
             <title>{title}</title>
             <meta property="og:image" content={post.ogImage.url} />
           </Head>
-          <PostHeader
-            title={post.title}
-            coverImage={post.coverImage}
-            created={post.created}
-            updated={post.updated}
-            author={post.author}
-            slug={post.slug}
-            readTime={post.readTime}
-            tags={post.tags}
-          />
+          <PostHeader {...post} />
 
           <PostBody>
             <div ref={ref}>
@@ -89,7 +80,6 @@ type Params = {
 
 export async function getStaticProps({ params }: Params) {
   const post = getSinglePost(params.slug);
-
   const content = await serialize(post.content);
 
   return {
