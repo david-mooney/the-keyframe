@@ -8,18 +8,16 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Layout = ({ preview, children }: Props) => {
-  return (
-    <>
-      <Meta />
-      {preview && <Alert />}
-      <div id="page-wrapper">
-        <main id="main">{children}</main>
-        <Footer />
-      </div>
-      <DynamicFooter />
-    </>
-  );
-};
+const Layout = ({ preview, children }: Props) => (
+  <>
+    <Meta />
+    {preview && <Alert />}
+    <div id="page-wrapper">
+      <main id="main">{children}</main>
+      <Footer />
+    </div>
+    <DynamicFooter />
+  </>
+);
 
 export default Layout;
