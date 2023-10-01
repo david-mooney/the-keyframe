@@ -24,7 +24,17 @@ const PostHeader = ({ title, coverImage, created, updated, slug }: Props) => (
     </div>
 
     <div className={styles.column}>
-      <motion.h1 layoutId={`post-title-${slug}`} className={styles.title}>
+      <motion.h1
+        className={styles.title}
+        initial={{ opacity: 0, y: 200 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 200 }}
+        transition={{
+          type: 'spring',
+          damping: 20,
+          stiffness: 100,
+        }}
+      >
         {title}
       </motion.h1>
 

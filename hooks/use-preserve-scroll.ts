@@ -3,14 +3,31 @@ import { useEffect, useRef } from 'react';
 
 export const usePreserveScroll = () => {
   const router = useRouter();
+  const scrollPositions = useRef<{ [url: string]: number }>({});
 
   useEffect(() => {
-    const onRouteChangeStart = () => {
-      console.log('a');
+    const onRouteChangeStart = (targetUrl) => {
+      const url = router.pathname;
+
+      if (url === targetUrl) {
+        window.scroll({
+          top: 0,
+          behavior: 'auto',
+        });
+      }
+
+      if (url === '/') {
+        scrollPositions.current[url] = window.scrollY;
+      }
     };
 
     const onRouteChangeComplete = (url: any) => {
-      console.log('b');
+      if (scrollPositions.current[url]) {
+        window.scroll({
+          top: scrollPositions.current[url],
+          behavior: 'auto',
+        });
+      }
     };
 
     router.events.on('routeChangeStart', onRouteChangeStart);

@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { AppProps } from 'next/app';
 import localFont from 'next/font/local';
-import { LayoutGroup } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import GlobalComponents from '@components/global-components';
 import usePreserveScroll from '@hooks/use-preserve-scroll';
 
@@ -34,9 +34,9 @@ export default function TheKeyframe({ Component, pageProps }: AppProps) {
       `}</style>
 
       <GlobalComponents />
-      <LayoutGroup>
+      <AnimatePresence mode="wait" initial={false}>
         <Component {...pageProps} />
-      </LayoutGroup>
+      </AnimatePresence>
     </StrictMode>
   );
 }

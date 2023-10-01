@@ -13,6 +13,8 @@ export default function Document() {
               DARK: 'dark',
             };
 
+            window.history.scrollRestoration = 'manual'
+
             function getTheme() {
               const savedTheme = window.localStorage.getItem('__theme');
               const osTheme = window.matchMedia('(prefers-color-scheme: dark)');

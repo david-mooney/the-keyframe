@@ -8,6 +8,7 @@ export interface CircleLinkProps {
   href: string;
   size?: number;
   newTab?: boolean;
+  scrollToTop?: boolean;
   children?: React.ReactNode;
 }
 
@@ -15,6 +16,7 @@ export const CircleLink = ({
   label,
   href,
   children,
+  scrollToTop = true,
   newTab = false,
 }: CircleLinkProps) => {
   const { pathname } = useRouter();
@@ -27,6 +29,8 @@ export const CircleLink = ({
       href={href}
       className={styles.anchor}
       data-animate="true"
+      scroll={isActive ? true : scrollToTop}
+      rel={newTab ? 'noopener noreferrer' : null}
     >
       <span className={styles.icon} aria-hidden="true">
         {children}

@@ -37,6 +37,7 @@ export const LINKS = {
   home: {
     href: '/',
     label: 'Home',
+    scrollToTop: false,
   },
   posts: {
     href: '/posts',
