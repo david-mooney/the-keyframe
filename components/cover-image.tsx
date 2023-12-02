@@ -8,19 +8,27 @@ type Props = {
   priority?: boolean;
 };
 
-const CoverImage = ({ id }: Props) => (
-  <motion.div
-    id={id}
-    layoutId={id}
-    className={styles.frame}
-    transition={{
-      type: 'spring',
-      damping: 20,
-      stiffness: 100,
-    }}
-  >
-    <div className={styles.image} data-animate="true"></div>
-  </motion.div>
-);
+const CoverImage = ({ id }: Props) => {
+  return (
+    <motion.div
+      id={id}
+      className={styles.frame}
+      animate={{
+        scale: [0.3, 1.1, 1],
+        opacity: [0, 1, 1],
+      }}
+      exit={{
+        scale: [1, 1.1, 0.3],
+        opacity: [1, 1, 0],
+      }}
+      transition={{
+        damping: 20,
+        stiffness: 100,
+      }}
+    >
+      <div className={styles.image} data-animate="true"></div>
+    </motion.div>
+  );
+};
 
 export default CoverImage;

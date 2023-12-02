@@ -4,7 +4,6 @@ import matter from 'gray-matter';
 import PostFields from '@interfaces/post-fields';
 import { FIELDS } from '@lib/constants';
 import formatDate from '@lib/format-date';
-import fuzzySearch from '@lib/fuzzy-search';
 
 const postsDirectory = join(process.cwd(), '_posts');
 
@@ -66,8 +65,8 @@ export function getAllPosts(fields: string[] = FIELDS.post) {
   return slugs.map((slug) => getPostBySlug(slug, fields)).sort(sortByDate);
 }
 
-export function getAllPostPreviews(query?: string) {
-  const results = query ? fuzzySearch(query) : [];
+export function getAllPostPreviews() {
+  const results = [];
   return [getAllPosts(FIELDS.preview), results];
 }
 

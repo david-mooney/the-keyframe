@@ -9,7 +9,7 @@
 }
 
 .list {
-  --height: 70vh;
+  --height: 45vh;
   --gap: 15vh;
 
   display: flex;

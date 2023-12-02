@@ -11,7 +11,7 @@
   transform: translateX(-50%);
   z-index: var(--z-fixed);
   border-radius: var(--border-radius-1);
-  background-color: var(--color-background-25);
+  background-color: var(--color-text-25);
   padding: var(--gap);
   padding-bottom: calc(var(--gap) + var(--spacing-3));
   width: auto;
